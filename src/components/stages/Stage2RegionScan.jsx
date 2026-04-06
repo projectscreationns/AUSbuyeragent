@@ -1,7 +1,5 @@
-import { useStageRunner } from '../../hooks/useStageRunner';
-import { buildStage2Prompt } from '../../prompts/stage2-region-scan';
+import { useStageLoader } from '../../hooks/useStageLoader';
 import { StageShell } from '../layout/StageShell';
-import { LoadingAgent } from '../common/LoadingAgent';
 import { VerdictBadge } from '../common/VerdictBadge';
 import { ErrorBoundary } from '../common/ErrorBoundary';
 
@@ -104,7 +102,7 @@ function RegionResults({ data, selections, onSelect }) {
 }
 
 export function Stage2RegionScan() {
-  const stage = useStageRunner('regions', buildStage2Prompt);
+  const stage = useStageLoader('regions');
 
   return (
     <StageShell
@@ -114,25 +112,12 @@ export function Stage2RegionScan() {
       error={stage.error}
       timestamp={stage.timestamp}
       isUnlocked={stage.isUnlocked}
-      isRunning={stage.isRunning}
       hasSelections={stage.selections.length > 0}
-      onRun={stage.run}
-      onReset={stage.reset}
+      onLoad={stage.load}
+      onReset={stage.load}
       onApprove={stage.approve}
-      onAbort={stage.abort}
     >
       <ErrorBoundary label="Region Scan">
-        {stage.isRunning && (
-          <LoadingAgent
-            title="Scanning Australian regions..."
-            phase={`Searching growth data, vacancy rates, medians — turn ${stage.turn + 1}`}
-            steps={[
-              { label: 'Search data', status: stage.turn >= 1 ? 'done' : 'active' },
-              { label: 'Score regions', status: stage.turn >= 2 ? 'done' : stage.turn >= 1 ? 'active' : 'pending' },
-              { label: 'Rank & filter', status: stage.turn >= 2 ? 'active' : 'pending' },
-            ]}
-          />
-        )}
         {stage.data && (
           <RegionResults
             data={stage.data}
@@ -143,10 +128,10 @@ export function Stage2RegionScan() {
         {stage.status === 'idle' && !stage.data && (
           <div className="loading-agent">
             <div className="loading-agent__icon">🗺</div>
-            <div className="loading-agent__title">Ready to scan regions</div>
+            <div className="loading-agent__title">No region data yet</div>
             <div className="loading-agent__phase">
-              Requires Macro Environment (Stage 1) to be completed first.<br />
-              Agent will search and score 30+ regions across Australia.
+              Ask Claude Code: "run region scan"<br />
+              Then click "Load Data" to display results.
             </div>
           </div>
         )}

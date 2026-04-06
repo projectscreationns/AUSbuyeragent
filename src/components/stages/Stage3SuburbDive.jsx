@@ -1,8 +1,6 @@
 import { useState } from 'react';
-import { useStageRunner } from '../../hooks/useStageRunner';
-import { buildStage3Prompt } from '../../prompts/stage3-suburb-dive';
+import { useStageLoader } from '../../hooks/useStageLoader';
 import { StageShell } from '../layout/StageShell';
-import { LoadingAgent } from '../common/LoadingAgent';
 import { SpiderChart } from '../common/SpiderChart';
 import { VerdictBadge } from '../common/VerdictBadge';
 import { ScoreBar } from '../common/ScoreBar';
@@ -271,7 +269,7 @@ function SuburbCard({ suburb, isSelected, onToggle }) {
 }
 
 export function Stage3SuburbDive() {
-  const stage = useStageRunner('suburbs', buildStage3Prompt);
+  const stage = useStageLoader('suburbs');
 
   return (
     <StageShell
@@ -281,26 +279,12 @@ export function Stage3SuburbDive() {
       error={stage.error}
       timestamp={stage.timestamp}
       isUnlocked={stage.isUnlocked}
-      isRunning={stage.isRunning}
       hasSelections={stage.selections.length > 0}
-      onRun={stage.run}
-      onReset={stage.reset}
+      onLoad={stage.load}
+      onReset={stage.load}
       onApprove={stage.approve}
-      onAbort={stage.abort}
     >
       <ErrorBoundary label="Suburb Deep Dive">
-        {stage.isRunning && (
-          <LoadingAgent
-            title="Deep diving selected suburbs..."
-            phase={`Searching quant + qual data — turn ${stage.turn + 1}`}
-            steps={[
-              { label: 'DSR Metrics', status: stage.turn >= 1 ? 'done' : 'active' },
-              { label: 'Infrastructure', status: stage.turn >= 2 ? 'done' : stage.turn >= 1 ? 'active' : 'pending' },
-              { label: 'Crime + Housing', status: stage.turn >= 3 ? 'done' : stage.turn >= 2 ? 'active' : 'pending' },
-              { label: 'Synthesize', status: stage.turn >= 3 ? 'active' : 'pending' },
-            ]}
-          />
-        )}
         {stage.data?.suburbs?.map((suburb, i) => (
           <SuburbCard
             key={i}
@@ -319,10 +303,10 @@ export function Stage3SuburbDive() {
         {stage.status === 'idle' && !stage.data && (
           <div className="loading-agent">
             <div className="loading-agent__icon">🏘</div>
-            <div className="loading-agent__title">Ready for suburb analysis</div>
+            <div className="loading-agent__title">No suburb data yet</div>
             <div className="loading-agent__phase">
-              Requires Region Scan (Stage 2) with selected regions.<br />
-              Agent will perform full quant + qual deep dive per suburb.
+              Ask Claude Code: "run suburb deep dive"<br />
+              Then click "Load Data" to display results.
             </div>
           </div>
         )}

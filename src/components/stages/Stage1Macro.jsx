@@ -1,7 +1,5 @@
-import { useStageRunner } from '../../hooks/useStageRunner';
-import { buildStage1Prompt } from '../../prompts/stage1-macro';
+import { useStageLoader } from '../../hooks/useStageLoader';
 import { StageShell } from '../layout/StageShell';
-import { LoadingAgent } from '../common/LoadingAgent';
 import { TrafficLight } from '../common/TrafficLight';
 import { ErrorBoundary } from '../common/ErrorBoundary';
 
@@ -122,7 +120,7 @@ function MacroResults({ data }) {
 }
 
 export function Stage1Macro() {
-  const stage = useStageRunner('macro', buildStage1Prompt);
+  const stage = useStageLoader('macro');
 
   return (
     <StageShell
@@ -132,32 +130,19 @@ export function Stage1Macro() {
       error={stage.error}
       timestamp={stage.timestamp}
       isUnlocked={stage.isUnlocked}
-      isRunning={stage.isRunning}
-      onRun={stage.run}
-      onReset={stage.reset}
+      onLoad={stage.load}
+      onReset={stage.load}
       onApprove={stage.approve}
-      onAbort={stage.abort}
     >
       <ErrorBoundary label="Macro Results">
-        {stage.isRunning && (
-          <LoadingAgent
-            title="Scanning macro environment..."
-            phase={`Agent searching — turn ${stage.turn + 1}`}
-            steps={[
-              { label: 'RBA + ABS', status: stage.turn >= 1 ? 'done' : 'active' },
-              { label: 'SQM + CoreLogic', status: stage.turn >= 2 ? 'done' : stage.turn >= 1 ? 'active' : 'pending' },
-              { label: 'Synthesize', status: stage.turn >= 3 ? 'active' : 'pending' },
-            ]}
-          />
-        )}
         {stage.data && <MacroResults data={stage.data} />}
         {stage.status === 'idle' && !stage.data && (
           <div className="loading-agent">
             <div className="loading-agent__icon">📊</div>
-            <div className="loading-agent__title">Ready to scan</div>
+            <div className="loading-agent__title">No macro data yet</div>
             <div className="loading-agent__phase">
-              Click "Run Analysis" to search for current macro data.<br />
-              Agent will search RBA, ABS, SQM, CoreLogic, and more.
+              Ask Claude Code: "run macro scan"<br />
+              Then click "Load Data" to display results.
             </div>
           </div>
         )}

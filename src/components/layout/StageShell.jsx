@@ -14,17 +14,16 @@ export function StageShell({
   error,
   timestamp,
   isUnlocked,
-  isRunning,
   hasSelections,
-  onRun,
+  onLoad,
   onReset,
   onApprove,
-  onAbort,
   children,
 }) {
   const isDone = status === 'done';
   const isError = status === 'error';
   const isIdle = status === 'idle';
+  const isLoading = status === 'running';
 
   return (
     <div>
@@ -36,23 +35,17 @@ export function StageShell({
         <div className="stage-shell__actions">
           {isDone && timestamp && (
             <span className="stage-shell__cached">
-              Results from {timeAgo(timestamp)}
+              Loaded {timeAgo(timestamp)}
             </span>
           )}
 
-          {isRunning && (
-            <button className="btn btn--danger btn--sm" onClick={onAbort}>
-              Cancel
-            </button>
-          )}
-
-          {!isRunning && isDone && onReset && (
+          {isDone && onReset && (
             <button className="btn btn--secondary btn--sm" onClick={onReset}>
-              Re-run
+              Reload
             </button>
           )}
 
-          {!isRunning && isDone && onApprove && (
+          {isDone && onApprove && (
             <button
               className="btn btn--success btn--sm"
               onClick={onApprove}
@@ -63,13 +56,13 @@ export function StageShell({
             </button>
           )}
 
-          {!isRunning && (isIdle || isError) && (
+          {(isIdle || isError) && (
             <button
               className="btn btn--primary"
-              onClick={onRun}
-              disabled={!isUnlocked}
+              onClick={onLoad}
+              disabled={!isUnlocked || isLoading}
             >
-              {isError ? 'Retry' : 'Run Analysis'}
+              {isLoading ? 'Loading...' : isError ? 'Retry' : 'Load Data'}
             </button>
           )}
         </div>
@@ -77,8 +70,11 @@ export function StageShell({
 
       {isError && error && (
         <div className="error-display" style={{ marginBottom: 16 }}>
-          <div className="error-display__title">Analysis failed</div>
+          <div className="error-display__title">Data not found</div>
           <div className="error-display__message">{error}</div>
+          <div style={{ fontSize: 11, color: 'var(--text-muted)', marginTop: 8 }}>
+            Ask Claude Code to run this analysis, then click "Load Data" to display results.
+          </div>
         </div>
       )}
 

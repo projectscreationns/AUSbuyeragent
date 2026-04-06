@@ -1,8 +1,6 @@
-import { useApi } from '../../context/ApiContext';
 import { usePipeline } from '../../context/PipelineContext';
 
 export function Header() {
-  const { clearApiKey } = useApi();
   const { state } = usePipeline();
   const p = state.investorProfile;
 
@@ -25,13 +23,9 @@ export function Header() {
         )}
       </div>
       <div className="header__right">
-        <button
-          className="btn btn--secondary btn--sm"
-          onClick={clearApiKey}
-          title="Change API key"
-        >
-          Key
-        </button>
+        <div className="header__chip" style={{ borderColor: 'var(--green)', color: 'var(--green)' }}>
+          Claude Code Engine
+        </div>
       </div>
     </header>
   );

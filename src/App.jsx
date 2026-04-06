@@ -1,7 +1,5 @@
 import './app.css';
-import { useApi } from './context/ApiContext';
 import { usePipeline } from './context/PipelineContext';
-import { ApiKeyInput } from './components/common/ApiKeyInput';
 import { ErrorBoundary } from './components/common/ErrorBoundary';
 import { Header } from './components/layout/Header';
 import { Sidebar } from './components/layout/Sidebar';
@@ -19,33 +17,21 @@ const STAGE_COMPONENTS = {
   dd: Stage5DueDiligence,
 };
 
-function Dashboard() {
+export default function App() {
   const { state } = usePipeline();
   const StageComponent = STAGE_COMPONENTS[state.currentStage] || Stage1Macro;
 
   return (
-    <div className="app-layout">
-      <Header />
-      <Sidebar />
-      <main className="main">
-        <ErrorBoundary label={state.currentStage}>
-          <StageComponent />
-        </ErrorBoundary>
-      </main>
-    </div>
-  );
-}
-
-export default function App() {
-  const { isConfigured } = useApi();
-
-  if (!isConfigured) {
-    return <ApiKeyInput />;
-  }
-
-  return (
     <ErrorBoundary label="App">
-      <Dashboard />
+      <div className="app-layout">
+        <Header />
+        <Sidebar />
+        <main className="main">
+          <ErrorBoundary label={state.currentStage}>
+            <StageComponent />
+          </ErrorBoundary>
+        </main>
+      </div>
     </ErrorBoundary>
   );
 }

@@ -1,15 +1,7 @@
-import { useState, useCallback } from 'react';
-import { usePipeline, useStageData, useUpstreamData } from '../../context/PipelineContext';
-import { useAnthropicAgent } from '../../hooks/useAnthropicAgent';
-import { useApi } from '../../context/ApiContext';
-import { extractJson } from '../../lib/response-parser';
-import { buildCollectorPrompt } from '../../prompts/stage4-collector';
-import { buildAnalystPrompt } from '../../prompts/stage4-analyst';
+import { useStageLoader } from '../../hooks/useStageLoader';
 import { StageShell } from '../layout/StageShell';
-import { LoadingAgent } from '../common/LoadingAgent';
 import { VerdictBadge } from '../common/VerdictBadge';
 import { ErrorBoundary } from '../common/ErrorBoundary';
-import { MODELS } from '../../config/constants';
 
 function ListingCard({ listing }) {
   const isInv = listing.verdict === 'INVESTIGATE';
@@ -33,9 +25,12 @@ function ListingCard({ listing }) {
       </div>
 
       <div className="listing-card__signal-bar">
-        <span className="verdict" style={{ background: mc + '18', color: mc, border: `1px solid ${mc}30` }}>
-          {listing.motivation} MOTIVATION
-        </span>
+        <VerdictBadge verdict={listing.verdict} />
+        {listing.motivation && (
+          <span className="verdict" style={{ background: mc + '18', color: mc, border: `1px solid ${mc}30` }}>
+            {listing.motivation} MOTIVATION
+          </span>
+        )}
         {listing.motivationSignal && <span className="text-sm text-muted">→ {listing.motivationSignal}</span>}
         <span style={{ marginLeft: 'auto', display: 'flex', gap: 6 }}>
           {listing.dom != null && (
@@ -75,167 +70,80 @@ function ListingCard({ listing }) {
 }
 
 export function Stage4ListingScout() {
-  const { state, dispatch } = usePipeline();
-  const stageData = useStageData('listings');
-  const upstream = useUpstreamData('listings');
-  const { apiKey } = useApi();
-  const agent = useAnthropicAgent();
+  const stage = useStageLoader('listings');
 
-  const suburbsStage = upstream.suburbs;
-  const selectedSuburbs = suburbsStage?.selections || [];
-  const suburbs = suburbsStage?.data?.suburbs?.filter(s => selectedSuburbs.includes(s.name)) || [];
+  // Data can be either:
+  // - { suburbName: { items: [...], collected: N } } (keyed by suburb)
+  // - or a flat array of listings
+  const results = stage.data || {};
+  const isKeyed = !Array.isArray(results);
 
-  const [results, setResults] = useState(stageData.data || {});
-  const [activeSuburb, setActiveSuburb] = useState(null);
-  const [phase, setPhase] = useState('');
+  const allListings = isKeyed
+    ? Object.entries(results).flatMap(([suburb, r]) => (r?.items || []).map(l => ({ ...l, _suburb: suburb })))
+    : results;
 
-  const prevKey = 'suburbs';
-  const isUnlocked = state.stages[prevKey]?.status === 'done';
-
-  const scanSuburb = useCallback(async (suburb) => {
-    setActiveSuburb(suburb.name);
-    setPhase('Agent 1 — Collecting listings');
-
-    const collectorPrompt = buildCollectorPrompt({ suburb, budget: state.investorProfile.budget });
-
-    const collectorResult = await agent.run({
-      system: collectorPrompt.system,
-      userMessage: collectorPrompt.user,
-      model: collectorPrompt.model,
-      maxTokens: collectorPrompt.maxTokens,
-      maxSearchUses: collectorPrompt.maxSearchUses,
-    });
-
-    const rawData = extractJson(collectorResult.text);
-    const collected = rawData?.collected || [];
-
-    if (collected.length === 0) {
-      return { suburb: suburb.name, items: [], collected: 0, error: null };
-    }
-
-    setPhase(`Agent 2 — Analysing ${collected.length} listings`);
-
-    const analystPrompt = buildAnalystPrompt({
-      suburb,
-      listings: collected,
-      budget: state.investorProfile.budget,
-    });
-
-    const analystResult = await agent.run({
-      system: analystPrompt.system,
-      userMessage: analystPrompt.user,
-      model: analystPrompt.model,
-      maxTokens: analystPrompt.maxTokens,
-      maxSearchUses: analystPrompt.maxSearchUses,
-    });
-
-    const analysed = extractJson(analystResult.text) || [];
-    return {
-      suburb: suburb.name,
-      items: Array.isArray(analysed) ? analysed : [],
-      collected: collected.length,
-      discarded: rawData?.discarded,
-      analysedAt: new Date().toLocaleString('en-AU', { day: '2-digit', month: 'short', hour: '2-digit', minute: '2-digit' }),
-      error: null,
-    };
-  }, [agent, state.investorProfile.budget]);
-
-  const runAll = useCallback(async () => {
-    dispatch({ type: 'STAGE_START', stage: 'listings' });
-    const allResults = { ...results };
-
-    for (const suburb of suburbs) {
-      if (allResults[suburb.name]?.items?.length > 0) continue;
-      try {
-        const result = await scanSuburb(suburb);
-        allResults[suburb.name] = result;
-        setResults({ ...allResults });
-      } catch (err) {
-        allResults[suburb.name] = { suburb: suburb.name, items: [], error: err.message };
-        setResults({ ...allResults });
-      }
-    }
-
-    setActiveSuburb(null);
-    setPhase('');
-    dispatch({ type: 'STAGE_COMPLETE', stage: 'listings', data: allResults });
-  }, [suburbs, results, scanSuburb, dispatch]);
-
-  const totalInvestigate = Object.values(results).reduce((n, r) => n + (r?.items?.filter(l => l.verdict === 'INVESTIGATE').length || 0), 0);
-  const totalMonitor = Object.values(results).reduce((n, r) => n + (r?.items?.filter(l => l.verdict === 'MONITOR').length || 0), 0);
+  const totalInvestigate = allListings.filter(l => l.verdict === 'INVESTIGATE').length;
+  const totalMonitor = allListings.filter(l => l.verdict === 'MONITOR').length;
 
   return (
     <StageShell
       title="Listing Scout"
-      description="AI searches Domain + REA for live listings in selected suburbs"
-      status={stageData.status}
-      error={stageData.error}
-      timestamp={stageData.timestamp}
-      isUnlocked={isUnlocked}
-      isRunning={agent.isRunning}
-      onRun={runAll}
-      onReset={() => {
-        agent.abort();
-        setResults({});
-        dispatch({ type: 'STAGE_RESET', stage: 'listings' });
-      }}
-      onApprove={() => dispatch({ type: 'STAGE_ADVANCE', stage: 'listings' })}
-      onAbort={agent.abort}
+      description="Live listings from Domain/REA with verdicts"
+      status={stage.status}
+      error={stage.error}
+      timestamp={stage.timestamp}
+      isUnlocked={stage.isUnlocked}
+      onLoad={stage.load}
+      onReset={stage.load}
+      onApprove={stage.approve}
     >
       <ErrorBoundary label="Listing Scout">
-        {agent.isRunning && (
-          <LoadingAgent
-            title={`Scanning ${activeSuburb || ''}...`}
-            phase={phase}
-            steps={[
-              { label: 'Collect', status: phase.includes('Agent 2') ? 'done' : 'active' },
-              { label: 'Analyse', status: phase.includes('Agent 2') ? 'active' : 'pending' },
-            ]}
-          />
-        )}
-
-        {Object.keys(results).length > 0 && (
-          <div className="flex gap-8 mb-16" style={{ flexWrap: 'wrap' }}>
-            <div className="info-box info-box--green" style={{ display: 'inline-block' }}>
-              <span className="fw-700" style={{ fontSize: 16 }}>{totalInvestigate}</span> INVESTIGATE
-            </div>
-            <div className="info-box info-box--amber" style={{ display: 'inline-block' }}>
-              <span className="fw-700" style={{ fontSize: 16 }}>{totalMonitor}</span> MONITOR
-            </div>
-          </div>
-        )}
-
-        {Object.entries(results).map(([suburbName, result]) => {
-          if (!result?.items?.length && !result?.error) return null;
-          const inv = result.items?.filter(l => l.verdict === 'INVESTIGATE') || [];
-          const mon = result.items?.filter(l => l.verdict === 'MONITOR') || [];
-
-          return (
-            <div key={suburbName} style={{ marginBottom: 20 }}>
-              <div className="flex justify-between items-center mb-8">
-                <h3 className="text-heading fw-600" style={{ fontSize: 15 }}>{suburbName}</h3>
-                <span className="mono text-xs text-muted">
-                  {result.collected} collected · {inv.length} investigate · {mon.length} monitor
-                  {result.analysedAt && ` · ${result.analysedAt}`}
-                </span>
+        {stage.data && (
+          <>
+            <div className="flex gap-8 mb-16" style={{ flexWrap: 'wrap' }}>
+              <div className="info-box info-box--green" style={{ display: 'inline-block' }}>
+                <span className="fw-700" style={{ fontSize: 16 }}>{totalInvestigate}</span> INVESTIGATE
               </div>
-              {result.error && (
-                <div className="info-box info-box--red mb-8">{result.error}</div>
-              )}
-              {[...inv, ...mon].map((listing, i) => (
-                <ListingCard key={i} listing={listing} />
-              ))}
+              <div className="info-box info-box--amber" style={{ display: 'inline-block' }}>
+                <span className="fw-700" style={{ fontSize: 16 }}>{totalMonitor}</span> MONITOR
+              </div>
             </div>
-          );
-        })}
 
-        {stageData.status === 'idle' && Object.keys(results).length === 0 && (
+            {isKeyed ? (
+              Object.entries(results).map(([suburbName, result]) => {
+                if (!result?.items?.length) return null;
+                const inv = result.items.filter(l => l.verdict === 'INVESTIGATE');
+                const mon = result.items.filter(l => l.verdict === 'MONITOR');
+
+                return (
+                  <div key={suburbName} style={{ marginBottom: 20 }}>
+                    <div className="flex justify-between items-center mb-8">
+                      <h3 className="text-heading fw-600" style={{ fontSize: 15 }}>{suburbName}</h3>
+                      <span className="mono text-xs text-muted">
+                        {result.collected || result.items.length} collected · {inv.length} investigate · {mon.length} monitor
+                      </span>
+                    </div>
+                    {[...inv, ...mon].map((listing, i) => (
+                      <ListingCard key={i} listing={listing} />
+                    ))}
+                  </div>
+                );
+              })
+            ) : (
+              allListings.map((listing, i) => (
+                <ListingCard key={i} listing={listing} />
+              ))
+            )}
+          </>
+        )}
+
+        {stage.status === 'idle' && !stage.data && (
           <div className="loading-agent">
             <div className="loading-agent__icon">🔍</div>
-            <div className="loading-agent__title">Ready to scout listings</div>
+            <div className="loading-agent__title">No listing data yet</div>
             <div className="loading-agent__phase">
-              Requires Suburb Deep Dive (Stage 3) with selected suburbs.<br />
-              Agent 1 collects from Domain/REA. Agent 2 filters to INVESTIGATE/MONITOR.
+              Ask Claude Code: "run listing scout"<br />
+              Then click "Load Data" to display results.
             </div>
           </div>
         )}
