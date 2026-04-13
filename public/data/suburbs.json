@@ -2265,7 +2265,638 @@
         "Regional VIC slowing"
       ],
       "stampDutyNote": "At $550k: VIC stamp ~$22k, total ~$88k \u2014 fits but growth upside poor. Pass in favour of WA regional."
+    },
+    {
+      "name": "Kirwan",
+      "state": "QLD",
+      "postcode": "4817",
+      "lga": "Townsville City",
+      "region": "QLD \u2014 Townsville",
+      "medianHouse": 550000,
+      "medianRentWeekly": 530,
+      "quant": {
+        "dom": {
+          "value": 11,
+          "score": 94,
+          "source": "htag.com.au"
+        },
+        "vacancy": {
+          "value": 0.5,
+          "score": 98,
+          "source": "SQM Feb 2026"
+        },
+        "yield": {
+          "value": 5.01,
+          "score": 78,
+          "source": "htag.com.au"
+        },
+        "priceGrowth": {
+          "value": 28.2,
+          "score": 98,
+          "source": "htag.com.au"
+        },
+        "supplyOnMarket": {
+          "value": 0.3,
+          "score": 88,
+          "source": "htag.com.au"
+        },
+        "vendorDiscount": {
+          "value": -0.5,
+          "score": 62,
+          "source": "htag.com.au"
+        },
+        "renterPercent": {
+          "value": 30,
+          "score": 80,
+          "source": "ABS Census"
+        },
+        "unitToHouseRatio": {
+          "value": 5,
+          "score": 95,
+          "source": "ABS"
+        },
+        "auctionClearance": {
+          "value": null,
+          "score": null,
+          "source": "N/A Townsville"
+        }
+      },
+      "compositeScore": 88,
+      "qual": {
+        "infrastructure": [
+          {
+            "name": "Lavarack Barracks Defence Expansion",
+            "type": "defence",
+            "status": "under-construction",
+            "expectedCompletion": "2028",
+            "delayMonths": null,
+            "investmentAud": 2000000000,
+            "impactRating": "high",
+            "source": "defence.gov.au",
+            "notes": "$2B+ defence investment. Largest army base in Australia. Drives population + rental demand."
+          },
+          {
+            "name": "CopperString 2032",
+            "type": "energy",
+            "status": "under-construction",
+            "expectedCompletion": "2029",
+            "delayMonths": null,
+            "investmentAud": 5000000000,
+            "impactRating": "high",
+            "source": "copperstring.com.au",
+            "notes": "$5B transmission line connecting NW QLD minerals province. Construction jobs + long-term economic diversification."
+          },
+          {
+            "name": "Townsville Port Expansion",
+            "type": "commercial",
+            "status": "under-construction",
+            "expectedCompletion": "2027",
+            "delayMonths": null,
+            "investmentAud": 232000000,
+            "impactRating": "medium",
+            "source": "portoftownsville.com.au",
+            "notes": "Channel widening + new berths. Supports export growth."
+          }
+        ],
+        "crime": {
+          "overallRating": "moderate",
+          "trend": "stable",
+          "notableTypes": [
+            "property crime above state avg in some pockets",
+            "youth crime perception"
+          ],
+          "comparisonToState": "average",
+          "source": "QLD Police 2025"
+        },
+        "publicHousing": {
+          "existingNearby": true,
+          "plannedNearby": false,
+          "concentration": "low",
+          "details": "Some scattered public housing but not dominant",
+          "source": "QLD Housing"
+        },
+        "schools": {
+          "primary": [
+            {
+              "name": "Kirwan State School",
+              "rating": "Good",
+              "distance": "1km"
+            }
+          ],
+          "secondary": [
+            {
+              "name": "Kirwan SHS",
+              "rating": "Good",
+              "distance": "2km"
+            }
+          ],
+          "overallQuality": "good",
+          "source": "MySchool"
+        },
+        "hazards": {
+          "flood": {
+            "risk": "medium",
+            "zone": "Some areas flood-prone (Ross River)",
+            "source": "TCC flood maps"
+          },
+          "bushfire": {
+            "risk": "low",
+            "zone": null,
+            "source": "QFES"
+          },
+          "coastal": {
+            "risk": "low",
+            "source": "inland suburb"
+          }
+        },
+        "zoning": {
+          "currentZoning": "Low density residential",
+          "densificationPotential": "low",
+          "recentRezonings": null,
+          "councilPlan": "townsville.qld.gov.au",
+          "source": "TCC"
+        },
+        "developmentApps": [],
+        "demographics": {
+          "medianAge": 34,
+          "trend": "young families + defence",
+          "householdType": "families dominant",
+          "irsad": 980,
+          "source": "ABS Census 2021"
+        },
+        "rentalDemand": {
+          "tenantTypes": "Defence personnel, FIFO, young families, healthcare workers",
+          "marketDepth": "deep \u2014 400+ sales/yr",
+          "source": "REIQ"
+        },
+        "connectivity": {
+          "nbn": "FTTP/FTTC",
+          "publicTransport": "Bus network (no rail)",
+          "cbdDistance": "10km",
+          "source": "NBN"
+        },
+        "noise": {
+          "flightPath": true,
+          "highway": false,
+          "industrial": false,
+          "notes": "Townsville Airport flight path affects eastern suburbs. Check specific street."
+        }
+      },
+      "forward": {
+        "cycleStage": "MID",
+        "bear": 15,
+        "base": 35,
+        "bull": 55,
+        "horizon": "5yr to 2031",
+        "drivers": [
+          "+28% growth momentum",
+          "$2B+ defence spending (Lavarack)",
+          "$5B CopperString 2032",
+          "Port expansion",
+          "Vacancy 0.5% extremely tight",
+          "DOM 11 days"
+        ],
+        "risks": [
+          "Cyclone risk (Cat 3+ every ~10yr)",
+          "QLD land tax on 2nd property (~$0-1,500/yr)",
+          "Mining cycle sensitivity",
+          "Youth crime perception",
+          "Distance from capital"
+        ],
+        "analystViews": [
+          "Propertyology: Townsville top pick 2026",
+          "InvestorKit: continued double-digit growth",
+          "htag: 28.2% annual growth",
+          "Keir Constructions: defence-driven demand"
+        ],
+        "consensus": "Strongest growth momentum in Australia right now. Defence spending provides structural floor. Land tax cost ($0-1,500/yr) is trivial vs 28% growth on $550k. Cyclone risk is real but insurable. Base case 35% over 5yr."
+      },
+      "verdict": "STRONG BUY",
+      "topSignals": [
+        "Growth +28.2% \u2014 highest in AU",
+        "DOM 11 days \u2014 instant demand",
+        "Vacancy 0.5%",
+        "$2B defence spending",
+        "$5B CopperString",
+        "Entry $550k \u2014 huge budget headroom"
+      ],
+      "watchPoints": [
+        "QLD land tax ~$1,500/yr (2nd QLD property)",
+        "Cyclone risk",
+        "Flight path eastern streets",
+        "Ross River flood zones \u2014 check specific address"
+      ],
+      "stampDutyNote": "At $550k: QLD stamp ~$17k, total costs ~$72k \u2014 massive $38k buffer. Land tax ~$0-1,500/yr on 2nd QLD property."
+    },
+    {
+      "name": "Munno Para",
+      "state": "SA",
+      "postcode": "5115",
+      "lga": "City of Playford",
+      "region": "SA \u2014 Adelaide north/south",
+      "medianHouse": 610000,
+      "medianRentWeekly": 550,
+      "quant": {
+        "dom": {
+          "value": 20,
+          "score": 82,
+          "source": "htag.com.au"
+        },
+        "vacancy": {
+          "value": 1.0,
+          "score": 90,
+          "source": "SQM Feb 2026"
+        },
+        "yield": {
+          "value": 4.6,
+          "score": 65,
+          "source": "htag.com.au"
+        },
+        "priceGrowth": {
+          "value": 6.09,
+          "score": 55,
+          "source": "htag.com.au"
+        },
+        "supplyOnMarket": {
+          "value": 0.5,
+          "score": 75,
+          "source": "Cotality"
+        },
+        "vendorDiscount": {
+          "value": -1.0,
+          "score": 68,
+          "source": "Cotality"
+        },
+        "renterPercent": {
+          "value": 32,
+          "score": 75,
+          "source": "ABS Census"
+        },
+        "unitToHouseRatio": {
+          "value": 8,
+          "score": 88,
+          "source": "ABS"
+        },
+        "auctionClearance": {
+          "value": 72,
+          "score": 82,
+          "source": "Domain"
+        }
+      },
+      "compositeScore": 74,
+      "qual": {
+        "infrastructure": [
+          {
+            "name": "Gawler Line Electrification",
+            "type": "transport",
+            "status": "completed",
+            "expectedCompletion": "2024",
+            "delayMonths": null,
+            "investmentAud": 860000000,
+            "impactRating": "high",
+            "source": "dit.sa.gov.au",
+            "notes": "Electric trains serve northern corridor. Commute improvement to CBD."
+          },
+          {
+            "name": "Edinburgh Parks Defence/Industrial Precinct",
+            "type": "commercial",
+            "status": "under-construction",
+            "expectedCompletion": "ongoing",
+            "delayMonths": null,
+            "investmentAud": 2000000000,
+            "impactRating": "high",
+            "source": "SA Gov",
+            "notes": "$2B+ defence industry precinct driving employment in northern Adelaide."
+          },
+          {
+            "name": "Northern Connector Motorway",
+            "type": "road",
+            "status": "completed",
+            "expectedCompletion": "2020",
+            "delayMonths": null,
+            "investmentAud": 985000000,
+            "impactRating": "high",
+            "source": "dit.sa.gov.au",
+            "notes": "15.5km motorway connecting northern suburbs to CBD/port. Already delivered."
+          }
+        ],
+        "crime": {
+          "overallRating": "moderate",
+          "trend": "stable",
+          "notableTypes": [
+            "Playford LGA historically higher than metro avg"
+          ],
+          "comparisonToState": "above-average",
+          "source": "SAPOL 2025"
+        },
+        "publicHousing": {
+          "existingNearby": true,
+          "plannedNearby": false,
+          "concentration": "moderate",
+          "details": "Playford Alive renewal reducing concentration gradually",
+          "source": "Renewal SA"
+        },
+        "schools": {
+          "primary": [
+            {
+              "name": "Munno Para Primary",
+              "rating": "Average",
+              "distance": "1km"
+            }
+          ],
+          "secondary": [
+            {
+              "name": "Mark Oliphant College",
+              "rating": "Average",
+              "distance": "3km"
+            }
+          ],
+          "overallQuality": "average",
+          "source": "MySchool"
+        },
+        "hazards": {
+          "flood": {
+            "risk": "low",
+            "zone": null,
+            "source": "SA Planning"
+          },
+          "bushfire": {
+            "risk": "low",
+            "zone": null,
+            "source": "CFS"
+          },
+          "coastal": {
+            "risk": "n/a",
+            "source": "inland"
+          }
+        },
+        "zoning": {
+          "currentZoning": "General Neighbourhood",
+          "densificationPotential": "medium",
+          "recentRezonings": null,
+          "councilPlan": "playford.sa.gov.au",
+          "source": "City of Playford"
+        },
+        "developmentApps": [],
+        "demographics": {
+          "medianAge": 32,
+          "trend": "young families growing",
+          "householdType": "families",
+          "irsad": 870,
+          "source": "ABS Census 2021"
+        },
+        "rentalDemand": {
+          "tenantTypes": "Defence workers, families, essential workers",
+          "marketDepth": "deep",
+          "source": "REISA"
+        },
+        "connectivity": {
+          "nbn": "FTTP (new estates)",
+          "publicTransport": "Munno Para train (electrified)",
+          "cbdDistance": "35km",
+          "source": "NBN/Adelaide Metro"
+        },
+        "noise": {
+          "flightPath": false,
+          "highway": false,
+          "industrial": false,
+          "notes": "Quiet residential"
+        }
+      },
+      "forward": {
+        "cycleStage": "EARLY-MID",
+        "bear": 10,
+        "base": 25,
+        "bull": 40,
+        "horizon": "5yr to 2031",
+        "drivers": [
+          "$610k entry \u2014 budget headroom",
+          "Edinburgh Parks defence jobs",
+          "Electrified train",
+          "Northern Connector motorway",
+          "Adelaide supply shortage"
+        ],
+        "risks": [
+          "IRSAD 870 lower",
+          "Playford LGA crime moderate",
+          "Growth slower (6%) vs WA/QLD",
+          "SA stamp duty higher than WA/QLD"
+        ],
+        "analystViews": [
+          "KPMG: Adelaide +8.2% 2026",
+          "Aussie: SA +6-9%",
+          "htag: Munno Para 6.09% annual"
+        ],
+        "consensus": "Solid SA diversification play. Not the highest growth but electrified train + defence precinct provide structural demand. Lower IRSAD is a concern. Base case 22-28% over 5yr."
+      },
+      "verdict": "BUY",
+      "topSignals": [
+        "$610k entry \u2014 fits budget easily",
+        "Electrified train",
+        "$2B Edinburgh Parks defence",
+        "Vacancy 1.0% tight",
+        "Northern Connector motorway"
+      ],
+      "watchPoints": [
+        "IRSAD 870",
+        "Playford LGA crime",
+        "Growth 6% below WA/QLD",
+        "Public housing pockets"
+      ],
+      "stampDutyNote": "At $610k: SA stamp ~$23k, total costs ~$85k \u2014 comfortable fit."
+    },
+    {
+      "name": "Cranbourne West",
+      "state": "VIC",
+      "postcode": "3977",
+      "lga": "City of Casey",
+      "region": "VIC \u2014 Melbourne outer",
+      "medianHouse": 695000,
+      "medianRentWeekly": 590,
+      "quant": {
+        "dom": {
+          "value": 26,
+          "score": 70,
+          "source": "htag.com.au"
+        },
+        "vacancy": {
+          "value": 1.82,
+          "score": 62,
+          "source": "SQM"
+        },
+        "yield": {
+          "value": 4.2,
+          "score": 55,
+          "source": "htag.com.au"
+        },
+        "priceGrowth": {
+          "value": 4.35,
+          "score": 52,
+          "source": "htag.com.au"
+        },
+        "supplyOnMarket": {
+          "value": 0.8,
+          "score": 65,
+          "source": "Cotality"
+        },
+        "vendorDiscount": {
+          "value": -2.0,
+          "score": 78,
+          "source": "Cotality"
+        },
+        "renterPercent": {
+          "value": 30,
+          "score": 80,
+          "source": "ABS Census"
+        },
+        "unitToHouseRatio": {
+          "value": 10,
+          "score": 85,
+          "source": "ABS"
+        },
+        "auctionClearance": {
+          "value": 62,
+          "score": 68,
+          "source": "Domain"
+        }
+      },
+      "compositeScore": 63,
+      "qual": {
+        "infrastructure": [
+          {
+            "name": "Cranbourne Line Upgrade (Level Crossing Removals)",
+            "type": "transport",
+            "status": "completed",
+            "expectedCompletion": "2024",
+            "delayMonths": null,
+            "investmentAud": 740000000,
+            "impactRating": "high",
+            "source": "levelcrossings.vic.gov.au",
+            "notes": "Level crossings removed, new stations. Already delivered."
+          }
+        ],
+        "crime": {
+          "overallRating": "moderate",
+          "trend": "stable",
+          "notableTypes": [
+            "Casey LGA higher than metro in some categories"
+          ],
+          "comparisonToState": "above-average",
+          "source": "Victoria Police"
+        },
+        "publicHousing": {
+          "existingNearby": false,
+          "plannedNearby": false,
+          "concentration": "low",
+          "details": "Mostly new estates",
+          "source": "Homes Victoria"
+        },
+        "schools": {
+          "primary": [
+            {
+              "name": "Cranbourne West Primary",
+              "rating": "Average",
+              "distance": "1km"
+            }
+          ],
+          "secondary": [
+            {
+              "name": "Cranbourne Secondary",
+              "rating": "Average",
+              "distance": "3km"
+            }
+          ],
+          "overallQuality": "average",
+          "source": "MySchool"
+        },
+        "hazards": {
+          "flood": {
+            "risk": "low",
+            "zone": null,
+            "source": "VicPlan"
+          },
+          "bushfire": {
+            "risk": "low",
+            "zone": null,
+            "source": "CFA"
+          },
+          "coastal": {
+            "risk": "n/a",
+            "source": "inland"
+          }
+        },
+        "zoning": {
+          "currentZoning": "General Residential",
+          "densificationPotential": "low",
+          "recentRezonings": null,
+          "councilPlan": "casey.vic.gov.au",
+          "source": "City of Casey"
+        },
+        "developmentApps": [],
+        "demographics": {
+          "medianAge": 31,
+          "trend": "young families fastest-growing",
+          "householdType": "young families",
+          "irsad": 990,
+          "source": "ABS Census 2021"
+        },
+        "rentalDemand": {
+          "tenantTypes": "Young families, first home buyers renting",
+          "marketDepth": "deep",
+          "source": "REIV"
+        },
+        "connectivity": {
+          "nbn": "FTTP (new estates)",
+          "publicTransport": "Cranbourne train (upgraded)",
+          "cbdDistance": "50km",
+          "source": "NBN/PTV"
+        },
+        "noise": {
+          "flightPath": false,
+          "highway": true,
+          "industrial": false,
+          "notes": "South Gippsland Highway proximity"
+        }
+      },
+      "forward": {
+        "cycleStage": "EARLY-MID",
+        "bear": 5,
+        "base": 18,
+        "bull": 30,
+        "horizon": "5yr to 2031",
+        "drivers": [
+          "Fastest-growing VIC LGA",
+          "Upgraded train line",
+          "Young family demand",
+          "Sub-$700k entry"
+        ],
+        "risks": [
+          "VIC stamp duty + investor surcharge",
+          "Melbourne lagging nationally 4-5% vs 10-28%",
+          "Vacancy 1.82% less tight than WA/QLD",
+          "Growth ceiling lower"
+        ],
+        "analystViews": [
+          "KPMG: Melbourne +6.6% 2026",
+          "Domain: Casey corridor growing"
+        ],
+        "consensus": "Affordable VIC entry but growth ceiling significantly lower than WA/QLD alternatives. Only pursue if geographic diversification into VIC is a priority. Base case 15-20% over 5yr."
+      },
+      "verdict": "WATCH",
+      "topSignals": [
+        "Sub-$700k entry",
+        "Young family demographics",
+        "Upgraded train",
+        "IRSAD 990 decent"
+      ],
+      "watchPoints": [
+        "VIC stamp duty + surcharge ($35-43k)",
+        "Growth 4.35% vs QLD 28%",
+        "Vacancy 1.82%",
+        "Melbourne underperforming nationally"
+      ],
+      "stampDutyNote": "At $695k: VIC stamp ~$37k + surcharge ~$10k = total costs ~$112k \u2014 EXCEEDS $110k cash. Need lower price point or more cash."
     }
   ],
-  "summary": "11 suburbs analyzed across 7 regions. Top BUY picks: Armadale WA (Metronet catalyst, $600k, score 81), Mandurah WA (momentum +23.7%, $575k, score 85), Geraldton WA (highest growth, $473k, score 84), Baldivis WA (master-planned, $750k, score 82), Albany WA (diversified regional, $550k, score 83), Wellard WA (train station, $710k, score 81), Gawler SA (43k homes pipeline, $637k, score 79). WATCH: Salisbury Downs (high crime flag), Melton VIC (affordable but VIC stamp duty). CAUTION: Mount Gambier (regional liquidity), Ballarat (slow growth). For $800k budget targeting growth + WA/SA diversification: Armadale or Mandurah offer best combination of price, growth upside, and infrastructure catalysts. Gawler is the standout SA option. Avoid Davoren Park/Elizabeth area (high crime, low IRSAD)."
+  "summary": "14 suburbs analyzed across 4 states (WA, QLD, SA, VIC). STRONG BUY: Kirwan QLD (score 88, +28% growth, $550k entry, defence spending). BUY: Baldivis WA (82), Wellard WA (81), Armadale WA (81), Mandurah WA (85), Gawler SA (79), Munno Para SA (74). WATCH: Salisbury Downs SA (74, crime flag), Cranbourne West VIC (63). CAUTION: Mt Gambier SA (70), Ballarat VIC (60). Portfolio strategy: QLD (Kirwan) for max growth + WA (Perth mid/outer) for strong growth + SA (Munno Para/Gawler) for diversification. VIC optional \u2014 weakest growth but cheapest entry."
 }
