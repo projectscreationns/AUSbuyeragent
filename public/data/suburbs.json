@@ -198,7 +198,37 @@
         "Yield 4.62% below 5%",
         "Growth may decelerate"
       ],
-      "stampDutyNote": "At $750k: stamp ~$26k, total ~$95k \u2014 fits $110k comfortably"
+      "stampDutyNote": "At $750k: stamp ~$26k, total ~$95k \u2014 fits $110k comfortably",
+      "riskFilter": {
+        "supplyRisk": {
+          "rating": "MEDIUM",
+          "reason": "Southern Perth growth corridor has ongoing land releases in adjacent suburbs (Secret Harbour, Singleton). Baldivis itself maturing.",
+          "source": "Rockingham Council"
+        },
+        "demandRisk": {
+          "rating": "LOW",
+          "reason": "Perth metro diversified + FIFO workforce",
+          "source": "ABS"
+        },
+        "infrastructureRisk": {
+          "rating": "LOW",
+          "reason": "Kwinana Freeway upgrade announced ($700M), construction 2027",
+          "source": "infrastructurepipeline.org"
+        },
+        "cycleRisk": {
+          "rating": "LOW",
+          "reason": "Sustainable 11% growth",
+          "source": "REIWA"
+        },
+        "liquidityRisk": {
+          "rating": "LOW",
+          "reason": "Deep market 200+ sales/yr",
+          "source": "REIWA"
+        },
+        "overallRisk": "LOW",
+        "downgradeVerdict": false,
+        "riskNote": "Some southern corridor greenfield but Baldivis itself mostly built out. Strong master-planned community."
+      }
     },
     {
       "name": "Wellard",
@@ -407,7 +437,37 @@
         "Average schools",
         "IRSAD 960 modest"
       ],
-      "stampDutyNote": "At $710k: stamp ~$23k, total ~$85k \u2014 very comfortable fit"
+      "stampDutyNote": "At $710k: stamp ~$23k, total ~$85k \u2014 very comfortable fit",
+      "riskFilter": {
+        "supplyRisk": {
+          "rating": "MEDIUM",
+          "reason": "Newer estate, still developing. Kwinana greenfield nearby.",
+          "source": "City of Kwinana"
+        },
+        "demandRisk": {
+          "rating": "LOW",
+          "reason": "Perth metro + industrial workforce",
+          "source": "ABS"
+        },
+        "infrastructureRisk": {
+          "rating": "LOW",
+          "reason": "Wellard train station operational",
+          "source": "PTA WA"
+        },
+        "cycleRisk": {
+          "rating": "LOW",
+          "reason": "Steady growth",
+          "source": ""
+        },
+        "liquidityRisk": {
+          "rating": "MEDIUM",
+          "reason": "Medium depth",
+          "source": ""
+        },
+        "overallRisk": "LOW-MEDIUM",
+        "downgradeVerdict": false,
+        "riskNote": "Slightly higher supply risk than Armadale but still Perth metro."
+      }
     },
     {
       "name": "Armadale",
@@ -610,7 +670,37 @@
         "Bushfire risk eastern areas",
         "Public housing pockets"
       ],
-      "stampDutyNote": "At $600k: stamp ~$18k, total ~$72k \u2014 huge cash buffer remains"
+      "stampDutyNote": "At $600k: stamp ~$18k, total ~$72k \u2014 huge cash buffer remains",
+      "riskFilter": {
+        "supplyRisk": {
+          "rating": "LOW",
+          "reason": "Established suburb. Only infill development (small apartment buildings near station). No greenfield.",
+          "source": "City of Armadale + DevelopmentWA"
+        },
+        "demandRisk": {
+          "rating": "LOW",
+          "reason": "Perth metro diversified",
+          "source": "ABS"
+        },
+        "infrastructureRisk": {
+          "rating": "LOW",
+          "reason": "Metronet Byford COMPLETE Oct 2025 \u2014 catalyst actively unfolding",
+          "source": "metronet.wa.gov.au"
+        },
+        "cycleRisk": {
+          "rating": "LOW",
+          "reason": "Sustainable 13% growth, still early in cycle",
+          "source": "REIWA"
+        },
+        "liquidityRisk": {
+          "rating": "LOW",
+          "reason": "Deep Perth metro market",
+          "source": "REIWA"
+        },
+        "overallRisk": "LOW",
+        "downgradeVerdict": false,
+        "riskNote": "LOW all dimensions. Established suburb + completed Metronet + Perth supply shortage = strongest WA pick."
+      }
     },
     {
       "name": "Mandurah",
@@ -823,7 +913,37 @@
         "Estuary flood zones \u2014 check specific street",
         "Growth may moderate"
       ],
-      "stampDutyNote": "At $575k: stamp ~$16k, total ~$68k \u2014 excellent buffer"
+      "stampDutyNote": "At $575k: stamp ~$16k, total ~$68k \u2014 excellent buffer",
+      "riskFilter": {
+        "supplyRisk": {
+          "rating": "LOW",
+          "reason": "Established coastal regional. Limited new supply, mostly infill.",
+          "source": "City of Mandurah"
+        },
+        "demandRisk": {
+          "rating": "MEDIUM",
+          "reason": "Retiree-heavy but young families growing. Peel Business Park adds diversification.",
+          "source": "ABS"
+        },
+        "infrastructureRisk": {
+          "rating": "LOW",
+          "reason": "Train station operational, Peel Business Park under construction",
+          "source": ""
+        },
+        "cycleRisk": {
+          "rating": "HIGH",
+          "reason": "Post +23.66% spike. Significant moderation expected.",
+          "source": ""
+        },
+        "liquidityRisk": {
+          "rating": "LOW",
+          "reason": "318 sales/yr",
+          "source": ""
+        },
+        "overallRisk": "MEDIUM",
+        "downgradeVerdict": false,
+        "riskNote": "Post-spike momentum risk. Decent fundamentals but expect growth to moderate to 5-10% after 23% surge."
+      }
     },
     {
       "name": "Gawler",
@@ -1036,7 +1156,37 @@
         "Oversupply risk 2030+",
         "Bushfire fringe"
       ],
-      "stampDutyNote": "At $637k: stamp ~$24k, total ~$95k \u2014 comfortable fit within $110k cash"
+      "stampDutyNote": "At $637k: stamp ~$24k, total ~$95k \u2014 comfortable fit within $110k cash",
+      "riskFilter": {
+        "supplyRisk": {
+          "rating": "HIGH",
+          "reason": "Active greenfield: Springwood Estate, Woodvale Estate (45 lots Stage 6), Fairview Rise PLUS 350 homes approved at Gawler Belt. 43,800 homes unlocked within 5km at Two Wells/Roseworthy.",
+          "source": "https://www.premier.sa.gov.au/media-releases/news-archive/rezoning-for-350-homes-near-gawler"
+        },
+        "demandRisk": {
+          "rating": "MEDIUM",
+          "reason": "Northern Adelaide employment growing (defence, healthcare) but still commuter-dependent",
+          "source": "ABS labour force"
+        },
+        "infrastructureRisk": {
+          "rating": "LOW",
+          "reason": "Gawler Line electrification COMPLETE. Northern Connector COMPLETE.",
+          "source": "dit.sa.gov.au"
+        },
+        "cycleRisk": {
+          "rating": "HIGH",
+          "reason": "Post +13.9% CAGR spike. Incoming 43,800 homes = major supply correction risk 2027-2030.",
+          "source": "Cotality + SA Gov"
+        },
+        "liquidityRisk": {
+          "rating": "LOW",
+          "reason": "150+ sales/yr, deep market",
+          "source": "REISA"
+        },
+        "overallRisk": "HIGH",
+        "downgradeVerdict": true,
+        "riskNote": "MAJOR SUPPLY RISK: 43,800 new dwellings being built within 5km as the urban growth boundary has been removed. Growth of 13.9% in past year is unlikely to continue \u2014 post-spike correction highly likely 2027-2030. Only pursue if you have exceptional value-add (e.g. genuinely subdividable block in R20+ zoning)."
+      }
     },
     {
       "name": "Salisbury Downs",
@@ -1242,7 +1392,37 @@
         "Below-avg schools",
         "Moderate public housing concentration"
       ],
-      "stampDutyNote": "At $680k: stamp ~$26k, total ~$97k \u2014 fits but risks outweigh savings. Consider Gawler instead."
+      "stampDutyNote": "At $680k: stamp ~$26k, total ~$97k \u2014 fits but risks outweigh savings. Consider Gawler instead.",
+      "riskFilter": {
+        "supplyRisk": {
+          "rating": "MEDIUM",
+          "reason": "Smithfield/Elizabeth corridor has 4.15% BA Ratio (oversupply warning)",
+          "source": "htag.com.au"
+        },
+        "demandRisk": {
+          "rating": "MEDIUM",
+          "reason": "Edinburgh Parks defence jobs mitigate, but IRSAD 820 = lower socio-economic",
+          "source": "ABS"
+        },
+        "infrastructureRisk": {
+          "rating": "LOW",
+          "reason": "Electrified train delivered",
+          "source": "dit.sa.gov.au"
+        },
+        "cycleRisk": {
+          "rating": "MEDIUM",
+          "reason": "Post 15.7% SA3 growth spike, moderation expected",
+          "source": "Cotality"
+        },
+        "liquidityRisk": {
+          "rating": "LOW",
+          "reason": "Deep market",
+          "source": "REISA"
+        },
+        "overallRisk": "MEDIUM-HIGH",
+        "downgradeVerdict": true,
+        "riskNote": "MEDIUM supply + HIGH crime (already flagged) + IRSAD 820 = better Adelaide alternatives exist. Do not target this suburb."
+      }
     },
     {
       "name": "Geraldton",
@@ -1455,7 +1635,37 @@
         "Small buyer pool on exit",
         "Coastal erosion west"
       ],
-      "stampDutyNote": "At $473k: stamp ~$14k, total ~$58k \u2014 massive cash buffer. Can afford building inspection risk."
+      "stampDutyNote": "At $473k: stamp ~$14k, total ~$58k \u2014 massive cash buffer. Can afford building inspection risk.",
+      "riskFilter": {
+        "supplyRisk": {
+          "rating": "LOW",
+          "reason": "Regional coastal, limited new supply",
+          "source": ""
+        },
+        "demandRisk": {
+          "rating": "HIGH",
+          "reason": "Mining + port + agriculture. Regional single-industry cluster.",
+          "source": "ABS"
+        },
+        "infrastructureRisk": {
+          "rating": "MEDIUM",
+          "reason": "Oakajee green hydrogen is PROPOSED (not under construction) \u2014 may not deliver",
+          "source": "WA Gov"
+        },
+        "cycleRisk": {
+          "rating": "HIGH",
+          "reason": "Post +24.47% spike",
+          "source": ""
+        },
+        "liquidityRisk": {
+          "rating": "MEDIUM",
+          "reason": "100+ sales/yr regional depth",
+          "source": ""
+        },
+        "overallRisk": "MEDIUM-HIGH",
+        "downgradeVerdict": true,
+        "riskNote": "Regional speculation \u2014 Oakajee not confirmed. Post-24% spike. Smaller buyer pool on exit."
+      }
     },
     {
       "name": "Albany",
@@ -1660,7 +1870,37 @@
         "Bushfire fringe",
         "Smaller growth upside vs Geraldton"
       ],
-      "stampDutyNote": "At $550k: stamp ~$20k, total ~$75k \u2014 excellent cash buffer"
+      "stampDutyNote": "At $550k: stamp ~$20k, total ~$75k \u2014 excellent cash buffer",
+      "riskFilter": {
+        "supplyRisk": {
+          "rating": "LOW",
+          "reason": "Established regional",
+          "source": ""
+        },
+        "demandRisk": {
+          "rating": "LOW",
+          "reason": "Diversified: healthcare, agriculture, tourism, port",
+          "source": "ABS"
+        },
+        "infrastructureRisk": {
+          "rating": "LOW",
+          "reason": "Ring Road complete, hospital expansion under construction",
+          "source": ""
+        },
+        "cycleRisk": {
+          "rating": "HIGH",
+          "reason": "Post +23.3% spike",
+          "source": ""
+        },
+        "liquidityRisk": {
+          "rating": "MEDIUM",
+          "reason": "Regional market",
+          "source": ""
+        },
+        "overallRisk": "MEDIUM",
+        "downgradeVerdict": false,
+        "riskNote": "Diversified regional is more resilient than Geraldton but post-spike moderation likely."
+      }
     },
     {
       "name": "Melton",
@@ -1867,7 +2107,37 @@
         "Moderate crime",
         "Growth < Perth/Adelaide"
       ],
-      "stampDutyNote": "At $510k: VIC stamp ~$21k, total costs ~$83k \u2014 fits $110k. BUT growth ceiling lower than WA alternatives."
+      "stampDutyNote": "At $510k: VIC stamp ~$21k, total costs ~$83k \u2014 fits $110k. BUT growth ceiling lower than WA alternatives.",
+      "riskFilter": {
+        "supplyRisk": {
+          "rating": "HIGH",
+          "reason": "Melton is Victoria's fastest-growing LGA \u2014 massive greenfield release ongoing across Melton South, Kurunjang, Weir Views",
+          "source": "City of Melton"
+        },
+        "demandRisk": {
+          "rating": "MEDIUM",
+          "reason": "Commuter-dependent, VIC economy weaker than WA/QLD",
+          "source": ""
+        },
+        "infrastructureRisk": {
+          "rating": "HIGH",
+          "reason": "Melton rail electrification still PROPOSED (federal funding uncertain, 2030+)",
+          "source": "dtp.vic.gov.au"
+        },
+        "cycleRisk": {
+          "rating": "MEDIUM",
+          "reason": "Modest 8.5% growth, VIC market lagging",
+          "source": ""
+        },
+        "liquidityRisk": {
+          "rating": "LOW",
+          "reason": "Deep market",
+          "source": ""
+        },
+        "overallRisk": "HIGH",
+        "downgradeVerdict": true,
+        "riskNote": "HIGH supply (fastest-growing VIC LGA) + HIGH infra risk (rail not funded) + VIC stamp duty surcharge = avoid."
+      }
     },
     {
       "name": "Mount Gambier",
@@ -2059,7 +2329,37 @@
         "Low liquidity",
         "Forestry fringe bushfire"
       ],
-      "stampDutyNote": "At $530k: stamp ~$20k, total ~$80k \u2014 affordable. But growth upside limited vs WA regional."
+      "stampDutyNote": "At $530k: stamp ~$20k, total ~$80k \u2014 affordable. But growth upside limited vs WA regional.",
+      "riskFilter": {
+        "supplyRisk": {
+          "rating": "LOW",
+          "reason": "Regional, limited greenfield",
+          "source": "Mt Gambier Council"
+        },
+        "demandRisk": {
+          "rating": "HIGH",
+          "reason": "Forestry-dependent single-industry regional town",
+          "source": "ABS"
+        },
+        "infrastructureRisk": {
+          "rating": "LOW",
+          "reason": "Regional hospital upgrade under construction",
+          "source": "SA Health"
+        },
+        "cycleRisk": {
+          "rating": "LOW",
+          "reason": "Steady moderate growth",
+          "source": ""
+        },
+        "liquidityRisk": {
+          "rating": "MEDIUM",
+          "reason": "Regional market ~100 sales/yr",
+          "source": ""
+        },
+        "overallRisk": "MEDIUM",
+        "downgradeVerdict": false,
+        "riskNote": "Single-industry regional risk. Better options elsewhere for growth but reasonable if you value stability."
+      }
     },
     {
       "name": "Ballarat Central",
@@ -2264,7 +2564,37 @@
         "Vacancy 1.8% higher",
         "Regional VIC slowing"
       ],
-      "stampDutyNote": "At $550k: VIC stamp ~$22k, total ~$88k \u2014 fits but growth upside poor. Pass in favour of WA regional."
+      "stampDutyNote": "At $550k: VIC stamp ~$22k, total ~$88k \u2014 fits but growth upside poor. Pass in favour of WA regional.",
+      "riskFilter": {
+        "supplyRisk": {
+          "rating": "LOW",
+          "reason": "Established heritage city, limited greenfield in central",
+          "source": ""
+        },
+        "demandRisk": {
+          "rating": "LOW",
+          "reason": "Diversified: gov, education, healthcare",
+          "source": ""
+        },
+        "infrastructureRisk": {
+          "rating": "LOW",
+          "reason": "Rail duplication complete",
+          "source": ""
+        },
+        "cycleRisk": {
+          "rating": "LOW",
+          "reason": "Steady moderate 5% growth",
+          "source": ""
+        },
+        "liquidityRisk": {
+          "rating": "LOW",
+          "reason": "Regional city depth",
+          "source": ""
+        },
+        "overallRisk": "LOW-MEDIUM",
+        "downgradeVerdict": false,
+        "riskNote": "Stable but slow. VIC stamp duty kills returns vs WA/QLD alternatives."
+      }
     },
     {
       "name": "Kirwan",
@@ -2486,7 +2816,37 @@
         "Flight path eastern streets",
         "Ross River flood zones \u2014 check specific address"
       ],
-      "stampDutyNote": "At $550k: QLD stamp ~$17k, total costs ~$72k \u2014 massive $38k buffer. Land tax ~$0-1,500/yr on 2nd QLD property."
+      "stampDutyNote": "At $550k: QLD stamp ~$17k, total costs ~$72k \u2014 massive $38k buffer. Land tax ~$0-1,500/yr on 2nd QLD property.",
+      "riskFilter": {
+        "supplyRisk": {
+          "rating": "LOW",
+          "reason": "Kirwan is ESTABLISHED. New supply concentrated in Mount Low, Elliot Springs, northern beaches \u2014 NOT Kirwan itself. Kirwan is infill only.",
+          "source": "Townsville Council + GemLife announcement"
+        },
+        "demandRisk": {
+          "rating": "LOW",
+          "reason": "Diversified: defence (Lavarack), healthcare (TTH Hospital), port, education",
+          "source": "ABS labour + defence.gov.au"
+        },
+        "infrastructureRisk": {
+          "rating": "LOW",
+          "reason": "$2B Lavarack expansion under construction. $5B CopperString ACTIVELY building.",
+          "source": "defence.gov.au"
+        },
+        "cycleRisk": {
+          "rating": "MEDIUM",
+          "reason": "Post +28% spike. Growth likely moderates to 10-12% in 2027-28 but supportive fundamentals.",
+          "source": "Propertyology"
+        },
+        "liquidityRisk": {
+          "rating": "LOW",
+          "reason": "400+ sales/yr, deep market",
+          "source": "REIQ"
+        },
+        "overallRisk": "LOW-MEDIUM",
+        "downgradeVerdict": false,
+        "riskNote": "STRONGEST risk-adjusted pick. Established suburb means supply is constrained. Defence spending is actively delivering, not announcements. Cyclone risk insurable."
+      }
     },
     {
       "name": "Munno Para",
@@ -2703,7 +3063,37 @@
         "Growth 6% below WA/QLD",
         "Public housing pockets"
       ],
-      "stampDutyNote": "At $610k: SA stamp ~$23k, total costs ~$85k \u2014 comfortable fit."
+      "stampDutyNote": "At $610k: SA stamp ~$23k, total costs ~$85k \u2014 comfortable fit.",
+      "riskFilter": {
+        "supplyRisk": {
+          "rating": "HIGH",
+          "reason": "Playford LGA has extensive greenfield release. Andrews Farm, Munno Para West corridor active.",
+          "source": "Playford Council"
+        },
+        "demandRisk": {
+          "rating": "MEDIUM",
+          "reason": "Edinburgh Parks defence, but lower IRSAD",
+          "source": "ABS"
+        },
+        "infrastructureRisk": {
+          "rating": "LOW",
+          "reason": "Electrified train + Northern Connector delivered",
+          "source": "dit.sa.gov.au"
+        },
+        "cycleRisk": {
+          "rating": "MEDIUM",
+          "reason": "Growing but outer fringe dynamic",
+          "source": ""
+        },
+        "liquidityRisk": {
+          "rating": "LOW",
+          "reason": "Deep market",
+          "source": "REISA"
+        },
+        "overallRisk": "MEDIUM-HIGH",
+        "downgradeVerdict": true,
+        "riskNote": "HIGH supply \u2014 outer fringe with ongoing greenfield release. Growth likely to moderate as supply catches up."
+      }
     },
     {
       "name": "Cranbourne West",
@@ -2895,7 +3285,37 @@
         "Vacancy 1.82%",
         "Melbourne underperforming nationally"
       ],
-      "stampDutyNote": "At $695k: VIC stamp ~$37k + surcharge ~$10k = total costs ~$112k \u2014 EXCEEDS $110k cash. Need lower price point or more cash."
+      "stampDutyNote": "At $695k: VIC stamp ~$37k + surcharge ~$10k = total costs ~$112k \u2014 EXCEEDS $110k cash. Need lower price point or more cash.",
+      "riskFilter": {
+        "supplyRisk": {
+          "rating": "HIGH",
+          "reason": "Casey LGA growth corridor with major greenfield releases in Clyde, Clyde North, Botanic Ridge",
+          "source": "City of Casey"
+        },
+        "demandRisk": {
+          "rating": "MEDIUM",
+          "reason": "Commuter-heavy, VIC weaker",
+          "source": ""
+        },
+        "infrastructureRisk": {
+          "rating": "LOW",
+          "reason": "Cranbourne line upgrade delivered",
+          "source": ""
+        },
+        "cycleRisk": {
+          "rating": "LOW",
+          "reason": "Modest 4.35% growth, no spike risk",
+          "source": ""
+        },
+        "liquidityRisk": {
+          "rating": "LOW",
+          "reason": "Deep market",
+          "source": ""
+        },
+        "overallRisk": "MEDIUM-HIGH",
+        "downgradeVerdict": true,
+        "riskNote": "Growing supply in adjacent Clyde/Clyde North. VIC stamp duty. Better WA/QLD alternatives."
+      }
     }
   ],
   "summary": "14 suburbs analyzed across 4 states (WA, QLD, SA, VIC). STRONG BUY: Kirwan QLD (score 88, +28% growth, $550k entry, defence spending). BUY: Baldivis WA (82), Wellard WA (81), Armadale WA (81), Mandurah WA (85), Gawler SA (79), Munno Para SA (74). WATCH: Salisbury Downs SA (74, crime flag), Cranbourne West VIC (63). CAUTION: Mt Gambier SA (70), Ballarat VIC (60). Portfolio strategy: QLD (Kirwan) for max growth + WA (Perth mid/outer) for strong growth + SA (Munno Para/Gawler) for diversification. VIC optional \u2014 weakest growth but cheapest entry."

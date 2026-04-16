@@ -65,6 +65,14 @@
       "notHouse": 0,
       "overBudget": 0,
       "strata": 0
+    },
+    "riskFilter": {
+      "overallRisk": "MEDIUM",
+      "supplyRisk": {
+        "rating": "MEDIUM",
+        "reason": "Default \u2014 risk not specifically assessed"
+      },
+      "riskNote": "Risk not fully assessed for this suburb."
     }
   },
   "Cranbourne East (VIC)": {
@@ -115,6 +123,14 @@
       "notHouse": 0,
       "overBudget": 0,
       "strata": 0
+    },
+    "riskFilter": {
+      "overallRisk": "MEDIUM",
+      "supplyRisk": {
+        "rating": "MEDIUM",
+        "reason": "Default \u2014 risk not specifically assessed"
+      },
+      "riskNote": "Risk not fully assessed for this suburb."
     }
   },
   "Hampton Park (VIC)": {
@@ -165,6 +181,14 @@
       "notHouse": 0,
       "overBudget": 0,
       "strata": 0
+    },
+    "riskFilter": {
+      "overallRisk": "LOW-MEDIUM",
+      "supplyRisk": {
+        "rating": "LOW",
+        "reason": "Established middle-ring Casey, land-constrained"
+      },
+      "riskNote": "Land-constrained middle-ring. VIC stamp duty surcharge is main drawback."
     }
   },
   "Cranbourne West (VIC)": {
@@ -233,6 +257,15 @@
       "notHouse": 0,
       "overBudget": 0,
       "strata": 0
+    },
+    "riskFilter": {
+      "overallRisk": "MEDIUM-HIGH",
+      "supplyRisk": {
+        "rating": "HIGH",
+        "reason": "Casey LGA growth corridor with major greenfield releases in Clyde, Clyde North, Botanic Ridge",
+        "source": "City of Casey"
+      },
+      "riskNote": "Growing supply in adjacent Clyde/Clyde North. VIC stamp duty. Better WA/QLD alternatives."
     }
   },
   "Cranbourne North (VIC)": {
@@ -301,6 +334,14 @@
       "notHouse": 0,
       "overBudget": 0,
       "strata": 0
+    },
+    "riskFilter": {
+      "overallRisk": "MEDIUM",
+      "supplyRisk": {
+        "rating": "MEDIUM",
+        "reason": "Default \u2014 risk not specifically assessed"
+      },
+      "riskNote": "Risk not fully assessed for this suburb."
     }
   },
   "Clyde North (VIC)": {
@@ -333,6 +374,14 @@
       "notHouse": 0,
       "overBudget": 0,
       "strata": 0
+    },
+    "riskFilter": {
+      "overallRisk": "MEDIUM",
+      "supplyRisk": {
+        "rating": "MEDIUM",
+        "reason": "Default \u2014 risk not specifically assessed"
+      },
+      "riskNote": "Risk not fully assessed for this suburb."
     }
   },
   "Lynbrook (VIC)": {
@@ -365,6 +414,14 @@
       "notHouse": 0,
       "overBudget": 0,
       "strata": 0
+    },
+    "riskFilter": {
+      "overallRisk": "MEDIUM",
+      "supplyRisk": {
+        "rating": "MEDIUM",
+        "reason": "Default \u2014 risk not specifically assessed"
+      },
+      "riskNote": "Risk not fully assessed for this suburb."
     }
   },
   "Evanston Park (SA)": {
@@ -398,13 +455,13 @@
         "car": 2,
         "land": "708sqm",
         "dom": null,
-        "verdict": "INVESTIGATE",
+        "verdict": "WATCH",
         "motivation": "MEDIUM",
         "motivationSignal": "708sqm large block",
         "yieldEst": "4.2%",
         "cashflowEst": "$-272pw",
         "valueAdd": "708sqm \u2192 granny flat (~$150k build, +$400pw rent) or subdivision",
-        "reason": "INVESTIGATE \u2014 708sqm large block. Caution: easement. ACTION: Call agent, request contract, book B&P inspection, check council zoning.",
+        "reason": "\u26a0 DOWNGRADED from INVESTIGATE: Outer Gawler corridor supply risk. Original analysis: INVESTIGATE \u2014 708sqm large block. Caution: easement. ACTION: Call agent, request contract, book B&P inspection, check council zoning.",
         "url": null
       }
     ],
@@ -415,6 +472,14 @@
       "notHouse": 0,
       "overBudget": 0,
       "strata": 0
+    },
+    "riskFilter": {
+      "overallRisk": "MEDIUM-HIGH",
+      "supplyRisk": {
+        "rating": "HIGH",
+        "reason": "Gawler-adjacent, Springwood/Woodvale estates within 3km"
+      },
+      "riskNote": "Outer Gawler corridor supply risk."
     }
   },
   "Gawler East (SA)": {
@@ -448,13 +513,13 @@
         "car": 3,
         "land": "785sqm",
         "dom": null,
-        "verdict": "INVESTIGATE",
+        "verdict": "WATCH",
         "motivation": "MEDIUM",
         "motivationSignal": "785sqm large block",
         "yieldEst": "N/A",
         "cashflowEst": "N/A",
         "valueAdd": "785sqm \u2192 granny flat (~$150k build, +$400pw rent) or subdivision",
-        "reason": "INVESTIGATE \u2014 785sqm large block. Caution: easement. ACTION: Call agent, request contract, book B&P inspection, check council zoning.",
+        "reason": "\u26a0 DOWNGRADED from INVESTIGATE: MAJOR SUPPLY RISK: 43,800 new dwellings being built within 5km as the urban growth boundary has been removed. Growth of 13.9% in past year is unlikely to continue \u2014 post-spike correction highly likely 2027-2030. Only pursue if you have exceptional value-add (e.g. genuinely subdividable block in R20+ zoning). Original analysis: INVESTIGATE \u2014 785sqm large block. Caution: easement. ACTION: Call agent, request contract, book B&P inspection, check council zoning.",
         "url": null
       },
       {
@@ -466,13 +531,13 @@
         "car": null,
         "land": "817sqm",
         "dom": null,
-        "verdict": "INVESTIGATE",
+        "verdict": "WATCH",
         "motivation": "HIGH",
         "motivationSignal": "817sqm MEGA-block",
         "yieldEst": "3.6%",
         "cashflowEst": "$-403pw",
         "valueAdd": "817sqm \u2192 granny flat (~$150k build, +$400pw rent) or subdivision",
-        "reason": "INVESTIGATE \u2014 817sqm mega-block. Caution: easement. ACTION: Call agent, request contract, book B&P inspection, check council zoning.",
+        "reason": "\u26a0 DOWNGRADED from INVESTIGATE: MAJOR SUPPLY RISK: 43,800 new dwellings being built within 5km as the urban growth boundary has been removed. Growth of 13.9% in past year is unlikely to continue \u2014 post-spike correction highly likely 2027-2030. Only pursue if you have exceptional value-add (e.g. genuinely subdividable block in R20+ zoning). Original analysis: INVESTIGATE \u2014 817sqm mega-block. Caution: easement. ACTION: Call agent, request contract, book B&P inspection, check council zoning.",
         "url": null
       },
       {
@@ -501,6 +566,15 @@
       "notHouse": 0,
       "overBudget": 0,
       "strata": 0
+    },
+    "riskFilter": {
+      "overallRisk": "HIGH",
+      "supplyRisk": {
+        "rating": "HIGH",
+        "reason": "Active greenfield: Springwood Estate, Woodvale Estate (45 lots Stage 6), Fairview Rise PLUS 350 homes approved at Gawler Belt. 43,800 homes unlocked within 5km at Two Wells/Roseworthy.",
+        "source": "https://www.premier.sa.gov.au/media-releases/news-archive/rezoning-for-350-homes-near-gawler"
+      },
+      "riskNote": "MAJOR SUPPLY RISK: 43,800 new dwellings being built within 5km as the urban growth boundary has been removed. Growth of 13.9% in past year is unlikely to continue \u2014 post-spike correction highly likely 2027-2030. Only pursue if you have exceptional value-add (e.g. genuinely subdividable block in R20+ zoning)."
     }
   },
   "Gawler West (SA)": {
@@ -534,13 +608,13 @@
         "car": 3,
         "land": "767sqm",
         "dom": null,
-        "verdict": "INVESTIGATE",
+        "verdict": "WATCH",
         "motivation": "MEDIUM",
         "motivationSignal": "767sqm large block",
         "yieldEst": "4.5%",
         "cashflowEst": "$-201pw",
         "valueAdd": "767sqm \u2192 granny flat (~$150k build, +$400pw rent) or subdivision",
-        "reason": "INVESTIGATE \u2014 767sqm large block. Below SA median $680k. Caution: easement. ACTION: Call agent, request contract, book B&P inspection, check council zoning.",
+        "reason": "\u26a0 DOWNGRADED from INVESTIGATE: MAJOR SUPPLY RISK: 43,800 new dwellings being built within 5km as the urban growth boundary has been removed. Growth of 13.9% in past year is unlikely to continue \u2014 post-spike correction highly likely 2027-2030. Only pursue if you have exceptional value-add (e.g. genuinely subdividable block in R20+ zoning). Original analysis: INVESTIGATE \u2014 767sqm large block. Below SA median $680k. Caution: easement. ACTION: Call agent, request contract, book B&P inspection, check council zoning.",
         "url": null
       }
     ],
@@ -551,6 +625,15 @@
       "notHouse": 0,
       "overBudget": 0,
       "strata": 0
+    },
+    "riskFilter": {
+      "overallRisk": "HIGH",
+      "supplyRisk": {
+        "rating": "HIGH",
+        "reason": "Active greenfield: Springwood Estate, Woodvale Estate (45 lots Stage 6), Fairview Rise PLUS 350 homes approved at Gawler Belt. 43,800 homes unlocked within 5km at Two Wells/Roseworthy.",
+        "source": "https://www.premier.sa.gov.au/media-releases/news-archive/rezoning-for-350-homes-near-gawler"
+      },
+      "riskNote": "MAJOR SUPPLY RISK: 43,800 new dwellings being built within 5km as the urban growth boundary has been removed. Growth of 13.9% in past year is unlikely to continue \u2014 post-spike correction highly likely 2027-2030. Only pursue if you have exceptional value-add (e.g. genuinely subdividable block in R20+ zoning)."
     }
   },
   "Gawler Belt (SA)": {
@@ -583,6 +666,15 @@
       "notHouse": 0,
       "overBudget": 0,
       "strata": 0
+    },
+    "riskFilter": {
+      "overallRisk": "HIGH",
+      "supplyRisk": {
+        "rating": "HIGH",
+        "reason": "Active greenfield: Springwood Estate, Woodvale Estate (45 lots Stage 6), Fairview Rise PLUS 350 homes approved at Gawler Belt. 43,800 homes unlocked within 5km at Two Wells/Roseworthy.",
+        "source": "https://www.premier.sa.gov.au/media-releases/news-archive/rezoning-for-350-homes-near-gawler"
+      },
+      "riskNote": "MAJOR SUPPLY RISK: 43,800 new dwellings being built within 5km as the urban growth boundary has been removed. Growth of 13.9% in past year is unlikely to continue \u2014 post-spike correction highly likely 2027-2030. Only pursue if you have exceptional value-add (e.g. genuinely subdividable block in R20+ zoning)."
     }
   },
   "Angle Vale (SA)": {
@@ -669,6 +761,14 @@
       "notHouse": 0,
       "overBudget": 0,
       "strata": 0
+    },
+    "riskFilter": {
+      "overallRisk": "MEDIUM",
+      "supplyRisk": {
+        "rating": "MEDIUM",
+        "reason": "Default \u2014 risk not specifically assessed"
+      },
+      "riskNote": "Risk not fully assessed for this suburb."
     }
   },
   "Munno Para West (SA)": {
@@ -791,6 +891,15 @@
       "notHouse": 0,
       "overBudget": 0,
       "strata": 0
+    },
+    "riskFilter": {
+      "overallRisk": "MEDIUM-HIGH",
+      "supplyRisk": {
+        "rating": "HIGH",
+        "reason": "Playford LGA has extensive greenfield release. Andrews Farm, Munno Para West corridor active.",
+        "source": "Playford Council"
+      },
+      "riskNote": "HIGH supply \u2014 outer fringe with ongoing greenfield release. Growth likely to moderate as supply catches up."
     }
   },
   "Andrews Farm (SA)": {
@@ -823,6 +932,14 @@
       "notHouse": 0,
       "overBudget": 0,
       "strata": 0
+    },
+    "riskFilter": {
+      "overallRisk": "MEDIUM",
+      "supplyRisk": {
+        "rating": "MEDIUM",
+        "reason": "Default \u2014 risk not specifically assessed"
+      },
+      "riskNote": "Risk not fully assessed for this suburb."
     }
   },
   "Evanston Gardens (SA)": {
@@ -873,6 +990,14 @@
       "notHouse": 0,
       "overBudget": 0,
       "strata": 0
+    },
+    "riskFilter": {
+      "overallRisk": "MEDIUM-HIGH",
+      "supplyRisk": {
+        "rating": "HIGH",
+        "reason": "Gawler-adjacent, Springwood/Woodvale estates within 3km"
+      },
+      "riskNote": "Outer Gawler corridor supply risk."
     }
   },
   "Smithfield (SA)": {
@@ -888,13 +1013,13 @@
         "car": 4,
         "land": "720sqm",
         "dom": null,
-        "verdict": "INVESTIGATE",
+        "verdict": "WATCH",
         "motivation": "MEDIUM",
         "motivationSignal": "720sqm large block",
         "yieldEst": "5.4%",
         "cashflowEst": "$-82pw",
         "valueAdd": "720sqm \u2192 granny flat (~$150k build, +$400pw rent) or subdivision",
-        "reason": "INVESTIGATE \u2014 720sqm large block. Below SA median $680k. Yield 5396.2%. Caution: easement. ACTION: Call agent, request contract, book B&P inspection, check council zoning.",
+        "reason": "\u26a0 DOWNGRADED from INVESTIGATE: Oversupply indicator (BA Ratio 4.15%) + lower IRSAD + Playford crime concerns. Original analysis: INVESTIGATE \u2014 720sqm large block. Below SA median $680k. Yield 5396.2%. Caution: easement. ACTION: Call agent, request contract, book B&P inspection, check council zoning.",
         "url": null
       }
     ],
@@ -905,6 +1030,14 @@
       "notHouse": 0,
       "overBudget": 0,
       "strata": 0
+    },
+    "riskFilter": {
+      "overallRisk": "HIGH",
+      "supplyRisk": {
+        "rating": "HIGH",
+        "reason": "BA Ratio 4.15% signals substantial approved construction and oversupply risk 12-36 months"
+      },
+      "riskNote": "Oversupply indicator (BA Ratio 4.15%) + lower IRSAD + Playford crime concerns."
     }
   },
   "Gawler South (SA)": {
@@ -920,13 +1053,13 @@
         "car": 1,
         "land": "828sqm",
         "dom": null,
-        "verdict": "INVESTIGATE",
+        "verdict": "WATCH",
         "motivation": "HIGH",
         "motivationSignal": "828sqm MEGA-block",
         "yieldEst": "4.0%",
         "cashflowEst": "$-307pw",
         "valueAdd": "828sqm \u2192 granny flat (~$150k build, +$400pw rent) or subdivision",
-        "reason": "INVESTIGATE \u2014 828sqm mega-block. Caution: easement. ACTION: Call agent, request contract, book B&P inspection, check council zoning.",
+        "reason": "\u26a0 DOWNGRADED from INVESTIGATE: MAJOR SUPPLY RISK: 43,800 new dwellings being built within 5km as the urban growth boundary has been removed. Growth of 13.9% in past year is unlikely to continue \u2014 post-spike correction highly likely 2027-2030. Only pursue if you have exceptional value-add (e.g. genuinely subdividable block in R20+ zoning). Original analysis: INVESTIGATE \u2014 828sqm mega-block. Caution: easement. ACTION: Call agent, request contract, book B&P inspection, check council zoning.",
         "url": null
       }
     ],
@@ -937,6 +1070,15 @@
       "notHouse": 0,
       "overBudget": 0,
       "strata": 0
+    },
+    "riskFilter": {
+      "overallRisk": "HIGH",
+      "supplyRisk": {
+        "rating": "HIGH",
+        "reason": "Active greenfield: Springwood Estate, Woodvale Estate (45 lots Stage 6), Fairview Rise PLUS 350 homes approved at Gawler Belt. 43,800 homes unlocked within 5km at Two Wells/Roseworthy.",
+        "source": "https://www.premier.sa.gov.au/media-releases/news-archive/rezoning-for-350-homes-near-gawler"
+      },
+      "riskNote": "MAJOR SUPPLY RISK: 43,800 new dwellings being built within 5km as the urban growth boundary has been removed. Growth of 13.9% in past year is unlikely to continue \u2014 post-spike correction highly likely 2027-2030. Only pursue if you have exceptional value-add (e.g. genuinely subdividable block in R20+ zoning)."
     }
   },
   "Munno Para (SA)": {
@@ -1023,6 +1165,15 @@
       "notHouse": 0,
       "overBudget": 0,
       "strata": 0
+    },
+    "riskFilter": {
+      "overallRisk": "MEDIUM-HIGH",
+      "supplyRisk": {
+        "rating": "HIGH",
+        "reason": "Playford LGA has extensive greenfield release. Andrews Farm, Munno Para West corridor active.",
+        "source": "Playford Council"
+      },
+      "riskNote": "HIGH supply \u2014 outer fringe with ongoing greenfield release. Growth likely to moderate as supply catches up."
     }
   },
   "Two Wells (SA)": {
@@ -1038,13 +1189,13 @@
         "car": 6,
         "land": "1101sqm",
         "dom": null,
-        "verdict": "INVESTIGATE",
+        "verdict": "WATCH",
         "motivation": "HIGH",
         "motivationSignal": "1101sqm MEGA-block",
         "yieldEst": "N/A",
         "cashflowEst": "N/A",
         "valueAdd": "1101sqm \u2192 granny flat (~$150k build, +$400pw rent) or subdivision",
-        "reason": "INVESTIGATE \u2014 1101sqm mega-block. Caution: easement. ACTION: Call agent, request contract, book B&P inspection, check council zoning.",
+        "reason": "\u26a0 DOWNGRADED from INVESTIGATE: EXTREME supply risk \u2014 43,800 new homes being built within 5km as urban growth boundary removed. Growth cap imposed by massive new supply pipeline. AVOID. Original analysis: INVESTIGATE \u2014 1101sqm mega-block. Caution: easement. ACTION: Call agent, request contract, book B&P inspection, check council zoning.",
         "url": null
       }
     ],
@@ -1055,6 +1206,14 @@
       "notHouse": 0,
       "overBudget": 0,
       "strata": 0
+    },
+    "riskFilter": {
+      "overallRisk": "HIGH",
+      "supplyRisk": {
+        "rating": "HIGH",
+        "reason": "9,600+1,200 new homes planned PLUS 33,000 at adjacent Roseworthy = 43,800 new dwellings within 5km"
+      },
+      "riskNote": "EXTREME supply risk \u2014 43,800 new homes being built within 5km as urban growth boundary removed. Growth cap imposed by massive new supply pipeline. AVOID."
     }
   },
   "Mount Louisa (QLD)": {
@@ -1087,6 +1246,14 @@
       "notHouse": 0,
       "overBudget": 0,
       "strata": 0
+    },
+    "riskFilter": {
+      "overallRisk": "MEDIUM",
+      "supplyRisk": {
+        "rating": "MEDIUM",
+        "reason": "Default \u2014 risk not specifically assessed"
+      },
+      "riskNote": "Risk not fully assessed for this suburb."
     }
   },
   "Kirwan (QLD)": {
@@ -1137,6 +1304,15 @@
       "notHouse": 0,
       "overBudget": 0,
       "strata": 0
+    },
+    "riskFilter": {
+      "overallRisk": "LOW-MEDIUM",
+      "supplyRisk": {
+        "rating": "LOW",
+        "reason": "Kirwan is ESTABLISHED. New supply concentrated in Mount Low, Elliot Springs, northern beaches \u2014 NOT Kirwan itself. Kirwan is infill only.",
+        "source": "Townsville Council + GemLife announcement"
+      },
+      "riskNote": "STRONGEST risk-adjusted pick. Established suburb means supply is constrained. Defence spending is actively delivering, not announcements. Cyclone risk insurable."
     }
   },
   "Townsville (QLD)": {
@@ -1158,7 +1334,7 @@
         "yieldEst": "4.4%",
         "cashflowEst": "$-259pw",
         "valueAdd": "704sqm \u2192 granny flat (~$150k build, +$400pw rent) or subdivision",
-        "reason": "INVESTIGATE \u2014 704sqm large block. ACTION: Call agent, request contract, book B&P inspection, check council zoning.",
+        "reason": "\u26a0 SUPPLY RISK MEDIUM: Default \u2014 risk not specifically assessed. INVESTIGATE \u2014 704sqm large block. ACTION: Call agent, request contract, book B&P inspection, check council zoning.",
         "url": null
       }
     ],
@@ -1169,6 +1345,14 @@
       "notHouse": 0,
       "overBudget": 0,
       "strata": 0
+    },
+    "riskFilter": {
+      "overallRisk": "MEDIUM",
+      "supplyRisk": {
+        "rating": "MEDIUM",
+        "reason": "Default \u2014 risk not specifically assessed"
+      },
+      "riskNote": "Risk not fully assessed for this suburb."
     }
   }
 }

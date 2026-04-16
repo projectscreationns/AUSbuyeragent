@@ -345,3 +345,103 @@ Second QLD property: land values aggregated. Individual threshold $600k.
 - Combined: ~$450-650k → at or near threshold
 - Estimated extra cost: **$0-1,500/yr** (~$30/wk worst case)
 - At 28% growth on $550k = $154k gain over 5yr. Land tax = ~$7,500 total = 5% of gain. **Growth justifies the tax.**
+
+---
+
+## Agent 3.5: Supply & Market Risk Filter
+**Trigger:** Runs automatically after `/run-suburbs`, before `/run-listings`. Also triggered standalone by `/risk-check`.
+**Dependencies:** Read `public/data/suburbs.json`
+**Output:** Updates `public/data/suburbs.json` in-place with `riskFilter` field per suburb
+
+### Purpose
+A real buyer's agent filters OUT garbage before presenting options. Backward-looking growth rates + large blocks look great on paper but are dangerous if:
+- Massive new supply is coming (greenfield rezonings, urban growth boundary removals)
+- Post-spike markets that will moderate hard
+- Single-employer / single-industry regional risk
+- Outer fringe with no land constraint
+- Infrastructure projects that aren't real (announced but delayed/cancelled)
+
+This agent applies these filters BEFORE the user sees recommendations.
+
+### Process
+For each suburb, evaluate 5 risk dimensions via WebSearch:
+
+**1. SUPPLY RISK — Greenfield / new builds**
+- Query: `"{suburb} {state}" new homes planned development master planned estate`
+- Query: `"{suburb} {state}" urban growth boundary rezoning land release`
+- Query: `"{suburb} {state}" house and land packages new estate`
+- FLAG: HIGH if >2,000 new dwellings planned within 5km, if urban growth boundary removed, if multiple new estates being marketed
+- FLAG: MEDIUM if outer fringe location with "rural residential" or "future urban" zoned land adjacent
+- FLAG: LOW if established urban, land-constrained, infill only
+
+**2. DEMAND RISK — Employment concentration**
+- Query: `"{suburb} {state}" employment jobs industry demographics`
+- FLAG: HIGH if single employer >30% of local jobs (mining town, single base military town, one-company town)
+- FLAG: MEDIUM if 2-3 industry dependency (e.g. mining + port)
+- FLAG: LOW if diversified (healthcare, education, government, retail, construction all present)
+
+**3. INFRASTRUCTURE DELIVERY RISK**
+For each major infrastructure project from Stage 3 suburbs data:
+- Query: `"{project name}" delayed OR delay cancelled funding cut`
+- Query: `"{project name}" opening date construction status`
+- FLAG: HIGH if any project is >24mo delayed, funding pulled, or cancelled
+- FLAG: MEDIUM if project is announced but not under construction
+- FLAG: LOW if under construction with firm completion date OR already completed
+
+**4. MARKET CYCLE RISK**
+- Post-spike moderation: suburbs with >20% growth in last 12mo have higher risk of stagnation/correction
+- Query: `"{suburb} {state}" property market outlook 2026 2027 slowing moderation`
+- FLAG: HIGH if recent growth >20% AND analyst consensus is "slowing"
+- FLAG: MEDIUM if recent growth >15% (natural moderation expected)
+- FLAG: LOW if steady 5-10% growth
+
+**5. LIQUIDITY RISK**
+- Check sales volume from Stage 3 (annual sales count)
+- FLAG: HIGH if <100 sales/year (thin market — hard to exit)
+- FLAG: MEDIUM if 100-300 sales/year
+- FLAG: LOW if >300 sales/year (deep market)
+
+### Aggregate Risk Score
+```
+if ANY dimension is HIGH → overall = HIGH
+if 2+ dimensions are MEDIUM → overall = MEDIUM-HIGH
+if 1 dimension is MEDIUM → overall = MEDIUM
+else → overall = LOW
+```
+
+### Output — Updates suburbs.json in place
+For each suburb, add:
+```json
+"riskFilter": {
+  "supplyRisk": { "rating": "HIGH|MEDIUM|LOW", "reason": "43,300 new dwellings planned within 5km (Two Wells/Roseworthy release)", "source": "url" },
+  "demandRisk": { "rating": "LOW", "reason": "Diversified — defence, healthcare, port, education", "source": "url" },
+  "infrastructureRisk": { "rating": "LOW", "reason": "Metronet complete + CopperString under construction with firm dates" },
+  "cycleRisk": { "rating": "MEDIUM", "reason": "Post-spike — 28% growth may moderate to 10-12% in 2027" },
+  "liquidityRisk": { "rating": "LOW", "reason": "400+ sales/yr, deep market" },
+  "overallRisk": "MEDIUM",
+  "downgradeVerdict": false,
+  "riskNote": "2-3 sentence summary of key risks investor must acknowledge"
+}
+```
+
+### Impact on Stage 4 Verdicts
+The Listing Scout (Agent 4) now reads suburbs.json INCLUDING the riskFilter field. Listing verdicts are automatically adjusted:
+
+| Listing Quality | Supply Risk | Final Verdict |
+|-----------------|-------------|---------------|
+| INVESTIGATE candidate | LOW | INVESTIGATE ✓ |
+| INVESTIGATE candidate | MEDIUM | WATCH (with supply warning) |
+| INVESTIGATE candidate | HIGH | MONITOR (with explicit supply warning in reason) |
+| MONITOR candidate | any | MONITOR |
+| AVOID (red flag) | any | AVOID |
+
+The listing's `reason` field must include: "⚠ SUPPLY RISK {rating}: {riskFilter.supplyRisk.reason}" if supply risk is MEDIUM or HIGH.
+
+### Why this agent exists
+Prevents recommending properties in suburbs like:
+- **Two Wells SA** — 43,300 homes being built, massive oversupply incoming
+- **Any mining town** that looks great until the mine closes
+- **Fringe suburbs** with unlimited surrounding greenfield = no land constraint = growth cap
+- **Single-catalyst towns** (e.g. announced defence base that gets scrapped)
+
+Real buyer's agents know these risks intuitively. This agent encodes them.
