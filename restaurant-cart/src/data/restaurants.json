@@ -1,0 +1,14 @@
+[
+  { "name": "Torchy's Tacos", "cuisine": "Tex-Mex Tacos", "emoji": "🌮" },
+  { "name": "Chipotle", "cuisine": "Mexican Grill", "emoji": "🌯" },
+  { "name": "Chick-fil-A", "cuisine": "Fried Chicken", "emoji": "🐔" },
+  { "name": "Panda Express", "cuisine": "American Chinese", "emoji": "🥡" },
+  { "name": "Olive Garden", "cuisine": "Italian-American", "emoji": "🍝" },
+  { "name": "Cheesecake Factory", "cuisine": "American", "emoji": "🍰" },
+  { "name": "In-N-Out", "cuisine": "Burgers", "emoji": "🍔" },
+  { "name": "Whataburger", "cuisine": "Burgers", "emoji": "🍔" },
+  { "name": "Raising Cane's", "cuisine": "Chicken Fingers", "emoji": "🍗" },
+  { "name": "P.F. Chang's", "cuisine": "Chinese-American", "emoji": "🥢" },
+  { "name": "Shake Shack", "cuisine": "Burgers", "emoji": "🍔" },
+  { "name": "Cracker Barrel", "cuisine": "Southern Comfort", "emoji": "🥞" }
+]
