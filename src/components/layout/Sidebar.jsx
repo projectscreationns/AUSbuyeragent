@@ -15,9 +15,9 @@ export function Sidebar() {
   const stageKeys = STAGE_DEFS.map(s => s.key);
 
   const handleClick = (key, idx) => {
-    // Can navigate to any completed stage or the current unlocked one
+    const alwaysUnlocked = ['agents', 'top10'].includes(key);
     const prevKey = idx > 0 ? stageKeys[idx - 1] : null;
-    const isUnlocked = !prevKey || state.stages[prevKey].status === 'done';
+    const isUnlocked = alwaysUnlocked || !prevKey || state.stages[prevKey].status === 'done';
     const isDone = state.stages[key].status === 'done';
 
     if (isDone || isUnlocked) {
