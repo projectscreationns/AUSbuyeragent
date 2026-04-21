@@ -8,8 +8,10 @@ import { Stage2RegionScan } from './components/stages/Stage2RegionScan';
 import { Stage3SuburbDive } from './components/stages/Stage3SuburbDive';
 import { Stage4ListingScout } from './components/stages/Stage4ListingScout';
 import { Stage5DueDiligence } from './components/stages/Stage5DueDiligence';
+import { AgentsView } from './components/stages/AgentsView';
 
 const STAGE_COMPONENTS = {
+  agents: AgentsView,
   macro: Stage1Macro,
   regions: Stage2RegionScan,
   suburbs: Stage3SuburbDive,
