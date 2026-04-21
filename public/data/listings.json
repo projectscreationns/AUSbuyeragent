@@ -1,1281 +1,177 @@
 {
-  "Cranbourne (VIC)": {
-    "suburb": "Cranbourne",
-    "state": "VIC",
+  "Maddington": {
+    "suburb": "Maddington",
+    "state": "WA",
     "items": [
       {
-        "addr": "1 Nanea Path, Cranbourne, VIC 3977",
-        "price": "$599,500 - $649,500",
-        "priceNumeric": 599500,
-        "beds": 3,
-        "baths": 2,
-        "car": 2,
-        "land": "251sqm",
-        "dom": null,
-        "verdict": "MONITOR",
-        "motivation": "LOW",
-        "motivationSignal": "No active signals",
-        "yieldEst": "4.8%",
-        "cashflowEst": "$-165pw",
-        "valueAdd": "Hold for growth",
-        "reason": "MONITOR \u2014 Standard listing, no strong triggers. Set price alert.",
-        "url": null
-      },
-      {
-        "addr": "90 Sladen Street, Cranbourne, VIC 3977",
-        "price": "$740,000 - $790,000",
-        "priceNumeric": 740000,
-        "beds": 3,
-        "baths": 2,
-        "car": 2,
-        "land": "651sqm",
-        "dom": null,
-        "verdict": "MONITOR",
-        "motivation": "LOW",
-        "motivationSignal": "No active signals",
-        "yieldEst": "3.9%",
-        "cashflowEst": "$-332pw",
-        "valueAdd": "Hold for growth",
-        "reason": "MONITOR \u2014 Standard listing, no strong triggers. Set price alert.",
-        "url": null
-      },
-      {
-        "addr": "57 Cranbourne Drive, Cranbourne, VIC 3977",
-        "price": "$590,000 - $640,000",
-        "priceNumeric": 590000,
-        "beds": 3,
-        "baths": 1,
-        "car": 3,
-        "land": "102sqm",
-        "dom": null,
-        "verdict": "MONITOR",
-        "motivation": "LOW",
-        "motivationSignal": "No active signals",
-        "yieldEst": "4.8%",
-        "cashflowEst": "$-153pw",
-        "valueAdd": "Hold for growth",
-        "reason": "MONITOR \u2014 Standard listing, no strong triggers. Set price alert.",
-        "url": null
-      }
-    ],
-    "analysedAt": "14 Apr 2026",
-    "source": "Ray White agent sites + REIWA \u2014 live listings",
-    "collected": 3,
-    "discarded": {
-      "notHouse": 0,
-      "overBudget": 0,
-      "strata": 0
-    },
-    "riskFilter": {
-      "overallRisk": "MEDIUM",
-      "supplyRisk": {
-        "rating": "MEDIUM",
-        "reason": "Default \u2014 risk not specifically assessed"
-      },
-      "riskNote": "Risk not fully assessed for this suburb."
-    }
-  },
-  "Cranbourne East (VIC)": {
-    "suburb": "Cranbourne East",
-    "state": "VIC",
-    "items": [
-      {
-        "addr": "23 Midnight Rise, Cranbourne East, VIC 3977",
-        "price": "$785,000 - $860,000",
-        "priceNumeric": 785000,
-        "beds": 4,
-        "baths": 2,
-        "car": 2,
-        "land": "512sqm",
-        "dom": null,
-        "verdict": "MONITOR",
-        "motivation": "LOW",
-        "motivationSignal": "No active signals",
-        "yieldEst": "4.1%",
-        "cashflowEst": "$-316pw",
-        "valueAdd": "Hold for growth",
-        "reason": "MONITOR \u2014 Standard listing, no strong triggers. Set price alert.",
-        "url": null
-      },
-      {
-        "addr": "85 Lineham Drive, Cranbourne East, VIC 3977",
-        "price": "$720,000 - $792,000",
-        "priceNumeric": 720000,
-        "beds": 4,
-        "baths": 2,
-        "car": 2,
-        "land": "186sqm",
-        "dom": null,
-        "verdict": "MONITOR",
-        "motivation": "LOW",
-        "motivationSignal": "No active signals",
-        "yieldEst": "4.5%",
-        "cashflowEst": "$-238pw",
-        "valueAdd": "Hold for growth",
-        "reason": "MONITOR \u2014 Standard listing, no strong triggers. Set price alert.",
-        "url": null
-      }
-    ],
-    "analysedAt": "14 Apr 2026",
-    "source": "Ray White agent sites + REIWA \u2014 live listings",
-    "collected": 2,
-    "discarded": {
-      "notHouse": 0,
-      "overBudget": 0,
-      "strata": 0
-    },
-    "riskFilter": {
-      "overallRisk": "MEDIUM",
-      "supplyRisk": {
-        "rating": "MEDIUM",
-        "reason": "Default \u2014 risk not specifically assessed"
-      },
-      "riskNote": "Risk not fully assessed for this suburb."
-    }
-  },
-  "Hampton Park (VIC)": {
-    "suburb": "Hampton Park",
-    "state": "VIC",
-    "items": [
-      {
-        "addr": "16 Redwood Avenue, Hampton Park, VIC 3976",
-        "price": "$670,000 - $730,000",
-        "priceNumeric": 670000,
-        "beds": 3,
-        "baths": 2,
-        "car": 5,
-        "land": "516sqm",
-        "dom": null,
-        "verdict": "MONITOR",
-        "motivation": "LOW",
-        "motivationSignal": "No active signals",
-        "yieldEst": "4.3%",
-        "cashflowEst": "$-249pw",
-        "valueAdd": "Hold for growth",
-        "reason": "MONITOR \u2014 Standard listing, no strong triggers. Set price alert.",
-        "url": null
-      },
-      {
-        "addr": "5 Valerie Court, Hampton Park, VIC 3976",
-        "price": "$790,000 - $860,000",
-        "priceNumeric": 790000,
-        "beds": 3,
-        "baths": 2,
-        "car": 2,
-        "land": "879sqm",
-        "dom": null,
-        "verdict": "INVESTIGATE",
-        "motivation": "HIGH",
-        "motivationSignal": "Subdivision zoning/potential in listing + 879sqm MEGA-block",
-        "yieldEst": "3.8%",
-        "cashflowEst": "$-362pw",
-        "valueAdd": "879sqm \u2192 granny flat (~$150k build, +$400pw rent) or subdivision \u00b7 Subdivision mentioned in listing",
-        "reason": "INVESTIGATE \u2014 879sqm mega-block. Value-add: subdivision. ACTION: Call agent, request contract, book B&P inspection, check council zoning.",
-        "url": null
-      }
-    ],
-    "analysedAt": "14 Apr 2026",
-    "source": "Ray White agent sites + REIWA \u2014 live listings",
-    "collected": 2,
-    "discarded": {
-      "notHouse": 0,
-      "overBudget": 0,
-      "strata": 0
-    },
-    "riskFilter": {
-      "overallRisk": "LOW-MEDIUM",
-      "supplyRisk": {
-        "rating": "LOW",
-        "reason": "Established middle-ring Casey, land-constrained"
-      },
-      "riskNote": "Land-constrained middle-ring. VIC stamp duty surcharge is main drawback."
-    }
-  },
-  "Cranbourne West (VIC)": {
-    "suburb": "Cranbourne West",
-    "state": "VIC",
-    "items": [
-      {
-        "addr": "66 Willora Crescent, Cranbourne West, VIC 3977",
-        "price": "$685,000 - $725,000",
-        "priceNumeric": 685000,
-        "beds": 3,
-        "baths": 1,
-        "car": 4,
-        "land": "545sqm",
-        "dom": null,
-        "verdict": "MONITOR",
-        "motivation": "LOW",
-        "motivationSignal": "No active signals",
-        "yieldEst": "4.2%",
-        "cashflowEst": "$-267pw",
-        "valueAdd": "Hold for growth",
-        "reason": "MONITOR \u2014 Standard listing, no strong triggers. Set price alert.",
-        "url": null
-      },
-      {
-        "addr": "19 Providence Drive, Cranbourne West, VIC 3977",
-        "price": "$680,000 - $748,000",
-        "priceNumeric": 680000,
-        "beds": 3,
-        "baths": 2,
-        "car": 2,
-        "land": "103sqm",
-        "dom": null,
-        "verdict": "MONITOR",
-        "motivation": "LOW",
-        "motivationSignal": "No active signals",
-        "yieldEst": "4.2%",
-        "cashflowEst": "$-261pw",
-        "valueAdd": "Hold for growth",
-        "reason": "MONITOR \u2014 Standard listing, no strong triggers. Set price alert.",
-        "url": null
-      },
-      {
-        "addr": "12 Breamlea Way, Cranbourne West, VIC 3977",
-        "price": "$650,000 - $700,000",
-        "priceNumeric": 650000,
-        "beds": 3,
-        "baths": 2,
-        "car": 2,
-        "land": "114sqm",
-        "dom": null,
-        "verdict": "MONITOR",
-        "motivation": "LOW",
-        "motivationSignal": "No active signals",
-        "yieldEst": "4.4%",
-        "cashflowEst": "$-225pw",
-        "valueAdd": "Hold for growth",
-        "reason": "MONITOR \u2014 Standard listing, no strong triggers. Set price alert.",
-        "url": null
-      }
-    ],
-    "analysedAt": "14 Apr 2026",
-    "source": "Ray White agent sites + REIWA \u2014 live listings",
-    "collected": 3,
-    "discarded": {
-      "notHouse": 0,
-      "overBudget": 0,
-      "strata": 0
-    },
-    "riskFilter": {
-      "overallRisk": "MEDIUM-HIGH",
-      "supplyRisk": {
-        "rating": "HIGH",
-        "reason": "Casey LGA growth corridor with major greenfield releases in Clyde, Clyde North, Botanic Ridge",
-        "source": "City of Casey"
-      },
-      "riskNote": "Growing supply in adjacent Clyde/Clyde North. VIC stamp duty. Better WA/QLD alternatives."
-    }
-  },
-  "Cranbourne North (VIC)": {
-    "suburb": "Cranbourne North",
-    "state": "VIC",
-    "items": [
-      {
-        "addr": "13 Julia Court, Cranbourne North, VIC 3977",
-        "price": "$770,000 - $830,000",
-        "priceNumeric": 770000,
-        "beds": 3,
-        "baths": 2,
-        "car": 4,
-        "land": "655sqm",
-        "dom": null,
-        "verdict": "MONITOR",
-        "motivation": "LOW",
-        "motivationSignal": "No active signals",
-        "yieldEst": "3.7%",
-        "cashflowEst": "$-368pw",
-        "valueAdd": "Hold for growth",
-        "reason": "MONITOR \u2014 Standard listing, no strong triggers. Set price alert.",
-        "url": null
-      },
-      {
-        "addr": "206 Wheelers Park Drive, Cranbourne North, VIC 3977",
-        "price": "$720,000 - $750,000",
-        "priceNumeric": 720000,
-        "beds": 3,
-        "baths": 2,
-        "car": 2,
-        "land": "137sqm",
-        "dom": null,
-        "verdict": "MONITOR",
-        "motivation": "LOW",
-        "motivationSignal": "No active signals",
-        "yieldEst": "4.0%",
-        "cashflowEst": "$-308pw",
-        "valueAdd": "Hold for growth",
-        "reason": "MONITOR \u2014 Standard listing, no strong triggers. Set price alert.",
-        "url": null
-      },
-      {
-        "addr": "169 Courtenay Avenue, Cranbourne North, VIC 3977",
-        "price": "$740,000 - $780,000",
-        "priceNumeric": 740000,
-        "beds": 3,
-        "baths": 2,
-        "car": 2,
-        "land": "131sqm",
-        "dom": null,
-        "verdict": "MONITOR",
-        "motivation": "LOW",
-        "motivationSignal": "No active signals",
-        "yieldEst": "3.9%",
-        "cashflowEst": "$-332pw",
-        "valueAdd": "Hold for growth",
-        "reason": "MONITOR \u2014 Standard listing, no strong triggers. Set price alert.",
-        "url": null
-      }
-    ],
-    "analysedAt": "14 Apr 2026",
-    "source": "Ray White agent sites + REIWA \u2014 live listings",
-    "collected": 3,
-    "discarded": {
-      "notHouse": 0,
-      "overBudget": 0,
-      "strata": 0
-    },
-    "riskFilter": {
-      "overallRisk": "MEDIUM",
-      "supplyRisk": {
-        "rating": "MEDIUM",
-        "reason": "Default \u2014 risk not specifically assessed"
-      },
-      "riskNote": "Risk not fully assessed for this suburb."
-    }
-  },
-  "Clyde North (VIC)": {
-    "suburb": "Clyde North",
-    "state": "VIC",
-    "items": [
-      {
-        "addr": "10 Bremer Street, Clyde North, VIC 3978",
-        "price": "$670,000 - $720,000",
-        "priceNumeric": 670000,
-        "beds": 3,
-        "baths": 2,
-        "car": 2,
-        "land": "141sqm",
-        "dom": null,
-        "verdict": "MONITOR",
-        "motivation": "LOW",
-        "motivationSignal": "No active signals",
-        "yieldEst": "4.3%",
-        "cashflowEst": "$-249pw",
-        "valueAdd": "Hold for growth",
-        "reason": "MONITOR \u2014 Standard listing, no strong triggers. Set price alert.",
-        "url": null
-      }
-    ],
-    "analysedAt": "14 Apr 2026",
-    "source": "Ray White agent sites + REIWA \u2014 live listings",
-    "collected": 1,
-    "discarded": {
-      "notHouse": 0,
-      "overBudget": 0,
-      "strata": 0
-    },
-    "riskFilter": {
-      "overallRisk": "MEDIUM",
-      "supplyRisk": {
-        "rating": "MEDIUM",
-        "reason": "Default \u2014 risk not specifically assessed"
-      },
-      "riskNote": "Risk not fully assessed for this suburb."
-    }
-  },
-  "Lynbrook (VIC)": {
-    "suburb": "Lynbrook",
-    "state": "VIC",
-    "items": [
-      {
-        "addr": "37 Harris Street, Lynbrook, VIC 3975",
-        "price": "$650,000 - $715,000",
-        "priceNumeric": 650000,
-        "beds": 3,
-        "baths": 2,
-        "car": 2,
-        "land": "167sqm",
-        "dom": null,
-        "verdict": "MONITOR",
-        "motivation": "LOW",
-        "motivationSignal": "No active signals",
-        "yieldEst": "4.4%",
-        "cashflowEst": "$-225pw",
-        "valueAdd": "Hold for growth",
-        "reason": "MONITOR \u2014 Standard listing, no strong triggers. Set price alert.",
-        "url": null
-      }
-    ],
-    "analysedAt": "14 Apr 2026",
-    "source": "Ray White agent sites + REIWA \u2014 live listings",
-    "collected": 1,
-    "discarded": {
-      "notHouse": 0,
-      "overBudget": 0,
-      "strata": 0
-    },
-    "riskFilter": {
-      "overallRisk": "MEDIUM",
-      "supplyRisk": {
-        "rating": "MEDIUM",
-        "reason": "Default \u2014 risk not specifically assessed"
-      },
-      "riskNote": "Risk not fully assessed for this suburb."
-    }
-  },
-  "Evanston Park (SA)": {
-    "suburb": "Evanston Park",
-    "state": "SA",
-    "items": [
-      {
-        "addr": "42 Thiele Crescent, Evanston Park, SA 5116",
-        "price": "Contact Agent",
-        "priceNumeric": null,
-        "beds": 4,
-        "baths": 2,
-        "car": 2,
-        "land": "210sqm",
-        "dom": null,
-        "verdict": "MONITOR",
-        "motivation": "LOW",
-        "motivationSignal": "No active signals",
-        "yieldEst": "N/A",
-        "cashflowEst": "N/A",
-        "valueAdd": "Hold for growth",
-        "reason": "MONITOR \u2014 Standard listing, no strong triggers. Set price alert.",
-        "url": null
-      },
-      {
-        "addr": "12 Newkree Road, Evanston Park, SA 5116",
-        "price": "$689,000",
-        "priceNumeric": 689000,
-        "beds": 3,
-        "baths": 1,
-        "car": 2,
-        "land": "708sqm",
-        "dom": null,
-        "verdict": "WATCH",
-        "motivation": "MEDIUM",
-        "motivationSignal": "708sqm large block",
-        "yieldEst": "4.2%",
-        "cashflowEst": "$-272pw",
-        "valueAdd": "708sqm \u2192 granny flat (~$150k build, +$400pw rent) or subdivision",
-        "reason": "\u26a0 DOWNGRADED from INVESTIGATE: Outer Gawler corridor supply risk. Original analysis: INVESTIGATE \u2014 708sqm large block. Caution: easement. ACTION: Call agent, request contract, book B&P inspection, check council zoning.",
-        "url": null
-      }
-    ],
-    "analysedAt": "14 Apr 2026",
-    "source": "Ray White agent sites + REIWA \u2014 live listings",
-    "collected": 2,
-    "discarded": {
-      "notHouse": 0,
-      "overBudget": 0,
-      "strata": 0
-    },
-    "riskFilter": {
-      "overallRisk": "MEDIUM-HIGH",
-      "supplyRisk": {
-        "rating": "HIGH",
-        "reason": "Gawler-adjacent, Springwood/Woodvale estates within 3km"
-      },
-      "riskNote": "Outer Gawler corridor supply risk."
-    }
-  },
-  "Gawler East (SA)": {
-    "suburb": "Gawler East",
-    "state": "SA",
-    "items": [
-      {
-        "addr": "18 Dawes Drive, Gawler East, SA 5118",
-        "price": "$690,000 - $710,000",
-        "priceNumeric": 690000,
-        "beds": 3,
-        "baths": 1,
-        "car": 1,
-        "land": "640sqm",
-        "dom": null,
-        "verdict": "MONITOR",
-        "motivation": "LOW",
-        "motivationSignal": "No active signals",
-        "yieldEst": "3.9%",
-        "cashflowEst": "$-303pw",
-        "valueAdd": "Hold for growth",
-        "reason": "MONITOR \u2014 Standard listing, no strong triggers. Set price alert.",
-        "url": null
-      },
-      {
-        "addr": "23 Cheek Avenue, Gawler East, SA 5118",
+        "addr": "67 Helm Street, Maddington WA 6109",
         "price": "Contact Agent",
         "priceNumeric": null,
         "beds": 3,
         "baths": 1,
-        "car": 3,
-        "land": "785sqm",
-        "dom": null,
-        "verdict": "WATCH",
-        "motivation": "MEDIUM",
-        "motivationSignal": "785sqm large block",
-        "yieldEst": "N/A",
-        "cashflowEst": "N/A",
-        "valueAdd": "785sqm \u2192 granny flat (~$150k build, +$400pw rent) or subdivision",
-        "reason": "\u26a0 DOWNGRADED from INVESTIGATE: MAJOR SUPPLY RISK: 43,800 new dwellings being built within 5km as the urban growth boundary has been removed. Growth of 13.9% in past year is unlikely to continue \u2014 post-spike correction highly likely 2027-2030. Only pursue if you have exceptional value-add (e.g. genuinely subdividable block in R20+ zoning). Original analysis: INVESTIGATE \u2014 785sqm large block. Caution: easement. ACTION: Call agent, request contract, book B&P inspection, check council zoning.",
-        "url": null
-      },
-      {
-        "addr": "43 Coombe Street, Gawler East, SA 5118",
-        "price": "$799,000",
-        "priceNumeric": 799000,
-        "beds": 3,
-        "baths": 2,
         "car": null,
-        "land": "817sqm",
-        "dom": null,
-        "verdict": "WATCH",
-        "motivation": "HIGH",
-        "motivationSignal": "817sqm MEGA-block",
-        "yieldEst": "3.6%",
-        "cashflowEst": "$-403pw",
-        "valueAdd": "817sqm \u2192 granny flat (~$150k build, +$400pw rent) or subdivision",
-        "reason": "\u26a0 DOWNGRADED from INVESTIGATE: MAJOR SUPPLY RISK: 43,800 new dwellings being built within 5km as the urban growth boundary has been removed. Growth of 13.9% in past year is unlikely to continue \u2014 post-spike correction highly likely 2027-2030. Only pursue if you have exceptional value-add (e.g. genuinely subdividable block in R20+ zoning). Original analysis: INVESTIGATE \u2014 817sqm mega-block. Caution: easement. ACTION: Call agent, request contract, book B&P inspection, check council zoning.",
-        "url": null
-      },
-      {
-        "addr": "6A Turner Street, Gawler East, SA 5118",
-        "price": "$630k (estimated from range)",
-        "priceNumeric": 630000,
-        "beds": 3,
-        "baths": 2,
-        "car": 2,
-        "land": "188sqm",
+        "land": "337sqm",
         "dom": null,
         "verdict": "MONITOR",
         "motivation": "LOW",
-        "motivationSignal": "No active signals",
-        "yieldEst": "4.3%",
-        "cashflowEst": "$-231pw",
-        "valueAdd": "Hold for growth",
-        "reason": "MONITOR \u2014 Standard listing, no strong triggers. Set price alert.",
-        "url": null
-      }
-    ],
-    "analysedAt": "14 Apr 2026",
-    "source": "Ray White agent sites + REIWA \u2014 live listings",
-    "collected": 4,
-    "discarded": {
-      "notHouse": 0,
-      "overBudget": 0,
-      "strata": 0
-    },
-    "riskFilter": {
-      "overallRisk": "HIGH",
-      "supplyRisk": {
-        "rating": "HIGH",
-        "reason": "Active greenfield: Springwood Estate, Woodvale Estate (45 lots Stage 6), Fairview Rise PLUS 350 homes approved at Gawler Belt. 43,800 homes unlocked within 5km at Two Wells/Roseworthy.",
-        "source": "https://www.premier.sa.gov.au/media-releases/news-archive/rezoning-for-350-homes-near-gawler"
-      },
-      "riskNote": "MAJOR SUPPLY RISK: 43,800 new dwellings being built within 5km as the urban growth boundary has been removed. Growth of 13.9% in past year is unlikely to continue \u2014 post-spike correction highly likely 2027-2030. Only pursue if you have exceptional value-add (e.g. genuinely subdividable block in R20+ zoning)."
-    }
-  },
-  "Gawler West (SA)": {
-    "suburb": "Gawler West",
-    "state": "SA",
-    "items": [
-      {
-        "addr": "9 Veale Street, Gawler West, SA 5118",
-        "price": "Contact Agent",
-        "priceNumeric": null,
-        "beds": 3,
-        "baths": 1,
-        "car": 2,
-        "land": "113sqm",
-        "dom": null,
-        "verdict": "MONITOR",
-        "motivation": "LOW",
-        "motivationSignal": "No active signals",
+        "motivationSignal": "No signals",
         "yieldEst": "N/A",
         "cashflowEst": "N/A",
         "valueAdd": "Hold for growth",
-        "reason": "MONITOR \u2014 Standard listing, no strong triggers. Set price alert.",
-        "url": null
+        "reason": "MONITOR \u2014 Standard listing. Set price alert.",
+        "url": "https://reiwa.com.au/67-helm-street-maddington-5006442/"
       },
       {
-        "addr": "21 Gosford Street, Gawler West, SA 5118",
-        "price": "$630,000 - $645,000",
-        "priceNumeric": 630000,
-        "beds": 3,
-        "baths": 1,
-        "car": 3,
-        "land": "767sqm",
-        "dom": null,
-        "verdict": "WATCH",
-        "motivation": "MEDIUM",
-        "motivationSignal": "767sqm large block",
-        "yieldEst": "4.5%",
-        "cashflowEst": "$-201pw",
-        "valueAdd": "767sqm \u2192 granny flat (~$150k build, +$400pw rent) or subdivision",
-        "reason": "\u26a0 DOWNGRADED from INVESTIGATE: MAJOR SUPPLY RISK: 43,800 new dwellings being built within 5km as the urban growth boundary has been removed. Growth of 13.9% in past year is unlikely to continue \u2014 post-spike correction highly likely 2027-2030. Only pursue if you have exceptional value-add (e.g. genuinely subdividable block in R20+ zoning). Original analysis: INVESTIGATE \u2014 767sqm large block. Below SA median $680k. Caution: easement. ACTION: Call agent, request contract, book B&P inspection, check council zoning.",
-        "url": null
-      }
-    ],
-    "analysedAt": "14 Apr 2026",
-    "source": "Ray White agent sites + REIWA \u2014 live listings",
-    "collected": 2,
-    "discarded": {
-      "notHouse": 0,
-      "overBudget": 0,
-      "strata": 0
-    },
-    "riskFilter": {
-      "overallRisk": "HIGH",
-      "supplyRisk": {
-        "rating": "HIGH",
-        "reason": "Active greenfield: Springwood Estate, Woodvale Estate (45 lots Stage 6), Fairview Rise PLUS 350 homes approved at Gawler Belt. 43,800 homes unlocked within 5km at Two Wells/Roseworthy.",
-        "source": "https://www.premier.sa.gov.au/media-releases/news-archive/rezoning-for-350-homes-near-gawler"
-      },
-      "riskNote": "MAJOR SUPPLY RISK: 43,800 new dwellings being built within 5km as the urban growth boundary has been removed. Growth of 13.9% in past year is unlikely to continue \u2014 post-spike correction highly likely 2027-2030. Only pursue if you have exceptional value-add (e.g. genuinely subdividable block in R20+ zoning)."
-    }
-  },
-  "Gawler Belt (SA)": {
-    "suburb": "Gawler Belt",
-    "state": "SA",
-    "items": [
-      {
-        "addr": "52 Parkers Road, Gawler Belt, SA 5118",
-        "price": "Contact Agent",
-        "priceNumeric": null,
-        "beds": 5,
-        "baths": 2,
-        "car": 6,
-        "land": "206sqm",
-        "dom": null,
-        "verdict": "MONITOR",
-        "motivation": "LOW",
-        "motivationSignal": "No active signals",
-        "yieldEst": "N/A",
-        "cashflowEst": "N/A",
-        "valueAdd": "Hold for growth",
-        "reason": "MONITOR \u2014 Standard listing, no strong triggers. Set price alert.",
-        "url": null
-      }
-    ],
-    "analysedAt": "14 Apr 2026",
-    "source": "Ray White agent sites + REIWA \u2014 live listings",
-    "collected": 1,
-    "discarded": {
-      "notHouse": 0,
-      "overBudget": 0,
-      "strata": 0
-    },
-    "riskFilter": {
-      "overallRisk": "HIGH",
-      "supplyRisk": {
-        "rating": "HIGH",
-        "reason": "Active greenfield: Springwood Estate, Woodvale Estate (45 lots Stage 6), Fairview Rise PLUS 350 homes approved at Gawler Belt. 43,800 homes unlocked within 5km at Two Wells/Roseworthy.",
-        "source": "https://www.premier.sa.gov.au/media-releases/news-archive/rezoning-for-350-homes-near-gawler"
-      },
-      "riskNote": "MAJOR SUPPLY RISK: 43,800 new dwellings being built within 5km as the urban growth boundary has been removed. Growth of 13.9% in past year is unlikely to continue \u2014 post-spike correction highly likely 2027-2030. Only pursue if you have exceptional value-add (e.g. genuinely subdividable block in R20+ zoning)."
-    }
-  },
-  "Angle Vale (SA)": {
-    "suburb": "Angle Vale",
-    "state": "SA",
-    "items": [
-      {
-        "addr": "14 Plati Road, Angle Vale, SA 5117",
-        "price": "$700k (estimated from range)",
-        "priceNumeric": 700000,
-        "beds": 4,
-        "baths": 2,
-        "car": 2,
-        "land": "480sqm",
-        "dom": null,
-        "verdict": "MONITOR",
-        "motivation": "LOW",
-        "motivationSignal": "No active signals",
-        "yieldEst": "4.5%",
-        "cashflowEst": "$-235pw",
-        "valueAdd": "Hold for growth",
-        "reason": "MONITOR \u2014 Standard listing, no strong triggers. Set price alert.",
-        "url": null
-      },
-      {
-        "addr": "7 Colton Place, Angle Vale, SA 5117",
-        "price": "Contact Agent",
-        "priceNumeric": null,
-        "beds": 3,
-        "baths": 2,
-        "car": 2,
-        "land": "684sqm",
-        "dom": null,
-        "verdict": "MONITOR",
-        "motivation": "LOW",
-        "motivationSignal": "No active signals",
-        "yieldEst": "N/A",
-        "cashflowEst": "N/A",
-        "valueAdd": "Hold for growth",
-        "reason": "MONITOR \u2014 Standard listing, no strong triggers. Set price alert.",
-        "url": null
-      },
-      {
-        "addr": "20 Luis Drive, Angle Vale, SA 5117",
-        "price": "Contact Agent",
-        "priceNumeric": null,
-        "beds": 4,
-        "baths": 2,
-        "car": 2,
-        "land": "179sqm",
-        "dom": null,
-        "verdict": "MONITOR",
-        "motivation": "LOW",
-        "motivationSignal": "No active signals",
-        "yieldEst": "N/A",
-        "cashflowEst": "N/A",
-        "valueAdd": "Hold for growth",
-        "reason": "MONITOR \u2014 Standard listing, no strong triggers. Set price alert.",
-        "url": null
-      },
-      {
-        "addr": "2 Luxmoore Road, Angle Vale, SA 5117",
-        "price": "$680k (estimated from range)",
-        "priceNumeric": 680000,
-        "beds": 4,
-        "baths": 2,
-        "car": 2,
-        "land": "450sqm",
-        "dom": null,
-        "verdict": "MONITOR",
-        "motivation": "LOW",
-        "motivationSignal": "No active signals",
-        "yieldEst": "4.6%",
-        "cashflowEst": "$-211pw",
-        "valueAdd": "Hold for growth",
-        "reason": "MONITOR \u2014 Standard listing, no strong triggers. Set price alert.",
-        "url": null
-      }
-    ],
-    "analysedAt": "14 Apr 2026",
-    "source": "Ray White agent sites + REIWA \u2014 live listings",
-    "collected": 4,
-    "discarded": {
-      "notHouse": 0,
-      "overBudget": 0,
-      "strata": 0
-    },
-    "riskFilter": {
-      "overallRisk": "MEDIUM",
-      "supplyRisk": {
-        "rating": "MEDIUM",
-        "reason": "Default \u2014 risk not specifically assessed"
-      },
-      "riskNote": "Risk not fully assessed for this suburb."
-    }
-  },
-  "Munno Para West (SA)": {
-    "suburb": "Munno Para West",
-    "state": "SA",
-    "items": [
-      {
-        "addr": "35 Ponderosa Road, Munno Para West, SA 5115",
-        "price": "$625,000 - $649,000",
-        "priceNumeric": 625000,
-        "beds": 3,
-        "baths": 2,
-        "car": 3,
-        "land": "300sqm",
-        "dom": null,
-        "verdict": "MONITOR",
-        "motivation": "LOW",
-        "motivationSignal": "No active signals",
-        "yieldEst": "4.3%",
-        "cashflowEst": "$-225pw",
-        "valueAdd": "Hold for growth",
-        "reason": "MONITOR \u2014 Standard listing, no strong triggers. Set price alert.",
-        "url": null
-      },
-      {
-        "addr": "70A Brandis Road, Munno Para West, SA 5115",
-        "price": "$649,000 - $675,000",
-        "priceNumeric": 649000,
-        "beds": 4,
-        "baths": 1,
-        "car": 2,
-        "land": "151sqm",
-        "dom": null,
-        "verdict": "MONITOR",
-        "motivation": "LOW",
-        "motivationSignal": "No active signals",
-        "yieldEst": "4.8%",
-        "cashflowEst": "$-174pw",
-        "valueAdd": "Hold for growth",
-        "reason": "MONITOR \u2014 Standard listing, no strong triggers. Set price alert.",
-        "url": null
-      },
-      {
-        "addr": "2 Barossa Drive, Munno Para West, SA 5115",
-        "price": "$750,000 - $825,000",
-        "priceNumeric": 750000,
-        "beds": 4,
-        "baths": 2,
-        "car": 2,
-        "land": "522sqm",
-        "dom": null,
-        "verdict": "MONITOR",
-        "motivation": "LOW",
-        "motivationSignal": "No active signals",
-        "yieldEst": "4.2%",
-        "cashflowEst": "$-294pw",
-        "valueAdd": "Hold for growth",
-        "reason": "MONITOR \u2014 Standard listing, no strong triggers. Set price alert.",
-        "url": null
-      },
-      {
-        "addr": "38 Ascot Avenue, Munno Para West, SA 5115",
-        "price": "$649,000 - $675,000",
-        "priceNumeric": 649000,
-        "beds": 3,
-        "baths": 2,
-        "car": 2,
-        "land": "300sqm",
-        "dom": null,
-        "verdict": "MONITOR",
-        "motivation": "LOW",
-        "motivationSignal": "No active signals",
-        "yieldEst": "4.2%",
-        "cashflowEst": "$-254pw",
-        "valueAdd": "Hold for growth",
-        "reason": "MONITOR \u2014 Standard listing, no strong triggers. Set price alert.",
-        "url": null
-      },
-      {
-        "addr": "70 Chellaston Road, Munno Para West, SA 5115",
-        "price": "$599,000 - $635,000",
-        "priceNumeric": 599000,
-        "beds": 4,
-        "baths": 1,
-        "car": 6,
-        "land": "538sqm",
-        "dom": null,
-        "verdict": "MONITOR",
-        "motivation": "LOW",
-        "motivationSignal": "No active signals",
-        "yieldEst": "5.2%",
-        "cashflowEst": "$-114pw",
-        "valueAdd": "Hold for growth",
-        "reason": "MONITOR \u2014 Standard listing, no strong triggers. Set price alert.",
-        "url": null
-      },
-      {
-        "addr": "18 Geoff Road, Munno Para West, SA 5115",
-        "price": "$735,000 - $765,000",
-        "priceNumeric": 735000,
-        "beds": 4,
-        "baths": 2,
-        "car": 4,
-        "land": "375sqm",
-        "dom": null,
-        "verdict": "MONITOR",
-        "motivation": "LOW",
-        "motivationSignal": "No active signals",
-        "yieldEst": "4.2%",
-        "cashflowEst": "$-276pw",
-        "valueAdd": "Hold for growth",
-        "reason": "MONITOR \u2014 Standard listing, no strong triggers. Set price alert.",
-        "url": null
-      }
-    ],
-    "analysedAt": "14 Apr 2026",
-    "source": "Ray White agent sites + REIWA \u2014 live listings",
-    "collected": 6,
-    "discarded": {
-      "notHouse": 0,
-      "overBudget": 0,
-      "strata": 0
-    },
-    "riskFilter": {
-      "overallRisk": "MEDIUM-HIGH",
-      "supplyRisk": {
-        "rating": "HIGH",
-        "reason": "Playford LGA has extensive greenfield release. Andrews Farm, Munno Para West corridor active.",
-        "source": "Playford Council"
-      },
-      "riskNote": "HIGH supply \u2014 outer fringe with ongoing greenfield release. Growth likely to moderate as supply catches up."
-    }
-  },
-  "Andrews Farm (SA)": {
-    "suburb": "Andrews Farm",
-    "state": "SA",
-    "items": [
-      {
-        "addr": "123 Lakeside Drive, Andrews Farm, SA 5114",
-        "price": "$685,000 - $699,000",
-        "priceNumeric": 685000,
-        "beds": 3,
-        "baths": 2,
-        "car": 2,
-        "land": "310sqm",
-        "dom": null,
-        "verdict": "MONITOR",
-        "motivation": "LOW",
-        "motivationSignal": "No active signals",
-        "yieldEst": "3.9%",
-        "cashflowEst": "$-297pw",
-        "valueAdd": "Hold for growth",
-        "reason": "MONITOR \u2014 Standard listing, no strong triggers. Set price alert.",
-        "url": null
-      }
-    ],
-    "analysedAt": "14 Apr 2026",
-    "source": "Ray White agent sites + REIWA \u2014 live listings",
-    "collected": 1,
-    "discarded": {
-      "notHouse": 0,
-      "overBudget": 0,
-      "strata": 0
-    },
-    "riskFilter": {
-      "overallRisk": "MEDIUM",
-      "supplyRisk": {
-        "rating": "MEDIUM",
-        "reason": "Default \u2014 risk not specifically assessed"
-      },
-      "riskNote": "Risk not fully assessed for this suburb."
-    }
-  },
-  "Evanston Gardens (SA)": {
-    "suburb": "Evanston Gardens",
-    "state": "SA",
-    "items": [
-      {
-        "addr": "29 Hamilton Boulevard, Evanston Gardens, SA 5116",
-        "price": "$680k (estimated from range)",
-        "priceNumeric": 680000,
-        "beds": 4,
-        "baths": 2,
-        "car": 2,
-        "land": "510sqm",
-        "dom": null,
-        "verdict": "MONITOR",
-        "motivation": "LOW",
-        "motivationSignal": "No active signals",
-        "yieldEst": "4.6%",
-        "cashflowEst": "$-211pw",
-        "valueAdd": "Hold for growth",
-        "reason": "MONITOR \u2014 Standard listing, no strong triggers. Set price alert.",
-        "url": null
-      },
-      {
-        "addr": "29 Gibson Street, Evanston Gardens, SA 5116",
-        "price": "$699,000 - $709,000",
+        "addr": "86B Gosnells Road, Maddington WA 6109",
+        "price": "From $699,000",
         "priceNumeric": 699000,
         "beds": 3,
-        "baths": 2,
-        "car": 1,
-        "land": "300sqm",
+        "baths": 1,
+        "car": 2,
+        "land": "437sqm",
         "dom": null,
         "verdict": "MONITOR",
         "motivation": "LOW",
-        "motivationSignal": "No active signals",
-        "yieldEst": "3.9%",
-        "cashflowEst": "$-313pw",
-        "valueAdd": "Hold for growth",
-        "reason": "MONITOR \u2014 Standard listing, no strong triggers. Set price alert.",
-        "url": null
-      }
-    ],
-    "analysedAt": "14 Apr 2026",
-    "source": "Ray White agent sites + REIWA \u2014 live listings",
-    "collected": 2,
-    "discarded": {
-      "notHouse": 0,
-      "overBudget": 0,
-      "strata": 0
-    },
-    "riskFilter": {
-      "overallRisk": "MEDIUM-HIGH",
-      "supplyRisk": {
-        "rating": "HIGH",
-        "reason": "Gawler-adjacent, Springwood/Woodvale estates within 3km"
-      },
-      "riskNote": "Outer Gawler corridor supply risk."
-    }
-  },
-  "Smithfield (SA)": {
-    "suburb": "Smithfield",
-    "state": "SA",
-    "items": [
-      {
-        "addr": "4 Lysle Court, Smithfield, SA 5114",
-        "price": "$530k (estimated from range)",
-        "priceNumeric": 530000,
-        "beds": 3,
-        "baths": 1,
-        "car": 4,
-        "land": "720sqm",
-        "dom": null,
-        "verdict": "WATCH",
-        "motivation": "MEDIUM",
-        "motivationSignal": "720sqm large block",
-        "yieldEst": "5.4%",
-        "cashflowEst": "$-82pw",
-        "valueAdd": "720sqm \u2192 granny flat (~$150k build, +$400pw rent) or subdivision",
-        "reason": "\u26a0 DOWNGRADED from INVESTIGATE: Oversupply indicator (BA Ratio 4.15%) + lower IRSAD + Playford crime concerns. Original analysis: INVESTIGATE \u2014 720sqm large block. Below SA median $680k. Yield 5396.2%. Caution: easement. ACTION: Call agent, request contract, book B&P inspection, check council zoning.",
-        "url": null
-      }
-    ],
-    "analysedAt": "14 Apr 2026",
-    "source": "Ray White agent sites + REIWA \u2014 live listings",
-    "collected": 1,
-    "discarded": {
-      "notHouse": 0,
-      "overBudget": 0,
-      "strata": 0
-    },
-    "riskFilter": {
-      "overallRisk": "HIGH",
-      "supplyRisk": {
-        "rating": "HIGH",
-        "reason": "BA Ratio 4.15% signals substantial approved construction and oversupply risk 12-36 months"
-      },
-      "riskNote": "Oversupply indicator (BA Ratio 4.15%) + lower IRSAD + Playford crime concerns."
-    }
-  },
-  "Gawler South (SA)": {
-    "suburb": "Gawler South",
-    "state": "SA",
-    "items": [
-      {
-        "addr": "3 Nineteenth Street, Gawler South, SA 5118",
-        "price": "$719,000",
-        "priceNumeric": 719000,
-        "beds": 3,
-        "baths": 1,
-        "car": 1,
-        "land": "828sqm",
-        "dom": null,
-        "verdict": "WATCH",
-        "motivation": "HIGH",
-        "motivationSignal": "828sqm MEGA-block",
+        "motivationSignal": "corner block",
         "yieldEst": "4.0%",
-        "cashflowEst": "$-307pw",
-        "valueAdd": "828sqm \u2192 granny flat (~$150k build, +$400pw rent) or subdivision",
-        "reason": "\u26a0 DOWNGRADED from INVESTIGATE: MAJOR SUPPLY RISK: 43,800 new dwellings being built within 5km as the urban growth boundary has been removed. Growth of 13.9% in past year is unlikely to continue \u2014 post-spike correction highly likely 2027-2030. Only pursue if you have exceptional value-add (e.g. genuinely subdividable block in R20+ zoning). Original analysis: INVESTIGATE \u2014 828sqm mega-block. Caution: easement. ACTION: Call agent, request contract, book B&P inspection, check council zoning.",
-        "url": null
-      }
-    ],
-    "analysedAt": "14 Apr 2026",
-    "source": "Ray White agent sites + REIWA \u2014 live listings",
-    "collected": 1,
-    "discarded": {
-      "notHouse": 0,
-      "overBudget": 0,
-      "strata": 0
-    },
-    "riskFilter": {
-      "overallRisk": "HIGH",
-      "supplyRisk": {
-        "rating": "HIGH",
-        "reason": "Active greenfield: Springwood Estate, Woodvale Estate (45 lots Stage 6), Fairview Rise PLUS 350 homes approved at Gawler Belt. 43,800 homes unlocked within 5km at Two Wells/Roseworthy.",
-        "source": "https://www.premier.sa.gov.au/media-releases/news-archive/rezoning-for-350-homes-near-gawler"
-      },
-      "riskNote": "MAJOR SUPPLY RISK: 43,800 new dwellings being built within 5km as the urban growth boundary has been removed. Growth of 13.9% in past year is unlikely to continue \u2014 post-spike correction highly likely 2027-2030. Only pursue if you have exceptional value-add (e.g. genuinely subdividable block in R20+ zoning)."
-    }
-  },
-  "Munno Para (SA)": {
-    "suburb": "Munno Para",
-    "state": "SA",
-    "items": [
-      {
-        "addr": "112 Douglas Drive, Munno Para, SA 5115",
-        "price": "$749,000 - $779,000",
-        "priceNumeric": 749000,
-        "beds": 4,
-        "baths": 2,
-        "car": 4,
-        "land": "375sqm",
-        "dom": null,
-        "verdict": "MONITOR",
-        "motivation": "LOW",
-        "motivationSignal": "No active signals",
-        "yieldEst": "4.2%",
         "cashflowEst": "$-293pw",
-        "valueAdd": "Hold for growth",
-        "reason": "MONITOR \u2014 Standard listing, no strong triggers. Set price alert.",
-        "url": null
-      },
-      {
-        "addr": "349 Coventry Road, Munno Para, SA 5115",
-        "price": "$610,000",
-        "priceNumeric": 610000,
-        "beds": 3,
-        "baths": 2,
-        "car": 2,
-        "land": "189sqm",
-        "dom": null,
-        "verdict": "MONITOR",
-        "motivation": "LOW",
-        "motivationSignal": "No active signals",
-        "yieldEst": "4.4%",
-        "cashflowEst": "$-207pw",
-        "valueAdd": "Hold for growth",
-        "reason": "MONITOR \u2014 Standard listing, no strong triggers. Set price alert.",
-        "url": null
-      },
-      {
-        "addr": "3 Wallaby Street, Munno Para, SA 5115",
-        "price": "$679,000 - $699,000",
-        "priceNumeric": 679000,
-        "beds": 3,
-        "baths": 2,
-        "car": 4,
-        "land": "442sqm",
-        "dom": null,
-        "verdict": "MONITOR",
-        "motivation": "LOW",
-        "motivationSignal": "No active signals",
-        "yieldEst": "4.0%",
-        "cashflowEst": "$-290pw",
-        "valueAdd": "Hold for growth",
-        "reason": "MONITOR \u2014 Standard listing, no strong triggers. Set price alert.",
-        "url": null
-      },
-      {
-        "addr": "155 Douglas Drive, Munno Para, SA 5115",
-        "price": "$649,000",
-        "priceNumeric": 649000,
-        "beds": 4,
-        "baths": 2,
-        "car": 2,
-        "land": "300sqm",
-        "dom": null,
-        "verdict": "MONITOR",
-        "motivation": "LOW",
-        "motivationSignal": "No active signals",
-        "yieldEst": "4.8%",
-        "cashflowEst": "$-174pw",
-        "valueAdd": "Hold for growth",
-        "reason": "MONITOR \u2014 Standard listing, no strong triggers. Set price alert.",
-        "url": null
+        "valueAdd": "corner block",
+        "reason": "MONITOR \u2014 Standard listing. Set price alert.",
+        "url": "https://reiwa.com.au/86b-gosnells-road-maddington-5014726/"
       }
     ],
-    "analysedAt": "14 Apr 2026",
-    "source": "Ray White agent sites + REIWA \u2014 live listings",
-    "collected": 4,
-    "discarded": {
-      "notHouse": 0,
-      "overBudget": 0,
-      "strata": 0
-    },
-    "riskFilter": {
-      "overallRisk": "MEDIUM-HIGH",
-      "supplyRisk": {
-        "rating": "HIGH",
-        "reason": "Playford LGA has extensive greenfield release. Andrews Farm, Munno Para West corridor active.",
-        "source": "Playford Council"
-      },
-      "riskNote": "HIGH supply \u2014 outer fringe with ongoing greenfield release. Growth likely to moderate as supply catches up."
-    }
+    "collected": 5,
+    "analysedAt": "21 Apr 17:11",
+    "source": "REIWA.com.au \u2014 automated scout"
   },
-  "Two Wells (SA)": {
-    "suburb": "Two Wells",
-    "state": "SA",
+  "Kelmscott": {
+    "suburb": "Kelmscott",
+    "state": "WA",
     "items": [
       {
-        "addr": "42 Walter Avenue, Two Wells, SA 5501",
+        "addr": "5 Grasmere Place, Kelmscott WA 6111",
+        "price": "$750,000",
+        "priceNumeric": 750000,
+        "beds": 3,
+        "baths": 1,
+        "car": null,
+        "land": null,
+        "dom": null,
+        "verdict": "MONITOR",
+        "motivation": "LOW",
+        "motivationSignal": "No signals",
+        "yieldEst": "3.8%",
+        "cashflowEst": "$-344pw",
+        "valueAdd": "Hold for growth",
+        "reason": "MONITOR \u2014 Standard listing. Set price alert.",
+        "url": "https://reiwa.com.au/5-grasmere-place-kelmscott-5011068/"
+      },
+      {
+        "addr": "6 Savage Road, Kelmscott WA 6111",
+        "price": "From $799,000",
+        "priceNumeric": 799000,
+        "beds": 3,
+        "baths": 1,
+        "car": 1,
+        "land": null,
+        "dom": null,
+        "verdict": "MONITOR",
+        "motivation": "LOW",
+        "motivationSignal": "No signals",
+        "yieldEst": "3.6%",
+        "cashflowEst": "$-403pw",
+        "valueAdd": "Hold for growth",
+        "reason": "MONITOR \u2014 Standard listing. Set price alert.",
+        "url": "https://reiwa.com.au/6-savage-road-kelmscott-5011613/"
+      },
+      {
+        "addr": "23 Bunney Road, Kelmscott WA 6111",
+        "price": "Contact Agent",
+        "priceNumeric": null,
+        "beds": 3,
+        "baths": 2,
+        "car": 2,
+        "land": "817sqm",
+        "dom": null,
+        "verdict": "AVOID",
+        "motivation": "LOW",
+        "motivationSignal": "development potential",
+        "yieldEst": "N/A",
+        "cashflowEst": "N/A",
+        "valueAdd": "817sqm \u2192 granny flat/subdivision \u00b7 development potential",
+        "reason": "AVOID \u2014 Red flags: sold as is.",
+        "url": "https://reiwa.com.au/23-bunney-road-kelmscott-5015023/"
+      }
+    ],
+    "collected": 5,
+    "analysedAt": "21 Apr 17:12",
+    "source": "REIWA.com.au \u2014 automated scout"
+  },
+  "Gosnells": {
+    "suburb": "Gosnells",
+    "state": "WA",
+    "items": [
+      {
+        "addr": "4 Killarney Loop, Gosnells WA 6110",
         "price": "Contact Agent",
         "priceNumeric": null,
         "beds": 4,
         "baths": 2,
-        "car": 6,
-        "land": "1101sqm",
-        "dom": null,
-        "verdict": "WATCH",
-        "motivation": "HIGH",
-        "motivationSignal": "1101sqm MEGA-block",
-        "yieldEst": "N/A",
-        "cashflowEst": "N/A",
-        "valueAdd": "1101sqm \u2192 granny flat (~$150k build, +$400pw rent) or subdivision",
-        "reason": "\u26a0 DOWNGRADED from INVESTIGATE: EXTREME supply risk \u2014 43,800 new homes being built within 5km as urban growth boundary removed. Growth cap imposed by massive new supply pipeline. AVOID. Original analysis: INVESTIGATE \u2014 1101sqm mega-block. Caution: easement. ACTION: Call agent, request contract, book B&P inspection, check council zoning.",
-        "url": null
-      }
-    ],
-    "analysedAt": "14 Apr 2026",
-    "source": "Ray White agent sites + REIWA \u2014 live listings",
-    "collected": 1,
-    "discarded": {
-      "notHouse": 0,
-      "overBudget": 0,
-      "strata": 0
-    },
-    "riskFilter": {
-      "overallRisk": "HIGH",
-      "supplyRisk": {
-        "rating": "HIGH",
-        "reason": "9,600+1,200 new homes planned PLUS 33,000 at adjacent Roseworthy = 43,800 new dwellings within 5km"
-      },
-      "riskNote": "EXTREME supply risk \u2014 43,800 new homes being built within 5km as urban growth boundary removed. Growth cap imposed by massive new supply pipeline. AVOID."
-    }
-  },
-  "Mount Louisa (QLD)": {
-    "suburb": "Mount Louisa",
-    "state": "QLD",
-    "items": [
-      {
-        "addr": "10 Browning Street, Mount Louisa, QLD 4814",
-        "price": "Offers Over $735,000",
-        "priceNumeric": 735000,
-        "beds": 4,
-        "baths": 2,
         "car": 2,
-        "land": "601sqm",
+        "land": null,
         "dom": null,
         "verdict": "MONITOR",
         "motivation": "LOW",
-        "motivationSignal": "Flexible vendor pricing",
-        "yieldEst": "4.1%",
-        "cashflowEst": "$-296pw",
+        "motivationSignal": "r30",
+        "yieldEst": "N/A",
+        "cashflowEst": "N/A",
+        "valueAdd": "r30",
+        "reason": "MONITOR \u2014 Standard listing. Set price alert.",
+        "url": "https://reiwa.com.au/4-killarney-loop-gosnells-5011042/"
+      },
+      {
+        "addr": "5 Settlers Way, Gosnells WA 6110",
+        "price": "Contact Agent",
+        "priceNumeric": null,
+        "beds": 4,
+        "baths": 2,
+        "car": 1,
+        "land": null,
+        "dom": null,
+        "verdict": "MONITOR",
+        "motivation": "LOW",
+        "motivationSignal": "No signals",
+        "yieldEst": "N/A",
+        "cashflowEst": "N/A",
         "valueAdd": "Hold for growth",
-        "reason": "MONITOR \u2014 Standard listing, no strong triggers. Set price alert.",
-        "url": null
+        "reason": "MONITOR \u2014 Standard listing. Set price alert.",
+        "url": "https://reiwa.com.au/5-settlers-way-gosnells-5012724/"
       }
     ],
-    "analysedAt": "14 Apr 2026",
-    "source": "Ray White agent sites + REIWA \u2014 live listings",
-    "collected": 1,
-    "discarded": {
-      "notHouse": 0,
-      "overBudget": 0,
-      "strata": 0
-    },
-    "riskFilter": {
-      "overallRisk": "MEDIUM",
-      "supplyRisk": {
-        "rating": "MEDIUM",
-        "reason": "Default \u2014 risk not specifically assessed"
-      },
-      "riskNote": "Risk not fully assessed for this suburb."
-    }
+    "collected": 5,
+    "analysedAt": "21 Apr 17:12",
+    "source": "REIWA.com.au \u2014 automated scout"
   },
   "Kirwan (QLD)": {
     "suburb": "Kirwan",
     "state": "QLD",
     "items": [
       {
-        "addr": "7 Chaimberlane Place, Kirwan, QLD 4817",
-        "price": "Offers Over $665,000",
-        "priceNumeric": 665000,
+        "addr": "514 Sturt Street Townsville , QLD 4810",
+        "price": "Offers Over $729,000",
+        "priceNumeric": 729000,
         "beds": 4,
-        "baths": 1,
+        "baths": 2,
         "car": 2,
-        "land": "510sqm",
+        "land": "704sqm",
         "dom": null,
-        "verdict": "MONITOR",
-        "motivation": "LOW",
-        "motivationSignal": "Flexible vendor pricing",
-        "yieldEst": "4.5%",
-        "cashflowEst": "$-213pw",
-        "valueAdd": "Hold for growth",
-        "reason": "MONITOR \u2014 Standard listing, no strong triggers. Set price alert.",
+        "verdict": "INVESTIGATE",
+        "motivation": "HIGH",
+        "motivationSignal": "No signals",
+        "yieldEst": "4.4%",
+        "cashflowEst": "$-259pw",
+        "valueAdd": "704sqm \u2192 granny flat/subdivision",
+        "reason": "INVESTIGATE \u2014 704sqm large block. ACTION: Call agent, request contract, book B&P.",
         "url": null
       },
       {
@@ -1289,70 +185,34 @@
         "dom": null,
         "verdict": "INVESTIGATE",
         "motivation": "HIGH",
-        "motivationSignal": "Corner block \u2014 subdivision angle + Flexible vendor pricing",
+        "motivationSignal": "corner block",
         "yieldEst": "4.0%",
         "cashflowEst": "$-313pw",
-        "valueAdd": "Corner block \u2014 better subdivision geometry",
-        "reason": "INVESTIGATE \u2014 Value-add: corner block. ACTION: Call agent, request contract, book B&P inspection, check council zoning.",
+        "valueAdd": "corner block",
+        "reason": "INVESTIGATE \u2014 696sqm large block. Value-add: corner block. ACTION: Call agent, request contract, book B&P.",
         "url": null
-      }
-    ],
-    "analysedAt": "14 Apr 2026",
-    "source": "Ray White agent sites + REIWA \u2014 live listings",
-    "collected": 2,
-    "discarded": {
-      "notHouse": 0,
-      "overBudget": 0,
-      "strata": 0
-    },
-    "riskFilter": {
-      "overallRisk": "LOW-MEDIUM",
-      "supplyRisk": {
-        "rating": "LOW",
-        "reason": "Kirwan is ESTABLISHED. New supply concentrated in Mount Low, Elliot Springs, northern beaches \u2014 NOT Kirwan itself. Kirwan is infill only.",
-        "source": "Townsville Council + GemLife announcement"
       },
-      "riskNote": "STRONGEST risk-adjusted pick. Established suburb means supply is constrained. Defence spending is actively delivering, not announcements. Cyclone risk insurable."
-    }
-  },
-  "Townsville (QLD)": {
-    "suburb": "Townsville",
-    "state": "QLD",
-    "items": [
       {
-        "addr": "514 Sturt Street Townsville, QLD 4810",
-        "price": "Offers Over $729,000",
-        "priceNumeric": 729000,
-        "beds": 4,
+        "addr": "48 Frank Street, Kirwan, QLD 4817",
+        "price": "$599,000",
+        "priceNumeric": 599000,
+        "beds": 3,
         "baths": 2,
         "car": 2,
-        "land": "704sqm",
+        "land": "637sqm",
         "dom": null,
-        "verdict": "INVESTIGATE",
-        "motivation": "MEDIUM",
-        "motivationSignal": "704sqm large block + Flexible vendor pricing",
-        "yieldEst": "4.4%",
-        "cashflowEst": "$-259pw",
-        "valueAdd": "704sqm \u2192 granny flat (~$150k build, +$400pw rent) or subdivision",
-        "reason": "\u26a0 SUPPLY RISK MEDIUM: Default \u2014 risk not specifically assessed. INVESTIGATE \u2014 704sqm large block. ACTION: Call agent, request contract, book B&P inspection, check council zoning.",
+        "verdict": "MONITOR",
+        "motivation": "LOW",
+        "motivationSignal": "No signals",
+        "yieldEst": "4.3%",
+        "cashflowEst": "$-214pw",
+        "valueAdd": "Hold for growth",
+        "reason": "MONITOR \u2014 Standard listing. Set price alert.",
         "url": null
       }
     ],
-    "analysedAt": "14 Apr 2026",
-    "source": "Ray White agent sites + REIWA \u2014 live listings",
-    "collected": 1,
-    "discarded": {
-      "notHouse": 0,
-      "overBudget": 0,
-      "strata": 0
-    },
-    "riskFilter": {
-      "overallRisk": "MEDIUM",
-      "supplyRisk": {
-        "rating": "MEDIUM",
-        "reason": "Default \u2014 risk not specifically assessed"
-      },
-      "riskNote": "Risk not fully assessed for this suburb."
-    }
+    "collected": 3,
+    "analysedAt": "21 Apr 17:12",
+    "source": "raywhitetownsville \u2014 automated scout"
   }
 }
