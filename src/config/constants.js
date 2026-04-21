@@ -5,6 +5,7 @@ export const STAGE_DEFS = [
   { id: 3, key: 'suburbs', label: 'Suburb Deep Dive', icon: '3', description: 'DSR metrics + qualitative analysis per suburb' },
   { id: 4, key: 'listings', label: 'Listing Scout', icon: '4', description: 'Live listings from Domain/REA with verdicts' },
   { id: 5, key: 'dd', label: 'Due Diligence', icon: '5', description: 'Risk analysis from property documents' },
+  { id: 6, key: 'top10', label: '🏆 Top 10', icon: '🏆', description: 'Agent 8 final ranking — the best 10 across all states' },
 ];
 
 export const SCORING_WEIGHTS = {
