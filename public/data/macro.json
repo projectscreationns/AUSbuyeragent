@@ -1,76 +1,93 @@
 {
-  "asOf": "06/04/2026",
+  "asOf": "21/04/2026",
   "rba": {
     "cashRate": "4.10%",
     "lastDecision": {
-      "date": "18/03/2026",
+      "date": "17/03/2026",
       "change": "+25bp",
       "voteSplit": "5-4",
       "source": "https://www.rba.gov.au/media-releases/2026/mr-26-08.html"
     },
     "nextMeeting": "05/05/2026",
     "forecasts": [
-      { "bank": "Markets", "nextMove": "85% chance +25bp May", "source": "https://www.asx.com.au/markets/trade-our-derivatives-market/futures-market/rba-rate-tracker" },
-      { "bank": "AMP", "nextMove": "Rates to remain elevated through 2026", "source": "https://www.amp.com.au/resources/insights-hub/olivers-insights-expect-some-slowing-in-2026" },
-      { "bank": "CBA", "nextMove": "Global instability may force further hikes", "source": "https://www.commbank.com.au/articles/newsroom/2026/03/global-instability-inflation-interest-rates.html" }
+      {
+        "bank": "Markets",
+        "nextMove": "60% chance +25bp to 4.35% in May",
+        "source": "https://www.asx.com.au/markets/trade-our-derivatives-market/futures-market/rba-rate-tracker"
+      },
+      {
+        "bank": "CBA/NAB/Westpac",
+        "nextMove": "All forecast hike in May",
+        "source": "https://www.finder.com.au/rba-cash-rate"
+      },
+      {
+        "bank": "RBA guidance",
+        "nextMove": "Trimmed mean inflation to stay above target until mid-2028",
+        "source": "https://www.rba.gov.au/speeches/2026/sp-so-2026-02-24.html"
+      }
     ],
     "signal": "RED",
-    "note": "Two consecutive hikes in 2026 (Feb + Mar). Cash rate at 4.10%, highest since 2024. Markets pricing 85% chance of another hike in May. Hawkish RBA language on inflation."
+    "note": "Two hikes in 2026. May hike 60% priced. RBA says inflation above target until mid-2028. Rates staying high."
   },
   "employment": {
     "unemployment": {
-      "value": "4.3%",
-      "month": "Feb 2026",
-      "trend": "rising slightly — trend at 4.2%, seasonally adjusted 4.3%",
+      "value": "4.1%",
+      "month": "Mar 2026",
+      "trend": "improved from 4.3% in Feb",
       "source": "https://www.abs.gov.au/statistics/labour/employment-and-unemployment/labour-force-australia/latest-release"
     },
-    "underemployment": {
-      "value": null,
-      "source": null
-    },
     "signal": "AMBER",
-    "note": "Unemployment ticking up from 4.1% to 4.3% seasonally adjusted. Labour market softening but not collapsing. March data due 16 April."
+    "note": "March data improved to 4.1% from 4.3% in Feb. Labour market more resilient than expected."
   },
   "inflation": {
     "headline": {
       "value": "3.7%",
       "period": "12mo to Feb 2026",
-      "source": "https://www.abs.gov.au/media-centre/media-releases/cpi-rose-37-year-february-2026"
+      "source": "https://www.abs.gov.au/statistics/economy/price-indexes-and-inflation/consumer-price-index-australia/latest-release"
     },
     "trimmedMean": {
       "value": "3.3%",
       "source": "https://www.abs.gov.au/statistics/economy/price-indexes-and-inflation/consumer-price-index-australia/latest-release"
     },
     "signal": "RED",
-    "note": "Still well above RBA 2-3% target. Housing +7.2%, electricity +37% (rebate distortion). Trimmed mean sticky at 3.3%. This is why RBA is hiking."
+    "note": "Still well above 2-3% target. Housing +7.2%, electricity distortions. RBA expects above-target until mid-2028."
   },
   "wages": {
     "wpiAnnual": {
       "value": "3.4%",
       "quarter": "Dec Q 2025",
-      "source": "https://www.abs.gov.au/media-centre/media-releases/wages-rise-08-quarter-and-34-over-year"
+      "source": "https://www.abs.gov.au/statistics/economy/price-indexes-and-inflation/wage-price-index-australia/latest-release"
     },
     "signal": "AMBER",
-    "note": "Wages growth 3.4% vs inflation 3.7% = real wages still negative. Private sector 3.4%, public 4.0%. Next release May 2026."
+    "note": "Wages 3.4% vs inflation 3.7% = real wages still slightly negative."
   },
   "migration": {
     "nom": {
-      "value": "306,000",
-      "period": "yr to Jun 2025",
+      "value": "311,000",
+      "period": "yr to Sep 2025",
       "source": "https://www.abs.gov.au/statistics/people/population/overseas-migration/latest-release"
     },
     "annualPopGrowth": {
       "value": "+1.5%",
-      "source": "https://www.abs.gov.au/statistics/people/population/national-state-and-territory-population/jun-2025"
+      "source": "https://www.abs.gov.au/statistics/people/population/national-state-and-territory-population/latest-release"
     },
     "fastestStates": [
-      { "state": "WA", "growth": "+2.2%" },
-      { "state": "QLD", "growth": "+2.0%" },
-      { "state": "SA", "growth": "+1.8%" }
+      {
+        "state": "WA",
+        "growth": "+2.2%"
+      },
+      {
+        "state": "QLD",
+        "growth": "+2.1%"
+      },
+      {
+        "state": "SA",
+        "growth": "+1.8%"
+      }
     ],
-    "forecast2026": "NOM expected to fall to ~260,000 in 2026 (gov't Population Statement)",
+    "forecast2026": "Treasury: NOM to 260,000 in 2025-26, settling near 225,000 by 2026-27",
     "signal": "GREEN",
-    "note": "306k NOM still well above long-run average (~190k). WA and QLD growing fastest. Population 27.6M. Even at forecast 260k, demand pressure remains strong vs undersupply."
+    "note": "311k NOM still elevated. WA and QLD growing fastest. Brisbane added 58,200 residents (60% from overseas migration)."
   },
   "approvals": {
     "monthly": {
@@ -79,57 +96,124 @@
       "source": "https://www.abs.gov.au/statistics/industry/building-and-construction/building-approvals-australia/latest-release"
     },
     "housesTrend": "+0.9%",
-    "aptsTrend": "Apartments drove Feb spike (+29.7% total)",
-    "vsTarget": "195,434 over 12mo vs 240,000/yr target = 18% shortfall",
+    "vsTarget": "195,434 trailing 12mo vs 240,000 target = 18% shortfall",
     "signal": "GREEN",
-    "note": "Feb 2026 spike to 19,022 was apartment-driven. Houses steady at ~9,847. Trailing 12mo total 195k vs 240k target = persistent undersupply. Good for existing property values."
+    "note": "Persistent undersupply. 18% below 240k/yr target. Good for existing property values."
   },
   "vacancy": {
     "national": {
-      "value": "1.1%",
+      "value": "1.0%",
       "source": "https://sqmresearch.com.au/graph_vacancy.php?national=1&t=1"
     },
     "byCity": [
-      { "city": "Sydney", "value": "0.6%" },
-      { "city": "Melbourne", "value": "1.4%" },
-      { "city": "Brisbane", "value": "0.6%" },
-      { "city": "Perth", "value": "0.6%" },
-      { "city": "Adelaide", "value": "0.5%" },
-      { "city": "Hobart", "value": "0.5%" },
-      { "city": "Darwin", "value": "0.6%" },
-      { "city": "Canberra", "value": "1.0%" }
+      {
+        "city": "Sydney",
+        "value": "1.8%"
+      },
+      {
+        "city": "Melbourne",
+        "value": "1.5%"
+      },
+      {
+        "city": "Brisbane",
+        "value": "0.6%"
+      },
+      {
+        "city": "Perth",
+        "value": "0.6%"
+      },
+      {
+        "city": "Adelaide",
+        "value": "0.5%"
+      },
+      {
+        "city": "Hobart",
+        "value": "0.5%"
+      },
+      {
+        "city": "Darwin",
+        "value": "0.6%"
+      },
+      {
+        "city": "Canberra",
+        "value": "1.0%"
+      }
     ],
     "signal": "GREEN",
-    "note": "National vacancy 1.1% is a multi-year low. Perth 0.6%, Adelaide 0.5%, Brisbane 0.6% — all extremely tight. Only Melbourne (1.4%) showing any balance. Strong rental demand = yield support."
+    "note": "National vacancy fell to 1.0% in March \u2014 tightest on record. Perth 0.6%, Adelaide 0.5%, Brisbane 0.6%."
   },
   "medians": {
     "cities": [
-      { "city": "Sydney", "median": 1751728 },
-      { "city": "Melbourne", "median": 920000 },
-      { "city": "Brisbane", "median": 1175981 },
-      { "city": "Perth", "median": 1032032 },
-      { "city": "Adelaide", "median": 980815 },
-      { "city": "Canberra", "median": 1051977 },
-      { "city": "Hobart", "median": 710000 },
-      { "city": "Darwin", "median": 709975 }
+      {
+        "city": "Sydney",
+        "median": 1760000
+      },
+      {
+        "city": "Melbourne",
+        "median": 920000
+      },
+      {
+        "city": "Brisbane",
+        "median": 1200000
+      },
+      {
+        "city": "Perth",
+        "median": 1060000
+      },
+      {
+        "city": "Adelaide",
+        "median": 995000
+      },
+      {
+        "city": "Canberra",
+        "median": 1048000
+      },
+      {
+        "city": "Hobart",
+        "median": 720000
+      },
+      {
+        "city": "Darwin",
+        "median": 715000
+      }
     ],
     "national": {
-      "value": 1155325,
-      "source": "https://www.yourmortgage.com.au/compare-home-loans/median-house-prices-around-australia"
+      "value": 1025365,
+      "source": "https://propertyupdate.com.au/the-latest-median-property-prices-in-australias-major-cities/"
     },
     "signal": "AMBER",
-    "note": "Capital city median now $1.155M. Perth ($1.03M) and Adelaide ($981k) have surged past budget — BUT these are CITY-WIDE medians. Many suburbs within these cities remain under $800k. Darwin ($710k) and Hobart ($710k) fit budget at city-wide level."
+    "note": "Combined capital median now $1.025M. Perth +2.5% monthly (strongest). Sydney/Melbourne flat or dipping. March: Perth +2.5%, Brisbane +1.8%, Adelaide +1.2%."
   },
   "clearanceRates": {
     "cities": [
-      { "city": "Sydney", "rate": "70-72%", "trend": "steady, leading volume" },
-      { "city": "Melbourne", "rate": "65-68%", "trend": "more negotiation-led" },
-      { "city": "Brisbane", "rate": "65-70%", "trend": "steady demand" },
-      { "city": "Adelaide", "rate": "72-75%", "trend": "strongest clearance nationally" },
-      { "city": "Perth", "rate": "N/A", "trend": "limited auction market — private treaty dominant" }
+      {
+        "city": "Sydney",
+        "rate": "56.5%",
+        "trend": "falling \u2014 school holidays + listings surge"
+      },
+      {
+        "city": "Melbourne",
+        "rate": "58%",
+        "trend": "below long-run average"
+      },
+      {
+        "city": "Adelaide",
+        "rate": "72%",
+        "trend": "strongest capital"
+      },
+      {
+        "city": "Brisbane",
+        "rate": "65%",
+        "trend": "steady"
+      },
+      {
+        "city": "Perth",
+        "rate": "N/A",
+        "trend": "private treaty market"
+      }
     ],
     "signal": "AMBER",
-    "note": "Clearance rates 65-72% across capitals — balanced market. Not overheated, not collapsing. Adelaide strongest. Easter weekend (4 April) skipped. Next data 11 April."
+    "note": "National clearance 56.5% (down from 64.3% prior week). Listings surging as holidays end. Lower clearance = more buyer leverage."
   },
   "lending": {
     "ownerOccVariable": {
@@ -141,50 +225,50 @@
       "source": "https://www.money.com.au/home-loans/interest-rates/variable-rate"
     },
     "assessmentRate": {
-      "value": "~8.59-9.60% (rate + 3% APRA buffer)",
-      "source": "https://australianpropertyupdate.com.au/apu/three-percent-mortgage-buffer-to-stay-apra"
+      "value": "~8.59-9.60% (rate + 3% buffer)",
+      "source": "https://www.propertybuyer.com.au/blog/apra-lending-changes-2026-impact-on-investment-lending-buyers"
     },
-    "apraChanges": "APRA retained 3% buffer. New DTI cap: max 20% of new loans at 6x+ income, effective Feb 2026.",
+    "apraChanges": "DTI cap: max 20% of new loans at 6x+ income, effective Feb 2026. 3% serviceability buffer retained.",
     "signal": "RED",
-    "note": "Investor rates 5.59-6.60%. APRA assessment rate ~8.6-9.6% squeezes borrowing capacity. New DTI cap limits high-leverage lending. Rates rising with cash rate hikes."
+    "note": "Investor rates 5.59-6.60%. Assessment rate ~9% squeezes borrowing. DTI cap limits leverage. Rates may go higher in May."
   },
   "risks": [
     {
-      "risk": "Further RBA rate hikes",
+      "risk": "May 2026 rate hike to 4.35%",
       "probability": "HIGH",
-      "impact": "Each 25bp hike reduces borrowing capacity ~3%. May hike 85% priced. Could reach 4.35% by mid-2026.",
+      "impact": "Each 25bp reduces borrowing capacity ~3%. Third hike in 2026.",
       "signal": "RED"
     },
     {
-      "risk": "Inflation remains sticky",
+      "risk": "Inflation sticky above target until mid-2028",
       "probability": "HIGH",
-      "impact": "CPI 3.7% still well above 2-3% target. Housing and energy driving. Delays any rate relief.",
+      "impact": "No rate relief for 2+ years. RBA's own forecast.",
       "signal": "RED"
     },
     {
-      "risk": "Global instability / tariff war",
+      "risk": "Global trade war / tariffs escalation",
       "probability": "MEDIUM",
-      "impact": "Iran conflict + trade tensions could spike energy prices, push inflation higher, force more hikes.",
+      "impact": "Could push energy prices higher, forcing more hikes.",
       "signal": "AMBER"
     },
     {
-      "risk": "Unemployment rising above 5%",
-      "probability": "LOW",
-      "impact": "Would cool demand significantly. Currently 4.3% and trending up slowly. Watch closely.",
-      "signal": "AMBER"
-    },
-    {
-      "risk": "Housing undersupply persists",
+      "risk": "Housing undersupply persists (POSITIVE)",
       "probability": "HIGH",
-      "impact": "POSITIVE RISK: 195k approvals vs 240k target. Structural shortage supports prices even through headwinds.",
+      "impact": "195k approvals vs 240k target. Structural shortage supports prices.",
       "signal": "GREEN"
+    },
+    {
+      "risk": "Falling auction clearance rates",
+      "probability": "MEDIUM",
+      "impact": "56.5% national clearance = more listings than buyers. Could signal softening.",
+      "signal": "AMBER"
     }
   ],
-  "summary": "Challenging macro environment for investors: RBA hiking cycle resumed with back-to-back rises to 4.10%, inflation sticky at 3.7%, and more hikes likely. However, structural tailwinds remain strong — vacancy rates at multi-year lows (1.1% nationally), building approvals ~18% below target, and migration still elevated at 306k. Perth, Adelaide, and Brisbane vacancy rates (0.5-0.6%) signal extreme rental tightness. The key tension is between rising rates (reducing borrowing capacity) and persistent undersupply (supporting prices and rents). For a growth investor with $800k budget, the sweet spot is suburbs in WA/SA where rates haven't yet priced out opportunity.",
+  "summary": "Macro environment tightening: RBA at 4.10% with May hike likely, inflation 3.7% stuck above target, and RBA guidance says rates stay high until mid-2028. However structural tailwinds persist: national vacancy hit record-low 1.0%, approvals 18% below target, and Perth/Brisbane/Adelaide continue strong monthly growth. Falling clearance rates (56.5%) actually help buyers \u2014 more negotiation power. For a $800k growth investor, target established suburbs in WA/QLD where vacancy <1% and infrastructure is DELIVERING (not just announced).",
   "warnings": [
-    "RBA has hiked TWICE in 2026 already — reassess serviceability at 4.10% before committing",
-    "Perth and Adelaide city-wide medians now above $800k — must target specific suburbs",
-    "APRA's new DTI cap (6x income) may limit borrowing — check with broker",
-    "March CPI data (late April) could seal another May hike"
+    "May 5 RBA meeting: likely +25bp to 4.35% \u2014 reassess serviceability",
+    "Clearance rates falling = market softening in Sydney/Melbourne. Good for buyers but watch for price drops",
+    "Perth +2.5% monthly is the hottest capital \u2014 act fast on sub-$800k suburbs before they price out",
+    "APRA DTI cap 6x income \u2014 confirm borrowing capacity with broker before making offers"
   ]
 }
