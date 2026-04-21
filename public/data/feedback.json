@@ -4,44 +4,238 @@
     {
       "date": "2026-04-21",
       "corrections": [
-        {"agent": "Risk Auditor", "corrected": "Suburb Analyst", "suburb": "Gawler SA", "from": "BUY", "to": "WATCH", "reason": "43,800 new homes within 5km (Two Wells + Roseworthy)"},
-        {"agent": "Risk Auditor", "corrected": "Suburb Analyst", "suburb": "Smithfield SA", "from": "BUY", "to": "WATCH", "reason": "BA Ratio 4.15% oversupply warning"},
-        {"agent": "Risk Auditor", "corrected": "Suburb Analyst", "suburb": "Munno Para SA", "from": "BUY", "to": "WATCH", "reason": "Active greenfield release in Playford LGA"},
-        {"agent": "Risk Auditor", "corrected": "Suburb Analyst", "suburb": "Melton VIC", "from": "WATCH", "to": "CAUTION", "reason": "Massive greenfield LGA + rail electrification unfunded"},
-        {"agent": "Risk Auditor", "corrected": "Suburb Analyst", "suburb": "Cranbourne West VIC", "from": "WATCH", "to": "CAUTION", "reason": "Casey LGA greenfield releases in Clyde/Clyde North"}
+        {
+          "agent": "Risk Auditor",
+          "corrected": "Suburb Analyst",
+          "suburb": "Gawler SA",
+          "from": "BUY",
+          "to": "WATCH",
+          "reason": "43,800 new homes within 5km (Two Wells + Roseworthy)"
+        },
+        {
+          "agent": "Risk Auditor",
+          "corrected": "Suburb Analyst",
+          "suburb": "Smithfield SA",
+          "from": "BUY",
+          "to": "WATCH",
+          "reason": "BA Ratio 4.15% oversupply warning"
+        },
+        {
+          "agent": "Risk Auditor",
+          "corrected": "Suburb Analyst",
+          "suburb": "Munno Para SA",
+          "from": "BUY",
+          "to": "WATCH",
+          "reason": "Active greenfield release in Playford LGA"
+        },
+        {
+          "agent": "Risk Auditor",
+          "corrected": "Suburb Analyst",
+          "suburb": "Melton VIC",
+          "from": "WATCH",
+          "to": "CAUTION",
+          "reason": "Massive greenfield LGA + rail electrification unfunded"
+        },
+        {
+          "agent": "Risk Auditor",
+          "corrected": "Suburb Analyst",
+          "suburb": "Cranbourne West VIC",
+          "from": "WATCH",
+          "to": "CAUTION",
+          "reason": "Casey LGA greenfield releases in Clyde/Clyde North"
+        }
       ],
       "rejections": [
-        {"agent": "Quality Inspector", "rejected": "Listing Scout", "address": "7 Selkirk Road Armadale WA", "reason": "MOULD in listing description"},
-        {"agent": "Quality Inspector", "rejected": "Listing Scout", "address": "56 Lyrebird Way Thornlie WA", "reason": "SOLD AS IS"},
-        {"agent": "Quality Inspector", "rejected": "Listing Scout", "address": "60 Banyard Avenue Kelmscott WA", "reason": "TERMITE history"},
-        {"agent": "Quality Inspector", "rejected": "Listing Scout", "address": "102 Allnutt Street Mandurah WA", "reason": "SOLD AS IS"},
-        {"agent": "Quality Inspector", "rejected": "Listing Scout", "address": "9 Darkin Drive Gosnells WA", "reason": "FLOOD ZONE"},
-        {"agent": "Quality Inspector", "rejected": "Listing Scout", "address": "32 Redtingle Road Camillo WA", "reason": "SOLD AS IS"}
+        {
+          "agent": "Quality Inspector",
+          "rejected": "Listing Scout",
+          "address": "7 Selkirk Road Armadale WA",
+          "reason": "MOULD in listing description"
+        },
+        {
+          "agent": "Quality Inspector",
+          "rejected": "Listing Scout",
+          "address": "56 Lyrebird Way Thornlie WA",
+          "reason": "SOLD AS IS"
+        },
+        {
+          "agent": "Quality Inspector",
+          "rejected": "Listing Scout",
+          "address": "60 Banyard Avenue Kelmscott WA",
+          "reason": "TERMITE history"
+        },
+        {
+          "agent": "Quality Inspector",
+          "rejected": "Listing Scout",
+          "address": "102 Allnutt Street Mandurah WA",
+          "reason": "SOLD AS IS"
+        },
+        {
+          "agent": "Quality Inspector",
+          "rejected": "Listing Scout",
+          "address": "9 Darkin Drive Gosnells WA",
+          "reason": "FLOOD ZONE"
+        },
+        {
+          "agent": "Quality Inspector",
+          "rejected": "Listing Scout",
+          "address": "32 Redtingle Road Camillo WA",
+          "reason": "SOLD AS IS"
+        }
       ],
-      "topPicks": ["22 Sheperd Circuit Kirwan QLD", "514 Sturt Street Townsville QLD", "5 Valerie Court Hampton Park VIC"],
+      "topPicks": [
+        "22 Sheperd Circuit Kirwan QLD",
+        "514 Sturt Street Townsville QLD",
+        "5 Valerie Court Hampton Park VIC"
+      ],
       "lessonsLearned": [
-        "Outer Adelaide fringe (Gawler/Two Wells/Smithfield) has massive supply pipeline — cap growth expectations",
-        "REIWA WA works via curl but rate limits after ~5 suburbs — stagger 1.5s between requests",
-        "Ray White local agent sites are the backdoor for QLD/SA/VIC — not blocked like Domain/REA",
+        "Outer Adelaide fringe (Gawler/Two Wells/Smithfield) has massive supply pipeline \u2014 cap growth expectations",
+        "REIWA WA works via curl but rate limits after ~5 suburbs \u2014 stagger 1.5s between requests",
+        "Ray White local agent sites are the backdoor for QLD/SA/VIC \u2014 not blocked like Domain/REA",
         "Always read full listing description for red flags BEFORE recommending INVESTIGATE",
-        "Corner blocks in R40 zones are highest value-add — prioritize these",
+        "Corner blocks in R40 zones are highest value-add \u2014 prioritize these",
         "Established inner/middle suburbs > outer greenfield fringe for capital growth",
-        "QLD land tax on 2nd property ~$1,500/yr is trivial vs 28% growth — don't over-weight this risk"
+        "QLD land tax on 2nd property ~$1,500/yr is trivial vs 28% growth \u2014 don't over-weight this risk"
       ]
+    },
+    {
+      "date": "2026-04-21",
+      "corrections": [
+        {
+          "agent": "Risk Auditor",
+          "corrected": "Suburb Analyst",
+          "suburb": "Evanston SA",
+          "from": "Potential BUY",
+          "to": "MONITOR",
+          "reason": "Gawler corridor supply risk"
+        },
+        {
+          "agent": "Risk Auditor",
+          "corrected": "Suburb Analyst",
+          "suburb": "Andrews Farm SA",
+          "from": "Potential BUY",
+          "to": "MONITOR",
+          "reason": "Playford LGA greenfield"
+        },
+        {
+          "agent": "Risk Auditor",
+          "corrected": "Suburb Analyst",
+          "suburb": "Davoren Park SA",
+          "from": "Potential BUY",
+          "to": "MONITOR",
+          "reason": "Low IRSAD + high crime + Playford greenfield"
+        }
+      ],
+      "rejections": [
+        {
+          "agent": "Quality Inspector",
+          "rejected": "Listing Scout",
+          "address": "Auto-rejected 2 listings",
+          "reason": "Red flags detected in descriptions (kept from known-bad list)"
+        }
+      ],
+      "topPicks": [
+        "27 Gollogly Lane Condon QLD",
+        "5 Avonlee Road (WA - 1332sqm)",
+        "4 Shanks Court (WA - 959sqm subdivision)"
+      ],
+      "lessonsLearned": [
+        "Multi-agent pipeline successfully ran via Claude Code sub-agents (no API credits needed)",
+        "67 listings scraped across WA/QLD/SA \u2014 Ray White agent sites + REIWA confirmed as backdoor",
+        "28 INVESTIGATE candidates survived risk + quality filters (vs 13 last run = improvement)",
+        "Rate limiting hit but parallel agents recovered most data",
+        "Condon QLD ($599k, 809sqm) emerges as new QLD alternative to Kirwan",
+        "WA dominates supply (59/67 listings) \u2014 need to expand QLD/SA/VIC scrape coverage"
+      ],
+      "agentPerformance": {
+        "Region Ranker": "TIMED OUT \u2014 needs to be split into smaller state-specific agents next run",
+        "Listing Scout WA": "SUCCESS \u2014 59 listings parsed",
+        "Listing Scout QLD/SA/VIC": "PARTIAL \u2014 rate limits hit, 10 listings parsed",
+        "Risk Auditor": "SUCCESS \u2014 automatically flagged Evanston/Andrews Farm/Davoren Park",
+        "Quality Inspector": "SUCCESS \u2014 rejected 2 listings with red flags",
+        "Learning Module": "Active \u2014 this entry is being written by it"
+      }
     }
   ],
   "knownTraps": [
-    {"suburb": "Two Wells SA", "reason": "10,800 + 33,000 new homes planned (43,800 total within 5km)", "flaggedDate": "2026-04-21"},
-    {"suburb": "Gawler SA", "reason": "Active greenfield: Springwood, Woodvale, Fairview Rise estates + 350 homes at Gawler Belt", "flaggedDate": "2026-04-21"},
-    {"suburb": "Smithfield SA", "reason": "BA Ratio 4.15% oversupply + high crime + low IRSAD", "flaggedDate": "2026-04-21"},
-    {"suburb": "Melton VIC", "reason": "Fastest-growing VIC LGA, massive greenfield + rail unfunded", "flaggedDate": "2026-04-21"},
-    {"suburb": "Salisbury Downs SA", "reason": "Crime 13,323/100k (safer than only 4% of AU suburbs)", "flaggedDate": "2026-04-21"}
+    {
+      "suburb": "Two Wells SA",
+      "reason": "10,800 + 33,000 new homes planned (43,800 total within 5km)",
+      "flaggedDate": "2026-04-21"
+    },
+    {
+      "suburb": "Gawler SA",
+      "reason": "Active greenfield: Springwood, Woodvale, Fairview Rise estates + 350 homes at Gawler Belt",
+      "flaggedDate": "2026-04-21"
+    },
+    {
+      "suburb": "Smithfield SA",
+      "reason": "BA Ratio 4.15% oversupply + high crime + low IRSAD",
+      "flaggedDate": "2026-04-21"
+    },
+    {
+      "suburb": "Melton VIC",
+      "reason": "Fastest-growing VIC LGA, massive greenfield + rail unfunded",
+      "flaggedDate": "2026-04-21"
+    },
+    {
+      "suburb": "Salisbury Downs SA",
+      "reason": "Crime 13,323/100k (safer than only 4% of AU suburbs)",
+      "flaggedDate": "2026-04-21"
+    },
+    {
+      "suburb": "Evanston SA",
+      "reason": "Gawler corridor supply risk - adjacent to major greenfield estates",
+      "flaggedDate": "2026-04-21"
+    },
+    {
+      "suburb": "Andrews Farm SA",
+      "reason": "Playford LGA greenfield release active",
+      "flaggedDate": "2026-04-21"
+    },
+    {
+      "suburb": "Davoren Park SA",
+      "reason": "Low IRSAD 651 + high crime + Playford greenfield = avoid for growth",
+      "flaggedDate": "2026-04-21"
+    },
+    {
+      "suburb": "Bibaringa SA",
+      "reason": "Gawler corridor supply risk",
+      "flaggedDate": "2026-04-21"
+    }
   ],
   "scoringAdjustments": [
-    {"rule": "If suburb has >2000 new dwellings within 5km, cap growth forecast at 5%/yr max", "addedDate": "2026-04-21"},
-    {"rule": "If listing mentions 'sold as is' OR 'mould' OR 'asbestos' OR 'termite', auto-AVOID", "addedDate": "2026-04-21"},
-    {"rule": "Corner blocks in R30/R40/R60 zones score +20 bonus in value-add ranking", "addedDate": "2026-04-21"},
-    {"rule": "Established suburbs (infill only) preferred over outer greenfield fringe", "addedDate": "2026-04-21"},
-    {"rule": "Post-spike suburbs (>20% growth in last 12mo) get MEDIUM cycle risk automatically", "addedDate": "2026-04-21"}
+    {
+      "rule": "If suburb has >2000 new dwellings within 5km, cap growth forecast at 5%/yr max",
+      "addedDate": "2026-04-21"
+    },
+    {
+      "rule": "If listing mentions 'sold as is' OR 'mould' OR 'asbestos' OR 'termite', auto-AVOID",
+      "addedDate": "2026-04-21"
+    },
+    {
+      "rule": "Corner blocks in R30/R40/R60 zones score +20 bonus in value-add ranking",
+      "addedDate": "2026-04-21"
+    },
+    {
+      "rule": "Established suburbs (infill only) preferred over outer greenfield fringe",
+      "addedDate": "2026-04-21"
+    },
+    {
+      "rule": "Post-spike suburbs (>20% growth in last 12mo) get MEDIUM cycle risk automatically",
+      "addedDate": "2026-04-21"
+    },
+    {
+      "rule": "Split Region Ranker into state-specific sub-agents to avoid context timeouts (split WA/QLD/SA/VIC)",
+      "addedDate": "2026-04-21"
+    },
+    {
+      "rule": "Condon QLD qualifies for consideration \u2014 established Townsville suburb with large blocks",
+      "addedDate": "2026-04-21"
+    },
+    {
+      "rule": "Any SA Playford LGA suburb gets auto-MEDIUM supply risk (Munno Para/Andrews Farm/Davoren Park)",
+      "addedDate": "2026-04-21"
+    }
   ]
 }
