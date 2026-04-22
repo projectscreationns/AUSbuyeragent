@@ -236,24 +236,30 @@ export function Top10View() {
       if (crimeLevel === 'SEVERE') {
         decision = 'SKIP';
         decisionReason = 'Crime too severe — growth capped, small buyer pool';
-      } else if (roci && roci >= 150 && isClean && (l._cashFits || l._cashStretch)) {
-        decision = 'CALL AGENT';
-        decisionReason = `ROCI ${roci}% + clean photos + cash fits. Top priority.`;
-      } else if (roci && roci >= 100 && isClean && l._cashStretch) {
-        decision = 'INSPECT';
-        decisionReason = `ROCI ${roci}% — worth physical inspection before offer`;
-      } else if (roci && roci >= 80 && l.photoVerdict === 'BEST' && l._cashStretch) {
-        decision = 'INSPECT';
-        decisionReason = `Lower ROCI but move-in ready with BEST photo verdict`;
+      } else if (!cashStretchFits && totalCost) {
+        decision = 'SKIP';
+        decisionReason = `$${Math.round(totalCost/1000)}k total exceeds $135k max`;
       } else if (isPhotoFlagged) {
         decision = 'SKIP';
         decisionReason = 'Photo inspection flagged concerns';
-      } else if (!l._cashStretch && totalCost) {
-        decision = 'SKIP';
-        decisionReason = `$${Math.round(totalCost/1000)}k total exceeds cash ceiling`;
-      } else {
+      } else if (roci && roci >= 150 && isClean && (cashFits || cashStretchFits)) {
+        decision = 'CALL AGENT';
+        decisionReason = `ROCI ${roci}% + clean photos + cash fits. Top priority.`;
+      } else if (roci && roci >= 100 && isClean && cashStretchFits) {
+        decision = 'CALL AGENT';
+        decisionReason = `ROCI ${roci}% — strong return, pick up phone today`;
+      } else if (roci && roci >= 60 && isClean && cashStretchFits) {
+        decision = 'INSPECT';
+        decisionReason = `ROCI ${roci}% — worth a physical inspection`;
+      } else if (l.photoVerdict === 'BEST' && cashStretchFits) {
+        decision = 'INSPECT';
+        decisionReason = `Move-in ready + cash fits — viable even at moderate ROCI`;
+      } else if (cashStretchFits) {
         decision = 'MONITOR';
         decisionReason = 'Track for price drop or longer DOM';
+      } else {
+        decision = 'SKIP';
+        decisionReason = 'Below investment thresholds';
       }
 
       return { ...l, _score: score, _reasons: reasons, _warnings: warnings,
@@ -268,12 +274,23 @@ export function Top10View() {
                _decision: decision, _decisionReason: decisionReason };
     });
 
-    scored.sort((a, b) => b._score - a._score);
+    // Filter OUT SKIP — only show actionable picks
+    const actionable = scored.filter(l => l._decision !== 'SKIP');
 
-    // Diversification: max 7 WA
+    // Sort by decision priority then score:
+    //   CALL AGENT first, then INSPECT, then MONITOR
+    const priorityRank = { 'CALL AGENT': 0, 'INSPECT': 1, 'MONITOR': 2 };
+    actionable.sort((a, b) => {
+      const pa = priorityRank[a._decision] ?? 99;
+      const pb = priorityRank[b._decision] ?? 99;
+      if (pa !== pb) return pa - pb;
+      return b._score - a._score;
+    });
+
+    // Diversification: max 7 WA, cap at 10 total
     const picked = [];
     const stateCount = {};
-    for (const item of scored) {
+    for (const item of actionable) {
       const s = item._state || '?';
       if (picked.length >= 10) break;
       if (s === 'WA' && (stateCount.WA || 0) >= 7) continue;
@@ -281,11 +298,17 @@ export function Top10View() {
       stateCount[s] = (stateCount[s] || 0) + 1;
     }
     if (picked.length < 10) {
-      for (const item of scored) {
+      for (const item of actionable) {
         if (picked.length >= 10) break;
         if (!picked.includes(item)) picked.push(item);
       }
     }
+
+    // Also count SKIPs so we can show "filtered out" stat
+    const skipCount = scored.length - actionable.length;
+    picked._skipCount = skipCount;
+    picked._totalCount = scored.length;
+
     return picked;
   }, [listings, suburbLookup]);
 
@@ -295,8 +318,8 @@ export function Top10View() {
     <div>
       <div className="stage-shell__header">
         <div>
-          <h2 className="stage-shell__title">Agent 8: Final Ranking</h2>
-          <p className="stage-shell__desc">Forward-looking investment model — growth-adjusted, risk-filtered, scenario-modelled for your $800k / $110k / 5yr profile</p>
+          <h2 className="stage-shell__title">🏆 Worth Your Time</h2>
+          <p className="stage-shell__desc">Only listings the system recommends action on. SKIPs filtered out — don't waste time on them.</p>
         </div>
         <button className="btn btn--secondary btn--sm" onClick={load}>Reload</button>
       </div>
@@ -307,7 +330,7 @@ export function Top10View() {
         {top10.length > 0 && (
           <>
             <div className="info-box info-box--blue mb-16" style={{ fontSize: 11, lineHeight: 1.7 }}>
-              <strong>The system has already decided.</strong> Your only actions are 📞 CALL AGENT, 🔍 INSPECT, or ✗ SKIP. No "verify this" homework. Each listing was run through: macro context → region rank → suburb DSR + risk filter → listing scout → quality inspector (red flags) → photo inspector (condition) → final decision engine (ROCI + crime + cash + reno). Returns speak, not aesthetics.
+              <strong>Decisions pre-made.</strong> {top10._skipCount ?? 0} candidates auto-SKIPPED (severe crime, over cash, photo flagged). Showing {top10.length} worth your time. Your only actions: 📞 CALL · 🔍 INSPECT · 👁 MONITOR. Pipeline: macro → region → suburb DSR + supply risk → listing scout → quality check → photo inspector → ROCI-based decision.
             </div>
 
             {/* Summary chips */}
@@ -316,14 +339,19 @@ export function Top10View() {
                 <div key={s} className="header__chip"><b>{s}</b>: {n}</div>
               ))}
               <div className="header__chip" style={{ borderColor: 'var(--green)' }}>
-                {top10.filter(l => l._cashFits).length}/10 fit $110k
+                📞 {top10.filter(l => l._decision === 'CALL AGENT').length}
               </div>
               <div className="header__chip" style={{ borderColor: 'var(--amber)' }}>
-                {top10.filter(l => !l._cashFits && l._cashStretch).length}/10 stretch to $135k
+                🔍 {top10.filter(l => l._decision === 'INSPECT').length}
               </div>
-              <div className="header__chip" style={{ borderColor: 'var(--blue)' }}>
-                avg ROCI: {Math.round(top10.reduce((a,l)=>a+(l._roci||0),0)/top10.length)}%
+              <div className="header__chip">
+                👁 {top10.filter(l => l._decision === 'MONITOR').length}
               </div>
+              {top10.length > 0 && (
+                <div className="header__chip" style={{ borderColor: 'var(--blue)' }}>
+                  avg ROCI: {Math.round(top10.reduce((a,l)=>a+(l._roci||0),0)/top10.length)}%
+                </div>
+              )}
             </div>
 
             {top10.map((l, i) => (
@@ -385,7 +413,7 @@ export function Top10View() {
                   </div>
                   <div className="metric">
                     <div className="metric__label">Crime</div>
-                    <div className="metric__value" style={{ fontSize: 14, color: (l._crimeLevel||'').includes('HIGH') ? 'var(--red)' : (l._crimeLevel||'').includes('MEDIUM') ? 'var(--amber)' : 'var(--green)' }}>{l._crimeLevel || '?'}</div>
+                    <div className="metric__value" style={{ fontSize: 14, color: (l._crimeLevel === 'SEVERE' || l._crimeLevel === 'HIGH') ? 'var(--red)' : (l._crimeLevel||'').includes('MEDIUM') ? 'var(--amber)' : 'var(--green)' }}>{l._crimeLevel || '?'}</div>
                   </div>
                   <div className="metric">
                     <div className="metric__label">Subdiv Profit</div>
