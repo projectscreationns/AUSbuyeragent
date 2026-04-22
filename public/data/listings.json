@@ -20,7 +20,10 @@
         "reason": "INVESTIGATE -- Value-add: granny flat. 753sqm block -- granny flat / subdivision potential. ACTION: call agent, request contract, book B&P.",
         "url": "https://reiwa.com.au/8-barge-court-armadale-5002576/",
         "redFlags": [],
-        "yellowFlags": []
+        "yellowFlags": [],
+        "photoVerdict": "PASS",
+        "renoEst": "$5-10k",
+        "photoNotes": "Brick & tile dated but solid. Paint exterior + garden."
       },
       {
         "addr": "5 Avonlee Road, Armadale, WA",
@@ -39,7 +42,10 @@
         "reason": "INVESTIGATE -- Value-add: subdivision, subdivi, zoned r. 1332sqm block -- granny flat / subdivision potential. ACTION: call agent, request contract, book B&P.",
         "url": "https://reiwa.com.au/5-avonlee-road-armadale-5015030/",
         "redFlags": [],
-        "yellowFlags": []
+        "yellowFlags": [],
+        "photoVerdict": "PASS",
+        "renoEst": "$5k",
+        "photoNotes": "1332sqm block is the play. Subdivision land value, house secondary."
       },
       {
         "addr": "26A William Street, Armadale, WA",
@@ -58,7 +64,10 @@
         "reason": "INVESTIGATE -- Below median at $699,000. ACTION: call agent, request contract, book B&P.",
         "url": "https://reiwa.com.au/26a-william-street-armadale-5012034/",
         "redFlags": [],
-        "yellowFlags": []
+        "yellowFlags": [],
+        "photoVerdict": "PASS",
+        "renoEst": "$0-3k",
+        "photoNotes": "Well-maintained brick. Rent as-is."
       },
       {
         "addr": "30 Wilcannia Way, Armadale, WA",
@@ -77,7 +86,10 @@
         "reason": "INVESTIGATE -- Value-add: subdivision, subdivi. 704sqm block -- granny flat / subdivision potential. Below median at $700,000. ACTION: call agent, request contract, book B&P.",
         "url": "https://reiwa.com.au/30-wilcannia-way-armadale-5006638/",
         "redFlags": [],
-        "yellowFlags": []
+        "yellowFlags": [],
+        "photoVerdict": "PASS",
+        "renoEst": "$3-5k",
+        "photoNotes": "Solid brick behind palms. Minor driveway patch."
       },
       {
         "addr": "23 Lowanna Way, Armadale, WA",
@@ -115,7 +127,10 @@
         "reason": "INVESTIGATE -- Value-add: subdivision, subdivi, granny flat, side access, zoned r, r25 (zoning). 959sqm block -- granny flat / subdivision potential. Below median at $700,000. ACTION: call agent, request contract, book B&P.",
         "url": "https://reiwa.com.au/4-shanks-court-armadale-4995977/",
         "redFlags": [],
-        "yellowFlags": []
+        "yellowFlags": [],
+        "photoVerdict": "PASS",
+        "renoEst": "$10-15k",
+        "photoNotes": "Dated carpet + paint. Structurally sound. Budget cosmetic refresh."
       },
       {
         "addr": "16A Werndley Street, Armadale, WA",
@@ -134,7 +149,10 @@
         "reason": "INVESTIGATE -- Motivation: all offers. Value-add: side access. ACTION: call agent, request contract, book B&P.",
         "url": "https://reiwa.com.au/16a-werndley-street-armadale-5014836/",
         "redFlags": [],
-        "yellowFlags": []
+        "yellowFlags": [],
+        "photoVerdict": "BEST",
+        "renoEst": "$0",
+        "photoNotes": "Near-new build. Modern render, double garage. Rent as-is day one."
       },
       {
         "addr": "31 Mornington Street, Armadale, WA",
@@ -233,7 +251,10 @@
         "redFlags": [],
         "yellowFlags": [
           "main road"
-        ]
+        ],
+        "photoVerdict": "STRONG",
+        "renoEst": "varies",
+        "photoNotes": "Agent shows LOT 1 + LOT 2 subdivision plan IN aerial photo. Pre-planned STCA. Real deal."
       },
       {
         "addr": "17 Brigalow Way, Armadale, WA",
@@ -254,7 +275,10 @@
         "redFlags": [],
         "yellowFlags": [
           "renovator"
-        ]
+        ],
+        "photoVerdict": "CAUTION",
+        "renoEst": "$8-12k",
+        "photoNotes": "Heavy security fencing = possible street crime. Check specifics. Garage dated."
       },
       {
         "addr": "11 Bowden Place, Armadale, WA",

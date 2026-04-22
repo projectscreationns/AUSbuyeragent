@@ -351,6 +351,29 @@ export function Top10View() {
 
                 {/* Reasons + warnings */}
                 <div className="listing-card__body" style={{ paddingLeft: 28 }}>
+                  {/* Photo inspection + reno estimate */}
+                  {(l.photoVerdict || l.renoEst) && (
+                    <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', marginBottom: 8 }}>
+                      {l.photoVerdict && (
+                        <span className="verdict" style={{
+                          background: l.photoVerdict === 'BEST' ? 'var(--green-dim)' : l.photoVerdict === 'STRONG' ? 'var(--green-dim)' : l.photoVerdict === 'CAUTION' ? 'var(--amber-dim)' : 'var(--blue-dim)',
+                          color: l.photoVerdict === 'BEST' || l.photoVerdict === 'STRONG' ? 'var(--green)' : l.photoVerdict === 'CAUTION' ? 'var(--amber)' : 'var(--blue)',
+                          border: `1px solid ${l.photoVerdict === 'CAUTION' ? 'rgba(245,158,11,.3)' : 'rgba(34,197,94,.3)'}`
+                        }}>Photo: {l.photoVerdict}</span>
+                      )}
+                      {l.renoEst && l.renoEst !== '$0' && (
+                        <span className="verdict" style={{ background: 'var(--amber-dim)', color: 'var(--amber)', border: '1px solid rgba(245,158,11,.3)' }}>
+                          Reno: {l.renoEst}
+                        </span>
+                      )}
+                      {l.renoEst === '$0' && (
+                        <span className="verdict" style={{ background: 'var(--green-dim)', color: 'var(--green)', border: '1px solid rgba(34,197,94,.3)' }}>
+                          No reno needed
+                        </span>
+                      )}
+                      {l.photoNotes && <span className="text-xs text-muted">{l.photoNotes}</span>}
+                    </div>
+                  )}
                   <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap', marginBottom: 6 }}>
                     {l._reasons.slice(0, 5).map((r, j) => (
                       <span key={j} className="verdict" style={{ background: 'var(--green-dim)', color: 'var(--green)', border: '1px solid rgba(34,197,94,.3)' }}>{r}</span>
