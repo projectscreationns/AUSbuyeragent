@@ -479,7 +479,10 @@
         "reason": "INVESTIGATE -- Motivation: end date sale. ACTION: call agent, request contract, book B&P.",
         "url": "https://reiwa.com.au/19-orberry-place-thornlie-5011715/",
         "redFlags": [],
-        "yellowFlags": []
+        "yellowFlags": [],
+        "photoVerdict": "PASS",
+        "renoEst": "$3-5k",
+        "photoNotes": "Brick & tile, maintained front lawn. Double garage, clean driveway. Some garden tidy + paint touch-ups. Solid structure."
       }
     ],
     "collected": 9,
@@ -604,7 +607,10 @@
         "reason": "INVESTIGATE -- Below median at $649,000. ACTION: call agent, request contract, book B&P.",
         "url": "https://reiwa.com.au/306a-corfield-street-gosnells-5012846/",
         "redFlags": [],
-        "yellowFlags": []
+        "yellowFlags": [],
+        "photoVerdict": "PASS",
+        "renoEst": "$5-8k",
+        "photoNotes": "Brick & tile, paved driveway in good condition. Crepe myrtle in bloom shows care. Minor shrub tidy + exterior paint."
       },
       {
         "addr": "5 Settlers Way, Gosnells, WA",
@@ -663,7 +669,10 @@
         "redFlags": [],
         "yellowFlags": [
           "cosmetic"
-        ]
+        ],
+        "photoVerdict": "BEST",
+        "renoEst": "$0",
+        "photoNotes": "Recently rendered grey finish, modern timber door, fresh concrete driveway, manicured lawn + garden. Rent-ready immediately."
       },
       {
         "addr": "4 Killarney Loop, Gosnells, WA",
@@ -682,7 +691,10 @@
         "reason": "INVESTIGATE -- Value-add: r30. ACTION: call agent, request contract, book B&P.",
         "url": "https://reiwa.com.au/4-killarney-loop-gosnells-5011042/",
         "redFlags": [],
-        "yellowFlags": []
+        "yellowFlags": [],
+        "photoVerdict": "BEST",
+        "renoEst": "$0",
+        "photoNotes": "Near-new build. Rendered exterior, colorbond roof, double garage, paved driveway, fresh lawn. Perfect condition, rent day one."
       },
       {
         "addr": "104B Blanche Street, Gosnells, WA",
