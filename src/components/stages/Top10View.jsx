@@ -77,17 +77,29 @@ export function Top10View() {
       const crimeData = subData?.qual?.crime || {};
 
       // ═══ CRIME REALITY CHECK ═══
-      // Hard-coded knowledge of actual crime patterns (beyond what the suburb file says)
+      // Based on aucrimerate.com rankings (1-100 scale, lower = worse):
+      // Armadale 97/100 = 97% of AU suburbs are safer, 175% higher violent crime vs WA avg
       const CRIME_OVERRIDES = {
-        'armadale': 'HIGH', 'gosnells': 'MEDIUM', 'maddington': 'MEDIUM',
-        'kelmscott': 'MEDIUM', 'seville grove': 'MEDIUM',
-        'salisbury downs': 'HIGH', 'davoren park': 'HIGH',
-        'smithfield': 'HIGH', 'paralowie': 'MEDIUM',
-        'kirwan': 'MEDIUM', 'condon': 'MEDIUM', 'aitkenvale': 'MEDIUM',
-        'noble park': 'MEDIUM', 'dandenong': 'MEDIUM-HIGH',
-        'baldivis': 'LOW', 'wellard': 'LOW', 'mandurah': 'LOW',
-        'thornlie': 'LOW-MEDIUM', 'para hills': 'MEDIUM',
-        'salisbury north': 'MEDIUM'
+        'armadale': 'SEVERE',        // 97/100 AU - worst case
+        'gosnells': 'HIGH',
+        'maddington': 'HIGH',
+        'kelmscott': 'MEDIUM-HIGH',
+        'seville grove': 'MEDIUM-HIGH',
+        'salisbury downs': 'SEVERE', // 13,323/100k incidents
+        'davoren park': 'SEVERE',
+        'smithfield': 'HIGH',
+        'paralowie': 'MEDIUM',
+        'kirwan': 'MEDIUM',
+        'condon': 'MEDIUM',
+        'aitkenvale': 'MEDIUM',
+        'noble park': 'MEDIUM',
+        'dandenong': 'MEDIUM-HIGH',
+        'baldivis': 'LOW',
+        'wellard': 'LOW',
+        'mandurah': 'LOW',
+        'thornlie': 'LOW-MEDIUM',
+        'para hills': 'MEDIUM',
+        'salisbury north': 'MEDIUM-HIGH'
       };
       const crimeLevel = CRIME_OVERRIDES[subName] || crimeData.overallRating?.toUpperCase() || 'UNKNOWN';
 
@@ -102,14 +114,16 @@ export function Top10View() {
       else if (cycleRisk === 'MEDIUM') adjustedGrowth *= 0.92;
 
       // Crime discount on growth (rougher areas attract less premium buyers, capping growth)
-      if (crimeLevel === 'HIGH') adjustedGrowth *= 0.8;
-      else if (crimeLevel === 'MEDIUM-HIGH') adjustedGrowth *= 0.9;
+      if (crimeLevel === 'SEVERE') adjustedGrowth *= 0.5;     // effectively removes from top 10
+      else if (crimeLevel === 'HIGH') adjustedGrowth *= 0.75;
+      else if (crimeLevel === 'MEDIUM-HIGH') adjustedGrowth *= 0.88;
 
       if (supplyRisk === 'LOW') reasons.push('LOW supply risk');
       else if (supplyRisk === 'HIGH') warnings.push(`Growth capped by HIGH supply risk`);
       else if (supplyRisk === 'MEDIUM') warnings.push('Growth capped by MEDIUM supply risk');
 
-      if (crimeLevel === 'HIGH') warnings.push('HIGH crime area — buyer pool smaller');
+      if (crimeLevel === 'SEVERE') warnings.push('SEVERE crime (97/100 AU) — buyer pool small, growth capped');
+      else if (crimeLevel === 'HIGH') warnings.push('HIGH crime area');
       else if (crimeLevel === 'MEDIUM-HIGH') warnings.push('Above-avg crime');
       else if (crimeLevel === 'LOW') reasons.push('LOW crime');
 
@@ -212,6 +226,36 @@ export function Top10View() {
         reasons.push(`Growth adjusted ${Math.round(baseGrowth)}%→${Math.round(adjustedGrowth)}%`);
       }
 
+      // ═══ DECISION ENGINE ═══
+      // The system drives the decision. User just calls / inspects / offers.
+      let decision = 'SKIP';
+      let decisionReason = '';
+      const isClean = !l.photoVerdict || l.photoVerdict === 'BEST' || l.photoVerdict === 'STRONG' || l.photoVerdict === 'PASS';
+      const isPhotoFlagged = l.photoVerdict === 'CAUTION';
+
+      if (crimeLevel === 'SEVERE') {
+        decision = 'SKIP';
+        decisionReason = 'Crime too severe — growth capped, small buyer pool';
+      } else if (roci && roci >= 150 && isClean && (l._cashFits || l._cashStretch)) {
+        decision = 'CALL AGENT';
+        decisionReason = `ROCI ${roci}% + clean photos + cash fits. Top priority.`;
+      } else if (roci && roci >= 100 && isClean && l._cashStretch) {
+        decision = 'INSPECT';
+        decisionReason = `ROCI ${roci}% — worth physical inspection before offer`;
+      } else if (roci && roci >= 80 && l.photoVerdict === 'BEST' && l._cashStretch) {
+        decision = 'INSPECT';
+        decisionReason = `Lower ROCI but move-in ready with BEST photo verdict`;
+      } else if (isPhotoFlagged) {
+        decision = 'SKIP';
+        decisionReason = 'Photo inspection flagged concerns';
+      } else if (!l._cashStretch && totalCost) {
+        decision = 'SKIP';
+        decisionReason = `$${Math.round(totalCost/1000)}k total exceeds cash ceiling`;
+      } else {
+        decision = 'MONITOR';
+        decisionReason = 'Track for price drop or longer DOM';
+      }
+
       return { ...l, _score: score, _reasons: reasons, _warnings: warnings,
                _totalCost: totalCost, _monthlyHold: monthlyHoldCost,
                _fiveYrEquity: fiveYrEquity, _cashFits: cashFits, _cashStretch: cashStretchFits,
@@ -220,7 +264,8 @@ export function Top10View() {
                _roci: roci, _fiveYrCapGain: fiveYrCapGain,
                _fiveYrCashOut: fiveYrTotalCashOut, _weeklyCashflow: weeklyCashflow,
                _crimeLevel: crimeLevel, _subdivProfit: subdivProfit,
-               _subdivViable: subdivViable, _hasSubdivZoning: hasSubdivZoning };
+               _subdivViable: subdivViable, _hasSubdivZoning: hasSubdivZoning,
+               _decision: decision, _decisionReason: decisionReason };
     });
 
     scored.sort((a, b) => b._score - a._score);
@@ -262,7 +307,7 @@ export function Top10View() {
         {top10.length > 0 && (
           <>
             <div className="info-box info-box--blue mb-16" style={{ fontSize: 11, lineHeight: 1.7 }}>
-              <strong>Ranked by ROCI (Return on Cash Invested over 5 years).</strong> Calculation: 5yr capital gain ÷ (upfront cash + 5yr negative cashflow). Growth rate is risk-adjusted: HIGH supply risk cuts growth 40%, MEDIUM cuts 15%. Cash target $110k preferred but stretch to $135k if ROCI justifies it. Returns speak.
+              <strong>The system has already decided.</strong> Your only actions are 📞 CALL AGENT, 🔍 INSPECT, or ✗ SKIP. No "verify this" homework. Each listing was run through: macro context → region rank → suburb DSR + risk filter → listing scout → quality inspector (red flags) → photo inspector (condition) → final decision engine (ROCI + crime + cash + reno). Returns speak, not aesthetics.
             </div>
 
             {/* Summary chips */}
@@ -389,13 +434,28 @@ export function Top10View() {
                   <div className="text-sm text-muted mt-4">{l.valueAdd}</div>
                 </div>
 
-                {/* Action */}
-                {l.url && (
-                  <div className="listing-card__footer" style={{ paddingLeft: 28 }}>
-                    <span className="mono text-xs text-muted">→ Call agent, request contract, book B&P ($400-600)</span>
-                    <a href={l.url} target="_blank" rel="noopener noreferrer" className="btn btn--primary btn--sm">View listing</a>
+                {/* ─── DECISION ─── */}
+                <div style={{ padding: '12px 16px 12px 28px', borderTop: '2px solid',
+                              borderColor: l._decision === 'CALL AGENT' ? 'var(--green)' : l._decision === 'INSPECT' ? 'var(--amber)' : l._decision === 'SKIP' ? 'var(--red)' : 'var(--text-muted)',
+                              background: l._decision === 'CALL AGENT' ? 'var(--green-dim)' : l._decision === 'INSPECT' ? 'var(--amber-dim)' : l._decision === 'SKIP' ? 'var(--red-dim)' : 'transparent',
+                              display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 12 }}>
+                  <div style={{ flex: 1 }}>
+                    <div style={{ fontSize: 16, fontWeight: 700, letterSpacing: '0.03em',
+                                  color: l._decision === 'CALL AGENT' ? 'var(--green)' : l._decision === 'INSPECT' ? 'var(--amber)' : l._decision === 'SKIP' ? 'var(--red)' : 'var(--text-heading)' }}>
+                      {l._decision === 'CALL AGENT' ? '📞 CALL AGENT' :
+                       l._decision === 'INSPECT' ? '🔍 INSPECT' :
+                       l._decision === 'SKIP' ? '✗ SKIP' :
+                       '👁 MONITOR'}
+                    </div>
+                    <div className="text-xs text-muted mt-4">{l._decisionReason}</div>
                   </div>
-                )}
+                  {l.url && (
+                    <a href={l.url} target="_blank" rel="noopener noreferrer"
+                       className={`btn btn--sm ${l._decision === 'CALL AGENT' ? 'btn--primary' : 'btn--secondary'}`}>
+                      {l._decision === 'SKIP' ? 'View anyway' : 'Open listing'}
+                    </a>
+                  )}
+                </div>
               </div>
             ))}
           </>
