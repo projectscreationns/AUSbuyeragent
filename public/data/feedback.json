@@ -155,6 +155,56 @@
         "Quality Inspector": "SUCCESS \u2014 rejected 2 listings with red flags",
         "Learning Module": "Active \u2014 this entry is being written by it"
       }
+    },
+    {
+      "date": "2026-04-22",
+      "corrections": [
+        {
+          "agent": "Suburb Analyst",
+          "corrected": "User feedback",
+          "suburb": "Tea Tree Gully SA",
+          "from": "Consider",
+          "to": "AVOID (over budget)",
+          "reason": "Median $968k \u2014 well over $800k budget"
+        },
+        {
+          "agent": "Suburb Analyst",
+          "corrected": "User feedback",
+          "suburb": "Modbury North SA",
+          "from": "Consider",
+          "to": "AVOID (over budget)",
+          "reason": "Median $901k \u2014 over budget"
+        }
+      ],
+      "rejections": [],
+      "additions": [
+        "Added Para Hills SA ($520k) \u2014 best SA risk-adjusted pick (established, LOW supply, 5% yield)",
+        "Added Salisbury North SA ($615k) \u2014 electrified train + defence precinct",
+        "Added Condon QLD ($599k) \u2014 established Townsville, defence active, +24.5% growth",
+        "Added Aitkenvale QLD ($681k) \u2014 inner Townsville, flight path/flood per address",
+        "Added Noble Park VIC ($780k) \u2014 first VIC middle-ring with LOW supply risk"
+      ],
+      "topPicks": [
+        "Para Hills SA $520k \u2014 best SA middle-ring option (new)",
+        "Condon QLD $599k \u2014 established Townsville with defence catalyst",
+        "Aitkenvale QLD 1012sqm mega-block \u2014 if zoning supports subdivision",
+        "Kirwan QLD $550k \u2014 original top QLD pick",
+        "Armadale WA 4 Shanks Court \u2014 959sqm R25 subdivision"
+      ],
+      "lessonsLearned": [
+        "Adelaide TRUE middle-ring suburbs (Tea Tree Gully/Modbury) now over $800k \u2014 need to go a ring further out to Para Hills/Salisbury North area",
+        "Para Hills is the sweet spot \u2014 established, LOW supply, under $550k",
+        "Ray White agent sites rate-limit after ~5 detail page fetches \u2014 need batching",
+        "Some Ray White detail pages now return 403 via CloudFront \u2014 need to use listing search pages for discovery, manual click-through for details",
+        "Added 5 new suburbs this run: Para Hills, Salisbury North, Condon, Aitkenvale, Noble Park",
+        "Dashboard now has 19 suburbs vs 14 (+36%), better state balance"
+      ],
+      "agentPerformance": {
+        "Suburb Analyst (manual)": "SUCCESS \u2014 added 5 suburbs with full quant + qual + forward + risk",
+        "Listing Scout": "PARTIAL \u2014 Ray White Townsville + Salisbury worked, Kirwan/Dandenong/Noble Park rate-limited",
+        "Quality Inspector": "Not run this iteration (no new red-flag listings fetched)",
+        "Risk Auditor": "SUCCESS \u2014 all 5 new suburbs classified LOW-MEDIUM supply risk (vs HIGH for outer Gawler corridor)"
+      }
     }
   ],
   "knownTraps": [
@@ -202,6 +252,16 @@
       "suburb": "Bibaringa SA",
       "reason": "Gawler corridor supply risk",
       "flaggedDate": "2026-04-21"
+    },
+    {
+      "suburb": "Tea Tree Gully SA",
+      "reason": "Median $968k \u2014 over $800k budget",
+      "flaggedDate": "2026-04-22"
+    },
+    {
+      "suburb": "Modbury North SA",
+      "reason": "Median $901k \u2014 over budget",
+      "flaggedDate": "2026-04-22"
     }
   ],
   "scoringAdjustments": [
@@ -236,6 +296,22 @@
     {
       "rule": "Any SA Playford LGA suburb gets auto-MEDIUM supply risk (Munno Para/Andrews Farm/Davoren Park)",
       "addedDate": "2026-04-21"
+    },
+    {
+      "rule": "Para Hills SA is best SA middle-ring pick \u2014 LOW supply risk + 5% yield + $520k entry",
+      "addedDate": "2026-04-22"
+    },
+    {
+      "rule": "Inner Townsville (Aitkenvale/Condon) has LOW supply risk \u2014 new supply is in Mount Low/Elliot Springs",
+      "addedDate": "2026-04-22"
+    },
+    {
+      "rule": "Adelaide middle-ring (Tea Tree Gully/Modbury) now OVER $800k \u2014 must target Para Hills/Salisbury North ring instead",
+      "addedDate": "2026-04-22"
+    },
+    {
+      "rule": "Flight path + Ross River flood in Aitkenvale are ADDRESS-SPECIFIC \u2014 must verify per property not at suburb level",
+      "addedDate": "2026-04-22"
     }
   ]
 }
