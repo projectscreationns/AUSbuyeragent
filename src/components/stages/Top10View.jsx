@@ -11,12 +11,13 @@ const STAMP_DUTY = {
 
 const INVESTOR = {
   budget: 800000,
-  cash: 110000,
+  cashTarget: 110000,   // preferred
+  cashMax: 135000,      // can stretch if returns justify
   depositPct: 0.10,
-  lmiPct: 0.02, // ~2% of loan at 90% LVR
+  lmiPct: 0.02,
   legalBP: 5000,
-  interestRate: 0.062, // investor variable ~6.2%
-  managementPct: 0.08, // 8% of rent
+  interestRate: 0.062,
+  managementPct: 0.08,
   insuranceYr: 1800,
   ratesYr: 2200,
 };
@@ -63,48 +64,38 @@ export function Top10View() {
     }
 
     const scored = all.map(l => {
-      let score = 0;
       const reasons = [];
       const warnings = [];
       const price = l.priceNumeric || 0;
       const state = l._state || 'WA';
 
-      // ═══ FIND SUBURB DATA ═══
       const subName = (l._suburb || '').split(' (')[0].toLowerCase();
       const subData = suburbLookup[subName] || null;
       const risk = subData?.riskFilter || {};
       const fwd = subData?.forward || {};
       const compositeScore = subData?.compositeScore || 0;
 
-      // ═══ 1. FORWARD GROWTH (biggest weight) ═══
-      const baseGrowth = fwd.bear ? ((fwd.bear + fwd.base * 2 + fwd.bull) / 4) : 20; // weighted avg
-      if (baseGrowth >= 35) { score += 80; reasons.push(`${Math.round(baseGrowth)}% 5yr growth (strong)`); }
-      else if (baseGrowth >= 25) { score += 50; reasons.push(`${Math.round(baseGrowth)}% 5yr growth`); }
-      else if (baseGrowth >= 15) { score += 25; }
-      else { score += 5; warnings.push(`Only ${Math.round(baseGrowth)}% 5yr growth forecast`); }
+      // Forward growth — weighted average of bear/base/bull
+      const baseGrowth = fwd.bear != null ? ((fwd.bear + fwd.base * 2 + fwd.bull) / 4) : 20;
 
-      // ═══ 2. SUPPLY RISK PENALTY (empty land = bad) ═══
+      // Supply/cycle risk adjustment to growth (REAL-WORLD penalty)
       const supplyRisk = risk.supplyRisk?.rating || '';
-      if (supplyRisk === 'HIGH') { score -= 60; warnings.push('HIGH supply risk — greenfield/new builds nearby'); }
-      else if (supplyRisk === 'MEDIUM') { score -= 25; warnings.push('MEDIUM supply risk'); }
-      else if (supplyRisk === 'LOW') { score += 20; reasons.push('LOW supply risk — established suburb'); }
-
-      // Cycle risk
       const cycleRisk = risk.cycleRisk?.rating || '';
-      if (cycleRisk === 'HIGH') { score -= 30; warnings.push('Post-spike correction risk'); }
-      else if (cycleRisk === 'MEDIUM') { score -= 10; }
+      let adjustedGrowth = baseGrowth;
+      if (supplyRisk === 'HIGH') adjustedGrowth *= 0.6;  // growth capped
+      else if (supplyRisk === 'MEDIUM') adjustedGrowth *= 0.85;
+      if (cycleRisk === 'HIGH') adjustedGrowth *= 0.8;
+      else if (cycleRisk === 'MEDIUM') adjustedGrowth *= 0.92;
 
-      // ═══ 3. DSR COMPOSITE (our own data) ═══
-      if (compositeScore >= 85) { score += 50; reasons.push(`DSR ${compositeScore}/100`); }
-      else if (compositeScore >= 75) { score += 30; reasons.push(`DSR ${compositeScore}/100`); }
-      else if (compositeScore >= 65) { score += 15; }
-      else if (compositeScore > 0) { score += 5; warnings.push(`DSR only ${compositeScore}/100`); }
+      if (supplyRisk === 'LOW') reasons.push('LOW supply risk');
+      else if (supplyRisk === 'HIGH') warnings.push(`Growth capped by HIGH supply risk`);
+      else if (supplyRisk === 'MEDIUM') warnings.push('Growth capped by MEDIUM supply risk');
 
-      // ═══ 4. YOUR SCENARIO — does it fit $110k cash? ═══
-      let totalCost = null;
-      let monthlyHoldCost = null;
-      let fiveYrEquity = null;
-      let cashFits = false;
+      // ═══ SCENARIO MODEL ═══
+      let totalCost = null, monthlyHoldCost = null, fiveYrEquity = null;
+      let cashFits = false, cashStretchFits = false;
+      let fiveYrCapGain = null, fiveYrTotalCashOut = null, roci = null;
+      let weeklyCashflow = null;
 
       if (price > 0) {
         const deposit = price * INVESTOR.depositPct;
@@ -113,66 +104,72 @@ export function Top10View() {
         const stampFn = STAMP_DUTY[state] || STAMP_DUTY.WA;
         const stamp = stampFn(price);
         totalCost = Math.round(deposit + stamp + lmi + INVESTOR.legalBP);
-        cashFits = totalCost <= INVESTOR.cash;
+        cashFits = totalCost <= INVESTOR.cashTarget;
+        cashStretchFits = totalCost <= INVESTOR.cashMax;
 
-        if (cashFits) {
-          score += 30;
-          reasons.push(`Fits $110k cash ($${Math.round(totalCost/1000)}k total)`);
-        } else {
-          score -= 40;
-          warnings.push(`OVER cash ($${Math.round(totalCost/1000)}k vs $110k)`);
-        }
-
-        // Monthly hold cost
-        const weeklyMortgage = loan * INVESTOR.interestRate / 52;
+        // Rent and cashflow
         const yMatch = (l.yieldEst || '').match(/([\d.]+)/);
-        const estRentWeekly = yMatch ? (price * parseFloat(yMatch[1]) / 100 / 52) : 0;
-        const weeklyMgmt = estRentWeekly * INVESTOR.managementPct;
+        const yieldPct = yMatch ? parseFloat(yMatch[1]) : 4.5;
+        const annualRent = price * yieldPct / 100;
+        const weeklyRent = annualRent / 52;
+        const weeklyMortgage = loan * INVESTOR.interestRate / 52;
+        const weeklyMgmt = weeklyRent * INVESTOR.managementPct;
         const weeklyInsRates = (INVESTOR.insuranceYr + INVESTOR.ratesYr) / 52;
-        const weeklyHoldCost = weeklyMortgage + weeklyMgmt + weeklyInsRates - estRentWeekly;
-        monthlyHoldCost = Math.round(weeklyHoldCost * 4.33);
+        weeklyCashflow = weeklyRent - weeklyMortgage - weeklyMgmt - weeklyInsRates;
+        monthlyHoldCost = Math.round(-weeklyCashflow * 4.33);
 
-        if (monthlyHoldCost < 400) { score += 15; }
-        else if (monthlyHoldCost < 800) { score += 5; }
-        else { warnings.push(`$${monthlyHoldCost}/mo hold cost`); }
-
-        // 5yr equity position
-        const growthRate = baseGrowth / 100;
+        // 5yr equity = future property value - loan remaining
+        const growthRate = adjustedGrowth / 100;
         const futureValue = price * (1 + growthRate);
-        const principalPaid = loan * 0.05; // ~5% principal in 5yr on interest-only approx
-        fiveYrEquity = Math.round(futureValue - loan + principalPaid);
+        fiveYrEquity = Math.round(futureValue - loan);
+        fiveYrCapGain = Math.round(futureValue - price);
 
-        if (fiveYrEquity > 300000) { score += 30; reasons.push(`$${Math.round(fiveYrEquity/1000)}k equity in 5yr`); }
-        else if (fiveYrEquity > 200000) { score += 15; reasons.push(`$${Math.round(fiveYrEquity/1000)}k equity in 5yr`); }
+        // Total cash deployed over 5yr = upfront + negative cashflow
+        const fiveYrNegCashflow = Math.max(0, -weeklyCashflow) * 52 * 5;
+        fiveYrTotalCashOut = Math.round(totalCost + fiveYrNegCashflow);
+
+        // Return on Cash Invested (ROCI) = cap gain / total cash deployed
+        if (fiveYrTotalCashOut > 0) {
+          roci = Math.round(fiveYrCapGain / fiveYrTotalCashOut * 100);
+        }
       }
 
-      // ═══ 5. VALUE-ADD (subdivision still matters but less dominant) ═══
-      const va = (l.valueAdd || '').toLowerCase();
-      if (va.includes('r40') || va.includes('r30') || va.includes('r60')) { score += 30; reasons.push('Subdivision zoning'); }
-      else if (va.includes('subdivision') || va.includes('subdivide')) { score += 20; reasons.push('Subdivision potential'); }
-      if (va.includes('granny flat')) { score += 15; reasons.push('Granny flat'); }
-      if (va.includes('corner')) { score += 10; reasons.push('Corner block'); }
+      // ═══ SCORE = ROCI-based ═══
+      let score = roci || 0;
 
-      // ═══ 6. LAND (only matters if established suburb) ═══
+      // Bonuses that matter for growth confidence
+      if (supplyRisk === 'LOW') score += 15;
+      if (compositeScore >= 85) score += 20;
+      else if (compositeScore >= 75) score += 10;
+      if (cashFits) score += 10;
+      else if (!cashStretchFits) score -= 50;
+
+      const va = (l.valueAdd || '').toLowerCase();
+      if (va.includes('r40') || va.includes('r30') || va.includes('r60')) { score += 15; reasons.push('Subdivision zoning'); }
+      if (va.includes('granny flat')) { score += 10; }
+      if (va.includes('corner')) { score += 5; }
       const landMatch = (l.land || '').match(/(\d+)/);
       const landSqm = landMatch ? parseInt(landMatch[1]) : 0;
-      if (landSqm >= 800 && supplyRisk !== 'HIGH') { score += 20; reasons.push(`${landSqm}sqm block`); }
-      else if (landSqm >= 650 && supplyRisk !== 'HIGH') { score += 10; }
+      if (landSqm >= 800 && supplyRisk !== 'HIGH') { score += 10; reasons.push(`${landSqm}sqm block`); }
 
-      // ═══ 7. MOTIVATION ═══
-      const ms = (l.motivationSignal || '').toLowerCase();
-      if (ms.includes('motivated') || ms.includes('must sell')) { score += 15; reasons.push('Motivated seller'); }
-      if (ms.includes('new price') || ms.includes('reduced')) { score += 10; reasons.push('Price reduced'); }
-
-      // ═══ 8. STATE DIVERSIFICATION ═══
-      if (state === 'QLD') { score += 10; reasons.push('QLD diversification'); }
-      if (state === 'SA') { score += 5; }
+      // Reasons/warnings
+      if (roci >= 150) reasons.push(`ROCI ${roci}% (excellent)`);
+      else if (roci >= 100) reasons.push(`ROCI ${roci}%`);
+      else if (roci && roci < 50) warnings.push(`Low ROCI ${roci}%`);
+      if (!cashFits && cashStretchFits) warnings.push(`Stretch cash $${Math.round(totalCost/1000)}k (over $110k target)`);
+      else if (!cashStretchFits) warnings.push(`TOO EXPENSIVE — $${Math.round(totalCost/1000)}k`);
+      if (adjustedGrowth < baseGrowth) {
+        reasons.push(`Growth adjusted ${Math.round(baseGrowth)}%→${Math.round(adjustedGrowth)}% for risks`);
+      }
+      if (monthlyHoldCost > 1000) warnings.push(`High hold cost $${monthlyHoldCost}/mo`);
 
       return { ...l, _score: score, _reasons: reasons, _warnings: warnings,
                _totalCost: totalCost, _monthlyHold: monthlyHoldCost,
-               _fiveYrEquity: fiveYrEquity, _cashFits: cashFits,
-               _baseGrowth: baseGrowth, _compositeScore: compositeScore,
-               _supplyRisk: supplyRisk };
+               _fiveYrEquity: fiveYrEquity, _cashFits: cashFits, _cashStretch: cashStretchFits,
+               _baseGrowth: baseGrowth, _adjustedGrowth: adjustedGrowth,
+               _compositeScore: compositeScore, _supplyRisk: supplyRisk,
+               _roci: roci, _fiveYrCapGain: fiveYrCapGain,
+               _fiveYrCashOut: fiveYrTotalCashOut, _weeklyCashflow: weeklyCashflow };
     });
 
     scored.sort((a, b) => b._score - a._score);
@@ -214,7 +211,7 @@ export function Top10View() {
         {top10.length > 0 && (
           <>
             <div className="info-box info-box--blue mb-16" style={{ fontSize: 11, lineHeight: 1.7 }}>
-              <strong>Scoring model:</strong> 5yr forward growth (weighted avg of bear/base/bull) · Supply risk penalty (HIGH -60, MEDIUM -25, LOW +20) · DSR composite from suburb data · Cash fit check ($110k) · Monthly hold cost · 5yr equity projection · Value-add bonus (subdivision/granny flat) · State diversification (max 7 WA) · Motivation signals
+              <strong>Ranked by ROCI (Return on Cash Invested over 5 years).</strong> Calculation: 5yr capital gain ÷ (upfront cash + 5yr negative cashflow). Growth rate is risk-adjusted: HIGH supply risk cuts growth 40%, MEDIUM cuts 15%. Cash target $110k preferred but stretch to $135k if ROCI justifies it. Returns speak.
             </div>
 
             {/* Summary chips */}
@@ -223,7 +220,13 @@ export function Top10View() {
                 <div key={s} className="header__chip"><b>{s}</b>: {n}</div>
               ))}
               <div className="header__chip" style={{ borderColor: 'var(--green)' }}>
-                {top10.filter(l => l._cashFits).length} fit $110k cash
+                {top10.filter(l => l._cashFits).length}/10 fit $110k
+              </div>
+              <div className="header__chip" style={{ borderColor: 'var(--amber)' }}>
+                {top10.filter(l => !l._cashFits && l._cashStretch).length}/10 stretch to $135k
+              </div>
+              <div className="header__chip" style={{ borderColor: 'var(--blue)' }}>
+                avg ROCI: {Math.round(top10.reduce((a,l)=>a+(l._roci||0),0)/top10.length)}%
               </div>
             </div>
 
@@ -256,31 +259,33 @@ export function Top10View() {
                 </div>
 
                 {/* Scenario model */}
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(120px, 1fr))', gap: 6, padding: '8px 16px 8px 28px', background: 'var(--bg-secondary)', borderTop: '1px solid var(--border)', borderBottom: '1px solid var(--border)' }}>
-                  <div className="metric">
-                    <div className="metric__label">5yr Growth</div>
-                    <div className="metric__value" style={{ fontSize: 14, color: l._baseGrowth >= 30 ? 'var(--green)' : l._baseGrowth >= 20 ? 'var(--amber)' : 'var(--red)' }}>+{Math.round(l._baseGrowth)}%</div>
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(110px, 1fr))', gap: 6, padding: '10px 16px 10px 28px', background: 'var(--bg-secondary)', borderTop: '1px solid var(--border)', borderBottom: '1px solid var(--border)' }}>
+                  <div className="metric" style={{ background: 'rgba(34,197,94,.08)', border: '1px solid rgba(34,197,94,.25)' }}>
+                    <div className="metric__label">ROCI 5YR</div>
+                    <div className="metric__value" style={{ fontSize: 16, color: l._roci >= 150 ? 'var(--green)' : l._roci >= 100 ? 'var(--amber)' : 'var(--red)' }}>{l._roci != null ? `${l._roci}%` : '—'}</div>
+                    <div className="metric__sub">return on cash invested</div>
                   </div>
                   <div className="metric">
-                    <div className="metric__label">Total Cost</div>
-                    <div className="metric__value" style={{ fontSize: 14, color: l._cashFits ? 'var(--green)' : 'var(--red)' }}>{l._totalCost ? `$${Math.round(l._totalCost/1000)}k` : '—'}</div>
-                    <div className="metric__sub">{l._cashFits ? '✓ fits $110k' : '✗ over $110k'}</div>
+                    <div className="metric__label">Cap Gain 5yr</div>
+                    <div className="metric__value" style={{ fontSize: 14, color: 'var(--green)' }}>{l._fiveYrCapGain ? `$${Math.round(l._fiveYrCapGain/1000)}k` : '—'}</div>
+                  </div>
+                  <div className="metric">
+                    <div className="metric__label">Growth (adj)</div>
+                    <div className="metric__value" style={{ fontSize: 14, color: l._adjustedGrowth >= 30 ? 'var(--green)' : l._adjustedGrowth >= 20 ? 'var(--amber)' : 'var(--red)' }}>+{Math.round(l._adjustedGrowth || 0)}%</div>
+                    <div className="metric__sub">was {Math.round(l._baseGrowth || 0)}%</div>
+                  </div>
+                  <div className="metric">
+                    <div className="metric__label">Upfront Cash</div>
+                    <div className="metric__value" style={{ fontSize: 14, color: l._cashFits ? 'var(--green)' : l._cashStretch ? 'var(--amber)' : 'var(--red)' }}>{l._totalCost ? `$${Math.round(l._totalCost/1000)}k` : '—'}</div>
+                    <div className="metric__sub">{l._cashFits ? '✓ under $110k' : l._cashStretch ? '△ stretch $135k' : '✗ over $135k'}</div>
                   </div>
                   <div className="metric">
                     <div className="metric__label">Hold Cost</div>
                     <div className="metric__value" style={{ fontSize: 14 }}>{l._monthlyHold != null ? `$${l._monthlyHold}/mo` : '—'}</div>
                   </div>
                   <div className="metric">
-                    <div className="metric__label">5yr Equity</div>
-                    <div className="metric__value" style={{ fontSize: 14, color: 'var(--green)' }}>{l._fiveYrEquity ? `$${Math.round(l._fiveYrEquity/1000)}k` : '—'}</div>
-                  </div>
-                  <div className="metric">
                     <div className="metric__label">Supply Risk</div>
                     <div className="metric__value" style={{ fontSize: 14, color: l._supplyRisk === 'LOW' ? 'var(--green)' : l._supplyRisk === 'HIGH' ? 'var(--red)' : 'var(--amber)' }}>{l._supplyRisk || '?'}</div>
-                  </div>
-                  <div className="metric">
-                    <div className="metric__label">DSR Score</div>
-                    <div className="metric__value" style={{ fontSize: 14 }}>{l._compositeScore || '—'}</div>
                   </div>
                 </div>
 
