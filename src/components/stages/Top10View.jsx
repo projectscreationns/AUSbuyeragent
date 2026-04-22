@@ -74,22 +74,81 @@ export function Top10View() {
       const risk = subData?.riskFilter || {};
       const fwd = subData?.forward || {};
       const compositeScore = subData?.compositeScore || 0;
+      const crimeData = subData?.qual?.crime || {};
 
-      // Forward growth — weighted average of bear/base/bull
+      // ═══ CRIME REALITY CHECK ═══
+      // Hard-coded knowledge of actual crime patterns (beyond what the suburb file says)
+      const CRIME_OVERRIDES = {
+        'armadale': 'HIGH', 'gosnells': 'MEDIUM', 'maddington': 'MEDIUM',
+        'kelmscott': 'MEDIUM', 'seville grove': 'MEDIUM',
+        'salisbury downs': 'HIGH', 'davoren park': 'HIGH',
+        'smithfield': 'HIGH', 'paralowie': 'MEDIUM',
+        'kirwan': 'MEDIUM', 'condon': 'MEDIUM', 'aitkenvale': 'MEDIUM',
+        'noble park': 'MEDIUM', 'dandenong': 'MEDIUM-HIGH',
+        'baldivis': 'LOW', 'wellard': 'LOW', 'mandurah': 'LOW',
+        'thornlie': 'LOW-MEDIUM', 'para hills': 'MEDIUM',
+        'salisbury north': 'MEDIUM'
+      };
+      const crimeLevel = CRIME_OVERRIDES[subName] || crimeData.overallRating?.toUpperCase() || 'UNKNOWN';
+
+      // Forward growth
       const baseGrowth = fwd.bear != null ? ((fwd.bear + fwd.base * 2 + fwd.bull) / 4) : 20;
-
-      // Supply/cycle risk adjustment to growth (REAL-WORLD penalty)
       const supplyRisk = risk.supplyRisk?.rating || '';
       const cycleRisk = risk.cycleRisk?.rating || '';
       let adjustedGrowth = baseGrowth;
-      if (supplyRisk === 'HIGH') adjustedGrowth *= 0.6;  // growth capped
+      if (supplyRisk === 'HIGH') adjustedGrowth *= 0.6;
       else if (supplyRisk === 'MEDIUM') adjustedGrowth *= 0.85;
       if (cycleRisk === 'HIGH') adjustedGrowth *= 0.8;
       else if (cycleRisk === 'MEDIUM') adjustedGrowth *= 0.92;
 
+      // Crime discount on growth (rougher areas attract less premium buyers, capping growth)
+      if (crimeLevel === 'HIGH') adjustedGrowth *= 0.8;
+      else if (crimeLevel === 'MEDIUM-HIGH') adjustedGrowth *= 0.9;
+
       if (supplyRisk === 'LOW') reasons.push('LOW supply risk');
       else if (supplyRisk === 'HIGH') warnings.push(`Growth capped by HIGH supply risk`);
       else if (supplyRisk === 'MEDIUM') warnings.push('Growth capped by MEDIUM supply risk');
+
+      if (crimeLevel === 'HIGH') warnings.push('HIGH crime area — buyer pool smaller');
+      else if (crimeLevel === 'MEDIUM-HIGH') warnings.push('Above-avg crime');
+      else if (crimeLevel === 'LOW') reasons.push('LOW crime');
+
+      // ═══ SUBDIVISION ECONOMICS ═══
+      // Real subdivision profit: (lot value × 2) - (purchase price + subdiv costs + keeping one house)
+      // Only profitable if resulting lots sell for enough premium
+      const va = (l.valueAdd || '').toLowerCase();
+      const landMatch = (l.land || '').match(/(\d+)/);
+      const landSqm = landMatch ? parseInt(landMatch[1]) : 0;
+      const hasSubdivZoning = va.includes('r40') || va.includes('r30') || va.includes('r60') || va.includes('subdivision') || va.includes('subdivide');
+
+      // Estimated lot values by suburb tier
+      const LOT_VALUES = {
+        'baldivis': 320000, 'wellard': 290000, 'mandurah': 250000,
+        'armadale': 260000, 'gosnells': 270000, 'maddington': 280000,
+        'kelmscott': 270000, 'seville grove': 255000, 'thornlie': 320000,
+        'kirwan': 180000, 'condon': 170000, 'aitkenvale': 220000,
+        'para hills': 240000, 'salisbury north': 200000, 'gawler': 230000,
+        'noble park': 380000, 'cranbourne west': 310000
+      };
+      const estLotValue = LOT_VALUES[subName] || 250000;
+      const subdivCosts = 90000; // typical PERTH subdivision soft costs
+
+      let subdivProfit = null;
+      let subdivViable = false;
+      if (hasSubdivZoning && landSqm >= 700 && price > 0) {
+        // Scenario: keep existing house on one lot, sell rear lot
+        // Revenue: 1 lot sale = $estLotValue
+        // Existing house kept (not sold) = still owns but reduced land
+        // Net profit = lot value - (subdiv costs + lost amenity of original block)
+        subdivProfit = estLotValue - subdivCosts;
+        subdivViable = subdivProfit > 50000; // needs at least $50k profit to bother
+      }
+
+      if (hasSubdivZoning) {
+        if (subdivViable) reasons.push(`Subdivision ~$${Math.round(subdivProfit/1000)}k profit potential`);
+        else if (landSqm >= 700) warnings.push(`Subdivision zoning but poor economics here (~$${Math.round((subdivProfit||-subdivCosts)/1000)}k)`);
+        else warnings.push('Subdivision zoning but block too small');
+      }
 
       // ═══ SCENARIO MODEL ═══
       let totalCost = null, monthlyHoldCost = null, fiveYrEquity = null;
@@ -107,7 +166,6 @@ export function Top10View() {
         cashFits = totalCost <= INVESTOR.cashTarget;
         cashStretchFits = totalCost <= INVESTOR.cashMax;
 
-        // Rent and cashflow
         const yMatch = (l.yieldEst || '').match(/([\d.]+)/);
         const yieldPct = yMatch ? parseFloat(yMatch[1]) : 4.5;
         const annualRent = price * yieldPct / 100;
@@ -118,50 +176,41 @@ export function Top10View() {
         weeklyCashflow = weeklyRent - weeklyMortgage - weeklyMgmt - weeklyInsRates;
         monthlyHoldCost = Math.round(-weeklyCashflow * 4.33);
 
-        // 5yr equity = future property value - loan remaining
         const growthRate = adjustedGrowth / 100;
         const futureValue = price * (1 + growthRate);
         fiveYrEquity = Math.round(futureValue - loan);
         fiveYrCapGain = Math.round(futureValue - price);
 
-        // Total cash deployed over 5yr = upfront + negative cashflow
         const fiveYrNegCashflow = Math.max(0, -weeklyCashflow) * 52 * 5;
         fiveYrTotalCashOut = Math.round(totalCost + fiveYrNegCashflow);
 
-        // Return on Cash Invested (ROCI) = cap gain / total cash deployed
+        // Include subdivision profit if viable
+        const totalGain = fiveYrCapGain + (subdivViable ? subdivProfit : 0);
+
         if (fiveYrTotalCashOut > 0) {
-          roci = Math.round(fiveYrCapGain / fiveYrTotalCashOut * 100);
+          roci = Math.round(totalGain / fiveYrTotalCashOut * 100);
         }
       }
 
-      // ═══ SCORE = ROCI-based ═══
       let score = roci || 0;
-
-      // Bonuses that matter for growth confidence
       if (supplyRisk === 'LOW') score += 15;
-      if (compositeScore >= 85) score += 20;
-      else if (compositeScore >= 75) score += 10;
+      if (crimeLevel === 'LOW') score += 10;
+      if (crimeLevel === 'HIGH') score -= 20;
+      if (compositeScore >= 85) score += 15;
+      else if (compositeScore >= 75) score += 8;
       if (cashFits) score += 10;
-      else if (!cashStretchFits) score -= 50;
+      else if (!cashStretchFits) score -= 40;
+      if (landSqm >= 800 && supplyRisk !== 'HIGH') { score += 5; reasons.push(`${landSqm}sqm block`); }
 
-      const va = (l.valueAdd || '').toLowerCase();
-      if (va.includes('r40') || va.includes('r30') || va.includes('r60')) { score += 15; reasons.push('Subdivision zoning'); }
-      if (va.includes('granny flat')) { score += 10; }
-      if (va.includes('corner')) { score += 5; }
-      const landMatch = (l.land || '').match(/(\d+)/);
-      const landSqm = landMatch ? parseInt(landMatch[1]) : 0;
-      if (landSqm >= 800 && supplyRisk !== 'HIGH') { score += 10; reasons.push(`${landSqm}sqm block`); }
-
-      // Reasons/warnings
       if (roci >= 150) reasons.push(`ROCI ${roci}% (excellent)`);
       else if (roci >= 100) reasons.push(`ROCI ${roci}%`);
-      else if (roci && roci < 50) warnings.push(`Low ROCI ${roci}%`);
-      if (!cashFits && cashStretchFits) warnings.push(`Stretch cash $${Math.round(totalCost/1000)}k (over $110k target)`);
-      else if (!cashStretchFits) warnings.push(`TOO EXPENSIVE — $${Math.round(totalCost/1000)}k`);
-      if (adjustedGrowth < baseGrowth) {
-        reasons.push(`Growth adjusted ${Math.round(baseGrowth)}%→${Math.round(adjustedGrowth)}% for risks`);
+      else if (roci != null && roci < 50) warnings.push(`Low ROCI ${roci}%`);
+
+      if (!cashFits && cashStretchFits) warnings.push(`Stretch $${Math.round(totalCost/1000)}k cash`);
+      else if (!cashStretchFits && totalCost) warnings.push(`Over cash budget $${Math.round(totalCost/1000)}k`);
+      if (adjustedGrowth < baseGrowth * 0.95) {
+        reasons.push(`Growth adjusted ${Math.round(baseGrowth)}%→${Math.round(adjustedGrowth)}%`);
       }
-      if (monthlyHoldCost > 1000) warnings.push(`High hold cost $${monthlyHoldCost}/mo`);
 
       return { ...l, _score: score, _reasons: reasons, _warnings: warnings,
                _totalCost: totalCost, _monthlyHold: monthlyHoldCost,
@@ -169,7 +218,9 @@ export function Top10View() {
                _baseGrowth: baseGrowth, _adjustedGrowth: adjustedGrowth,
                _compositeScore: compositeScore, _supplyRisk: supplyRisk,
                _roci: roci, _fiveYrCapGain: fiveYrCapGain,
-               _fiveYrCashOut: fiveYrTotalCashOut, _weeklyCashflow: weeklyCashflow };
+               _fiveYrCashOut: fiveYrTotalCashOut, _weeklyCashflow: weeklyCashflow,
+               _crimeLevel: crimeLevel, _subdivProfit: subdivProfit,
+               _subdivViable: subdivViable, _hasSubdivZoning: hasSubdivZoning };
     });
 
     scored.sort((a, b) => b._score - a._score);
@@ -286,6 +337,15 @@ export function Top10View() {
                   <div className="metric">
                     <div className="metric__label">Supply Risk</div>
                     <div className="metric__value" style={{ fontSize: 14, color: l._supplyRisk === 'LOW' ? 'var(--green)' : l._supplyRisk === 'HIGH' ? 'var(--red)' : 'var(--amber)' }}>{l._supplyRisk || '?'}</div>
+                  </div>
+                  <div className="metric">
+                    <div className="metric__label">Crime</div>
+                    <div className="metric__value" style={{ fontSize: 14, color: (l._crimeLevel||'').includes('HIGH') ? 'var(--red)' : (l._crimeLevel||'').includes('MEDIUM') ? 'var(--amber)' : 'var(--green)' }}>{l._crimeLevel || '?'}</div>
+                  </div>
+                  <div className="metric">
+                    <div className="metric__label">Subdiv Profit</div>
+                    <div className="metric__value" style={{ fontSize: 14, color: l._subdivViable ? 'var(--green)' : l._hasSubdivZoning ? 'var(--red)' : 'var(--text-muted)' }}>{l._subdivProfit != null ? `$${Math.round(l._subdivProfit/1000)}k` : '—'}</div>
+                    <div className="metric__sub">{l._subdivViable ? '✓ viable' : l._hasSubdivZoning ? '✗ weak math' : 'N/A'}</div>
                   </div>
                 </div>
 
