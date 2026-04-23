@@ -1959,7 +1959,7 @@
   "Condon (QLD)": {
     "suburb": "Condon",
     "state": "QLD",
-    "collected": 4,
+    "collected": 1,
     "analysedAt": "22 Apr 14:45",
     "source": "Ray White Townsville + Homely (107 listings available)",
     "riskFilter": {
@@ -1988,24 +1988,6 @@
         "valueAdd": "809sqm \u2014 granny flat potential ($150k build \u2192 +$400pw rent)",
         "reason": "INVESTIGATE \u2014 809sqm block in established Townsville suburb (9km CBD). Defence + CopperString catalysts actively building. LOW supply risk. Yield 4.6%. ACTION: Call agent, request contract, book B&P.",
         "url": "https://www.homely.com.au/for-sale/condon-qld-4815/houses"
-      },
-      {
-        "addr": "Browse all 107 4-bed listings in Condon",
-        "price": "Search via Homely",
-        "priceNumeric": null,
-        "beds": 4,
-        "baths": 2,
-        "car": 2,
-        "land": null,
-        "dom": null,
-        "verdict": "MONITOR",
-        "motivation": "LOW",
-        "motivationSignal": "Search link",
-        "yieldEst": "N/A",
-        "cashflowEst": "N/A",
-        "valueAdd": "Filter by 700+sqm blocks in under $600k range",
-        "reason": "MONITOR \u2014 107 4-bed houses available. Filter by 700+sqm + subdivision zoning for value-add candidates.",
-        "url": "https://www.homely.com.au/for-sale/condon-qld-4815/houses/4-bedrooms"
       }
     ]
   },
@@ -2201,7 +2183,7 @@
   "Aitkenvale (QLD)": {
     "suburb": "Aitkenvale",
     "state": "QLD",
-    "collected": 3,
+    "collected": 2,
     "analysedAt": "22 Apr 14:45",
     "source": "Allhomes (7 properties) + Homely (230 properties)",
     "riskFilter": {
@@ -2248,147 +2230,6 @@
         "valueAdd": "750sqm CORNER block \u2014 best subdivision geometry",
         "reason": "INVESTIGATE \u2014 Corner block in inner Townsville (6km CBD). Corner = better subdivision or duplex potential. ACTION: Call agent, check zoning and flight path.",
         "url": "https://www.homely.com.au/for-sale/aitkenvale-qld-4814/real-estate"
-      },
-      {
-        "addr": "Browse Aitkenvale (7 listings on Allhomes)",
-        "price": "Search link",
-        "priceNumeric": null,
-        "beds": null,
-        "baths": null,
-        "car": null,
-        "land": null,
-        "dom": null,
-        "verdict": "MONITOR",
-        "motivation": "LOW",
-        "motivationSignal": "Search",
-        "yieldEst": "N/A",
-        "cashflowEst": "N/A",
-        "valueAdd": "Filter by land size",
-        "reason": "MONITOR \u2014 7 properties on Allhomes. Verify flight path and Ross River flood for each address.",
-        "url": "https://www.allhomes.com.au/sale/aitkenvale-qld-4814/"
-      }
-    ]
-  },
-  "Para Hills (SA)": {
-    "suburb": "Para Hills",
-    "state": "SA",
-    "collected": 14,
-    "analysedAt": "22 Apr 14:45",
-    "source": "Allhomes (14 properties) + Harris Real Estate + RateMyAgent (26 properties)",
-    "riskFilter": {
-      "overallRisk": "LOW",
-      "supplyRisk": {
-        "rating": "LOW",
-        "reason": "Established middle-ring infill only"
-      },
-      "riskNote": "Best SA risk-adjusted pick"
-    },
-    "items": [
-      {
-        "addr": "Browse 14 listings in Para Hills SA 5096",
-        "price": "Median $520k",
-        "priceNumeric": 520000,
-        "beds": 3,
-        "baths": 1,
-        "car": 2,
-        "land": null,
-        "dom": null,
-        "verdict": "INVESTIGATE",
-        "motivation": "MEDIUM",
-        "motivationSignal": "Middle-ring established",
-        "yieldEst": "5.0%",
-        "cashflowEst": "-$112pw",
-        "valueAdd": "Established middle-ring \u2014 no supply risk. O-Bahn Busway to CBD in 15min.",
-        "reason": "INVESTIGATE \u2014 Established Adelaide middle-ring. LOW supply risk. O-Bahn to CBD. 5% yield is strong for Adelaide. $520k entry = massive cash buffer ($35k unused). Typical price $740k but entry homes from $520k. ACTION: Browse listings, target 3-bed on 600+sqm.",
-        "url": "https://www.allhomes.com.au/sale/para-hills-sa-5096/"
-      },
-      {
-        "addr": "Harris RE Para Hills listings",
-        "price": "Search",
-        "priceNumeric": null,
-        "beds": null,
-        "baths": null,
-        "car": null,
-        "land": null,
-        "dom": null,
-        "verdict": "MONITOR",
-        "motivation": "LOW",
-        "motivationSignal": "Search",
-        "yieldEst": "N/A",
-        "cashflowEst": "N/A",
-        "valueAdd": "Harris is the major SA agency",
-        "reason": "MONITOR \u2014 Harris Real Estate has Para Hills listings. Browse for sub-$600k 3-bed on 600+sqm.",
-        "url": "https://www.harrisre.com.au/properties-for-sale/para-hills-sa-5096/"
-      }
-    ]
-  },
-  "Salisbury North (SA)": {
-    "suburb": "Salisbury North",
-    "state": "SA",
-    "collected": 20,
-    "analysedAt": "22 Apr 14:45",
-    "source": "Homely (124 properties)",
-    "riskFilter": {
-      "overallRisk": "LOW-MEDIUM",
-      "supplyRisk": {
-        "rating": "LOW",
-        "reason": "Established middle-ring"
-      },
-      "riskNote": "Train + defence catalysts, lower IRSAD"
-    },
-    "items": [
-      {
-        "addr": "Browse Salisbury North SA 5108",
-        "price": "Median $615k",
-        "priceNumeric": 615000,
-        "beds": 3,
-        "baths": 1,
-        "car": 2,
-        "land": null,
-        "dom": null,
-        "verdict": "INVESTIGATE",
-        "motivation": "MEDIUM",
-        "motivationSignal": "Electrified train + defence precinct",
-        "yieldEst": "4.6%",
-        "cashflowEst": "-$153pw",
-        "valueAdd": "Electrified train to CBD + Edinburgh Parks $2B defence precinct",
-        "reason": "INVESTIGATE \u2014 Established Adelaide north with electrified Gawler Line + $2B defence precinct. +13.2% growth past 12mo. 124 listings available \u2014 filter by sub-$650k and 600+sqm. IRSAD 855 is the main caveat.",
-        "url": "https://www.homely.com.au/for-sale/salisbury-north-sa-5108/real-estate"
-      }
-    ]
-  },
-  "Noble Park (VIC)": {
-    "suburb": "Noble Park",
-    "state": "VIC",
-    "collected": 15,
-    "analysedAt": "22 Apr 14:45",
-    "source": "Homely + Allhomes",
-    "riskFilter": {
-      "overallRisk": "LOW-MEDIUM",
-      "supplyRisk": {
-        "rating": "LOW",
-        "reason": "Established middle-ring"
-      },
-      "riskNote": "VIC stamp duty hurts but LOW supply risk"
-    },
-    "items": [
-      {
-        "addr": "Noble Park VIC 3174 (median $780k)",
-        "price": "Median $780k",
-        "priceNumeric": 780000,
-        "beds": 3,
-        "baths": 1,
-        "car": 2,
-        "land": null,
-        "dom": null,
-        "verdict": "WATCH",
-        "motivation": "LOW",
-        "motivationSignal": "VIC stamp duty burden",
-        "yieldEst": "3.6%",
-        "cashflowEst": "-$362pw",
-        "valueAdd": "Established middle-ring, rail to CBD 40min",
-        "reason": "WATCH \u2014 Real VIC middle-ring option but $780k + $42k stamp + $10k surcharge = $132k total costs exceeds $110k cash. Only pursue if can add $25k cash or find sub-$700k listings.",
-        "url": "https://www.homely.com.au/for-sale/noble-park-vic-3174/houses"
       }
     ]
   }

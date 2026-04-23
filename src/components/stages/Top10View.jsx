@@ -54,12 +54,19 @@ export function Top10View() {
   const top10 = useMemo(() => {
     if (!listings) return [];
 
+    // Collect INVESTIGATE listings — filter out fakes/placeholders
     const all = [];
     for (const [suburbKey, data] of Object.entries(listings)) {
       for (const item of (data.items || [])) {
-        if (item.verdict === 'INVESTIGATE') {
-          all.push({ ...item, _suburb: suburbKey, _state: data.state });
-        }
+        if (item.verdict !== 'INVESTIGATE') continue;
+        const addr = (item.addr || '');
+        // Must be a real street address (starts with number)
+        if (!/^\d/.test(addr.trim())) continue;
+        // No search/browse placeholders
+        if (/browse|search|harris|listings|multiple/i.test(addr)) continue;
+        // Must have a price
+        if (!item.priceNumeric) continue;
+        all.push({ ...item, _suburb: suburbKey, _state: data.state });
       }
     }
 
@@ -233,9 +240,9 @@ export function Top10View() {
       const isClean = !l.photoVerdict || l.photoVerdict === 'BEST' || l.photoVerdict === 'STRONG' || l.photoVerdict === 'PASS';
       const isPhotoFlagged = l.photoVerdict === 'CAUTION';
 
-      if (crimeLevel === 'SEVERE') {
+      if (crimeLevel === 'SEVERE' || crimeLevel === 'HIGH') {
         decision = 'SKIP';
-        decisionReason = 'Crime too severe — growth capped, small buyer pool';
+        decisionReason = `${crimeLevel} crime — growth capped, buyer pool limited`;
       } else if (!cashStretchFits && totalCost) {
         decision = 'SKIP';
         decisionReason = `$${Math.round(totalCost/1000)}k total exceeds $135k max`;
@@ -274,8 +281,8 @@ export function Top10View() {
                _decision: decision, _decisionReason: decisionReason };
     });
 
-    // Filter OUT SKIP — only show actionable picks
-    const actionable = scored.filter(l => l._decision !== 'SKIP');
+    // Only show CALL AGENT + INSPECT — no padding with MONITORs or SKIPs
+    const actionable = scored.filter(l => l._decision === 'CALL AGENT' || l._decision === 'INSPECT');
 
     // Sort by decision priority then score:
     //   CALL AGENT first, then INSPECT, then MONITOR
@@ -330,8 +337,24 @@ export function Top10View() {
         {top10.length > 0 && (
           <>
             <div className="info-box info-box--blue mb-16" style={{ fontSize: 11, lineHeight: 1.7 }}>
-              <strong>Decisions pre-made.</strong> {top10._skipCount ?? 0} candidates auto-SKIPPED (severe crime, over cash, photo flagged). Showing {top10.length} worth your time. Your only actions: 📞 CALL · 🔍 INSPECT · 👁 MONITOR. Pipeline: macro → region → suburb DSR + supply risk → listing scout → quality check → photo inspector → ROCI-based decision.
+              <strong>Decisions pre-made.</strong> {top10._skipCount ?? 0} candidates auto-filtered (crime, over cash, photo flagged, no price, fake placeholders). Showing {top10.length} worth your time. Only 📞 CALL AGENT and 🔍 INSPECT listings appear. Pipeline: macro → region → suburb DSR + supply risk → listing scout → red flag check → photo inspector → crime filter → ROCI ranking.
             </div>
+            {(() => {
+              const stateMap = top10.reduce((a, l) => { a[l._state || '?'] = (a[l._state || '?'] || 0) + 1; return a; }, {});
+              const total = top10.length;
+              const waCount = stateMap.WA || 0;
+              const waPct = total > 0 ? Math.round(waCount / total * 100) : 0;
+              return waPct > 80 && total > 2 ? (
+                <div className="info-box info-box--amber mb-16" style={{ fontSize: 11 }}>
+                  <strong>⚠ {waPct}% WA-heavy.</strong> SA/QLD/VIC listing data is limited because Domain + REA block automated scraping. These states may have better options — check manually:
+                  <div style={{ marginTop: 6, display: 'flex', gap: 8, flexWrap: 'wrap' }}>
+                    <a href="https://www.domain.com.au/sale/kirwan-qld-4817/?ptype=house&price=0-800000" target="_blank" rel="noopener noreferrer" className="btn btn--secondary btn--sm">Kirwan QLD on Domain</a>
+                    <a href="https://www.domain.com.au/sale/condon-qld-4815/?ptype=house&price=0-800000" target="_blank" rel="noopener noreferrer" className="btn btn--secondary btn--sm">Condon QLD on Domain</a>
+                    <a href="https://www.domain.com.au/sale/para-hills-sa-5096/?ptype=house&price=0-800000" target="_blank" rel="noopener noreferrer" className="btn btn--secondary btn--sm">Para Hills SA on Domain</a>
+                  </div>
+                </div>
+              ) : null;
+            })()}
 
             {/* Summary chips */}
             <div className="flex gap-8 mb-16" style={{ flexWrap: 'wrap' }}>
@@ -487,6 +510,20 @@ export function Top10View() {
               </div>
             ))}
           </>
+        )}
+
+        {listings && top10.length === 0 && (
+          <div className="info-box info-box--amber" style={{ textAlign: 'center', padding: 30 }}>
+            <div style={{ fontSize: 18, fontWeight: 700, marginBottom: 8 }}>No listings passed all filters</div>
+            <div style={{ fontSize: 12 }}>
+              {top10._skipCount ?? 0} candidates were filtered out (crime, cash, quality). Run /run-full for fresh listings or check manually:
+              <div style={{ marginTop: 12, display: 'flex', gap: 8, justifyContent: 'center', flexWrap: 'wrap' }}>
+                <a href="https://www.domain.com.au/sale/kirwan-qld-4817/?ptype=house&price=0-800000" target="_blank" rel="noopener noreferrer" className="btn btn--primary btn--sm">Kirwan QLD</a>
+                <a href="https://www.domain.com.au/sale/condon-qld-4815/?ptype=house&price=0-800000" target="_blank" rel="noopener noreferrer" className="btn btn--primary btn--sm">Condon QLD</a>
+                <a href="https://www.domain.com.au/sale/para-hills-sa-5096/?ptype=house&price=0-800000" target="_blank" rel="noopener noreferrer" className="btn btn--primary btn--sm">Para Hills SA</a>
+              </div>
+            </div>
+          </div>
         )}
 
         {!listings && !err && (
