@@ -199,8 +199,8 @@ def main():
     total_in = total_out = 0
     for idx, (name, state, pc, median, r3, r4) in enumerate(SUBURBS):
         if idx > 0:
-            print(f"   [pacing 50s for rate limit]", flush=True)
-            time.sleep(50)
+            print(f"   [pacing 90s for rate limit]", flush=True)
+            time.sleep(90)
         print(f"[{state}] {name}...", end=" ", flush=True)
         items, tin, tout = search_suburb(name, state, pc, median, r3, r4)
         total_in += tin
