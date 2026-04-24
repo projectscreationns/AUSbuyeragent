@@ -197,10 +197,17 @@ def main():
             listings = json.load(f)
 
     total_in = total_out = 0
+    api_sourced_keys = {k for k, v in listings.items() if 'Anthropic API' in v.get('source','')}
+    first_call = True
     for idx, (name, state, pc, median, r3, r4) in enumerate(SUBURBS):
-        if idx > 0:
+        key = f"{name} ({state})"
+        if key in api_sourced_keys:
+            print(f"[{state}] {name}... SKIP (already done via API)")
+            continue
+        if not first_call:
             print(f"   [pacing 90s for rate limit]", flush=True)
             time.sleep(90)
+        first_call = False
         print(f"[{state}] {name}...", end=" ", flush=True)
         items, tin, tout = search_suburb(name, state, pc, median, r3, r4)
         total_in += tin
