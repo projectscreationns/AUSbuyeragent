@@ -2301,27 +2301,9 @@
         "valueAdd": "802sqm \u2014 granny flat/subdivision potential",
         "reason": "INVESTIGATE \u2014 802sqm block. below median $681k. 5.0% yield.",
         "url": "https://view.com.au/for-sale/qld/in-aitkenvale-4814/under-800000/"
-      },
-      {
-        "addr": "16 Patrick Street, Aitkenvale, QLD 4814",
-        "price": "$430,000 Neg",
-        "priceNumeric": 430000,
-        "beds": 1,
-        "baths": 1,
-        "car": 1,
-        "land": "1012sqm",
-        "dom": null,
-        "verdict": "INVESTIGATE",
-        "motivation": "MEDIUM",
-        "motivationSignal": "None",
-        "yieldEst": "6.7%",
-        "cashflowEst": "$37pw",
-        "valueAdd": "1012sqm \u2014 granny flat/subdivision potential",
-        "reason": "INVESTIGATE \u2014 1012sqm block. below median $681k. 6.7% yield.",
-        "url": "https://view.com.au/for-sale/qld/in-aitkenvale-4814/under-800000/"
       }
     ],
-    "collected": 4,
+    "collected": 3,
     "analysedAt": "24 Apr 00:28",
     "source": "Anthropic API + web_search"
   },
