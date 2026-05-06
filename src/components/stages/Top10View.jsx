@@ -64,9 +64,9 @@ export function Top10View() {
         if (!/^\d/.test(addr.trim())) continue;
         // No search/browse placeholders
         if (/browse|search|harris|listings|multiple/i.test(addr)) continue;
-        // Must have a price
+        // Must have a price (or an estimated price for Contact Agent listings)
         if (!item.priceNumeric) continue;
-        all.push({ ...item, _suburb: suburbKey, _state: data.state });
+        all.push({ ...item, _suburb: suburbKey, _state: data.state, _priceEstimated: !!item.priceEstimated });
       }
     }
 
@@ -227,6 +227,7 @@ export function Top10View() {
       else if (roci >= 100) reasons.push(`ROCI ${roci}%`);
       else if (roci != null && roci < 50) warnings.push(`Low ROCI ${roci}%`);
 
+      if (l._priceEstimated) warnings.push('Price estimated — confirm with agent');
       if (!cashFits && cashStretchFits) warnings.push(`Stretch $${Math.round(totalCost/1000)}k cash`);
       else if (!cashStretchFits && totalCost) warnings.push(`Over cash budget $${Math.round(totalCost/1000)}k`);
       if (adjustedGrowth < baseGrowth * 0.95) {
@@ -401,6 +402,7 @@ export function Top10View() {
                   </div>
                   <div style={{ textAlign: 'right' }}>
                     <div className="listing-card__price">{l.price || 'POA'}</div>
+                    {l._priceEstimated && <div className="text-xs" style={{ color: 'var(--amber)' }}>est from median</div>}
                     <div className="text-xs text-muted">{l._state}</div>
                   </div>
                 </div>
