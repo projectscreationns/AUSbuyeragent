@@ -17334,26 +17334,6 @@
     "state": "WA",
     "items": [
       {
-        "addr": "13 Burley Street, Mandurah, WA 6210",
-        "price": "$650,000",
-        "priceNumeric": 650000,
-        "priceEstimated": false,
-        "beds": 3,
-        "baths": null,
-        "car": null,
-        "land": "832sqm",
-        "dom": null,
-        "verdict": "INVESTIGATE",
-        "motivation": "HIGH",
-        "motivationSignal": "None",
-        "yieldEst": "4.4%",
-        "cashflowEst": "$-225pw",
-        "valueAdd": "832sqm \u2014 granny flat/subdivision potential",
-        "reason": "INVESTIGATE \u2014 832sqm mega-block. ACTION: Call agent, request contract, book B&P.",
-        "url": "https://www.homely.com.au/for-sale/mandurah-wa-6210/houses/3-bedrooms",
-        "redFlags": []
-      },
-      {
         "addr": "36 Peel Street, Mandurah, WA 6210",
         "price": "$650,000",
         "priceNumeric": 650000,
@@ -17874,7 +17854,7 @@
         "redFlags": []
       }
     ],
-    "collected": 27,
+    "collected": 26,
     "analysedAt": "14 May 03:33",
     "source": "Serper.dev Google Search API"
   }
