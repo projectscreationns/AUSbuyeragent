@@ -60,10 +60,17 @@ export function Top10View() {
       for (const item of (data.items || [])) {
         if (item.verdict !== 'INVESTIGATE') continue;
         const addr = (item.addr || '');
+        const combined = `${addr} ${item.price || ''} ${item.reason || ''} ${item.motivationSignal || ''}`.toLowerCase();
         // Must be a real street address (starts with number)
         if (!/^\d/.test(addr.trim())) continue;
         // No search/browse placeholders
         if (/browse|search|harris|listings|multiple/i.test(addr)) continue;
+        // Filter stale/sold/under-offer listings
+        if (/under offer|under contract|sold|withdrawn|off market|settlement|exchanged|auction results/i.test(combined)) continue;
+        // Filter non-house types that slipped through
+        if (/unit|apartment|villa|townhouse|duplex pair|granny flat only/i.test(combined)) continue;
+        // Filter garbage entries (no real street name)
+        if (/^\d+\s+(bed|bath|car|with|properties|results|listing)/i.test(addr)) continue;
         // Must have a price (or an estimated price for Contact Agent listings)
         if (!item.priceNumeric) continue;
         all.push({ ...item, _suburb: suburbKey, _state: data.state, _priceEstimated: !!item.priceEstimated });

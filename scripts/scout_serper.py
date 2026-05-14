@@ -106,11 +106,14 @@ def extract_listings_from_results(results, suburb_name, state, postcode, median)
         link = item.get('link', '')
         combined = f"{title} {snippet}"
 
-        # Skip index/search pages, sold pages, rental pages
+        # Skip index/search pages, sold pages, rental pages, stale listings
         lower = combined.lower()
         if any(skip in lower for skip in ['suburb profile', 'market trends', 'median price',
             'recently sold', 'property sold', 'for rent', 'rental', 'property data',
-            'statistics', 'how much', 'property market', 'suburb/kirwan', 'house prices']):
+            'statistics', 'how much', 'property market', 'suburb/kirwan', 'house prices',
+            'under offer', 'under contract', 'sold', 'withdrawn', 'off market',
+            'settlement', 'exchanged', 'auction results',
+            'unit for sale', 'apartment for sale', 'villa for sale', 'townhouse for sale']):
             continue
 
         # Extract individual addresses from snippet
