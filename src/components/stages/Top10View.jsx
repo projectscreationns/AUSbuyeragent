@@ -30,8 +30,8 @@ export function Top10View() {
   const load = async () => {
     try {
       const [lr, sr] = await Promise.all([
-        fetch(`/data/listings.json?t=${Date.now()}`),
-        fetch(`/data/suburbs.json?t=${Date.now()}`),
+        fetch(`${import.meta.env.BASE_URL}data/listings.json?t=${Date.now()}`),
+        fetch(`${import.meta.env.BASE_URL}data/suburbs.json?t=${Date.now()}`),
       ]);
       if (!lr.ok) throw new Error('No listings yet');
       setListings(await lr.json());

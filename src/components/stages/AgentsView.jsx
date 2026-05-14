@@ -20,7 +20,7 @@ export function AgentsView() {
     setLoading(true);
     setErr(null);
     try {
-      const r = await fetch(`/data/feedback.json?t=${Date.now()}`);
+      const r = await fetch(`${import.meta.env.BASE_URL}data/feedback.json?t=${Date.now()}`);
       if (!r.ok) throw new Error('No feedback.json yet — run /run-full first');
       setFeedback(await r.json());
     } catch (e) {

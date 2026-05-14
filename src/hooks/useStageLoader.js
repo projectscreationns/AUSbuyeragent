@@ -19,7 +19,7 @@ export function useStageLoader(stageKey) {
 
     try {
       // Cache-bust to ensure we get the latest file
-      const resp = await fetch(`/data/${stageKey}.json?t=${Date.now()}`);
+      const resp = await fetch(`${import.meta.env.BASE_URL}data/${stageKey}.json?t=${Date.now()}`);
       if (!resp.ok) {
         throw new Error(
           resp.status === 404

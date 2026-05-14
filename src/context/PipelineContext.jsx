@@ -86,7 +86,7 @@ export function PipelineProvider({ children }) {
     async function loadExisting() {
       for (const key of STAGE_KEYS) {
         try {
-          const resp = await fetch(`/data/${key}.json?t=${Date.now()}`);
+          const resp = await fetch(`${import.meta.env.BASE_URL}data/${key}.json?t=${Date.now()}`);
           if (resp.ok) {
             const data = await resp.json();
             dispatch({ type: 'STAGE_COMPLETE', stage: key, data });
