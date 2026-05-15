@@ -1,274 +1,206 @@
 {
-  "asOf": "21/04/2026",
+  "asOf": "14/05/2026",
   "rba": {
-    "cashRate": "4.10%",
+    "cashRate": "4.35%",
     "lastDecision": {
-      "date": "17/03/2026",
+      "date": "07/05/2026",
       "change": "+25bp",
-      "voteSplit": "5-4",
-      "source": "https://www.rba.gov.au/media-releases/2026/mr-26-08.html"
+      "voteSplit": "8-1",
+      "source": "https://www.rba.gov.au/monetary-policy/int-rate-decisions/"
     },
-    "nextMeeting": "05/05/2026",
+    "nextMeeting": "17/06/2026",
     "forecasts": [
-      {
-        "bank": "Markets",
-        "nextMove": "60% chance +25bp to 4.35% in May",
-        "source": "https://www.asx.com.au/markets/trade-our-derivatives-market/futures-market/rba-rate-tracker"
-      },
-      {
-        "bank": "CBA/NAB/Westpac",
-        "nextMove": "All forecast hike in May",
-        "source": "https://www.finder.com.au/rba-cash-rate"
-      },
-      {
-        "bank": "RBA guidance",
-        "nextMove": "Trimmed mean inflation to stay above target until mid-2028",
-        "source": "https://www.rba.gov.au/speeches/2026/sp-so-2026-02-24.html"
-      }
+      { "bank": "Westpac", "nextMove": "Two more 0.25% hikes to 4.85% (June + August)", "source": "https://www.westpac.com.au/" },
+      { "bank": "CBA", "nextMove": "Hold for rest of 2026 — wait and assess", "source": "https://www.commbank.com.au/articles/newsroom/2026/05/rba-may-interest-rates-decision.html" },
+      { "bank": "RBA Statement", "nextMove": "Will 'do what it considers necessary' — door open for more hikes", "source": "https://www.rba.gov.au/" }
     ],
     "signal": "RED",
-    "note": "Two hikes in 2026. May hike 60% priced. RBA says inflation above target until mid-2028. Rates staying high."
+    "note": "3rd hike of 2026 = 4.35% (was 4.10%). Middle East oil crisis fuelling inflation. Westpac sees 4.85% by August."
   },
   "employment": {
-    "unemployment": {
-      "value": "4.1%",
-      "month": "Mar 2026",
-      "trend": "improved from 4.3% in Feb",
-      "source": "https://www.abs.gov.au/statistics/labour/employment-and-unemployment/labour-force-australia/latest-release"
-    },
+    "unemployment": { "value": "4.3%", "month": "Mar 2026", "trend": "stable", "source": "https://www.abs.gov.au/statistics/labour/employment-and-unemployment/labour-force-australia/latest-release" },
     "signal": "AMBER",
-    "note": "March data improved to 4.1% from 4.3% in Feb. Labour market more resilient than expected."
+    "note": "March stable at 4.3%. April data releases 21/05. Labour market resilient despite rate hikes."
   },
   "inflation": {
-    "headline": {
-      "value": "3.7%",
-      "period": "12mo to Feb 2026",
-      "source": "https://www.abs.gov.au/statistics/economy/price-indexes-and-inflation/consumer-price-index-australia/latest-release"
-    },
-    "trimmedMean": {
-      "value": "3.3%",
-      "source": "https://www.abs.gov.au/statistics/economy/price-indexes-and-inflation/consumer-price-index-australia/latest-release"
-    },
+    "headline": { "value": "4.6%", "period": "12mo to Mar 2026", "source": "https://www.abs.gov.au/media-centre/media-releases/cpi-rose-46-year-march-2026" },
+    "trimmedMean": { "value": "3.3%", "source": "https://www.abs.gov.au/statistics/economy/price-indexes-and-inflation/consumer-price-index-australia/latest-release" },
     "signal": "RED",
-    "note": "Still well above 2-3% target. Housing +7.2%, electricity distortions. RBA expects above-target until mid-2028."
+    "note": "Headline jumped to 4.6% (from 3.7%). Housing +6.5%, Transport +8.9%, Fuel +24.2%. Trimmed mean 3.3% still well above target."
   },
   "wages": {
-    "wpiAnnual": {
-      "value": "3.4%",
-      "quarter": "Dec Q 2025",
-      "source": "https://www.abs.gov.au/statistics/economy/price-indexes-and-inflation/wage-price-index-australia/latest-release"
-    },
-    "signal": "AMBER",
-    "note": "Wages 3.4% vs inflation 3.7% = real wages still slightly negative."
+    "wpiAnnual": { "value": "3.4%", "quarter": "Mar Q 2026", "source": "https://www.abs.gov.au/" },
+    "signal": "RED",
+    "note": "Wages 3.4% vs inflation 4.6% = real wages going BACKWARDS. Cost of living squeeze."
   },
   "migration": {
-    "nom": {
-      "value": "311,000",
-      "period": "yr to Sep 2025",
-      "source": "https://www.abs.gov.au/statistics/people/population/overseas-migration/latest-release"
-    },
-    "annualPopGrowth": {
-      "value": "+1.5%",
-      "source": "https://www.abs.gov.au/statistics/people/population/national-state-and-territory-population/latest-release"
-    },
+    "nom": { "value": "311,000", "period": "yr to Sep 2025", "source": "https://www.abs.gov.au/statistics/people/population/overseas-migration/latest-release" },
+    "annualPopGrowth": { "value": "+1.5%", "source": "https://www.abs.gov.au/" },
     "fastestStates": [
-      {
-        "state": "WA",
-        "growth": "+2.2%"
-      },
-      {
-        "state": "QLD",
-        "growth": "+2.1%"
-      },
-      {
-        "state": "SA",
-        "growth": "+1.8%"
-      }
+      { "state": "WA", "growth": "+2.2%" },
+      { "state": "QLD", "growth": "+2.1%" },
+      { "state": "SA", "growth": "+1.8%" }
     ],
     "forecast2026": "Treasury: NOM to 260,000 in 2025-26, settling near 225,000 by 2026-27",
     "signal": "GREEN",
-    "note": "311k NOM still elevated. WA and QLD growing fastest. Brisbane added 58,200 residents (60% from overseas migration)."
+    "note": "Demand pressure continues. WA/QLD/SA still leading. Net migration sustains rental and housing demand."
   },
   "approvals": {
-    "monthly": {
-      "value": "19,022",
-      "month": "Feb 2026",
-      "source": "https://www.abs.gov.au/statistics/industry/building-and-construction/building-approvals-australia/latest-release"
-    },
-    "housesTrend": "+0.9%",
-    "vsTarget": "195,434 trailing 12mo vs 240,000 target = 18% shortfall",
+    "monthly": { "value": "17,300", "month": "Mar 2026", "source": "https://www.abs.gov.au/statistics/industry/building-and-construction/building-approvals-australia/latest-release" },
+    "housesTrend": "+0.9% houses, -26% units",
+    "vsTarget": "938k forecast vs 1.2M Housing Accord target = 22% shortfall over 5 years",
     "signal": "GREEN",
-    "note": "Persistent undersupply. 18% below 240k/yr target. Good for existing property values."
+    "note": "March approvals DOWN 10.5%. Council projects 938k vs 1.2M target. Persistent undersupply POSITIVE for existing values."
   },
   "vacancy": {
-    "national": {
-      "value": "1.0%",
-      "source": "https://sqmresearch.com.au/graph_vacancy.php?national=1&t=1"
-    },
+    "national": { "value": "1.2%", "source": "https://sqmresearch.com.au/" },
     "byCity": [
-      {
-        "city": "Sydney",
-        "value": "1.8%"
-      },
-      {
-        "city": "Melbourne",
-        "value": "1.5%"
-      },
-      {
-        "city": "Brisbane",
-        "value": "0.6%"
-      },
-      {
-        "city": "Perth",
-        "value": "0.6%"
-      },
-      {
-        "city": "Adelaide",
-        "value": "0.5%"
-      },
-      {
-        "city": "Hobart",
-        "value": "0.5%"
-      },
-      {
-        "city": "Darwin",
-        "value": "0.6%"
-      },
-      {
-        "city": "Canberra",
-        "value": "1.0%"
-      }
+      { "city": "Sydney", "value": "1.3%" },
+      { "city": "Melbourne", "value": "1.5%" },
+      { "city": "Brisbane", "value": "0.8%" },
+      { "city": "Perth", "value": "0.6%" },
+      { "city": "Adelaide", "value": "0.5%" },
+      { "city": "Hobart", "value": "0.5%" },
+      { "city": "Darwin", "value": "0.6%" },
+      { "city": "Canberra", "value": "1.4%" }
     ],
     "signal": "GREEN",
-    "note": "National vacancy fell to 1.0% in March \u2014 tightest on record. Perth 0.6%, Adelaide 0.5%, Brisbane 0.6%."
+    "note": "National up to 1.2% (from 1.0%) but still very tight. Perth/Adelaide/Brisbane critically low — rents continuing to rise."
   },
   "medians": {
     "cities": [
-      {
-        "city": "Sydney",
-        "median": 1760000
-      },
-      {
-        "city": "Melbourne",
-        "median": 920000
-      },
-      {
-        "city": "Brisbane",
-        "median": 1200000
-      },
-      {
-        "city": "Perth",
-        "median": 1060000
-      },
-      {
-        "city": "Adelaide",
-        "median": 995000
-      },
-      {
-        "city": "Canberra",
-        "median": 1048000
-      },
-      {
-        "city": "Hobart",
-        "median": 720000
-      },
-      {
-        "city": "Darwin",
-        "median": 715000
-      }
+      { "city": "Sydney", "median": 1760000 },
+      { "city": "Melbourne", "median": 925000 },
+      { "city": "Brisbane", "median": 1280000 },
+      { "city": "Perth", "median": 1130000 },
+      { "city": "Adelaide", "median": 1010000 },
+      { "city": "Canberra", "median": 1048000 },
+      { "city": "Hobart", "median": 720000 },
+      { "city": "Darwin", "median": 730000 }
     ],
-    "national": {
-      "value": 1025365,
-      "source": "https://propertyupdate.com.au/the-latest-median-property-prices-in-australias-major-cities/"
-    },
+    "annualGrowth": [
+      { "city": "Perth", "growth": "+26.0%" },
+      { "city": "Brisbane", "growth": "+19.7%" },
+      { "city": "Adelaide", "growth": "+12.2%" },
+      { "city": "Sydney", "growth": "+4.2%" },
+      { "city": "Melbourne", "growth": "+2.0%" }
+    ],
+    "national": { "value": 1060000, "source": "https://propertyupdate.com.au/the-latest-median-property-prices-in-australias-major-cities/" },
     "signal": "AMBER",
-    "note": "Combined capital median now $1.025M. Perth +2.5% monthly (strongest). Sydney/Melbourne flat or dipping. March: Perth +2.5%, Brisbane +1.8%, Adelaide +1.2%."
+    "note": "Two-speed market widening: 24pt gap Perth (+26%) vs Melbourne (+2%). Perth/Brisbane/Adelaide at record highs. Sydney still below Nov 2025 peak. Q1: Perth +7.3%."
   },
   "clearanceRates": {
     "cities": [
-      {
-        "city": "Sydney",
-        "rate": "56.5%",
-        "trend": "falling \u2014 school holidays + listings surge"
-      },
-      {
-        "city": "Melbourne",
-        "rate": "58%",
-        "trend": "below long-run average"
-      },
-      {
-        "city": "Adelaide",
-        "rate": "72%",
-        "trend": "strongest capital"
-      },
-      {
-        "city": "Brisbane",
-        "rate": "65%",
-        "trend": "steady"
-      },
-      {
-        "city": "Perth",
-        "rate": "N/A",
-        "trend": "private treaty market"
-      }
+      { "city": "Sydney", "rate": "58%", "trend": "weakening" },
+      { "city": "Melbourne", "rate": "60%", "trend": "weakening" },
+      { "city": "Adelaide", "rate": "75%", "trend": "strongest" },
+      { "city": "Brisbane", "rate": "67%", "trend": "steady" },
+      { "city": "Perth", "rate": "N/A", "trend": "private treaty market" }
     ],
     "signal": "AMBER",
-    "note": "National clearance 56.5% (down from 64.3% prior week). Listings surging as holidays end. Lower clearance = more buyer leverage."
+    "note": "Sydney/Melbourne 58-60% (below long-term avg). Adelaide 75% strongest. Lower clearance = more buyer leverage."
   },
   "lending": {
-    "ownerOccVariable": {
-      "value": "5.51% avg",
-      "source": "https://www.rba.gov.au/statistics/interest-rates/"
-    },
-    "investorVariable": {
-      "value": "5.59-6.60%",
-      "source": "https://www.money.com.au/home-loans/interest-rates/variable-rate"
-    },
-    "assessmentRate": {
-      "value": "~8.59-9.60% (rate + 3% buffer)",
-      "source": "https://www.propertybuyer.com.au/blog/apra-lending-changes-2026-impact-on-investment-lending-buyers"
-    },
-    "apraChanges": "DTI cap: max 20% of new loans at 6x+ income, effective Feb 2026. 3% serviceability buffer retained.",
+    "ownerOccVariable": { "value": "5.76% avg", "source": "https://www.rba.gov.au/statistics/interest-rates/" },
+    "investorVariable": { "value": "5.84-6.85%", "source": "https://www.money.com.au/home-loans/interest-rates/variable-rate" },
+    "assessmentRate": { "value": "~8.84-9.85% (rate + 3% buffer)", "source": "https://www.apra.gov.au/" },
+    "apraChanges": "DTI cap: max 20% of new loans at 6x+ income, active since Feb 2026. 3% serviceability buffer retained.",
     "signal": "RED",
-    "note": "Investor rates 5.59-6.60%. Assessment rate ~9% squeezes borrowing. DTI cap limits leverage. Rates may go higher in May."
+    "note": "Investor rates 5.84-6.85% after May hike. Assessment rate ~9.5%. DTI cap binding on investors (10% already above 6x)."
+  },
+  "lawsAndBills": {
+    "negativeGearing": {
+      "change": "REMOVED for established residential properties acquired after 7:30pm AEST 12 May 2026",
+      "effectiveDate": "1 July 2027",
+      "exemptions": [
+        "Properties owned before 12 May 2026 (grandfathered for life)",
+        "Properties under contract before 12 May 2026 (awaiting settlement)",
+        "New builds (still fully eligible)",
+        "Build-to-rent developments",
+        "Widely-held trusts and super funds"
+      ],
+      "impact": "Investors buying established houses after 12/05/2026 CANNOT offset rental losses against other income. New builds remain fully negative-gearable.",
+      "source": "https://budget.gov.au/content/factsheets/download/tax-explainers-negative-gearing-capital-gains-tax.pdf",
+      "signal": "RED"
+    },
+    "capitalGainsTax": {
+      "change": "50% CGT discount REMOVED, replaced with cost base indexation + 30% minimum tax on net gains",
+      "effectiveDate": "1 July 2027",
+      "exemptions": [
+        "Gains realised before 1 July 2027 keep 50% discount",
+        "New residential property buyers can CHOOSE between old (50% discount) or new regime on disposal",
+        "Build-to-rent + government housing programs exempt"
+      ],
+      "impact": "Established property capital gains taxed at min 30% on indexed gains. New builds get choice = better outcome.",
+      "source": "https://williambuck.com/tools/federal-budget-2026/negative-gearing/",
+      "signal": "RED"
+    },
+    "stampDuty": {
+      "WA": "~$36k on $700k investor",
+      "SA": "~$29k on $637k investor",
+      "QLD": "~$25k on $550k investor (+ land tax for 2nd QLD property)",
+      "VIC": "~$55k on $800k investor (+1.5% surcharge)",
+      "note": "Rates unchanged in 2026-27 budget but rising property prices = higher dollar cost"
+    }
   },
   "risks": [
     {
-      "risk": "May 2026 rate hike to 4.35%",
-      "probability": "HIGH",
-      "impact": "Each 25bp reduces borrowing capacity ~3%. Third hike in 2026.",
+      "risk": "Negative gearing REMOVED for established homes acquired after 12/05/2026",
+      "probability": "CERTAIN",
+      "impact": "CRITICAL: Established houses bought now CANNOT be negatively geared. Must be cash flow positive day 1 OR pivot to new builds.",
       "signal": "RED"
     },
     {
-      "risk": "Inflation sticky above target until mid-2028",
-      "probability": "HIGH",
-      "impact": "No rate relief for 2+ years. RBA's own forecast.",
+      "risk": "CGT 50% discount REMOVED from 1 July 2027",
+      "probability": "CERTAIN",
+      "impact": "Established property gains taxed at min 30% indexed. New builds get choice of regime.",
       "signal": "RED"
     },
     {
-      "risk": "Global trade war / tariffs escalation",
-      "probability": "MEDIUM",
-      "impact": "Could push energy prices higher, forcing more hikes.",
-      "signal": "AMBER"
+      "risk": "Further RBA hikes (Westpac: 4.85% by August)",
+      "probability": "HIGH",
+      "impact": "Each 25bp cuts borrowing capacity ~3%. Investor rates pushing 7%.",
+      "signal": "RED"
     },
     {
-      "risk": "Housing undersupply persists (POSITIVE)",
+      "risk": "Inflation re-accelerating (4.6%)",
       "probability": "HIGH",
-      "impact": "195k approvals vs 240k target. Structural shortage supports prices.",
+      "impact": "More hikes likely. No pivot until inflation back to target.",
+      "signal": "RED"
+    },
+    {
+      "risk": "Middle East oil crisis fuel +24%",
+      "probability": "HIGH",
+      "impact": "Cost of living + further inflation pressure.",
+      "signal": "RED"
+    },
+    {
+      "risk": "Housing undersupply (POSITIVE)",
+      "probability": "CERTAIN",
+      "impact": "22% shortfall over 5yr. Existing prices supported.",
       "signal": "GREEN"
     },
     {
-      "risk": "Falling auction clearance rates",
+      "risk": "Perth +26% / Brisbane +19.7% surge continues",
       "probability": "MEDIUM",
-      "impact": "56.5% national clearance = more listings than buyers. Could signal softening.",
+      "impact": "Window closing — sub-$800k WA/QLD suburbs being priced out fast.",
+      "signal": "AMBER"
+    },
+    {
+      "risk": "Investor flight to new builds post-budget",
+      "probability": "HIGH",
+      "impact": "Established demand softens. New build prices may rise.",
       "signal": "AMBER"
     }
   ],
-  "summary": "Macro environment tightening: RBA at 4.10% with May hike likely, inflation 3.7% stuck above target, and RBA guidance says rates stay high until mid-2028. However structural tailwinds persist: national vacancy hit record-low 1.0%, approvals 18% below target, and Perth/Brisbane/Adelaide continue strong monthly growth. Falling clearance rates (56.5%) actually help buyers \u2014 more negotiation power. For a $800k growth investor, target established suburbs in WA/QLD where vacancy <1% and infrastructure is DELIVERING (not just announced).",
+  "summary": "MAJOR REGIME CHANGE 12 May 2026: Federal Budget killed negative gearing on new established-property purchases and removed CGT 50% discount from July 2027. Macro tightening: RBA 4.35% (3rd hike), inflation 4.6%, investor rates 5.84-6.85%. Despite headwinds, Perth +26% and Brisbane +19.7% continue on supply shortage. STRATEGY SHIFT: Either (1) buy new builds to keep negative gearing + CGT choice, or (2) buy established that's cash-flow-positive from day one. The 'negative gear + wait for growth' play is DEAD for established houses bought today.",
   "warnings": [
-    "May 5 RBA meeting: likely +25bp to 4.35% \u2014 reassess serviceability",
-    "Clearance rates falling = market softening in Sydney/Melbourne. Good for buyers but watch for price drops",
-    "Perth +2.5% monthly is the hottest capital \u2014 act fast on sub-$800k suburbs before they price out",
-    "APRA DTI cap 6x income \u2014 confirm borrowing capacity with broker before making offers"
+    "🚨 NEGATIVE GEARING REMOVED for established homes after 12 May 2026 (2 days ago). Existing portfolio grandfathered.",
+    "🚨 CGT 50% discount GONE from 1 July 2027 — replaced with 30% min tax on indexed gains. New builds get choice.",
+    "🚨 RBA at 4.35% — Westpac forecasts 4.85% by August. Investor rates pushing 7%. Confirm serviceability with broker BEFORE offers.",
+    "⚠ Perth +26% annual = sub-$800k suburbs disappearing. Act decisively or move to next-tier.",
+    "⚠ APRA DTI 6x income cap binding on investors. Get pre-approval before house hunting.",
+    "✅ POSITIVE: Housing undersupply persists (938k vs 1.2M target). Established prices supported.",
+    "💡 STRATEGY: New builds in growth corridors now structurally favoured. Reconsider H&L packages vs established."
   ]
 }
