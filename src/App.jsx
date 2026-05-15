@@ -10,6 +10,7 @@ import { Stage4ListingScout } from './components/stages/Stage4ListingScout';
 import { Stage5DueDiligence } from './components/stages/Stage5DueDiligence';
 import { AgentsView } from './components/stages/AgentsView';
 import { Top10View } from './components/stages/Top10View';
+import { StrategyView } from './components/stages/StrategyView';
 
 const STAGE_COMPONENTS = {
   agents: AgentsView,
@@ -19,6 +20,7 @@ const STAGE_COMPONENTS = {
   listings: Stage4ListingScout,
   dd: Stage5DueDiligence,
   top10: Top10View,
+  strategy: StrategyView,
 };
 
 export default function App() {
