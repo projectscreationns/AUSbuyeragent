@@ -1,542 +1,206 @@
-import { useEffect, useState, useMemo } from 'react';
+import { useEffect, useState } from 'react';
 import { ErrorBoundary } from '../common/ErrorBoundary';
 
-// Stamp duty estimates by state (investor, approximate)
-const STAMP_DUTY = {
-  WA: (p) => p <= 500000 ? p * 0.04 : 20000 + (p - 500000) * 0.055,
-  SA: (p) => p * 0.045 + 1000,
-  QLD: (p) => p <= 540000 ? p * 0.035 : 18900 + (p - 540000) * 0.045,
-  VIC: (p) => p * 0.055 + p * 0.015, // includes investor surcharge ~1.5%
+const VERDICT_STYLE = {
+  INVESTIGATE: { bg: '#1a3a1a', border: '#2d8a2d', color: '#6fdc6f' },
+  MONITOR: { bg: '#1a2a3a', border: '#2d6a8a', color: '#6fbcdc' },
+  AVOID: { bg: '#3a1a1a', border: '#8a2d2d', color: '#dc6f6f' },
 };
 
-const INVESTOR = {
-  budget: 800000,
-  cashTarget: 110000,   // preferred
-  cashMax: 135000,      // can stretch if returns justify
-  depositPct: 0.10,
-  lmiPct: 0.02,
-  legalBP: 5000,
-  interestRate: 0.062,
-  managementPct: 0.08,
-  insuranceYr: 1800,
-  ratesYr: 2200,
+const CRIME_COLOR = {
+  LOW: '#6fdc6f', 'LOW-MEDIUM': '#b8dc6f', MEDIUM: '#dcb86f', HIGH: '#dc6f6f', SEVERE: '#ff3333',
 };
 
 export function Top10View() {
-  const [listings, setListings] = useState(null);
-  const [suburbs, setSuburbs] = useState(null);
+  const [data, setData] = useState(null);
   const [err, setErr] = useState(null);
+  const [tab, setTab] = useState('suburbs');
 
   const load = async () => {
     try {
-      const [lr, sr] = await Promise.all([
-        fetch(`${import.meta.env.BASE_URL}data/listings.json?t=${Date.now()}`),
-        fetch(`${import.meta.env.BASE_URL}data/suburbs.json?t=${Date.now()}`),
-      ]);
-      if (!lr.ok) throw new Error('No listings yet');
-      setListings(await lr.json());
-      if (sr.ok) setSuburbs(await sr.json());
+      const r = await fetch(`${import.meta.env.BASE_URL}data/top10.json?t=${Date.now()}`);
+      if (!r.ok) throw new Error('top10.json not found');
+      setData(await r.json());
     } catch (e) { setErr(e.message); }
   };
 
   useEffect(() => { load(); }, []);
 
-  // Build suburb lookup
-  const suburbLookup = useMemo(() => {
-    if (!suburbs?.suburbs) return {};
-    const m = {};
-    for (const s of suburbs.suburbs) {
-      m[s.name.toLowerCase()] = s;
-    }
-    return m;
-  }, [suburbs]);
+  if (err) return (
+    <div className="error-display">
+      <div className="error-display__title">No data</div>
+      <div className="error-display__message">{err}</div>
+    </div>
+  );
+  if (!data) return <div className="loading-spinner"><span className="loading-spinner__dot" /><span className="loading-spinner__dot" /><span className="loading-spinner__dot" /></div>;
 
-  const top10 = useMemo(() => {
-    if (!listings) return [];
-
-    // Collect INVESTIGATE listings — filter out fakes/placeholders
-    const all = [];
-    for (const [suburbKey, data] of Object.entries(listings)) {
-      for (const item of (data.items || [])) {
-        if (item.verdict !== 'INVESTIGATE') continue;
-        const addr = (item.addr || '');
-        const combined = `${addr} ${item.price || ''} ${item.reason || ''} ${item.motivationSignal || ''}`.toLowerCase();
-        // Must be a real street address (starts with number)
-        if (!/^\d/.test(addr.trim())) continue;
-        // No search/browse placeholders
-        if (/browse|search|harris|listings|multiple/i.test(addr)) continue;
-        // Filter stale/sold/under-offer listings
-        if (/under offer|under contract|sold|withdrawn|off market|settlement|exchanged|auction results/i.test(combined)) continue;
-        // Filter non-house types that slipped through
-        if (/unit|apartment|villa|townhouse|duplex pair|granny flat only/i.test(combined)) continue;
-        // Filter garbage entries (no real street name)
-        if (/^\d+\s+(bed|bath|car|with|properties|results|listing)/i.test(addr)) continue;
-        // Must have a price (or an estimated price for Contact Agent listings)
-        if (!item.priceNumeric) continue;
-        all.push({ ...item, _suburb: suburbKey, _state: data.state, _priceEstimated: !!item.priceEstimated });
-      }
-    }
-
-    const scored = all.map(l => {
-      const reasons = [];
-      const warnings = [];
-      const price = l.priceNumeric || 0;
-      const state = l._state || 'WA';
-
-      const subName = (l._suburb || '').split(' (')[0].toLowerCase();
-      const subData = suburbLookup[subName] || null;
-      const risk = subData?.riskFilter || {};
-      const fwd = subData?.forward || {};
-      const compositeScore = subData?.compositeScore || 0;
-      const crimeData = subData?.qual?.crime || {};
-
-      // ═══ CRIME REALITY CHECK ═══
-      // Based on aucrimerate.com rankings (1-100 scale, lower = worse):
-      // Armadale 97/100 = 97% of AU suburbs are safer, 175% higher violent crime vs WA avg
-      const CRIME_OVERRIDES = {
-        'armadale': 'SEVERE',        // 97/100 AU - worst case
-        'gosnells': 'HIGH',
-        'maddington': 'HIGH',
-        'kelmscott': 'MEDIUM-HIGH',
-        'seville grove': 'MEDIUM-HIGH',
-        'salisbury downs': 'SEVERE', // 13,323/100k incidents
-        'davoren park': 'SEVERE',
-        'smithfield': 'HIGH',
-        'paralowie': 'MEDIUM',
-        'kirwan': 'MEDIUM',
-        'condon': 'MEDIUM',
-        'aitkenvale': 'MEDIUM',
-        'noble park': 'MEDIUM',
-        'dandenong': 'MEDIUM-HIGH',
-        'baldivis': 'LOW',
-        'wellard': 'LOW',
-        'mandurah': 'LOW',
-        'thornlie': 'LOW-MEDIUM',
-        'para hills': 'MEDIUM',
-        'salisbury north': 'MEDIUM-HIGH'
-      };
-      const crimeLevel = CRIME_OVERRIDES[subName] || crimeData.overallRating?.toUpperCase() || 'UNKNOWN';
-
-      // Forward growth
-      const baseGrowth = fwd.bear != null ? ((fwd.bear + fwd.base * 2 + fwd.bull) / 4) : 20;
-      const supplyRisk = risk.supplyRisk?.rating || '';
-      const cycleRisk = risk.cycleRisk?.rating || '';
-      let adjustedGrowth = baseGrowth;
-      if (supplyRisk === 'HIGH') adjustedGrowth *= 0.6;
-      else if (supplyRisk === 'MEDIUM') adjustedGrowth *= 0.85;
-      if (cycleRisk === 'HIGH') adjustedGrowth *= 0.8;
-      else if (cycleRisk === 'MEDIUM') adjustedGrowth *= 0.92;
-
-      // Crime discount on growth (rougher areas attract less premium buyers, capping growth)
-      if (crimeLevel === 'SEVERE') adjustedGrowth *= 0.5;     // effectively removes from top 10
-      else if (crimeLevel === 'HIGH') adjustedGrowth *= 0.75;
-      else if (crimeLevel === 'MEDIUM-HIGH') adjustedGrowth *= 0.88;
-
-      if (supplyRisk === 'LOW') reasons.push('LOW supply risk');
-      else if (supplyRisk === 'HIGH') warnings.push(`Growth capped by HIGH supply risk`);
-      else if (supplyRisk === 'MEDIUM') warnings.push('Growth capped by MEDIUM supply risk');
-
-      if (crimeLevel === 'SEVERE') warnings.push('SEVERE crime (97/100 AU) — buyer pool small, growth capped');
-      else if (crimeLevel === 'HIGH') warnings.push('HIGH crime area');
-      else if (crimeLevel === 'MEDIUM-HIGH') warnings.push('Above-avg crime');
-      else if (crimeLevel === 'LOW') reasons.push('LOW crime');
-
-      // ═══ SUBDIVISION ECONOMICS ═══
-      // Real subdivision profit: (lot value × 2) - (purchase price + subdiv costs + keeping one house)
-      // Only profitable if resulting lots sell for enough premium
-      const va = (l.valueAdd || '').toLowerCase();
-      const landMatch = (l.land || '').match(/(\d+)/);
-      const landSqm = landMatch ? parseInt(landMatch[1]) : 0;
-      const hasSubdivZoning = va.includes('r40') || va.includes('r30') || va.includes('r60') || va.includes('subdivision') || va.includes('subdivide');
-
-      // Estimated lot values by suburb tier
-      const LOT_VALUES = {
-        'baldivis': 320000, 'wellard': 290000, 'mandurah': 250000,
-        'armadale': 260000, 'gosnells': 270000, 'maddington': 280000,
-        'kelmscott': 270000, 'seville grove': 255000, 'thornlie': 320000,
-        'kirwan': 180000, 'condon': 170000, 'aitkenvale': 220000,
-        'para hills': 240000, 'salisbury north': 200000, 'gawler': 230000,
-        'noble park': 380000, 'cranbourne west': 310000
-      };
-      const estLotValue = LOT_VALUES[subName] || 250000;
-      const subdivCosts = 90000; // typical PERTH subdivision soft costs
-
-      let subdivProfit = null;
-      let subdivViable = false;
-      if (hasSubdivZoning && landSqm >= 700 && price > 0) {
-        // Scenario: keep existing house on one lot, sell rear lot
-        // Revenue: 1 lot sale = $estLotValue
-        // Existing house kept (not sold) = still owns but reduced land
-        // Net profit = lot value - (subdiv costs + lost amenity of original block)
-        subdivProfit = estLotValue - subdivCosts;
-        subdivViable = subdivProfit > 50000; // needs at least $50k profit to bother
-      }
-
-      if (hasSubdivZoning) {
-        if (subdivViable) reasons.push(`Subdivision ~$${Math.round(subdivProfit/1000)}k profit potential`);
-        else if (landSqm >= 700) warnings.push(`Subdivision zoning but poor economics here (~$${Math.round((subdivProfit||-subdivCosts)/1000)}k)`);
-        else warnings.push('Subdivision zoning but block too small');
-      }
-
-      // ═══ SCENARIO MODEL ═══
-      let totalCost = null, monthlyHoldCost = null, fiveYrEquity = null;
-      let cashFits = false, cashStretchFits = false;
-      let fiveYrCapGain = null, fiveYrTotalCashOut = null, roci = null;
-      let weeklyCashflow = null;
-
-      if (price > 0) {
-        const deposit = price * INVESTOR.depositPct;
-        const loan = price - deposit;
-        const lmi = loan * INVESTOR.lmiPct;
-        const stampFn = STAMP_DUTY[state] || STAMP_DUTY.WA;
-        const stamp = stampFn(price);
-        totalCost = Math.round(deposit + stamp + lmi + INVESTOR.legalBP);
-        cashFits = totalCost <= INVESTOR.cashTarget;
-        cashStretchFits = totalCost <= INVESTOR.cashMax;
-
-        const yMatch = (l.yieldEst || '').match(/([\d.]+)/);
-        const yieldPct = yMatch ? parseFloat(yMatch[1]) : 4.5;
-        const annualRent = price * yieldPct / 100;
-        const weeklyRent = annualRent / 52;
-        const weeklyMortgage = loan * INVESTOR.interestRate / 52;
-        const weeklyMgmt = weeklyRent * INVESTOR.managementPct;
-        const weeklyInsRates = (INVESTOR.insuranceYr + INVESTOR.ratesYr) / 52;
-        weeklyCashflow = weeklyRent - weeklyMortgage - weeklyMgmt - weeklyInsRates;
-        monthlyHoldCost = Math.round(-weeklyCashflow * 4.33);
-
-        const growthRate = adjustedGrowth / 100;
-        const futureValue = price * (1 + growthRate);
-        fiveYrEquity = Math.round(futureValue - loan);
-        fiveYrCapGain = Math.round(futureValue - price);
-
-        const fiveYrNegCashflow = Math.max(0, -weeklyCashflow) * 52 * 5;
-        fiveYrTotalCashOut = Math.round(totalCost + fiveYrNegCashflow);
-
-        // Include subdivision profit if viable
-        const totalGain = fiveYrCapGain + (subdivViable ? subdivProfit : 0);
-
-        if (fiveYrTotalCashOut > 0) {
-          roci = Math.round(totalGain / fiveYrTotalCashOut * 100);
-        }
-      }
-
-      let score = roci || 0;
-      if (supplyRisk === 'LOW') score += 15;
-      if (crimeLevel === 'LOW') score += 10;
-      if (crimeLevel === 'HIGH') score -= 20;
-      if (compositeScore >= 85) score += 15;
-      else if (compositeScore >= 75) score += 8;
-      if (cashFits) score += 10;
-      else if (!cashStretchFits) score -= 40;
-      if (landSqm >= 800 && supplyRisk !== 'HIGH') { score += 5; reasons.push(`${landSqm}sqm block`); }
-
-      if (roci >= 150) reasons.push(`ROCI ${roci}% (excellent)`);
-      else if (roci >= 100) reasons.push(`ROCI ${roci}%`);
-      else if (roci != null && roci < 50) warnings.push(`Low ROCI ${roci}%`);
-
-      if (l._priceEstimated) warnings.push('Price estimated — confirm with agent');
-      if (!cashFits && cashStretchFits) warnings.push(`Stretch $${Math.round(totalCost/1000)}k cash`);
-      else if (!cashStretchFits && totalCost) warnings.push(`Over cash budget $${Math.round(totalCost/1000)}k`);
-      if (adjustedGrowth < baseGrowth * 0.95) {
-        reasons.push(`Growth adjusted ${Math.round(baseGrowth)}%→${Math.round(adjustedGrowth)}%`);
-      }
-
-      // ═══ DECISION ENGINE ═══
-      // The system drives the decision. User just calls / inspects / offers.
-      let decision = 'SKIP';
-      let decisionReason = '';
-      const isClean = !l.photoVerdict || l.photoVerdict === 'BEST' || l.photoVerdict === 'STRONG' || l.photoVerdict === 'PASS';
-      const isPhotoFlagged = l.photoVerdict === 'CAUTION';
-
-      if (crimeLevel === 'SEVERE' || crimeLevel === 'HIGH') {
-        decision = 'SKIP';
-        decisionReason = `${crimeLevel} crime — growth capped, buyer pool limited`;
-      } else if (!cashStretchFits && totalCost) {
-        decision = 'SKIP';
-        decisionReason = `$${Math.round(totalCost/1000)}k total exceeds $135k max`;
-      } else if (isPhotoFlagged) {
-        decision = 'SKIP';
-        decisionReason = 'Photo inspection flagged concerns';
-      } else if (roci && roci >= 150 && isClean && (cashFits || cashStretchFits)) {
-        decision = 'CALL AGENT';
-        decisionReason = `ROCI ${roci}% + clean photos + cash fits. Top priority.`;
-      } else if (roci && roci >= 100 && isClean && cashStretchFits) {
-        decision = 'CALL AGENT';
-        decisionReason = `ROCI ${roci}% — strong return, pick up phone today`;
-      } else if (roci && roci >= 60 && isClean && cashStretchFits) {
-        decision = 'INSPECT';
-        decisionReason = `ROCI ${roci}% — worth a physical inspection`;
-      } else if (l.photoVerdict === 'BEST' && cashStretchFits) {
-        decision = 'INSPECT';
-        decisionReason = `Move-in ready + cash fits — viable even at moderate ROCI`;
-      } else if (cashStretchFits) {
-        decision = 'MONITOR';
-        decisionReason = 'Track for price drop or longer DOM';
-      } else {
-        decision = 'SKIP';
-        decisionReason = 'Below investment thresholds';
-      }
-
-      return { ...l, _score: score, _reasons: reasons, _warnings: warnings,
-               _totalCost: totalCost, _monthlyHold: monthlyHoldCost,
-               _fiveYrEquity: fiveYrEquity, _cashFits: cashFits, _cashStretch: cashStretchFits,
-               _baseGrowth: baseGrowth, _adjustedGrowth: adjustedGrowth,
-               _compositeScore: compositeScore, _supplyRisk: supplyRisk,
-               _roci: roci, _fiveYrCapGain: fiveYrCapGain,
-               _fiveYrCashOut: fiveYrTotalCashOut, _weeklyCashflow: weeklyCashflow,
-               _crimeLevel: crimeLevel, _subdivProfit: subdivProfit,
-               _subdivViable: subdivViable, _hasSubdivZoning: hasSubdivZoning,
-               _decision: decision, _decisionReason: decisionReason };
-    });
-
-    // Only show CALL AGENT + INSPECT — no padding with MONITORs or SKIPs
-    const actionable = scored.filter(l => l._decision === 'CALL AGENT' || l._decision === 'INSPECT');
-
-    // Sort by decision priority then score:
-    //   CALL AGENT first, then INSPECT, then MONITOR
-    const priorityRank = { 'CALL AGENT': 0, 'INSPECT': 1, 'MONITOR': 2 };
-    actionable.sort((a, b) => {
-      const pa = priorityRank[a._decision] ?? 99;
-      const pb = priorityRank[b._decision] ?? 99;
-      if (pa !== pb) return pa - pb;
-      return b._score - a._score;
-    });
-
-    // Diversification: max 7 WA, cap at 10 total
-    const picked = [];
-    const stateCount = {};
-    for (const item of actionable) {
-      const s = item._state || '?';
-      if (picked.length >= 10) break;
-      if (s === 'WA' && (stateCount.WA || 0) >= 7) continue;
-      picked.push(item);
-      stateCount[s] = (stateCount[s] || 0) + 1;
-    }
-    if (picked.length < 10) {
-      for (const item of actionable) {
-        if (picked.length >= 10) break;
-        if (!picked.includes(item)) picked.push(item);
-      }
-    }
-
-    // Also count SKIPs so we can show "filtered out" stat
-    const skipCount = scored.length - actionable.length;
-    picked._skipCount = skipCount;
-    picked._totalCount = scored.length;
-
-    return picked;
-  }, [listings, suburbLookup]);
-
-  const fmt = (n) => n != null ? `$${Math.round(n).toLocaleString()}` : '—';
+  const { investorProfile: ip, marketContext: mc, suburbRankings: suburbs, topListings: listings, cashAnalysis: ca, recommendation } = data;
 
   return (
     <div>
       <div className="stage-shell__header">
         <div>
-          <h2 className="stage-shell__title">🏆 Worth Your Time</h2>
-          <p className="stage-shell__desc">Only listings the system recommends action on. SKIPs filtered out — don't waste time on them.</p>
+          <h2 className="stage-shell__title">Adelaide AUKUS — Top 10 Analysis</h2>
+          <p className="stage-shell__desc">Ranked by growth potential × AUKUS proximity × crime × cash fit</p>
         </div>
         <button className="btn btn--secondary btn--sm" onClick={load}>Reload</button>
       </div>
 
       <ErrorBoundary label="Top10">
-        {err && <div className="error-display"><div className="error-display__title">No data</div><div className="error-display__message">{err}</div></div>}
+        {/* Recommendation banner */}
+        <div className="info-box info-box--green mb-16" style={{ fontSize: 12, lineHeight: 1.8 }}>
+          <strong>Recommendation:</strong> {recommendation}
+        </div>
 
-        {top10.length > 0 && (
-          <>
-            <div className="info-box info-box--blue mb-16" style={{ fontSize: 11, lineHeight: 1.7 }}>
-              <strong>Decisions pre-made.</strong> {top10._skipCount ?? 0} candidates auto-filtered (crime, over cash, photo flagged, no price, fake placeholders). Showing {top10.length} worth your time. Only 📞 CALL AGENT and 🔍 INSPECT listings appear. Pipeline: macro → region → suburb DSR + supply risk → listing scout → red flag check → photo inspector → crime filter → ROCI ranking.
-            </div>
-            {(() => {
-              const stateMap = top10.reduce((a, l) => { a[l._state || '?'] = (a[l._state || '?'] || 0) + 1; return a; }, {});
-              const total = top10.length;
-              const waCount = stateMap.WA || 0;
-              const waPct = total > 0 ? Math.round(waCount / total * 100) : 0;
-              return waPct > 80 && total > 2 ? (
-                <div className="info-box info-box--amber mb-16" style={{ fontSize: 11 }}>
-                  <strong>⚠ {waPct}% WA-heavy.</strong> SA/QLD/VIC listing data is limited because Domain + REA block automated scraping. These states may have better options — check manually:
-                  <div style={{ marginTop: 6, display: 'flex', gap: 8, flexWrap: 'wrap' }}>
-                    <a href="https://www.domain.com.au/sale/kirwan-qld-4817/?ptype=house&price=0-800000" target="_blank" rel="noopener noreferrer" className="btn btn--secondary btn--sm">Kirwan QLD on Domain</a>
-                    <a href="https://www.domain.com.au/sale/condon-qld-4815/?ptype=house&price=0-800000" target="_blank" rel="noopener noreferrer" className="btn btn--secondary btn--sm">Condon QLD on Domain</a>
-                    <a href="https://www.domain.com.au/sale/para-hills-sa-5096/?ptype=house&price=0-800000" target="_blank" rel="noopener noreferrer" className="btn btn--secondary btn--sm">Para Hills SA on Domain</a>
-                  </div>
-                </div>
-              ) : null;
-            })()}
+        {/* Market context */}
+        <div className="card mb-16" style={{ padding: 16 }}>
+          <h3 style={{ margin: '0 0 12px', fontSize: 14, color: 'var(--text-bright)' }}>Market Context — May 2026</h3>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: 8, fontSize: 11 }}>
+            <div><span style={{ color: 'var(--text-dim)' }}>Adelaide median:</span> <strong>{mc.adelaideMedian}</strong></div>
+            <div><span style={{ color: 'var(--text-dim)' }}>Growth:</span> <strong style={{ color: '#6fdc6f' }}>{mc.adelaideGrowth}</strong></div>
+            <div><span style={{ color: 'var(--text-dim)' }}>Vacancy:</span> <strong style={{ color: '#dc6f6f' }}>{mc.vacancyRate}</strong></div>
+            <div><span style={{ color: 'var(--text-dim)' }}>AUKUS jobs:</span> <strong>{mc.aukusJobs}</strong></div>
+            <div><span style={{ color: 'var(--text-dim)' }}>Northern corridor:</span> <strong style={{ color: '#6fdc6f' }}>{mc.northernCorridor}</strong></div>
+            <div><span style={{ color: 'var(--text-dim)' }}>Interest rate:</span> <strong>{mc.interestRate}</strong></div>
+          </div>
+        </div>
 
-            {/* Summary chips */}
-            <div className="flex gap-8 mb-16" style={{ flexWrap: 'wrap' }}>
-              {Object.entries(top10.reduce((a, l) => { a[l._state || '?'] = (a[l._state || '?'] || 0) + 1; return a; }, {})).map(([s, n]) => (
-                <div key={s} className="header__chip"><b>{s}</b>: {n}</div>
-              ))}
-              <div className="header__chip" style={{ borderColor: 'var(--green)' }}>
-                📞 {top10.filter(l => l._decision === 'CALL AGENT').length}
-              </div>
-              <div className="header__chip" style={{ borderColor: 'var(--amber)' }}>
-                🔍 {top10.filter(l => l._decision === 'INSPECT').length}
-              </div>
-              <div className="header__chip">
-                👁 {top10.filter(l => l._decision === 'MONITOR').length}
-              </div>
-              {top10.length > 0 && (
-                <div className="header__chip" style={{ borderColor: 'var(--blue)' }}>
-                  avg ROCI: {Math.round(top10.reduce((a,l)=>a+(l._roci||0),0)/top10.length)}%
-                </div>
-              )}
-            </div>
+        {/* Investor profile chips */}
+        <div className="flex gap-8 mb-16" style={{ flexWrap: 'wrap', fontSize: 11 }}>
+          <div className="header__chip">Budget: ${(ip.budget/1000).toFixed(0)}k</div>
+          <div className="header__chip">Cash: ${(ip.cashAvailable/1000).toFixed(0)}k</div>
+          <div className="header__chip" style={{ borderColor: 'var(--green)' }}>NG: {ip.ngRelevance}</div>
+          <div className="header__chip" style={{ borderColor: 'var(--green)' }}>Surcharge: {ip.absenteeSurcharge}</div>
+          <div className="header__chip">Tax: {ip.taxStatus}</div>
+        </div>
 
-            {top10.map((l, i) => (
-              <div key={i} className="listing-card listing-card--investigate" style={{ position: 'relative', marginBottom: 14 }}>
-                {/* Rank badge */}
-                <div style={{ position: 'absolute', top: 14, left: -16, width: 36, height: 36, borderRadius: '50%',
-                  background: i < 3 ? 'var(--green)' : 'var(--blue)', color: '#000',
-                  display: 'flex', alignItems: 'center', justifyContent: 'center',
-                  fontWeight: 700, fontSize: 15, fontFamily: 'var(--font-mono)', zIndex: 2 }}>
-                  {i + 1}
-                </div>
+        {/* Tab selector */}
+        <div className="flex gap-8 mb-16">
+          <button className={`btn btn--sm ${tab === 'suburbs' ? 'btn--primary' : 'btn--secondary'}`} onClick={() => setTab('suburbs')}>
+            Suburb Rankings ({suburbs?.length || 0})
+          </button>
+          <button className={`btn btn--sm ${tab === 'listings' ? 'btn--primary' : 'btn--secondary'}`} onClick={() => setTab('listings')}>
+            Top Listings ({listings?.length || 0})
+          </button>
+          <button className={`btn btn--sm ${tab === 'cash' ? 'btn--primary' : 'btn--secondary'}`} onClick={() => setTab('cash')}>
+            Cash Analysis
+          </button>
+        </div>
 
-                {/* Header */}
-                <div className="listing-card__header" style={{ paddingLeft: 28 }}>
-                  <div style={{ flex: 1 }}>
-                    <div className="listing-card__addr">{l.addr}</div>
-                    <div className="listing-card__specs">
-                      {l.beds && <span>{l.beds} bed</span>}
-                      {l.baths && <span>{l.baths} bath</span>}
-                      {l.car && <span>{l.car} car</span>}
-                      {l.land && <span>{l.land}</span>}
-                      <span className="mono" style={{ color: 'var(--amber)' }}>score {l._score}</span>
-                    </div>
+        {/* SUBURBS TAB */}
+        {tab === 'suburbs' && suburbs && (
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
+            {suburbs.map((s, i) => (
+              <div key={i} className="card" style={{ padding: 16, borderLeft: `4px solid ${i < 3 ? '#6fdc6f' : i < 6 ? '#dcb86f' : '#6fbcdc'}` }}>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 8 }}>
+                  <div>
+                    <span style={{ fontSize: 20, fontWeight: 700, color: 'var(--text-bright)', marginRight: 8 }}>#{s.rank}</span>
+                    <span style={{ fontSize: 16, fontWeight: 600, color: 'var(--text-bright)' }}>{s.suburb}</span>
+                    <span style={{ fontSize: 11, color: 'var(--text-dim)', marginLeft: 8 }}>{s.postcode}</span>
                   </div>
                   <div style={{ textAlign: 'right' }}>
-                    <div className="listing-card__price">{l.price || 'POA'}</div>
-                    {l._priceEstimated && <div className="text-xs" style={{ color: 'var(--amber)' }}>est from median</div>}
-                    <div className="text-xs text-muted">{l._state}</div>
+                    <div style={{ fontSize: 18, fontWeight: 700, color: 'var(--text-bright)' }}>${(s.median/1000).toFixed(0)}k</div>
+                    <div style={{ fontSize: 11, color: '#6fdc6f' }}>+{s.annualGrowth} growth</div>
                   </div>
                 </div>
 
-                {/* Scenario model */}
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(110px, 1fr))', gap: 6, padding: '10px 16px 10px 28px', background: 'var(--bg-secondary)', borderTop: '1px solid var(--border)', borderBottom: '1px solid var(--border)' }}>
-                  <div className="metric" style={{ background: 'rgba(34,197,94,.08)', border: '1px solid rgba(34,197,94,.25)' }}>
-                    <div className="metric__label">ROCI 5YR</div>
-                    <div className="metric__value" style={{ fontSize: 16, color: l._roci >= 150 ? 'var(--green)' : l._roci >= 100 ? 'var(--amber)' : 'var(--red)' }}>{l._roci != null ? `${l._roci}%` : '—'}</div>
-                    <div className="metric__sub">return on cash invested</div>
-                  </div>
-                  <div className="metric">
-                    <div className="metric__label">Cap Gain 5yr</div>
-                    <div className="metric__value" style={{ fontSize: 14, color: 'var(--green)' }}>{l._fiveYrCapGain ? `$${Math.round(l._fiveYrCapGain/1000)}k` : '—'}</div>
-                  </div>
-                  <div className="metric">
-                    <div className="metric__label">Growth (adj)</div>
-                    <div className="metric__value" style={{ fontSize: 14, color: l._adjustedGrowth >= 30 ? 'var(--green)' : l._adjustedGrowth >= 20 ? 'var(--amber)' : 'var(--red)' }}>+{Math.round(l._adjustedGrowth || 0)}%</div>
-                    <div className="metric__sub">was {Math.round(l._baseGrowth || 0)}%</div>
-                  </div>
-                  <div className="metric">
-                    <div className="metric__label">Upfront Cash</div>
-                    <div className="metric__value" style={{ fontSize: 14, color: l._cashFits ? 'var(--green)' : l._cashStretch ? 'var(--amber)' : 'var(--red)' }}>{l._totalCost ? `$${Math.round(l._totalCost/1000)}k` : '—'}</div>
-                    <div className="metric__sub">{l._cashFits ? '✓ under $110k' : l._cashStretch ? '△ stretch $135k' : '✗ over $135k'}</div>
-                  </div>
-                  <div className="metric">
-                    <div className="metric__label">Hold Cost</div>
-                    <div className="metric__value" style={{ fontSize: 14 }}>{l._monthlyHold != null ? `$${l._monthlyHold}/mo` : '—'}</div>
-                  </div>
-                  <div className="metric">
-                    <div className="metric__label">Supply Risk</div>
-                    <div className="metric__value" style={{ fontSize: 14, color: l._supplyRisk === 'LOW' ? 'var(--green)' : l._supplyRisk === 'HIGH' ? 'var(--red)' : 'var(--amber)' }}>{l._supplyRisk || '?'}</div>
-                  </div>
-                  <div className="metric">
-                    <div className="metric__label">Crime</div>
-                    <div className="metric__value" style={{ fontSize: 14, color: (l._crimeLevel === 'SEVERE' || l._crimeLevel === 'HIGH') ? 'var(--red)' : (l._crimeLevel||'').includes('MEDIUM') ? 'var(--amber)' : 'var(--green)' }}>{l._crimeLevel || '?'}</div>
-                  </div>
-                  <div className="metric">
-                    <div className="metric__label">Subdiv Profit</div>
-                    <div className="metric__value" style={{ fontSize: 14, color: l._subdivViable ? 'var(--green)' : l._hasSubdivZoning ? 'var(--red)' : 'var(--text-muted)' }}>{l._subdivProfit != null ? `$${Math.round(l._subdivProfit/1000)}k` : '—'}</div>
-                    <div className="metric__sub">{l._subdivViable ? '✓ viable' : l._hasSubdivZoning ? '✗ weak math' : 'N/A'}</div>
-                  </div>
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(140px, 1fr))', gap: 6, fontSize: 11, marginBottom: 8 }}>
+                  <div>Yield: <strong>{s.rentalYield}</strong></div>
+                  <div>Rent: <strong>${s.medianRent}/wk</strong></div>
+                  <div>DOM: <strong>{s.dom}d</strong></div>
+                  <div>Vacancy: <strong>{s.vacancyRate}</strong></div>
+                  <div>Crime: <strong style={{ color: CRIME_COLOR[s.crimeRating] || '#fff' }}>{s.crimeRating}</strong></div>
+                  <div>Supply risk: <strong>{s.supplyRisk}</strong></div>
+                  <div>AUKUS: <strong style={{ color: '#dcb86f' }}>{s.aukusProximity}</strong></div>
+                  <div>Listings: <strong>{s.listings}</strong> ({s.investigate} INV)</div>
                 </div>
 
-                {/* Reasons + warnings */}
-                <div className="listing-card__body" style={{ paddingLeft: 28 }}>
-                  {/* Photo inspection + reno estimate */}
-                  {(l.photoVerdict || l.renoEst) && (
-                    <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', marginBottom: 8 }}>
-                      {l.photoVerdict && (
-                        <span className="verdict" style={{
-                          background: l.photoVerdict === 'BEST' ? 'var(--green-dim)' : l.photoVerdict === 'STRONG' ? 'var(--green-dim)' : l.photoVerdict === 'CAUTION' ? 'var(--amber-dim)' : 'var(--blue-dim)',
-                          color: l.photoVerdict === 'BEST' || l.photoVerdict === 'STRONG' ? 'var(--green)' : l.photoVerdict === 'CAUTION' ? 'var(--amber)' : 'var(--blue)',
-                          border: `1px solid ${l.photoVerdict === 'CAUTION' ? 'rgba(245,158,11,.3)' : 'rgba(34,197,94,.3)'}`
-                        }}>Photo: {l.photoVerdict}</span>
-                      )}
-                      {l.renoEst && l.renoEst !== '$0' && (
-                        <span className="verdict" style={{ background: 'var(--amber-dim)', color: 'var(--amber)', border: '1px solid rgba(245,158,11,.3)' }}>
-                          Reno: {l.renoEst}
-                        </span>
-                      )}
-                      {l.renoEst === '$0' && (
-                        <span className="verdict" style={{ background: 'var(--green-dim)', color: 'var(--green)', border: '1px solid rgba(34,197,94,.3)' }}>
-                          No reno needed
-                        </span>
-                      )}
-                      {l.photoNotes && <span className="text-xs text-muted">{l.photoNotes}</span>}
-                    </div>
-                  )}
-                  <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap', marginBottom: 6 }}>
-                    {l._reasons.slice(0, 5).map((r, j) => (
-                      <span key={j} className="verdict" style={{ background: 'var(--green-dim)', color: 'var(--green)', border: '1px solid rgba(34,197,94,.3)' }}>{r}</span>
-                    ))}
-                  </div>
-                  {l._warnings.length > 0 && (
-                    <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap', marginBottom: 6 }}>
-                      {l._warnings.map((w, j) => (
-                        <span key={j} className="verdict" style={{ background: 'var(--amber-dim)', color: 'var(--amber)', border: '1px solid rgba(245,158,11,.3)' }}>{w}</span>
-                      ))}
-                    </div>
-                  )}
-                  <div className="text-sm text-muted mt-4">{l.valueAdd}</div>
-                </div>
-
-                {/* ─── DECISION ─── */}
-                <div style={{ padding: '12px 16px 12px 28px', borderTop: '2px solid',
-                              borderColor: l._decision === 'CALL AGENT' ? 'var(--green)' : l._decision === 'INSPECT' ? 'var(--amber)' : l._decision === 'SKIP' ? 'var(--red)' : 'var(--text-muted)',
-                              background: l._decision === 'CALL AGENT' ? 'var(--green-dim)' : l._decision === 'INSPECT' ? 'var(--amber-dim)' : l._decision === 'SKIP' ? 'var(--red-dim)' : 'transparent',
-                              display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 12 }}>
-                  <div style={{ flex: 1 }}>
-                    <div style={{ fontSize: 16, fontWeight: 700, letterSpacing: '0.03em',
-                                  color: l._decision === 'CALL AGENT' ? 'var(--green)' : l._decision === 'INSPECT' ? 'var(--amber)' : l._decision === 'SKIP' ? 'var(--red)' : 'var(--text-heading)' }}>
-                      {l._decision === 'CALL AGENT' ? '📞 CALL AGENT' :
-                       l._decision === 'INSPECT' ? '🔍 INSPECT' :
-                       l._decision === 'SKIP' ? '✗ SKIP' :
-                       '👁 MONITOR'}
-                    </div>
-                    <div className="text-xs text-muted mt-4">{l._decisionReason}</div>
-                  </div>
-                  {l.url && (
-                    <a href={l.url} target="_blank" rel="noopener noreferrer"
-                       className={`btn btn--sm ${l._decision === 'CALL AGENT' ? 'btn--primary' : 'btn--secondary'}`}>
-                      {l._decision === 'SKIP' ? 'View anyway' : 'Open listing'}
-                    </a>
-                  )}
-                </div>
+                <div style={{ fontSize: 12, color: 'var(--text-bright)', marginBottom: 6 }}>{s.whyTop}</div>
+                <div style={{ fontSize: 11, color: '#dcb86f' }}>⚠ {s.riskNote}</div>
               </div>
             ))}
-          </>
-        )}
-
-        {listings && top10.length === 0 && (
-          <div className="info-box info-box--amber" style={{ textAlign: 'center', padding: 30 }}>
-            <div style={{ fontSize: 18, fontWeight: 700, marginBottom: 8 }}>No listings passed all filters</div>
-            <div style={{ fontSize: 12 }}>
-              {top10._skipCount ?? 0} candidates were filtered out (crime, cash, quality). Run /run-full for fresh listings or check manually:
-              <div style={{ marginTop: 12, display: 'flex', gap: 8, justifyContent: 'center', flexWrap: 'wrap' }}>
-                <a href="https://www.domain.com.au/sale/kirwan-qld-4817/?ptype=house&price=0-800000" target="_blank" rel="noopener noreferrer" className="btn btn--primary btn--sm">Kirwan QLD</a>
-                <a href="https://www.domain.com.au/sale/condon-qld-4815/?ptype=house&price=0-800000" target="_blank" rel="noopener noreferrer" className="btn btn--primary btn--sm">Condon QLD</a>
-                <a href="https://www.domain.com.au/sale/para-hills-sa-5096/?ptype=house&price=0-800000" target="_blank" rel="noopener noreferrer" className="btn btn--primary btn--sm">Para Hills SA</a>
-              </div>
-            </div>
           </div>
         )}
 
-        {!listings && !err && (
-          <div className="loading-agent"><div className="loading-agent__icon">🏆</div><div className="loading-agent__title">Loading...</div></div>
+        {/* LISTINGS TAB */}
+        {tab === 'listings' && listings && (
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
+            {listings.map((l, i) => {
+              const vs = VERDICT_STYLE.INVESTIGATE;
+              return (
+                <div key={i} className="card" style={{ padding: 16, borderLeft: `4px solid ${i < 3 ? '#6fdc6f' : i < 6 ? '#dcb86f' : '#6fbcdc'}` }}>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 8 }}>
+                    <div>
+                      <span style={{ fontSize: 18, fontWeight: 700, color: 'var(--text-bright)', marginRight: 8 }}>#{l.rank}</span>
+                      <span style={{ fontSize: 13, fontWeight: 600, color: 'var(--text-bright)' }}>{l.addr}</span>
+                    </div>
+                    <div style={{ textAlign: 'right' }}>
+                      <div style={{ fontSize: 16, fontWeight: 700, color: l.priceNumeric <= 700000 ? '#6fdc6f' : '#dcb86f' }}>{l.price}</div>
+                      <div style={{ fontSize: 11, color: 'var(--text-dim)' }}>{l.suburb}</div>
+                    </div>
+                  </div>
+
+                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(120px, 1fr))', gap: 6, fontSize: 11, marginBottom: 8 }}>
+                    <div>Beds: <strong>{l.beds || '?'}</strong></div>
+                    <div>Baths: <strong>{l.baths || '?'}</strong></div>
+                    <div>Car: <strong>{l.car || '?'}</strong></div>
+                    <div>Land: <strong>{l.land || '?'}</strong></div>
+                    <div>Yield: <strong style={{ color: parseFloat(l.yieldEst) >= 5 ? '#6fdc6f' : '#fff' }}>{l.yieldEst}</strong></div>
+                    <div>Cashflow: <strong style={{ color: l.cashflowEst?.includes('+') ? '#6fdc6f' : '#dc8a6f' }}>{l.cashflowEst}</strong></div>
+                  </div>
+
+                  <div style={{ fontSize: 12, color: 'var(--text-bright)', marginBottom: 6 }}>{l.reason}</div>
+                  <div style={{ fontSize: 12, color: '#6fdc6f', fontWeight: 600, marginBottom: 6 }}>→ {l.action}</div>
+
+                  {l.riskFlags?.length > 0 && (
+                    <div style={{ fontSize: 11, color: '#dcb86f', marginBottom: 6 }}>
+                      {l.riskFlags.map((rf, j) => <div key={j}>⚠ {rf}</div>)}
+                    </div>
+                  )}
+
+                  {l.url && (
+                    <a href={l.url} target="_blank" rel="noopener noreferrer"
+                      className="btn btn--primary btn--sm" style={{ fontSize: 11 }}>
+                      View Listing →
+                    </a>
+                  )}
+                </div>
+              );
+            })}
+          </div>
+        )}
+
+        {/* CASH TAB */}
+        {tab === 'cash' && ca && (
+          <div className="card" style={{ padding: 20 }}>
+            <h3 style={{ margin: '0 0 16px', fontSize: 14, color: 'var(--text-bright)' }}>Cash Position Analysis</h3>
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16, fontSize: 12 }}>
+              <div>
+                <h4 style={{ margin: '0 0 8px', color: '#6fbcdc' }}>Upfront Costs</h4>
+                <div style={{ lineHeight: 2 }}>
+                  <div>Stamp duty (SA): <strong>{ca.stampDutySA}</strong></div>
+                  <div>Deposit (10%): <strong>{ca.deposit10pct}</strong></div>
+                  <div>LMI (90% LVR): <strong>{ca.lmi90lvr}</strong></div>
+                  <div>Legal + B&P: <strong>{ca.legalBP}</strong></div>
+                </div>
+              </div>
+              <div>
+                <h4 style={{ margin: '0 0 8px', color: '#6fbcdc' }}>Total Cash Required</h4>
+                <div style={{ lineHeight: 2 }}>
+                  <div>At $700k: <strong style={{ color: '#6fdc6f' }}>{ca.totalUpfront700k}</strong></div>
+                  <div>At $800k: <strong style={{ color: '#dcb86f' }}>{ca.totalUpfront800k}</strong></div>
+                  <div style={{ marginTop: 8, color: 'var(--text-bright)' }}>{ca.cashFits}</div>
+                </div>
+              </div>
+              <div>
+                <h4 style={{ margin: '0 0 8px', color: '#6fbcdc' }}>Weekly Cashflow ($700k)</h4>
+                <div style={{ lineHeight: 2 }}>
+                  <div>Mortgage: <strong>{ca.weeklyMortgage700k}</strong></div>
+                  <div>Rent (3bed): <strong>{ca.weeklyRent700k}</strong></div>
+                </div>
+              </div>
+            </div>
+          </div>
         )}
       </ErrorBoundary>
     </div>
