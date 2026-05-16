@@ -36,7 +36,7 @@ export function Sidebar() {
           const isRunning = stage.status === 'running';
           const prevKey = idx > 0 ? stageKeys[idx - 1] : null;
           // Always unlock dashboard views (not pipeline stages)
-          const alwaysUnlocked = ['agents', 'top10'].includes(def.key);
+          const alwaysUnlocked = ['agents', 'top10', 'strategy'].includes(def.key);
           const isUnlocked = alwaysUnlocked || !prevKey || state.stages[prevKey].status === 'done';
           const isLocked = !isUnlocked && !isDone;
 
