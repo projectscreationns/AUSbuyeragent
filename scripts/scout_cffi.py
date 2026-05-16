@@ -53,31 +53,50 @@ RED_FLAGS = ['mould','mold','asbestos','termite','white ant','sold as is','struc
 VALUE_KWS = ['r40','r30','r60','subdivision','granny flat','corner block','development potential','dual occupancy','subdivide']
 
 
-def fetch_rea(name, postcode, page_num=1):
-    slug = name.lower().replace(' ', '+')
-    url = f"https://www.realestate.com.au/buy/property-house-in-{slug},+sa+{postcode}/list-{page_num}"
+def make_session():
+    """Create a session that persists cookies across requests."""
+    s = requests.Session()
+    return s
+
+SESSION = make_session()
+
+def fetch_page(url, label=""):
+    """Fetch a URL with Chrome TLS fingerprint and session cookies."""
     try:
-        resp = requests.get(url, impersonate="chrome", timeout=30, headers={
-            "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
-            "Accept-Language": "en-AU,en;q=0.9",
+        resp = SESSION.get(url, impersonate="chrome", timeout=30, headers={
+            "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
+            "Accept-Language": "en-AU,en-US;q=0.9,en;q=0.8",
+            "Accept-Encoding": "gzip, deflate, br",
             "Cache-Control": "no-cache",
+            "Sec-Fetch-Dest": "document",
+            "Sec-Fetch-Mode": "navigate",
+            "Sec-Fetch-Site": "none",
+            "Sec-Fetch-User": "?1",
+            "Upgrade-Insecure-Requests": "1",
         })
         return resp.status_code, resp.text
     except Exception as e:
         return 0, str(e)
 
+def fetch_rea(name, postcode, page_num=1):
+    slug = name.lower().replace(' ', '+')
+    url = f"https://www.realestate.com.au/buy/property-house-in-{slug},+sa+{postcode}/list-{page_num}"
+    return fetch_page(url, "REA")
 
 def fetch_domain(name, postcode, page_num=1):
     slug = name.lower().replace(' ', '-')
     url = f"https://www.domain.com.au/sale/{slug}-sa-{postcode}/?ptype=house&price=0-{BUDGET}&page={page_num}"
-    try:
-        resp = requests.get(url, impersonate="chrome", timeout=30, headers={
-            "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
-            "Accept-Language": "en-AU,en;q=0.9",
-        })
-        return resp.status_code, resp.text
-    except Exception as e:
-        return 0, str(e)
+    return fetch_page(url, "Domain")
+
+def fetch_view(name, postcode, page_num=1):
+    slug = name.lower().replace(' ', '-')
+    url = f"https://view.com.au/for-sale/sa/in-{slug}-{postcode}/houses/?page={page_num}"
+    return fetch_page(url, "View")
+
+def fetch_homely(name, postcode):
+    slug = name.lower().replace(' ', '-')
+    url = f"https://www.homely.com.au/for-sale/{slug}-sa-{postcode}/houses"
+    return fetch_page(url, "Homely")
 
 
 def parse_listings(html, name, postcode):
@@ -213,57 +232,85 @@ def enrich(p, median, r3, r4):
     }
 
 
+def try_source(name, postcode, fetch_fn, label, max_pages=8):
+    """Try a source, paginate, return parsed listings."""
+    listings = []
+    seen = set()
+    for page in range(1, max_pages + 1):
+        if fetch_fn.__code__.co_varnames[2:3] == ('page_num',) if hasattr(fetch_fn, '__code__') else True:
+            status, html = fetch_fn(name, postcode, page) if 'page_num' in fetch_fn.__code__.co_varnames else (fetch_fn(name, postcode) if page == 1 else (0, ''))
+        else:
+            status, html = fetch_fn(name, postcode) if page == 1 else (0, '')
+
+        if status != 200 or len(html) < 5000:
+            if page == 1:
+                print(f"  {label}: {status} ({len(html)}b)", end='')
+            break
+
+        parsed = parse_listings(html, name, postcode)
+        new = 0
+        for p in parsed:
+            key = re.sub(r'[^a-z0-9]', '', p['addr'].lower())
+            if key not in seen:
+                seen.add(key)
+                listings.append(p)
+                new += 1
+
+        if page == 1:
+            print(f"  {label}: {len(parsed)} found", end='')
+        if new == 0 and page > 1:
+            break
+        time.sleep(2 + page)
+
+    return listings
+
+
 def scan_suburb(name, postcode, median, r3, r4):
     all_listings = []
     seen_addrs = set()
 
-    # Try REA first — paginate
-    blocked = False
-    for page in range(1, 10):
-        status, html = fetch_rea(name, postcode, page)
-        if status != 200 or len(html) < 5000:
+    # Try ALL sources — REA, Domain, View.com.au, Homely
+    sources = [
+        ('REA', fetch_rea, 8),
+        ('Domain', fetch_domain, 5),
+        ('View', fetch_view, 5),
+        ('Homely', fetch_homely, 1),
+    ]
+
+    for label, fetch_fn, max_pages in sources:
+        for page in range(1, max_pages + 1):
+            try:
+                if label == 'Homely':
+                    status, html = fetch_fn(name, postcode)
+                else:
+                    status, html = fetch_fn(name, postcode, page)
+            except Exception as e:
+                if page == 1: print(f"  {label}: error", end='')
+                break
+
+            if status != 200 or len(html) < 5000:
+                if page == 1:
+                    print(f"  {label}: {status}({len(html)}b)", end='')
+                break
+
+            parsed = parse_listings(html, name, postcode)
+            new = 0
+            for p in parsed:
+                key = re.sub(r'[^a-z0-9]', '', p['addr'].lower())
+                if key not in seen_addrs:
+                    seen_addrs.add(key)
+                    all_listings.append(p)
+                    new += 1
+
             if page == 1:
-                print(f"  REA: {status} ({len(html)} bytes)", end='')
-                blocked = True
-            break
-
-        parsed = parse_listings(html, name, postcode)
-        new = 0
-        for p in parsed:
-            key = re.sub(r'[^a-z0-9]', '', p['addr'].lower())
-            if key not in seen_addrs:
-                seen_addrs.add(key)
-                all_listings.append(p)
-                new += 1
-
-        if page == 1:
-            print(f"  REA: {len(parsed)} on page 1", end='')
-        if new == 0 and page > 1:
-            break
-        time.sleep(2 + 1 * page)
-
-    # Try Domain too
-    for page in range(1, 6):
-        status, html = fetch_domain(name, postcode, page)
-        if status != 200 or len(html) < 5000:
-            if page == 1:
-                print(f" | Domain: {status} ({len(html)} bytes)", end='')
-            break
-
-        parsed = parse_listings(html, name, postcode)
-        new = 0
-        for p in parsed:
-            key = re.sub(r'[^a-z0-9]', '', p['addr'].lower())
-            if key not in seen_addrs:
-                seen_addrs.add(key)
-                all_listings.append(p)
-                new += 1
-
-        if page == 1:
-            print(f" | Domain: +{new} new", end='')
-        if new == 0 and page > 1:
-            break
-        time.sleep(2 + 1 * page)
+                print(f"  {label}: {len(parsed)}", end='')
+            elif new > 0:
+                print(f"+{new}", end='')
+            if new == 0 and page > 1:
+                break
+            if label == 'Homely':
+                break
+            time.sleep(2 + page)
 
     # Enrich
     enriched = [enrich(p, median, r3, r4) for p in all_listings]
