@@ -223,26 +223,6 @@
     },
     {
       "rank": 2,
-      "addr": "4 Karma Close, Modbury North, SA 5092",
-      "price": "Contact Agent (est ~$690k)",
-      "priceNumeric": 690000,
-      "suburb": "Modbury North",
-      "beds": 4,
-      "baths": null,
-      "car": null,
-      "land": "820sqm",
-      "yieldEst": "4.7%",
-      "cashflowEst": "-$203pw",
-      "reason": "820sqm MEGA BLOCK. 4 bed house. Subdivision potential in Tea Tree Gully LGA. Low crime suburb.",
-      "action": "Call agent. Check zoning for subdivision. 820sqm = potential for rear dwelling or subdivide into 2 lots.",
-      "url": "https://www.realestate.com.au/buy/property-house-with-4-bedrooms-in-modbury,+sa+5092/list-1",
-      "riskFlags": [
-        "Price estimated \u2014 may be higher than $690k",
-        "25min from Osborne"
-      ]
-    },
-    {
-      "rank": 3,
       "addr": "3 Hay Court, Walkley Heights, SA 5098",
       "price": "Contact Agent (est ~$740k)",
       "priceNumeric": 740000,
@@ -257,12 +237,13 @@
       "action": "Call agent. 825sqm in Walkley Heights could subdivide. Check council zoning. Premium suburb = premium exit.",
       "url": "https://www.realestate.com.au/property/3-hay-ct-walkley-heights-sa-5098/",
       "riskFlags": [
+        "PRICE UNVERIFIED \u2014 click URL to check real price before calling",
         "Price estimated",
         "Small suburb \u2014 limited exit liquidity"
       ]
     },
     {
-      "rank": 4,
+      "rank": 3,
       "addr": "62 Morgan Street, Parafield Gardens, SA 5107",
       "price": "$758,000",
       "priceNumeric": 758000,
@@ -282,7 +263,7 @@
       ]
     },
     {
-      "rank": 5,
+      "rank": 4,
       "addr": "34 Rothwell Avenue, Ingle Farm, SA 5098",
       "price": "Contact Agent (est ~$780k)",
       "priceNumeric": 780000,
@@ -297,12 +278,13 @@
       "action": "Call agent immediately. 950sqm could yield 2-3 lots. Check R40/R60 zoning.",
       "url": "https://www.facebook.com/groups/1423891058797762/posts/1547727486414118/",
       "riskFlags": [
+        "PRICE UNVERIFIED \u2014 click URL to check real price before calling",
         "Price estimated \u2014 950sqm block may command premium above $780k",
         "At budget ceiling"
       ]
     },
     {
-      "rank": 6,
+      "rank": 5,
       "addr": "4 Day Street, Salisbury, SA 5108",
       "price": "$692,000",
       "priceNumeric": 692000,
@@ -322,7 +304,7 @@
       ]
     },
     {
-      "rank": 7,
+      "rank": 6,
       "addr": "8 Lynore Avenue, Para Hills, SA 5096",
       "price": "Contact Agent",
       "priceNumeric": 750000,
@@ -341,7 +323,7 @@
       ]
     },
     {
-      "rank": 8,
+      "rank": 7,
       "addr": "17 Billabong Road, Para Hills, SA 5096",
       "price": "Contact Agent",
       "priceNumeric": 750000,
@@ -356,12 +338,13 @@
       "action": "Set auction alert. 580sqm Para Hills with 4 car spaces rare. Strong rental to defence/tradie workers.",
       "url": "https://www.realestate.com.au/property-house-sa-para+hills-151189844",
       "riskFlags": [
+        "PRICE UNVERIFIED \u2014 click URL to check real price before calling",
         "Auction \u2014 may exceed budget",
         "1 bathroom dated"
       ]
     },
     {
-      "rank": 9,
+      "rank": 8,
       "addr": "18 Sloan Road, Ingle Farm, SA 5098",
       "price": "Contact Agent (est ~$780k)",
       "priceNumeric": 780000,
@@ -376,29 +359,9 @@
       "action": "Call agent. Check granny flat feasibility on 691sqm. Ingle Farm steady 9.3% growth.",
       "url": "https://www.property.com.au/sa/ingle-farm-5098/sloan-rd/18-pid-6948196/",
       "riskFlags": [
+        "PRICE UNVERIFIED \u2014 click URL to check real price before calling",
         "At budget ceiling",
         "1 bathroom limits rental appeal"
-      ]
-    },
-    {
-      "rank": 10,
-      "addr": "27 High Street, Gawler East, SA 5118",
-      "price": "Contact Agent (est ~$720k)",
-      "priceNumeric": 720000,
-      "suburb": "Gawler East",
-      "beds": 4,
-      "baths": 2,
-      "car": 1,
-      "land": "1909sqm",
-      "yieldEst": "4.5%",
-      "cashflowEst": "-$228pw",
-      "reason": "1,909sqm MEGA BLOCK. 4/2 house. Massive subdivision potential if zoning allows. Good cash fit at $720k.",
-      "action": "Call agent. 1909sqm = potential 3-4 lot subdivision = $500k+ profit if approved. Check Gawler council zoning.",
-      "url": "https://www.property.com.au/sa/gawler-east-5118/high-st/27-pid-7156119/",
-      "riskFlags": [
-        "SUPPLY RISK MEDIUM \u2014 Gawler growth area",
-        "Semi-regional \u2014 40min from Osborne",
-        "Subdivision approval not guaranteed"
       ]
     }
   ],
