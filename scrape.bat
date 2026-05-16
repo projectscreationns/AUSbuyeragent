@@ -1,7 +1,8 @@
 @echo off
-echo ======================================
-echo   AUS Buyer Agent - Full Listing Scan
-echo ======================================
+echo ========================================================
+echo   AUS Buyer Agent — Adelaide Metro Agentic Loop
+echo   AUKUS Catchment Analysis
+echo ========================================================
 echo.
 
 REM Check if Node.js is installed
@@ -16,17 +17,19 @@ cd /d "%~dp0"
 
 REM Install dependencies if needed
 if not exist node_modules\playwright (
-    echo Installing Playwright...
+    echo Installing Playwright + Chromium browser...
     npm install playwright
     npx playwright install chromium
+    echo.
 )
 
-echo.
-echo Starting full listing scan across all suburbs...
-echo This will take 10-15 minutes.
+echo Starting agentic loop: suburbs scan + analysis + expansion...
+echo Pass 1: Scan 16 Adelaide metro suburbs
+echo Pass 2: Analyze results, expand to adjacent suburbs where strong
+echo This will take 15-25 minutes.
 echo.
 
-node scripts\scout_playwright.js
+node scripts\orchestrator.js --passes 2 --screenshot
 
 echo.
 echo Building and deploying to website...
@@ -34,8 +37,8 @@ call npm run build -- --base=/AUSbuyeragent/
 npx gh-pages -d dist --branch gh-pages --dotfiles
 
 echo.
-echo ======================================
+echo ========================================================
 echo   DONE! Refresh your dashboard at:
 echo   https://projectscreationns.github.io/AUSbuyeragent/
-echo ======================================
+echo ========================================================
 pause
