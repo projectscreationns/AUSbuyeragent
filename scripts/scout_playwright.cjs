@@ -54,7 +54,7 @@ function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
 
 async function scrapeREA(page, suburb, opts = {}) {
   const { name, postcode } = suburb;
-  const slug = `${name.toLowerCase().replace(/\s+/g, '-')},+sa+${postcode}`;
+  const slug = `${name.toLowerCase().replace(/\s+/g, '+')},+sa+${postcode}`;
   const listings = [];
   const seenAddrs = new Set();
 
@@ -63,12 +63,17 @@ async function scrapeREA(page, suburb, opts = {}) {
     console.log(`    REA page ${pageNum}...`);
 
     try {
-      await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 30000 });
-      await sleep(2000 + Math.random() * 3000);
+      await page.goto(url, { waitUntil: 'networkidle', timeout: 45000 });
+      await sleep(3000 + Math.random() * 3000);
+      // Screenshot first page of every suburb for debugging
+      if (pageNum === 1 && opts.screenshot) {
+        await page.screenshot({ path: path.join(SCREENSHOT_DIR, `rea-${name.replace(/\s+/g, '-')}.png`), fullPage: false }).catch(() => {});
+        console.log(`    Screenshot saved: debug/rea-${name.replace(/\s+/g, '-')}.png`);
+      }
     } catch (e) {
       console.log(`    Failed to load: ${e.message.slice(0, 60)}`);
       if (opts.screenshot) {
-        await page.screenshot({ path: path.join(SCREENSHOT_DIR, `error-rea-${name}-p${pageNum}.png`) }).catch(() => {});
+        await page.screenshot({ path: path.join(SCREENSHOT_DIR, `error-rea-${name.replace(/\s+/g, '-')}-p${pageNum}.png`) }).catch(() => {});
       }
       break;
     }
