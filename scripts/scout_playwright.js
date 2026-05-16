@@ -427,9 +427,11 @@ async function main() {
   return summary;
 }
 
-main().catch(e => {
-  console.error('Fatal:', e.message);
-  process.exit(1);
-});
+if (require.main === module) {
+  main().catch(e => {
+    console.error('Fatal:', e.message);
+    process.exit(1);
+  });
+}
 
 module.exports = { DEFAULT_SUBURBS, main };
