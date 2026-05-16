@@ -1,0 +1,4481 @@
+{
+  "asOf": "06/04/2026",
+  "suburbs": [
+    {
+      "name": "Baldivis",
+      "state": "WA",
+      "postcode": "6171",
+      "lga": "City of Rockingham",
+      "region": "WA \u2014 Perth mid/outer ring",
+      "medianHouse": 750000,
+      "medianRentWeekly": 650,
+      "quant": {
+        "dom": {
+          "value": 15,
+          "score": 90,
+          "source": "htag.com.au"
+        },
+        "vacancy": {
+          "value": 0.9,
+          "score": 92,
+          "source": "SQM Research Feb 2026"
+        },
+        "yield": {
+          "value": 4.62,
+          "score": 65,
+          "source": "htag.com.au"
+        },
+        "priceGrowth": {
+          "value": 11.06,
+          "score": 78,
+          "source": "htag.com.au"
+        },
+        "supplyOnMarket": {
+          "value": 0.4,
+          "score": 82,
+          "source": "REIWA"
+        },
+        "vendorDiscount": {
+          "value": -1.2,
+          "score": 72,
+          "source": "REIWA"
+        },
+        "renterPercent": {
+          "value": 26,
+          "score": 85,
+          "source": "ABS Census"
+        },
+        "unitToHouseRatio": {
+          "value": 4,
+          "score": 96,
+          "source": "ABS"
+        },
+        "auctionClearance": {
+          "value": null,
+          "score": null,
+          "source": "N/A Perth"
+        }
+      },
+      "compositeScore": 82,
+      "qual": {
+        "infrastructure": [
+          {
+            "name": "Kwinana Freeway Widening (Russell\u2013Mortimer Rd)",
+            "type": "road",
+            "status": "planned",
+            "expectedCompletion": "2028-Q2",
+            "delayMonths": null,
+            "investmentAud": 700000000,
+            "impactRating": "high",
+            "source": "infrastructurepipeline.org",
+            "notes": "$700M upgrade, 3rd lane each way over 11km. Construction 2027."
+          }
+        ],
+        "crime": {
+          "overallRating": "low",
+          "trend": "stable",
+          "notableTypes": [
+            "low violent crime",
+            "below state property crime"
+          ],
+          "comparisonToState": "below-average",
+          "source": "WA Police 2025"
+        },
+        "publicHousing": {
+          "existingNearby": false,
+          "plannedNearby": false,
+          "concentration": "none",
+          "details": "Master-planned estate, predominantly owner-occupier",
+          "source": "SA Dept"
+        },
+        "schools": {
+          "primary": [
+            {
+              "name": "Baldivis Primary School",
+              "rating": "Above average",
+              "distance": "1.5km"
+            }
+          ],
+          "secondary": [
+            {
+              "name": "Baldivis Secondary College",
+              "rating": "Good",
+              "distance": "3km"
+            }
+          ],
+          "overallQuality": "good",
+          "source": "MySchool"
+        },
+        "hazards": {
+          "flood": {
+            "risk": "low",
+            "zone": null,
+            "source": "WAPC"
+          },
+          "bushfire": {
+            "risk": "low",
+            "zone": null,
+            "source": "DFES"
+          },
+          "coastal": {
+            "risk": "n/a",
+            "source": "inland"
+          }
+        },
+        "zoning": {
+          "currentZoning": "R20/R25",
+          "densificationPotential": "low",
+          "recentRezonings": null,
+          "councilPlan": "rockingham.wa.gov.au",
+          "source": "City of Rockingham"
+        },
+        "developmentApps": [
+          {
+            "description": "Baldivis Town Centre expansion",
+            "scale": "medium",
+            "impact": "positive",
+            "source": "DA register"
+          }
+        ],
+        "demographics": {
+          "medianAge": 33,
+          "trend": "young families growing",
+          "householdType": "families with children",
+          "irsad": 1010,
+          "source": "ABS Census 2021"
+        },
+        "rentalDemand": {
+          "tenantTypes": "Young families, FIFO, healthcare",
+          "marketDepth": "deep 200+ sales/yr",
+          "source": "REIWA"
+        },
+        "connectivity": {
+          "nbn": "FTTP",
+          "publicTransport": "Warnbro train 5km + bus",
+          "cbdDistance": "46km",
+          "source": "NBN/Transperth"
+        },
+        "noise": {
+          "flightPath": false,
+          "highway": true,
+          "industrial": false,
+          "notes": "Minor Kwinana Fwy noise eastern streets"
+        }
+      },
+      "forward": {
+        "cycleStage": "MID",
+        "bear": 18,
+        "base": 35,
+        "bull": 50,
+        "horizon": "5yr to 2031",
+        "drivers": [
+          "Southern corridor pop growth 2.2%",
+          "Kwinana Freeway upgrade",
+          "Town centre expansion",
+          "Perth structural undersupply"
+        ],
+        "risks": [
+          "Price may exceed $800k within 12mo",
+          "Freeway construction disruption 2027-28",
+          "Rate hikes squeeze borrowing"
+        ],
+        "analystViews": [
+          "REIWA: Perth outer +10% 2026",
+          "PropTrack: Rockingham +15% annual"
+        ],
+        "consensus": "Strong mid-cycle with infrastructure tailwinds. Base case 30-35% total 5yr growth."
+      },
+      "verdict": "BUY",
+      "topSignals": [
+        "Vacancy sub-1%",
+        "IRSAD 1010 good",
+        "$700M freeway upgrade",
+        "Young family demographics",
+        "Low public housing"
+      ],
+      "watchPoints": [
+        "Median $750k budget pressure",
+        "Yield 4.62% below 5%",
+        "Growth may decelerate"
+      ],
+      "stampDutyNote": "At $750k: stamp ~$26k, total ~$95k \u2014 fits $110k comfortably",
+      "riskFilter": {
+        "supplyRisk": {
+          "rating": "MEDIUM",
+          "reason": "Southern Perth growth corridor has ongoing land releases in adjacent suburbs (Secret Harbour, Singleton). Baldivis itself maturing.",
+          "source": "Rockingham Council"
+        },
+        "demandRisk": {
+          "rating": "LOW",
+          "reason": "Perth metro diversified + FIFO workforce",
+          "source": "ABS"
+        },
+        "infrastructureRisk": {
+          "rating": "LOW",
+          "reason": "Kwinana Freeway upgrade announced ($700M), construction 2027",
+          "source": "infrastructurepipeline.org"
+        },
+        "cycleRisk": {
+          "rating": "LOW",
+          "reason": "Sustainable 11% growth",
+          "source": "REIWA"
+        },
+        "liquidityRisk": {
+          "rating": "LOW",
+          "reason": "Deep market 200+ sales/yr",
+          "source": "REIWA"
+        },
+        "overallRisk": "LOW",
+        "downgradeVerdict": false,
+        "riskNote": "Some southern corridor greenfield but Baldivis itself mostly built out. Strong master-planned community."
+      }
+    },
+    {
+      "name": "Wellard",
+      "state": "WA",
+      "postcode": "6170",
+      "lga": "City of Kwinana",
+      "region": "WA \u2014 Perth mid/outer ring",
+      "medianHouse": 710000,
+      "medianRentWeekly": 670,
+      "quant": {
+        "dom": {
+          "value": 15,
+          "score": 90,
+          "source": "htag.com.au"
+        },
+        "vacancy": {
+          "value": 0.9,
+          "score": 92,
+          "source": "SQM Feb 2026"
+        },
+        "yield": {
+          "value": 4.71,
+          "score": 68,
+          "source": "htag.com.au"
+        },
+        "priceGrowth": {
+          "value": 9.23,
+          "score": 72,
+          "source": "htag.com.au"
+        },
+        "supplyOnMarket": {
+          "value": 0.35,
+          "score": 86,
+          "source": "REIWA"
+        },
+        "vendorDiscount": {
+          "value": -0.8,
+          "score": 78,
+          "source": "REIWA"
+        },
+        "renterPercent": {
+          "value": 28,
+          "score": 85,
+          "source": "ABS Census"
+        },
+        "unitToHouseRatio": {
+          "value": 6,
+          "score": 95,
+          "source": "ABS"
+        },
+        "auctionClearance": {
+          "value": null,
+          "score": null,
+          "source": "N/A Perth"
+        }
+      },
+      "compositeScore": 81,
+      "qual": {
+        "infrastructure": [
+          {
+            "name": "Kwinana Freeway Widening",
+            "type": "road",
+            "status": "planned",
+            "expectedCompletion": "2028-Q2",
+            "delayMonths": null,
+            "investmentAud": 700000000,
+            "impactRating": "high",
+            "source": "infrastructurepipeline.org",
+            "notes": "$700M upgrade directly benefits Wellard commuters"
+          },
+          {
+            "name": "Wellard Train Station (existing)",
+            "type": "transport",
+            "status": "completed",
+            "expectedCompletion": "2014",
+            "delayMonths": null,
+            "investmentAud": null,
+            "impactRating": "high",
+            "source": "PTA WA",
+            "notes": "On Mandurah Line, 42min to Perth CBD. Major value driver."
+          }
+        ],
+        "crime": {
+          "overallRating": "low",
+          "trend": "stable",
+          "notableTypes": [
+            "low overall crime"
+          ],
+          "comparisonToState": "below-average",
+          "source": "WA Police"
+        },
+        "publicHousing": {
+          "existingNearby": false,
+          "plannedNearby": false,
+          "concentration": "low",
+          "details": "Mostly private estates, small social housing footprint",
+          "source": "Dept Communities"
+        },
+        "schools": {
+          "primary": [
+            {
+              "name": "Wellard Primary",
+              "rating": "Good",
+              "distance": "1km"
+            }
+          ],
+          "secondary": [
+            {
+              "name": "Leda Primary/Kwinana SHS",
+              "rating": "Average",
+              "distance": "4km"
+            }
+          ],
+          "overallQuality": "average",
+          "source": "MySchool"
+        },
+        "hazards": {
+          "flood": {
+            "risk": "low",
+            "zone": null,
+            "source": "WAPC"
+          },
+          "bushfire": {
+            "risk": "low",
+            "zone": null,
+            "source": "DFES"
+          },
+          "coastal": {
+            "risk": "n/a",
+            "source": "inland"
+          }
+        },
+        "zoning": {
+          "currentZoning": "R20",
+          "densificationPotential": "low",
+          "recentRezonings": null,
+          "councilPlan": "kwinana.wa.gov.au",
+          "source": "City of Kwinana"
+        },
+        "developmentApps": [
+          {
+            "description": "Wellard Village infill development",
+            "scale": "small",
+            "impact": "positive",
+            "source": "DA"
+          }
+        ],
+        "demographics": {
+          "medianAge": 32,
+          "trend": "young families",
+          "householdType": "families dominant",
+          "irsad": 960,
+          "source": "ABS Census 2021"
+        },
+        "rentalDemand": {
+          "tenantTypes": "First home buyer renters, young families, Kwinana industrial workers",
+          "marketDepth": "medium",
+          "source": "REIWA"
+        },
+        "connectivity": {
+          "nbn": "FTTP",
+          "publicTransport": "Wellard train (Mandurah line) + bus",
+          "cbdDistance": "35km",
+          "source": "NBN/Transperth"
+        },
+        "noise": {
+          "flightPath": false,
+          "highway": true,
+          "industrial": true,
+          "notes": "Kwinana industrial area 8km north \u2014 occasional industrial noise. Fwy proximity."
+        }
+      },
+      "forward": {
+        "cycleStage": "EARLY-MID",
+        "bear": 15,
+        "base": 32,
+        "bull": 48,
+        "horizon": "5yr to 2031",
+        "drivers": [
+          "Train station = 42min CBD",
+          "Kwinana Freeway upgrade",
+          "First home buyer magnet",
+          "Sub-$800k pricing"
+        ],
+        "risks": [
+          "Industrial proximity",
+          "Growth slower than Baldivis",
+          "Limited secondary school options"
+        ],
+        "analystViews": [
+          "htag: 9.2% annual growth",
+          "REIWA: Kwinana region outperforming"
+        ],
+        "consensus": "Solid mid-tier pick with train-station premium. Base case 30% total 5yr growth."
+      },
+      "verdict": "BUY",
+      "topSignals": [
+        "Own train station",
+        "Below $800k budget",
+        "Vacancy sub-1%",
+        "Yield 4.71%",
+        "Low crime"
+      ],
+      "watchPoints": [
+        "Industrial proximity Kwinana",
+        "Average schools",
+        "IRSAD 960 modest"
+      ],
+      "stampDutyNote": "At $710k: stamp ~$23k, total ~$85k \u2014 very comfortable fit",
+      "riskFilter": {
+        "supplyRisk": {
+          "rating": "MEDIUM",
+          "reason": "Newer estate, still developing. Kwinana greenfield nearby.",
+          "source": "City of Kwinana"
+        },
+        "demandRisk": {
+          "rating": "LOW",
+          "reason": "Perth metro + industrial workforce",
+          "source": "ABS"
+        },
+        "infrastructureRisk": {
+          "rating": "LOW",
+          "reason": "Wellard train station operational",
+          "source": "PTA WA"
+        },
+        "cycleRisk": {
+          "rating": "LOW",
+          "reason": "Steady growth",
+          "source": ""
+        },
+        "liquidityRisk": {
+          "rating": "MEDIUM",
+          "reason": "Medium depth",
+          "source": ""
+        },
+        "overallRisk": "LOW-MEDIUM",
+        "downgradeVerdict": false,
+        "riskNote": "Slightly higher supply risk than Armadale but still Perth metro."
+      }
+    },
+    {
+      "name": "Armadale",
+      "state": "WA",
+      "postcode": "6112",
+      "lga": "City of Armadale",
+      "region": "WA \u2014 Perth mid/outer ring",
+      "medianHouse": 600000,
+      "medianRentWeekly": 595,
+      "quant": {
+        "dom": {
+          "value": 11,
+          "score": 94,
+          "source": "htag.com.au"
+        },
+        "vacancy": {
+          "value": 1.39,
+          "score": 78,
+          "source": "SQM Feb 2026"
+        },
+        "yield": {
+          "value": 5.26,
+          "score": 80,
+          "source": "htag.com.au"
+        },
+        "priceGrowth": {
+          "value": 13.21,
+          "score": 82,
+          "source": "htag.com.au"
+        },
+        "supplyOnMarket": {
+          "value": 0.3,
+          "score": 88,
+          "source": "REIWA"
+        },
+        "vendorDiscount": {
+          "value": -2.5,
+          "score": 82,
+          "source": "REIWA"
+        },
+        "renterPercent": {
+          "value": 42,
+          "score": 58,
+          "source": "ABS Census"
+        },
+        "unitToHouseRatio": {
+          "value": 8,
+          "score": 88,
+          "source": "ABS"
+        },
+        "auctionClearance": {
+          "value": null,
+          "score": null,
+          "source": "N/A Perth"
+        }
+      },
+      "compositeScore": 81,
+      "qual": {
+        "infrastructure": [
+          {
+            "name": "Metronet Byford Rail Extension (Armadale Line)",
+            "type": "transport",
+            "status": "completed",
+            "expectedCompletion": "2025-10",
+            "delayMonths": 6,
+            "investmentAud": 1200000000,
+            "impactRating": "high",
+            "source": "metronet.wa.gov.au",
+            "notes": "COMPLETED Oct 2025. New elevated Armadale station, 9 level crossings removed, 8km new dual track to Byford. Major transformation \u2014 expect continued price uplift."
+          }
+        ],
+        "crime": {
+          "overallRating": "moderate",
+          "trend": "improving",
+          "notableTypes": [
+            "property crime above state avg but declining",
+            "some anti-social behaviour"
+          ],
+          "comparisonToState": "above-average",
+          "source": "WA Police 2025"
+        },
+        "publicHousing": {
+          "existingNearby": true,
+          "plannedNearby": false,
+          "concentration": "moderate",
+          "details": "Some public housing in southern Armadale streets. Concentration declining.",
+          "source": "Dept Communities"
+        },
+        "schools": {
+          "primary": [
+            {
+              "name": "Armadale Primary",
+              "rating": "Average",
+              "distance": "1km"
+            }
+          ],
+          "secondary": [
+            {
+              "name": "Cecil Andrews College",
+              "rating": "Below average",
+              "distance": "2km"
+            }
+          ],
+          "overallQuality": "average",
+          "source": "MySchool"
+        },
+        "hazards": {
+          "flood": {
+            "risk": "low",
+            "zone": null,
+            "source": "WAPC"
+          },
+          "bushfire": {
+            "risk": "medium",
+            "zone": "BAL-12.5 eastern hills",
+            "source": "DFES"
+          },
+          "coastal": {
+            "risk": "n/a",
+            "source": "inland"
+          }
+        },
+        "zoning": {
+          "currentZoning": "R20/R40 mix",
+          "densificationPotential": "medium",
+          "recentRezonings": "Transit-oriented dev around new station",
+          "councilPlan": "armadale.wa.gov.au",
+          "source": "City of Armadale"
+        },
+        "developmentApps": [
+          {
+            "description": "Armadale station precinct TOD",
+            "scale": "large",
+            "impact": "positive",
+            "source": "DA"
+          }
+        ],
+        "demographics": {
+          "medianAge": 33,
+          "trend": "young families",
+          "householdType": "mixed families + single parent",
+          "irsad": 880,
+          "source": "ABS Census 2021"
+        },
+        "rentalDemand": {
+          "tenantTypes": "FIFO, young families, essential workers",
+          "marketDepth": "deep",
+          "source": "REIWA"
+        },
+        "connectivity": {
+          "nbn": "FTTP",
+          "publicTransport": "Armadale train (new elevated station)",
+          "cbdDistance": "28km",
+          "source": "NBN/Transperth"
+        },
+        "noise": {
+          "flightPath": false,
+          "highway": false,
+          "industrial": false,
+          "notes": "Quieter since level crossings removed"
+        }
+      },
+      "forward": {
+        "cycleStage": "EARLY-MID",
+        "bear": 20,
+        "base": 38,
+        "bull": 55,
+        "horizon": "5yr to 2031",
+        "drivers": [
+          "Metronet COMPLETED \u2014 price catalyst unfolding",
+          "Sub-$600k entry",
+          "TOD rezoning potential",
+          "LGA growth +23.7% 2025",
+          "Strong yield 5.26%"
+        ],
+        "risks": [
+          "Higher crime (improving)",
+          "IRSAD 880 below preferred",
+          "Bushfire zone eastern hills",
+          "High renter % (42%) = investor-heavy"
+        ],
+        "analystViews": [
+          "htag: LGA +23.7% 2025",
+          "PropTrack: Armadale outperforming",
+          "REIWA: TOD-driven upside"
+        ],
+        "consensus": "Strong early-cycle with Metronet catalyst just activating. Highest growth upside in Perth mid-ring. Base case 35-40% 5yr."
+      },
+      "verdict": "BUY",
+      "topSignals": [
+        "Metronet JUST COMPLETED Oct 2025",
+        "Median only $600k",
+        "Yield 5.26%",
+        "LGA +23.7% growth",
+        "DOM 11 days"
+      ],
+      "watchPoints": [
+        "Crime moderate (improving)",
+        "IRSAD 880 lower",
+        "Bushfire risk eastern areas",
+        "Public housing pockets"
+      ],
+      "stampDutyNote": "At $600k: stamp ~$18k, total ~$72k \u2014 huge cash buffer remains",
+      "riskFilter": {
+        "supplyRisk": {
+          "rating": "LOW",
+          "reason": "Established suburb. Only infill development (small apartment buildings near station). No greenfield.",
+          "source": "City of Armadale + DevelopmentWA"
+        },
+        "demandRisk": {
+          "rating": "LOW",
+          "reason": "Perth metro diversified",
+          "source": "ABS"
+        },
+        "infrastructureRisk": {
+          "rating": "LOW",
+          "reason": "Metronet Byford COMPLETE Oct 2025 \u2014 catalyst actively unfolding",
+          "source": "metronet.wa.gov.au"
+        },
+        "cycleRisk": {
+          "rating": "LOW",
+          "reason": "Sustainable 13% growth, still early in cycle",
+          "source": "REIWA"
+        },
+        "liquidityRisk": {
+          "rating": "LOW",
+          "reason": "Deep Perth metro market",
+          "source": "REIWA"
+        },
+        "overallRisk": "LOW",
+        "downgradeVerdict": false,
+        "riskNote": "LOW all dimensions. Established suburb + completed Metronet + Perth supply shortage = strongest WA pick."
+      }
+    },
+    {
+      "name": "Mandurah",
+      "state": "WA",
+      "postcode": "6210",
+      "lga": "City of Mandurah",
+      "region": "WA \u2014 Perth mid/outer ring",
+      "medianHouse": 575000,
+      "medianRentWeekly": 550,
+      "quant": {
+        "dom": {
+          "value": 18,
+          "score": 85,
+          "source": "htag.com.au"
+        },
+        "vacancy": {
+          "value": 1.15,
+          "score": 82,
+          "source": "SQM Feb 2026"
+        },
+        "yield": {
+          "value": 5.01,
+          "score": 78,
+          "source": "htag.com.au"
+        },
+        "priceGrowth": {
+          "value": 23.66,
+          "score": 97,
+          "source": "htag.com.au"
+        },
+        "supplyOnMarket": {
+          "value": 0.34,
+          "score": 86,
+          "source": "REIWA"
+        },
+        "vendorDiscount": {
+          "value": -1.5,
+          "score": 75,
+          "source": "REIWA"
+        },
+        "renterPercent": {
+          "value": 30,
+          "score": 80,
+          "source": "ABS Census"
+        },
+        "unitToHouseRatio": {
+          "value": 15,
+          "score": 75,
+          "source": "ABS"
+        },
+        "auctionClearance": {
+          "value": null,
+          "score": null,
+          "source": "N/A Perth"
+        }
+      },
+      "compositeScore": 85,
+      "qual": {
+        "infrastructure": [
+          {
+            "name": "Mandurah Train Line (existing)",
+            "type": "transport",
+            "status": "completed",
+            "expectedCompletion": "2007",
+            "delayMonths": null,
+            "investmentAud": null,
+            "impactRating": "high",
+            "source": "PTA WA",
+            "notes": "70min to Perth CBD. Transperth Mandurah Line terminus."
+          },
+          {
+            "name": "Peel Business Park",
+            "type": "commercial",
+            "status": "under-construction",
+            "expectedCompletion": "2027",
+            "delayMonths": null,
+            "investmentAud": 500000000,
+            "impactRating": "medium",
+            "source": "peeldevelopment.wa.gov.au",
+            "notes": "Major employment precinct creating local jobs."
+          }
+        ],
+        "crime": {
+          "overallRating": "low",
+          "trend": "stable",
+          "notableTypes": [
+            "below state average"
+          ],
+          "comparisonToState": "below-average",
+          "source": "WA Police"
+        },
+        "publicHousing": {
+          "existingNearby": false,
+          "plannedNearby": false,
+          "concentration": "low",
+          "details": "Limited public housing footprint",
+          "source": "Dept Communities"
+        },
+        "schools": {
+          "primary": [
+            {
+              "name": "Mandurah Primary",
+              "rating": "Average",
+              "distance": "1km"
+            }
+          ],
+          "secondary": [
+            {
+              "name": "Mandurah Baptist College",
+              "rating": "Good",
+              "distance": "3km"
+            }
+          ],
+          "overallQuality": "average",
+          "source": "MySchool"
+        },
+        "hazards": {
+          "flood": {
+            "risk": "medium",
+            "zone": "Estuary flood zones in coastal streets",
+            "source": "WAPC"
+          },
+          "bushfire": {
+            "risk": "low",
+            "zone": null,
+            "source": "DFES"
+          },
+          "coastal": {
+            "risk": "medium",
+            "source": "Coastal erosion on western beaches"
+          }
+        },
+        "zoning": {
+          "currentZoning": "R20/R30 mix",
+          "densificationPotential": "medium",
+          "recentRezonings": null,
+          "councilPlan": "mandurah.wa.gov.au",
+          "source": "City of Mandurah"
+        },
+        "developmentApps": [
+          {
+            "description": "Peel Business Park industrial expansion",
+            "scale": "large",
+            "impact": "positive",
+            "source": "DA"
+          }
+        ],
+        "demographics": {
+          "medianAge": 45,
+          "trend": "aging but young families growing",
+          "householdType": "retirees + families mix",
+          "irsad": 935,
+          "source": "ABS Census 2021"
+        },
+        "rentalDemand": {
+          "tenantTypes": "Retirees downsizing, young families, workers",
+          "marketDepth": "deep 318 sales/yr",
+          "source": "REIWA"
+        },
+        "connectivity": {
+          "nbn": "FTTP",
+          "publicTransport": "Mandurah train (terminus of line) + local bus",
+          "cbdDistance": "72km",
+          "source": "NBN/Transperth"
+        },
+        "noise": {
+          "flightPath": false,
+          "highway": false,
+          "industrial": false,
+          "notes": "Coastal lifestyle, low noise"
+        }
+      },
+      "forward": {
+        "cycleStage": "MID",
+        "bear": 15,
+        "base": 32,
+        "bull": 48,
+        "horizon": "5yr to 2031",
+        "drivers": [
+          "+23.66% recent growth momentum",
+          "Sub-$600k entry",
+          "Peel Business Park jobs",
+          "Train to Perth",
+          "Retiree appeal"
+        ],
+        "risks": [
+          "Aging demographic",
+          "Distance to Perth CBD (72km)",
+          "Coastal flood zones in some streets",
+          "Growth may decelerate after spike"
+        ],
+        "analystViews": [
+          "htag: +23.7% annual",
+          "REIWA: Mandurah top performer",
+          "OpenAgent: continued strength"
+        ],
+        "consensus": "High-growth regional-metro play. Strong momentum but watch for moderation. Base case 30% 5yr."
+      },
+      "verdict": "BUY",
+      "topSignals": [
+        "Growth +23.66%",
+        "Sub-$600k budget",
+        "Yield 5.01%",
+        "Stock on market 0.34%",
+        "Low crime"
+      ],
+      "watchPoints": [
+        "Aging demographic",
+        "72km to CBD",
+        "Estuary flood zones \u2014 check specific street",
+        "Growth may moderate"
+      ],
+      "stampDutyNote": "At $575k: stamp ~$16k, total ~$68k \u2014 excellent buffer",
+      "riskFilter": {
+        "supplyRisk": {
+          "rating": "LOW",
+          "reason": "Established coastal regional. Limited new supply, mostly infill.",
+          "source": "City of Mandurah"
+        },
+        "demandRisk": {
+          "rating": "MEDIUM",
+          "reason": "Retiree-heavy but young families growing. Peel Business Park adds diversification.",
+          "source": "ABS"
+        },
+        "infrastructureRisk": {
+          "rating": "LOW",
+          "reason": "Train station operational, Peel Business Park under construction",
+          "source": ""
+        },
+        "cycleRisk": {
+          "rating": "HIGH",
+          "reason": "Post +23.66% spike. Significant moderation expected.",
+          "source": ""
+        },
+        "liquidityRisk": {
+          "rating": "LOW",
+          "reason": "318 sales/yr",
+          "source": ""
+        },
+        "overallRisk": "MEDIUM",
+        "downgradeVerdict": false,
+        "riskNote": "Post-spike momentum risk. Decent fundamentals but expect growth to moderate to 5-10% after 23% surge."
+      }
+    },
+    {
+      "name": "Gawler",
+      "state": "SA",
+      "postcode": "5118",
+      "lga": "Town of Gawler",
+      "region": "SA \u2014 Adelaide north/south",
+      "medianHouse": 637500,
+      "medianRentWeekly": 485,
+      "quant": {
+        "dom": {
+          "value": 25,
+          "score": 72,
+          "source": "htag.com.au"
+        },
+        "vacancy": {
+          "value": 1.3,
+          "score": 78,
+          "source": "SQM Feb 2026"
+        },
+        "yield": {
+          "value": 4.84,
+          "score": 72,
+          "source": "htag.com.au"
+        },
+        "priceGrowth": {
+          "value": 13.9,
+          "score": 82,
+          "source": "htag.com.au CAGR"
+        },
+        "supplyOnMarket": {
+          "value": 0.5,
+          "score": 75,
+          "source": "Cotality"
+        },
+        "vendorDiscount": {
+          "value": -1.0,
+          "score": 68,
+          "source": "Cotality"
+        },
+        "renterPercent": {
+          "value": 28,
+          "score": 85,
+          "source": "ABS Census"
+        },
+        "unitToHouseRatio": {
+          "value": 12,
+          "score": 80,
+          "source": "ABS"
+        },
+        "auctionClearance": {
+          "value": 72,
+          "score": 82,
+          "source": "Domain Apr 2026"
+        }
+      },
+      "compositeScore": 79,
+      "qual": {
+        "infrastructure": [
+          {
+            "name": "Northern Adelaide Urban Growth (43,300 new homes Two Wells/Roseworthy)",
+            "type": "mixed",
+            "status": "approved",
+            "expectedCompletion": "2030+",
+            "delayMonths": null,
+            "investmentAud": null,
+            "impactRating": "high",
+            "source": "SA Planning Portal",
+            "notes": "Urban growth boundary removed. 43,300 dwellings planned. Massive population inflow expected."
+          },
+          {
+            "name": "Gawler Line Electrification",
+            "type": "transport",
+            "status": "completed",
+            "expectedCompletion": "2024",
+            "delayMonths": null,
+            "investmentAud": 860000000,
+            "impactRating": "high",
+            "source": "dit.sa.gov.au",
+            "notes": "Already delivered \u2014 electric trains, faster commute to Adelaide CBD (~50min)."
+          }
+        ],
+        "crime": {
+          "overallRating": "moderate",
+          "trend": "stable",
+          "notableTypes": [
+            "property crime average",
+            "low violent crime"
+          ],
+          "comparisonToState": "average",
+          "source": "SAPOL 2025"
+        },
+        "publicHousing": {
+          "existingNearby": true,
+          "plannedNearby": false,
+          "concentration": "low",
+          "details": "Some older public housing but not dominant",
+          "source": "SA Housing Trust"
+        },
+        "schools": {
+          "primary": [
+            {
+              "name": "Gawler Primary",
+              "rating": "Average",
+              "distance": "1.5km"
+            }
+          ],
+          "secondary": [
+            {
+              "name": "Trinity College",
+              "rating": "Good",
+              "distance": "2km"
+            }
+          ],
+          "overallQuality": "good",
+          "source": "MySchool"
+        },
+        "hazards": {
+          "flood": {
+            "risk": "low",
+            "zone": "Gawler River corridor",
+            "source": "SA Planning"
+          },
+          "bushfire": {
+            "risk": "medium",
+            "zone": "Adelaide Hills fringe",
+            "source": "CFS"
+          },
+          "coastal": {
+            "risk": "n/a",
+            "source": "inland"
+          }
+        },
+        "zoning": {
+          "currentZoning": "Suburban Neighbourhood",
+          "densificationPotential": "medium",
+          "recentRezonings": "Urban growth boundary removal",
+          "councilPlan": "gawler.sa.gov.au",
+          "source": "Town of Gawler"
+        },
+        "developmentApps": [
+          {
+            "description": "Concordia master-planned development",
+            "scale": "large",
+            "impact": "positive",
+            "source": "DA"
+          }
+        ],
+        "demographics": {
+          "medianAge": 38,
+          "trend": "growing young families",
+          "householdType": "families dominant",
+          "irsad": 950,
+          "source": "ABS Census 2021"
+        },
+        "rentalDemand": {
+          "tenantTypes": "Young families, commuters, locals",
+          "marketDepth": "deep 150+ sales/yr",
+          "source": "REISA"
+        },
+        "connectivity": {
+          "nbn": "FTTN/FTTC",
+          "publicTransport": "Gawler train (electrified), bus",
+          "cbdDistance": "42km",
+          "source": "NBN/Adelaide Metro"
+        },
+        "noise": {
+          "flightPath": false,
+          "highway": false,
+          "industrial": false,
+          "notes": "Quiet township feel"
+        }
+      },
+      "forward": {
+        "cycleStage": "EARLY-MID",
+        "bear": 15,
+        "base": 30,
+        "bull": 45,
+        "horizon": "5yr to 2031",
+        "drivers": [
+          "43,300 new homes = massive infrastructure",
+          "Electrified train line",
+          "Adelaide supply shortage",
+          "Still sub-$700k entry",
+          "13.9% CAGR trajectory"
+        ],
+        "risks": [
+          "Oversupply risk long-term from 43,300 homes",
+          "SA stamp duty higher",
+          "Bushfire fringe risk",
+          "Regional sentiment softening"
+        ],
+        "analystViews": [
+          "Aussie: SA +6-9% 2026",
+          "KPMG: Adelaide +8.2%",
+          "htag: Gawler CAGR 13.9%"
+        ],
+        "consensus": "Strong early-cycle play with massive infrastructure tailwind. Watch oversupply risk late-cycle. Base 28-32% 5yr."
+      },
+      "verdict": "BUY",
+      "topSignals": [
+        "Sub-$650k entry",
+        "Electrified train",
+        "43k new homes pipeline",
+        "+13.9% CAGR",
+        "Good schools"
+      ],
+      "watchPoints": [
+        "SA stamp duty bite",
+        "Oversupply risk 2030+",
+        "Bushfire fringe"
+      ],
+      "stampDutyNote": "At $637k: stamp ~$24k, total ~$95k \u2014 comfortable fit within $110k cash",
+      "riskFilter": {
+        "supplyRisk": {
+          "rating": "HIGH",
+          "reason": "Active greenfield: Springwood Estate, Woodvale Estate (45 lots Stage 6), Fairview Rise PLUS 350 homes approved at Gawler Belt. 43,800 homes unlocked within 5km at Two Wells/Roseworthy.",
+          "source": "https://www.premier.sa.gov.au/media-releases/news-archive/rezoning-for-350-homes-near-gawler"
+        },
+        "demandRisk": {
+          "rating": "MEDIUM",
+          "reason": "Northern Adelaide employment growing (defence, healthcare) but still commuter-dependent",
+          "source": "ABS labour force"
+        },
+        "infrastructureRisk": {
+          "rating": "LOW",
+          "reason": "Gawler Line electrification COMPLETE. Northern Connector COMPLETE.",
+          "source": "dit.sa.gov.au"
+        },
+        "cycleRisk": {
+          "rating": "HIGH",
+          "reason": "Post +13.9% CAGR spike. Incoming 43,800 homes = major supply correction risk 2027-2030.",
+          "source": "Cotality + SA Gov"
+        },
+        "liquidityRisk": {
+          "rating": "LOW",
+          "reason": "150+ sales/yr, deep market",
+          "source": "REISA"
+        },
+        "overallRisk": "HIGH",
+        "downgradeVerdict": true,
+        "riskNote": "MAJOR SUPPLY RISK: 43,800 new dwellings being built within 5km as the urban growth boundary has been removed. Growth of 13.9% in past year is unlikely to continue \u2014 post-spike correction highly likely 2027-2030. Only pursue if you have exceptional value-add (e.g. genuinely subdividable block in R20+ zoning)."
+      }
+    },
+    {
+      "name": "Salisbury Downs",
+      "state": "SA",
+      "postcode": "5108",
+      "lga": "City of Salisbury",
+      "region": "SA \u2014 Adelaide north/south",
+      "medianHouse": 680000,
+      "medianRentWeekly": 550,
+      "quant": {
+        "dom": {
+          "value": 27,
+          "score": 70,
+          "source": "htag.com.au"
+        },
+        "vacancy": {
+          "value": 0.78,
+          "score": 92,
+          "source": "SQM Feb 2026"
+        },
+        "yield": {
+          "value": 4.47,
+          "score": 62,
+          "source": "htag.com.au"
+        },
+        "priceGrowth": {
+          "value": 15.7,
+          "score": 85,
+          "source": "Cotality SA3"
+        },
+        "supplyOnMarket": {
+          "value": 0.6,
+          "score": 70,
+          "source": "Cotality"
+        },
+        "vendorDiscount": {
+          "value": -0.5,
+          "score": 60,
+          "source": "Cotality"
+        },
+        "renterPercent": {
+          "value": 38,
+          "score": 62,
+          "source": "ABS Census"
+        },
+        "unitToHouseRatio": {
+          "value": 18,
+          "score": 72,
+          "source": "ABS"
+        },
+        "auctionClearance": {
+          "value": 68,
+          "score": 72,
+          "source": "Domain"
+        }
+      },
+      "compositeScore": 74,
+      "qual": {
+        "infrastructure": [
+          {
+            "name": "Gawler Line Electrification (Salisbury station)",
+            "type": "transport",
+            "status": "completed",
+            "expectedCompletion": "2024",
+            "delayMonths": null,
+            "investmentAud": 860000000,
+            "impactRating": "high",
+            "source": "dit.sa.gov.au",
+            "notes": "Electric trains directly serve Salisbury station. Commute improvement."
+          },
+          {
+            "name": "Edinburgh Parks Defence/Industrial Precinct",
+            "type": "commercial",
+            "status": "under-construction",
+            "expectedCompletion": "ongoing",
+            "delayMonths": null,
+            "investmentAud": 2000000000,
+            "impactRating": "medium",
+            "source": "SA Gov",
+            "notes": "Major defence industry precinct driving employment in northern Adelaide."
+          }
+        ],
+        "crime": {
+          "overallRating": "HIGH",
+          "trend": "improving",
+          "notableTypes": [
+            "13,323 incidents per 100k population",
+            "property crime well above state avg",
+            "safer than only 4% of AU suburbs"
+          ],
+          "comparisonToState": "well above-average",
+          "source": "SAPOL 2024"
+        },
+        "publicHousing": {
+          "existingNearby": true,
+          "plannedNearby": false,
+          "concentration": "moderate",
+          "details": "City of Salisbury historically higher public housing concentration",
+          "source": "SA Housing Trust"
+        },
+        "schools": {
+          "primary": [
+            {
+              "name": "Salisbury Downs Primary",
+              "rating": "Below average",
+              "distance": "1km"
+            }
+          ],
+          "secondary": [
+            {
+              "name": "Salisbury High",
+              "rating": "Below average",
+              "distance": "2km"
+            }
+          ],
+          "overallQuality": "below-average",
+          "source": "MySchool"
+        },
+        "hazards": {
+          "flood": {
+            "risk": "low",
+            "zone": null,
+            "source": "SA Planning"
+          },
+          "bushfire": {
+            "risk": "low",
+            "zone": null,
+            "source": "CFS"
+          },
+          "coastal": {
+            "risk": "n/a",
+            "source": "inland"
+          }
+        },
+        "zoning": {
+          "currentZoning": "General Neighbourhood",
+          "densificationPotential": "medium",
+          "recentRezonings": null,
+          "councilPlan": "salisbury.sa.gov.au",
+          "source": "City of Salisbury"
+        },
+        "developmentApps": [],
+        "demographics": {
+          "medianAge": 37,
+          "trend": "stable",
+          "householdType": "mixed",
+          "irsad": 820,
+          "source": "ABS Census 2021"
+        },
+        "rentalDemand": {
+          "tenantTypes": "Budget renters, essential workers",
+          "marketDepth": "deep",
+          "source": "REISA"
+        },
+        "connectivity": {
+          "nbn": "FTTN",
+          "publicTransport": "Salisbury train (electrified) + bus",
+          "cbdDistance": "22km",
+          "source": "NBN/Metro"
+        },
+        "noise": {
+          "flightPath": false,
+          "highway": false,
+          "industrial": true,
+          "notes": "Edinburgh Parks industrial nearby"
+        }
+      },
+      "forward": {
+        "cycleStage": "MID",
+        "bear": 10,
+        "base": 22,
+        "bull": 35,
+        "horizon": "5yr to 2031",
+        "drivers": [
+          "SA3 growth +15.7%",
+          "Electrified train",
+          "Affordability",
+          "Defence precinct jobs"
+        ],
+        "risks": [
+          "HIGH CRIME \u2014 significant concern",
+          "IRSAD 820 low",
+          "Below avg schools",
+          "Moderate public housing",
+          "Vacancy rising"
+        ],
+        "analystViews": [
+          "Cotality: Salisbury SA3 +15.7%",
+          "KPMG: Adelaide +8.2%"
+        ],
+        "consensus": "Growth exists but crime + IRSAD concerns cap upside. Better Adelaide alternatives available. Base case 20-25% 5yr."
+      },
+      "verdict": "WATCH",
+      "topSignals": [
+        "Vacancy 0.78% tight",
+        "+15.7% SA3 growth",
+        "Sub-$700k entry",
+        "Electrified train"
+      ],
+      "watchPoints": [
+        "HIGH CRIME 13,323/100k",
+        "IRSAD 820",
+        "Below-avg schools",
+        "Moderate public housing concentration"
+      ],
+      "stampDutyNote": "At $680k: stamp ~$26k, total ~$97k \u2014 fits but risks outweigh savings. Consider Gawler instead.",
+      "riskFilter": {
+        "supplyRisk": {
+          "rating": "MEDIUM",
+          "reason": "Smithfield/Elizabeth corridor has 4.15% BA Ratio (oversupply warning)",
+          "source": "htag.com.au"
+        },
+        "demandRisk": {
+          "rating": "MEDIUM",
+          "reason": "Edinburgh Parks defence jobs mitigate, but IRSAD 820 = lower socio-economic",
+          "source": "ABS"
+        },
+        "infrastructureRisk": {
+          "rating": "LOW",
+          "reason": "Electrified train delivered",
+          "source": "dit.sa.gov.au"
+        },
+        "cycleRisk": {
+          "rating": "MEDIUM",
+          "reason": "Post 15.7% SA3 growth spike, moderation expected",
+          "source": "Cotality"
+        },
+        "liquidityRisk": {
+          "rating": "LOW",
+          "reason": "Deep market",
+          "source": "REISA"
+        },
+        "overallRisk": "MEDIUM-HIGH",
+        "downgradeVerdict": true,
+        "riskNote": "MEDIUM supply + HIGH crime (already flagged) + IRSAD 820 = better Adelaide alternatives exist. Do not target this suburb."
+      }
+    },
+    {
+      "name": "Geraldton",
+      "state": "WA",
+      "postcode": "6530",
+      "lga": "City of Greater Geraldton",
+      "region": "WA \u2014 Geraldton",
+      "medianHouse": 473000,
+      "medianRentWeekly": 520,
+      "quant": {
+        "dom": {
+          "value": 22,
+          "score": 78,
+          "source": "htag.com.au"
+        },
+        "vacancy": {
+          "value": 0.9,
+          "score": 92,
+          "source": "SQM Feb 2026"
+        },
+        "yield": {
+          "value": 5.72,
+          "score": 88,
+          "source": "htag.com.au"
+        },
+        "priceGrowth": {
+          "value": 24.47,
+          "score": 96,
+          "source": "htag.com.au"
+        },
+        "supplyOnMarket": {
+          "value": 0.5,
+          "score": 75,
+          "source": "REIWA"
+        },
+        "vendorDiscount": {
+          "value": -0.5,
+          "score": 62,
+          "source": "REIWA"
+        },
+        "renterPercent": {
+          "value": 32,
+          "score": 75,
+          "source": "ABS Census"
+        },
+        "unitToHouseRatio": {
+          "value": 10,
+          "score": 85,
+          "source": "ABS"
+        },
+        "auctionClearance": {
+          "value": null,
+          "score": null,
+          "source": "N/A regional"
+        }
+      },
+      "compositeScore": 84,
+      "qual": {
+        "infrastructure": [
+          {
+            "name": "Oakajee Strategic Industrial Area (green hydrogen)",
+            "type": "energy",
+            "status": "proposed",
+            "expectedCompletion": "2030+",
+            "delayMonths": null,
+            "investmentAud": 3000000000,
+            "impactRating": "high",
+            "source": "WA Gov",
+            "notes": "Major green hydrogen + renewables precinct. Long-term catalyst."
+          },
+          {
+            "name": "Mid West Port Expansion",
+            "type": "commercial",
+            "status": "under-construction",
+            "expectedCompletion": "2027",
+            "delayMonths": null,
+            "investmentAud": 350000000,
+            "impactRating": "medium",
+            "source": "MWPA",
+            "notes": "Iron ore export capacity expansion."
+          }
+        ],
+        "crime": {
+          "overallRating": "moderate",
+          "trend": "stable",
+          "notableTypes": [
+            "regional crime rates average"
+          ],
+          "comparisonToState": "average",
+          "source": "WA Police"
+        },
+        "publicHousing": {
+          "existingNearby": true,
+          "plannedNearby": false,
+          "concentration": "low",
+          "details": "Regional housing stock mixed",
+          "source": "Dept Communities"
+        },
+        "schools": {
+          "primary": [
+            {
+              "name": "Geraldton Primary",
+              "rating": "Average",
+              "distance": "1km"
+            }
+          ],
+          "secondary": [
+            {
+              "name": "Geraldton Grammar",
+              "rating": "Good",
+              "distance": "3km"
+            }
+          ],
+          "overallQuality": "average",
+          "source": "MySchool"
+        },
+        "hazards": {
+          "flood": {
+            "risk": "low",
+            "zone": null,
+            "source": "WAPC"
+          },
+          "bushfire": {
+            "risk": "low",
+            "zone": null,
+            "source": "DFES"
+          },
+          "coastal": {
+            "risk": "medium",
+            "source": "Coastal erosion on western strip"
+          }
+        },
+        "zoning": {
+          "currentZoning": "R20/R30",
+          "densificationPotential": "low",
+          "recentRezonings": null,
+          "councilPlan": "cgg.wa.gov.au",
+          "source": "City of Greater Geraldton"
+        },
+        "developmentApps": [
+          {
+            "description": "Oakajee precinct DAs",
+            "scale": "large",
+            "impact": "positive",
+            "source": "DA"
+          }
+        ],
+        "demographics": {
+          "medianAge": 38,
+          "trend": "stable",
+          "householdType": "mixed",
+          "irsad": 930,
+          "source": "ABS Census 2021"
+        },
+        "rentalDemand": {
+          "tenantTypes": "Mining/port workers, FIFO, locals",
+          "marketDepth": "medium 100+ sales/yr",
+          "source": "REIWA"
+        },
+        "connectivity": {
+          "nbn": "Fixed wireless + FTTN",
+          "publicTransport": "Local bus only",
+          "cbdDistance": "424km from Perth",
+          "source": "NBN/Transregional"
+        },
+        "noise": {
+          "flightPath": false,
+          "highway": false,
+          "industrial": true,
+          "notes": "Port and industrial areas on western edge"
+        }
+      },
+      "forward": {
+        "cycleStage": "EARLY",
+        "bear": 10,
+        "base": 28,
+        "bull": 50,
+        "horizon": "5yr to 2031",
+        "drivers": [
+          "+24.47% recent growth",
+          "Yield 5.72%",
+          "Sub-$500k entry",
+          "Oakajee green hydrogen",
+          "Port expansion"
+        ],
+        "risks": [
+          "Regional liquidity \u2014 small buyer pool",
+          "Single-industry sensitivity",
+          "424km from Perth",
+          "Mining cycle dependent"
+        ],
+        "analystViews": [
+          "OpenAgent: 15-20% 2026 forecast",
+          "Cotality: WA regional surge continues",
+          "htag: 12.29% 10-yr CAGR"
+        ],
+        "consensus": "High-growth regional play with excellent fundamentals. Regional risk is main concern. Base case 25-35% 5yr."
+      },
+      "verdict": "BUY",
+      "topSignals": [
+        "Median $473k",
+        "Growth +24.47%",
+        "Yield 5.72%",
+        "Oakajee catalyst",
+        "Vacancy sub-1%"
+      ],
+      "watchPoints": [
+        "424km from Perth \u2014 regional liquidity",
+        "Single industry",
+        "Small buyer pool on exit",
+        "Coastal erosion west"
+      ],
+      "stampDutyNote": "At $473k: stamp ~$14k, total ~$58k \u2014 massive cash buffer. Can afford building inspection risk.",
+      "riskFilter": {
+        "supplyRisk": {
+          "rating": "LOW",
+          "reason": "Regional coastal, limited new supply",
+          "source": ""
+        },
+        "demandRisk": {
+          "rating": "HIGH",
+          "reason": "Mining + port + agriculture. Regional single-industry cluster.",
+          "source": "ABS"
+        },
+        "infrastructureRisk": {
+          "rating": "MEDIUM",
+          "reason": "Oakajee green hydrogen is PROPOSED (not under construction) \u2014 may not deliver",
+          "source": "WA Gov"
+        },
+        "cycleRisk": {
+          "rating": "HIGH",
+          "reason": "Post +24.47% spike",
+          "source": ""
+        },
+        "liquidityRisk": {
+          "rating": "MEDIUM",
+          "reason": "100+ sales/yr regional depth",
+          "source": ""
+        },
+        "overallRisk": "MEDIUM-HIGH",
+        "downgradeVerdict": true,
+        "riskNote": "Regional speculation \u2014 Oakajee not confirmed. Post-24% spike. Smaller buyer pool on exit."
+      }
+    },
+    {
+      "name": "Albany",
+      "state": "WA",
+      "postcode": "6330",
+      "lga": "City of Albany",
+      "region": "WA \u2014 Albany",
+      "medianHouse": 550000,
+      "medianRentWeekly": 530,
+      "quant": {
+        "dom": {
+          "value": 25,
+          "score": 72,
+          "source": "htag.com.au"
+        },
+        "vacancy": {
+          "value": 0.8,
+          "score": 93,
+          "source": "SQM Feb 2026"
+        },
+        "yield": {
+          "value": 5.01,
+          "score": 78,
+          "source": "htag.com.au"
+        },
+        "priceGrowth": {
+          "value": 23.3,
+          "score": 94,
+          "source": "Cotality 2025"
+        },
+        "supplyOnMarket": {
+          "value": 0.55,
+          "score": 73,
+          "source": "REIWA"
+        },
+        "vendorDiscount": {
+          "value": -0.5,
+          "score": 62,
+          "source": "REIWA"
+        },
+        "renterPercent": {
+          "value": 28,
+          "score": 85,
+          "source": "ABS Census"
+        },
+        "unitToHouseRatio": {
+          "value": 8,
+          "score": 88,
+          "source": "ABS"
+        },
+        "auctionClearance": {
+          "value": null,
+          "score": null,
+          "source": "N/A regional"
+        }
+      },
+      "compositeScore": 83,
+      "qual": {
+        "infrastructure": [
+          {
+            "name": "Albany Ring Road (upgrade)",
+            "type": "road",
+            "status": "completed",
+            "expectedCompletion": "2024",
+            "delayMonths": null,
+            "investmentAud": 175000000,
+            "impactRating": "medium",
+            "source": "Main Roads WA",
+            "notes": "Freight + tourism infrastructure improvement."
+          },
+          {
+            "name": "Albany Health Campus expansion",
+            "type": "hospital",
+            "status": "under-construction",
+            "expectedCompletion": "2027",
+            "delayMonths": null,
+            "investmentAud": 180000000,
+            "impactRating": "medium",
+            "source": "WA Health",
+            "notes": "Regional healthcare hub expansion creates local jobs."
+          }
+        ],
+        "crime": {
+          "overallRating": "low",
+          "trend": "stable",
+          "notableTypes": [
+            "below state average"
+          ],
+          "comparisonToState": "below-average",
+          "source": "WA Police"
+        },
+        "publicHousing": {
+          "existingNearby": false,
+          "plannedNearby": false,
+          "concentration": "low",
+          "details": "Low concentration",
+          "source": "Dept Communities"
+        },
+        "schools": {
+          "primary": [
+            {
+              "name": "Albany Primary",
+              "rating": "Good",
+              "distance": "1km"
+            }
+          ],
+          "secondary": [
+            {
+              "name": "Great Southern Grammar",
+              "rating": "Good",
+              "distance": "4km"
+            }
+          ],
+          "overallQuality": "good",
+          "source": "MySchool"
+        },
+        "hazards": {
+          "flood": {
+            "risk": "low",
+            "zone": null,
+            "source": "WAPC"
+          },
+          "bushfire": {
+            "risk": "medium",
+            "zone": "Surrounding bushland",
+            "source": "DFES"
+          },
+          "coastal": {
+            "risk": "low",
+            "source": "Sheltered harbour"
+          }
+        },
+        "zoning": {
+          "currentZoning": "R20/R25",
+          "densificationPotential": "low",
+          "recentRezonings": null,
+          "councilPlan": "albany.wa.gov.au",
+          "source": "City of Albany"
+        },
+        "developmentApps": [],
+        "demographics": {
+          "medianAge": 42,
+          "trend": "lifestyle migration (tree-change)",
+          "householdType": "families + retirees",
+          "irsad": 980,
+          "source": "ABS Census 2021"
+        },
+        "rentalDemand": {
+          "tenantTypes": "Healthcare workers, locals, lifestyle tenants",
+          "marketDepth": "medium",
+          "source": "REIWA"
+        },
+        "connectivity": {
+          "nbn": "FTTN/FTTC",
+          "publicTransport": "Local bus",
+          "cbdDistance": "418km from Perth",
+          "source": "NBN"
+        },
+        "noise": {
+          "flightPath": false,
+          "highway": false,
+          "industrial": false,
+          "notes": "Coastal lifestyle"
+        }
+      },
+      "forward": {
+        "cycleStage": "MID",
+        "bear": 8,
+        "base": 22,
+        "bull": 40,
+        "horizon": "5yr to 2031",
+        "drivers": [
+          "+23.3% growth 2025",
+          "Diversified economy (healthcare, tourism, port, agriculture)",
+          "Lifestyle migration",
+          "Sub-$600k entry",
+          "Good schools"
+        ],
+        "risks": [
+          "After big 23% spike, moderation likely",
+          "Regional liquidity",
+          "418km from Perth",
+          "Bushfire exposure"
+        ],
+        "analystViews": [
+          "Cotality: Albany top WA regional 2025",
+          "OpenAgent: 15-20% 2026"
+        ],
+        "consensus": "Diversified regional with lifestyle appeal. More resilient than pure mining towns. Base case 22-28% 5yr."
+      },
+      "verdict": "BUY",
+      "topSignals": [
+        "Median $550k",
+        "Diversified economy",
+        "Lifestyle appeal",
+        "Vacancy 0.8%",
+        "Good schools"
+      ],
+      "watchPoints": [
+        "Post-spike moderation",
+        "418km from Perth",
+        "Bushfire fringe",
+        "Smaller growth upside vs Geraldton"
+      ],
+      "stampDutyNote": "At $550k: stamp ~$20k, total ~$75k \u2014 excellent cash buffer",
+      "riskFilter": {
+        "supplyRisk": {
+          "rating": "LOW",
+          "reason": "Established regional",
+          "source": ""
+        },
+        "demandRisk": {
+          "rating": "LOW",
+          "reason": "Diversified: healthcare, agriculture, tourism, port",
+          "source": "ABS"
+        },
+        "infrastructureRisk": {
+          "rating": "LOW",
+          "reason": "Ring Road complete, hospital expansion under construction",
+          "source": ""
+        },
+        "cycleRisk": {
+          "rating": "HIGH",
+          "reason": "Post +23.3% spike",
+          "source": ""
+        },
+        "liquidityRisk": {
+          "rating": "MEDIUM",
+          "reason": "Regional market",
+          "source": ""
+        },
+        "overallRisk": "MEDIUM",
+        "downgradeVerdict": false,
+        "riskNote": "Diversified regional is more resilient than Geraldton but post-spike moderation likely."
+      }
+    },
+    {
+      "name": "Melton",
+      "state": "VIC",
+      "postcode": "3337",
+      "lga": "City of Melton",
+      "region": "VIC \u2014 Melbourne outer",
+      "medianHouse": 510000,
+      "medianRentWeekly": 430,
+      "quant": {
+        "dom": {
+          "value": 35,
+          "score": 58,
+          "source": "Domain"
+        },
+        "vacancy": {
+          "value": 1.4,
+          "score": 78,
+          "source": "SQM"
+        },
+        "yield": {
+          "value": 4.38,
+          "score": 58,
+          "source": "Domain"
+        },
+        "priceGrowth": {
+          "value": 8.5,
+          "score": 68,
+          "source": "Domain"
+        },
+        "supplyOnMarket": {
+          "value": 0.9,
+          "score": 62,
+          "source": "Cotality"
+        },
+        "vendorDiscount": {
+          "value": -2.0,
+          "score": 78,
+          "source": "Cotality"
+        },
+        "renterPercent": {
+          "value": 32,
+          "score": 75,
+          "source": "ABS Census"
+        },
+        "unitToHouseRatio": {
+          "value": 10,
+          "score": 85,
+          "source": "ABS"
+        },
+        "auctionClearance": {
+          "value": 60,
+          "score": 68,
+          "source": "Domain"
+        }
+      },
+      "compositeScore": 68,
+      "qual": {
+        "infrastructure": [
+          {
+            "name": "Melton Rail Electrification",
+            "type": "transport",
+            "status": "proposed",
+            "expectedCompletion": "2030+",
+            "delayMonths": null,
+            "investmentAud": 3000000000,
+            "impactRating": "high",
+            "source": "dtp.vic.gov.au",
+            "notes": "Long-awaited upgrade. Currently diesel. Timeline uncertain \u2014 federal funding dependent."
+          },
+          {
+            "name": "Western Outer Metropolitan Freeway",
+            "type": "road",
+            "status": "planned",
+            "expectedCompletion": "2030+",
+            "delayMonths": null,
+            "investmentAud": null,
+            "impactRating": "medium",
+            "source": "dtp.vic.gov.au",
+            "notes": "Major freeway connecting outer west. Early planning."
+          }
+        ],
+        "crime": {
+          "overallRating": "moderate",
+          "trend": "stable",
+          "notableTypes": [
+            "property crime above Victoria avg",
+            "youth crime concerns"
+          ],
+          "comparisonToState": "above-average",
+          "source": "Victoria Police 2025"
+        },
+        "publicHousing": {
+          "existingNearby": false,
+          "plannedNearby": false,
+          "concentration": "low",
+          "details": "Low concentration in new estates",
+          "source": "Homes Victoria"
+        },
+        "schools": {
+          "primary": [
+            {
+              "name": "Melton Primary",
+              "rating": "Average",
+              "distance": "1km"
+            }
+          ],
+          "secondary": [
+            {
+              "name": "Melton Secondary",
+              "rating": "Average",
+              "distance": "2km"
+            }
+          ],
+          "overallQuality": "average",
+          "source": "MySchool"
+        },
+        "hazards": {
+          "flood": {
+            "risk": "low",
+            "zone": null,
+            "source": "VicPlan"
+          },
+          "bushfire": {
+            "risk": "low",
+            "zone": null,
+            "source": "CFA"
+          },
+          "coastal": {
+            "risk": "n/a",
+            "source": "inland"
+          }
+        },
+        "zoning": {
+          "currentZoning": "General Residential",
+          "densificationPotential": "medium",
+          "recentRezonings": null,
+          "councilPlan": "melton.vic.gov.au",
+          "source": "City of Melton"
+        },
+        "developmentApps": [],
+        "demographics": {
+          "medianAge": 32,
+          "trend": "fastest-growing LGA in VIC",
+          "householdType": "young families",
+          "irsad": 960,
+          "source": "ABS Census 2021"
+        },
+        "rentalDemand": {
+          "tenantTypes": "Young families, first home buyer renters",
+          "marketDepth": "deep",
+          "source": "REIV"
+        },
+        "connectivity": {
+          "nbn": "FTTP new estates",
+          "publicTransport": "Melton train (diesel), V/Line",
+          "cbdDistance": "37km",
+          "source": "NBN/PTV"
+        },
+        "noise": {
+          "flightPath": false,
+          "highway": true,
+          "industrial": false,
+          "notes": "Western Freeway proximity"
+        }
+      },
+      "forward": {
+        "cycleStage": "EARLY-MID",
+        "bear": 8,
+        "base": 18,
+        "bull": 30,
+        "horizon": "5yr to 2031",
+        "drivers": [
+          "Most affordable Melbourne entry",
+          "Fastest-growing VIC LGA",
+          "Population corridor",
+          "Rail upgrade possible"
+        ],
+        "risks": [
+          "VIC STAMP DUTY ~$21k on $510k = $85k total costs (tight but fits)",
+          "Melbourne lagging other capitals",
+          "Rail electrification still proposed",
+          "Higher vacancy vs WA/SA",
+          "Growth below WA significantly"
+        ],
+        "analystViews": [
+          "KPMG: Melbourne +6.6% 2026",
+          "Domain: +5-7% outer",
+          "PropTrack: Melton affordable entry"
+        ],
+        "consensus": "Affordable entry but Melbourne underperforming. VIC stamp duty bite. Base case 15-22% 5yr \u2014 well below Perth/Adelaide."
+      },
+      "verdict": "WATCH",
+      "topSignals": [
+        "Most affordable Melbourne entry",
+        "Young family demographics",
+        "Fastest-growing VIC LGA",
+        "Sub-$520k entry"
+      ],
+      "watchPoints": [
+        "VIC stamp duty punishes investors",
+        "Melbourne lagging capitals",
+        "Diesel train not electrified yet",
+        "Moderate crime",
+        "Growth < Perth/Adelaide"
+      ],
+      "stampDutyNote": "At $510k: VIC stamp ~$21k, total costs ~$83k \u2014 fits $110k. BUT growth ceiling lower than WA alternatives.",
+      "riskFilter": {
+        "supplyRisk": {
+          "rating": "HIGH",
+          "reason": "Melton is Victoria's fastest-growing LGA \u2014 massive greenfield release ongoing across Melton South, Kurunjang, Weir Views",
+          "source": "City of Melton"
+        },
+        "demandRisk": {
+          "rating": "MEDIUM",
+          "reason": "Commuter-dependent, VIC economy weaker than WA/QLD",
+          "source": ""
+        },
+        "infrastructureRisk": {
+          "rating": "HIGH",
+          "reason": "Melton rail electrification still PROPOSED (federal funding uncertain, 2030+)",
+          "source": "dtp.vic.gov.au"
+        },
+        "cycleRisk": {
+          "rating": "MEDIUM",
+          "reason": "Modest 8.5% growth, VIC market lagging",
+          "source": ""
+        },
+        "liquidityRisk": {
+          "rating": "LOW",
+          "reason": "Deep market",
+          "source": ""
+        },
+        "overallRisk": "HIGH",
+        "downgradeVerdict": true,
+        "riskNote": "HIGH supply (fastest-growing VIC LGA) + HIGH infra risk (rail not funded) + VIC stamp duty surcharge = avoid."
+      }
+    },
+    {
+      "name": "Mount Gambier",
+      "state": "SA",
+      "postcode": "5290",
+      "lga": "City of Mount Gambier",
+      "region": "SA \u2014 Mount Gambier",
+      "medianHouse": 530000,
+      "medianRentWeekly": 420,
+      "quant": {
+        "dom": {
+          "value": 32,
+          "score": 62,
+          "source": "htag.com.au"
+        },
+        "vacancy": {
+          "value": 1.1,
+          "score": 82,
+          "source": "SQM Feb 2026"
+        },
+        "yield": {
+          "value": 4.12,
+          "score": 56,
+          "source": "htag.com.au"
+        },
+        "priceGrowth": {
+          "value": 11.34,
+          "score": 78,
+          "source": "htag.com.au"
+        },
+        "supplyOnMarket": {
+          "value": 0.7,
+          "score": 65,
+          "source": "Cotality"
+        },
+        "vendorDiscount": {
+          "value": -1.0,
+          "score": 68,
+          "source": "Cotality"
+        },
+        "renterPercent": {
+          "value": 30,
+          "score": 80,
+          "source": "ABS Census"
+        },
+        "unitToHouseRatio": {
+          "value": 8,
+          "score": 88,
+          "source": "ABS"
+        },
+        "auctionClearance": {
+          "value": null,
+          "score": null,
+          "source": "N/A regional"
+        }
+      },
+      "compositeScore": 70,
+      "qual": {
+        "infrastructure": [
+          {
+            "name": "Mount Gambier Regional Hospital upgrade",
+            "type": "hospital",
+            "status": "under-construction",
+            "expectedCompletion": "2026",
+            "delayMonths": null,
+            "investmentAud": 80000000,
+            "impactRating": "medium",
+            "source": "SA Health",
+            "notes": "Regional hospital expansion creates jobs."
+          }
+        ],
+        "crime": {
+          "overallRating": "low",
+          "trend": "stable",
+          "notableTypes": [
+            "below state avg"
+          ],
+          "comparisonToState": "below-average",
+          "source": "SAPOL"
+        },
+        "publicHousing": {
+          "existingNearby": true,
+          "plannedNearby": false,
+          "concentration": "low",
+          "details": "Typical regional mix",
+          "source": "SA Housing Trust"
+        },
+        "schools": {
+          "primary": [
+            {
+              "name": "Mount Gambier Primary",
+              "rating": "Average",
+              "distance": "1km"
+            }
+          ],
+          "secondary": [
+            {
+              "name": "Grant High",
+              "rating": "Average",
+              "distance": "2km"
+            }
+          ],
+          "overallQuality": "average",
+          "source": "MySchool"
+        },
+        "hazards": {
+          "flood": {
+            "risk": "low",
+            "zone": null,
+            "source": "SA Planning"
+          },
+          "bushfire": {
+            "risk": "medium",
+            "zone": "Forestry fringe",
+            "source": "CFS"
+          },
+          "coastal": {
+            "risk": "n/a",
+            "source": "inland but near coast"
+          }
+        },
+        "zoning": {
+          "currentZoning": "General Neighbourhood",
+          "densificationPotential": "low",
+          "recentRezonings": null,
+          "councilPlan": "mountgambier.sa.gov.au",
+          "source": "City of Mount Gambier"
+        },
+        "developmentApps": [],
+        "demographics": {
+          "medianAge": 40,
+          "trend": "stable",
+          "householdType": "mixed",
+          "irsad": 940,
+          "source": "ABS Census 2021"
+        },
+        "rentalDemand": {
+          "tenantTypes": "Forestry, healthcare, locals",
+          "marketDepth": "medium",
+          "source": "REISA"
+        },
+        "connectivity": {
+          "nbn": "Fixed wireless + FTTN",
+          "publicTransport": "Local bus only",
+          "cbdDistance": "436km from Adelaide",
+          "source": "NBN"
+        },
+        "noise": {
+          "flightPath": false,
+          "highway": false,
+          "industrial": false,
+          "notes": "Quiet regional"
+        }
+      },
+      "forward": {
+        "cycleStage": "MID",
+        "bear": 5,
+        "base": 15,
+        "bull": 28,
+        "horizon": "5yr to 2031",
+        "drivers": [
+          "Affordability $530k",
+          "Regional cost of living advantage",
+          "Healthcare jobs",
+          "Lifestyle"
+        ],
+        "risks": [
+          "Very regional \u2014 low liquidity",
+          "Limited growth catalysts",
+          "Yield only 4.12%",
+          "436km from Adelaide",
+          "Small buyer pool"
+        ],
+        "analystViews": [
+          "htag: 11.34% annual (moderating)"
+        ],
+        "consensus": "Affordable regional but limited upside. Better regional options exist (Geraldton/Albany WA). Base case 12-18% 5yr."
+      },
+      "verdict": "CAUTION",
+      "topSignals": [
+        "Affordable $530k entry",
+        "Low crime",
+        "Vacancy 1.1%"
+      ],
+      "watchPoints": [
+        "Very regional 436km",
+        "Yield only 4.12%",
+        "Limited growth catalysts",
+        "Low liquidity",
+        "Forestry fringe bushfire"
+      ],
+      "stampDutyNote": "At $530k: stamp ~$20k, total ~$80k \u2014 affordable. But growth upside limited vs WA regional.",
+      "riskFilter": {
+        "supplyRisk": {
+          "rating": "LOW",
+          "reason": "Regional, limited greenfield",
+          "source": "Mt Gambier Council"
+        },
+        "demandRisk": {
+          "rating": "HIGH",
+          "reason": "Forestry-dependent single-industry regional town",
+          "source": "ABS"
+        },
+        "infrastructureRisk": {
+          "rating": "LOW",
+          "reason": "Regional hospital upgrade under construction",
+          "source": "SA Health"
+        },
+        "cycleRisk": {
+          "rating": "LOW",
+          "reason": "Steady moderate growth",
+          "source": ""
+        },
+        "liquidityRisk": {
+          "rating": "MEDIUM",
+          "reason": "Regional market ~100 sales/yr",
+          "source": ""
+        },
+        "overallRisk": "MEDIUM",
+        "downgradeVerdict": false,
+        "riskNote": "Single-industry regional risk. Better options elsewhere for growth but reasonable if you value stability."
+      }
+    },
+    {
+      "name": "Ballarat Central",
+      "state": "VIC",
+      "postcode": "3350",
+      "lga": "City of Ballarat",
+      "region": "VIC \u2014 Ballarat",
+      "medianHouse": 550000,
+      "medianRentWeekly": 450,
+      "quant": {
+        "dom": {
+          "value": 40,
+          "score": 52,
+          "source": "Domain"
+        },
+        "vacancy": {
+          "value": 1.8,
+          "score": 62,
+          "source": "SQM"
+        },
+        "yield": {
+          "value": 4.25,
+          "score": 55,
+          "source": "Domain"
+        },
+        "priceGrowth": {
+          "value": 5.2,
+          "score": 55,
+          "source": "Domain"
+        },
+        "supplyOnMarket": {
+          "value": 0.95,
+          "score": 60,
+          "source": "Cotality"
+        },
+        "vendorDiscount": {
+          "value": -2.5,
+          "score": 82,
+          "source": "Cotality"
+        },
+        "renterPercent": {
+          "value": 35,
+          "score": 72,
+          "source": "ABS Census"
+        },
+        "unitToHouseRatio": {
+          "value": 12,
+          "score": 80,
+          "source": "ABS"
+        },
+        "auctionClearance": {
+          "value": 58,
+          "score": 62,
+          "source": "Domain"
+        }
+      },
+      "compositeScore": 60,
+      "qual": {
+        "infrastructure": [
+          {
+            "name": "Ballarat Rail Line Upgrade (completed)",
+            "type": "transport",
+            "status": "completed",
+            "expectedCompletion": "2021",
+            "delayMonths": null,
+            "investmentAud": 518000000,
+            "impactRating": "high",
+            "source": "dtp.vic.gov.au",
+            "notes": "Duplication complete. 70min to Melbourne."
+          },
+          {
+            "name": "GovHub Ballarat",
+            "type": "commercial",
+            "status": "completed",
+            "expectedCompletion": "2022",
+            "delayMonths": null,
+            "investmentAud": 100000000,
+            "impactRating": "medium",
+            "source": "Vic Gov",
+            "notes": "Government employment hub driving CBD jobs."
+          }
+        ],
+        "crime": {
+          "overallRating": "moderate",
+          "trend": "stable",
+          "notableTypes": [
+            "average regional crime"
+          ],
+          "comparisonToState": "average",
+          "source": "Victoria Police"
+        },
+        "publicHousing": {
+          "existingNearby": true,
+          "plannedNearby": false,
+          "concentration": "low",
+          "details": "Some public housing but scattered",
+          "source": "Homes Victoria"
+        },
+        "schools": {
+          "primary": [
+            {
+              "name": "Ballarat Primary",
+              "rating": "Good",
+              "distance": "1km"
+            }
+          ],
+          "secondary": [
+            {
+              "name": "Ballarat Clarendon College",
+              "rating": "Excellent",
+              "distance": "2km"
+            }
+          ],
+          "overallQuality": "good",
+          "source": "MySchool"
+        },
+        "hazards": {
+          "flood": {
+            "risk": "low",
+            "zone": null,
+            "source": "VicPlan"
+          },
+          "bushfire": {
+            "risk": "medium",
+            "zone": "Surrounding bushland",
+            "source": "CFA"
+          },
+          "coastal": {
+            "risk": "n/a",
+            "source": "inland"
+          }
+        },
+        "zoning": {
+          "currentZoning": "General Residential",
+          "densificationPotential": "low",
+          "recentRezonings": "Heritage overlay restricts",
+          "councilPlan": "ballarat.vic.gov.au",
+          "source": "City of Ballarat"
+        },
+        "developmentApps": [],
+        "demographics": {
+          "medianAge": 38,
+          "trend": "tree-changer growth",
+          "householdType": "families + professionals",
+          "irsad": 985,
+          "source": "ABS Census 2021"
+        },
+        "rentalDemand": {
+          "tenantTypes": "Gov workers, students (Fed Uni), tree-changers",
+          "marketDepth": "deep",
+          "source": "REIV"
+        },
+        "connectivity": {
+          "nbn": "FTTN/FTTC",
+          "publicTransport": "Ballarat V/Line (duplicated)",
+          "cbdDistance": "116km from Melbourne",
+          "source": "NBN/PTV"
+        },
+        "noise": {
+          "flightPath": false,
+          "highway": false,
+          "industrial": false,
+          "notes": "Historic quiet"
+        }
+      },
+      "forward": {
+        "cycleStage": "LATE-MID",
+        "bear": 5,
+        "base": 12,
+        "bull": 22,
+        "horizon": "5yr to 2031",
+        "drivers": [
+          "Diversified economy (gov, education, healthcare)",
+          "Tree-changer appeal",
+          "Completed rail duplication",
+          "Heritage character"
+        ],
+        "risks": [
+          "VIC stamp duty punitive",
+          "Growth modest 5.2%",
+          "DOM 40 days = slow market",
+          "Higher vacancy 1.8%",
+          "Melbourne commuter dependency"
+        ],
+        "analystViews": [
+          "Cotality: Ballarat modest growth",
+          "Propertyology: regional VIC slowing"
+        ],
+        "consensus": "Stable but slow. VIC stamp duty kills investor returns. Much better WA/SA alternatives. Base case 10-15% 5yr."
+      },
+      "verdict": "CAUTION",
+      "topSignals": [
+        "Good schools",
+        "Diversified economy",
+        "Completed rail line",
+        "Heritage appeal"
+      ],
+      "watchPoints": [
+        "VIC stamp duty punitive",
+        "Growth only 5.2%",
+        "DOM 40d slow market",
+        "Vacancy 1.8% higher",
+        "Regional VIC slowing"
+      ],
+      "stampDutyNote": "At $550k: VIC stamp ~$22k, total ~$88k \u2014 fits but growth upside poor. Pass in favour of WA regional.",
+      "riskFilter": {
+        "supplyRisk": {
+          "rating": "LOW",
+          "reason": "Established heritage city, limited greenfield in central",
+          "source": ""
+        },
+        "demandRisk": {
+          "rating": "LOW",
+          "reason": "Diversified: gov, education, healthcare",
+          "source": ""
+        },
+        "infrastructureRisk": {
+          "rating": "LOW",
+          "reason": "Rail duplication complete",
+          "source": ""
+        },
+        "cycleRisk": {
+          "rating": "LOW",
+          "reason": "Steady moderate 5% growth",
+          "source": ""
+        },
+        "liquidityRisk": {
+          "rating": "LOW",
+          "reason": "Regional city depth",
+          "source": ""
+        },
+        "overallRisk": "LOW-MEDIUM",
+        "downgradeVerdict": false,
+        "riskNote": "Stable but slow. VIC stamp duty kills returns vs WA/QLD alternatives."
+      }
+    },
+    {
+      "name": "Kirwan",
+      "state": "QLD",
+      "postcode": "4817",
+      "lga": "Townsville City",
+      "region": "QLD \u2014 Townsville",
+      "medianHouse": 550000,
+      "medianRentWeekly": 530,
+      "quant": {
+        "dom": {
+          "value": 11,
+          "score": 94,
+          "source": "htag.com.au"
+        },
+        "vacancy": {
+          "value": 0.5,
+          "score": 98,
+          "source": "SQM Feb 2026"
+        },
+        "yield": {
+          "value": 5.01,
+          "score": 78,
+          "source": "htag.com.au"
+        },
+        "priceGrowth": {
+          "value": 28.2,
+          "score": 98,
+          "source": "htag.com.au"
+        },
+        "supplyOnMarket": {
+          "value": 0.3,
+          "score": 88,
+          "source": "htag.com.au"
+        },
+        "vendorDiscount": {
+          "value": -0.5,
+          "score": 62,
+          "source": "htag.com.au"
+        },
+        "renterPercent": {
+          "value": 30,
+          "score": 80,
+          "source": "ABS Census"
+        },
+        "unitToHouseRatio": {
+          "value": 5,
+          "score": 95,
+          "source": "ABS"
+        },
+        "auctionClearance": {
+          "value": null,
+          "score": null,
+          "source": "N/A Townsville"
+        }
+      },
+      "compositeScore": 88,
+      "qual": {
+        "infrastructure": [
+          {
+            "name": "Lavarack Barracks Defence Expansion",
+            "type": "defence",
+            "status": "under-construction",
+            "expectedCompletion": "2028",
+            "delayMonths": null,
+            "investmentAud": 2000000000,
+            "impactRating": "high",
+            "source": "defence.gov.au",
+            "notes": "$2B+ defence investment. Largest army base in Australia. Drives population + rental demand."
+          },
+          {
+            "name": "CopperString 2032",
+            "type": "energy",
+            "status": "under-construction",
+            "expectedCompletion": "2029",
+            "delayMonths": null,
+            "investmentAud": 5000000000,
+            "impactRating": "high",
+            "source": "copperstring.com.au",
+            "notes": "$5B transmission line connecting NW QLD minerals province. Construction jobs + long-term economic diversification."
+          },
+          {
+            "name": "Townsville Port Expansion",
+            "type": "commercial",
+            "status": "under-construction",
+            "expectedCompletion": "2027",
+            "delayMonths": null,
+            "investmentAud": 232000000,
+            "impactRating": "medium",
+            "source": "portoftownsville.com.au",
+            "notes": "Channel widening + new berths. Supports export growth."
+          }
+        ],
+        "crime": {
+          "overallRating": "moderate",
+          "trend": "stable",
+          "notableTypes": [
+            "property crime above state avg in some pockets",
+            "youth crime perception"
+          ],
+          "comparisonToState": "average",
+          "source": "QLD Police 2025"
+        },
+        "publicHousing": {
+          "existingNearby": true,
+          "plannedNearby": false,
+          "concentration": "low",
+          "details": "Some scattered public housing but not dominant",
+          "source": "QLD Housing"
+        },
+        "schools": {
+          "primary": [
+            {
+              "name": "Kirwan State School",
+              "rating": "Good",
+              "distance": "1km"
+            }
+          ],
+          "secondary": [
+            {
+              "name": "Kirwan SHS",
+              "rating": "Good",
+              "distance": "2km"
+            }
+          ],
+          "overallQuality": "good",
+          "source": "MySchool"
+        },
+        "hazards": {
+          "flood": {
+            "risk": "medium",
+            "zone": "Some areas flood-prone (Ross River)",
+            "source": "TCC flood maps"
+          },
+          "bushfire": {
+            "risk": "low",
+            "zone": null,
+            "source": "QFES"
+          },
+          "coastal": {
+            "risk": "low",
+            "source": "inland suburb"
+          }
+        },
+        "zoning": {
+          "currentZoning": "Low density residential",
+          "densificationPotential": "low",
+          "recentRezonings": null,
+          "councilPlan": "townsville.qld.gov.au",
+          "source": "TCC"
+        },
+        "developmentApps": [],
+        "demographics": {
+          "medianAge": 34,
+          "trend": "young families + defence",
+          "householdType": "families dominant",
+          "irsad": 980,
+          "source": "ABS Census 2021"
+        },
+        "rentalDemand": {
+          "tenantTypes": "Defence personnel, FIFO, young families, healthcare workers",
+          "marketDepth": "deep \u2014 400+ sales/yr",
+          "source": "REIQ"
+        },
+        "connectivity": {
+          "nbn": "FTTP/FTTC",
+          "publicTransport": "Bus network (no rail)",
+          "cbdDistance": "10km",
+          "source": "NBN"
+        },
+        "noise": {
+          "flightPath": true,
+          "highway": false,
+          "industrial": false,
+          "notes": "Townsville Airport flight path affects eastern suburbs. Check specific street."
+        }
+      },
+      "forward": {
+        "cycleStage": "MID",
+        "bear": 15,
+        "base": 35,
+        "bull": 55,
+        "horizon": "5yr to 2031",
+        "drivers": [
+          "+28% growth momentum",
+          "$2B+ defence spending (Lavarack)",
+          "$5B CopperString 2032",
+          "Port expansion",
+          "Vacancy 0.5% extremely tight",
+          "DOM 11 days"
+        ],
+        "risks": [
+          "Cyclone risk (Cat 3+ every ~10yr)",
+          "QLD land tax on 2nd property (~$0-1,500/yr)",
+          "Mining cycle sensitivity",
+          "Youth crime perception",
+          "Distance from capital"
+        ],
+        "analystViews": [
+          "Propertyology: Townsville top pick 2026",
+          "InvestorKit: continued double-digit growth",
+          "htag: 28.2% annual growth",
+          "Keir Constructions: defence-driven demand"
+        ],
+        "consensus": "Strongest growth momentum in Australia right now. Defence spending provides structural floor. Land tax cost ($0-1,500/yr) is trivial vs 28% growth on $550k. Cyclone risk is real but insurable. Base case 35% over 5yr."
+      },
+      "verdict": "STRONG BUY",
+      "topSignals": [
+        "Growth +28.2% \u2014 highest in AU",
+        "DOM 11 days \u2014 instant demand",
+        "Vacancy 0.5%",
+        "$2B defence spending",
+        "$5B CopperString",
+        "Entry $550k \u2014 huge budget headroom"
+      ],
+      "watchPoints": [
+        "QLD land tax ~$1,500/yr (2nd QLD property)",
+        "Cyclone risk",
+        "Flight path eastern streets",
+        "Ross River flood zones \u2014 check specific address"
+      ],
+      "stampDutyNote": "At $550k: QLD stamp ~$17k, total costs ~$72k \u2014 massive $38k buffer. Land tax ~$0-1,500/yr on 2nd QLD property.",
+      "riskFilter": {
+        "supplyRisk": {
+          "rating": "LOW",
+          "reason": "Kirwan is ESTABLISHED. New supply concentrated in Mount Low, Elliot Springs, northern beaches \u2014 NOT Kirwan itself. Kirwan is infill only.",
+          "source": "Townsville Council + GemLife announcement"
+        },
+        "demandRisk": {
+          "rating": "LOW",
+          "reason": "Diversified: defence (Lavarack), healthcare (TTH Hospital), port, education",
+          "source": "ABS labour + defence.gov.au"
+        },
+        "infrastructureRisk": {
+          "rating": "LOW",
+          "reason": "$2B Lavarack expansion under construction. $5B CopperString ACTIVELY building.",
+          "source": "defence.gov.au"
+        },
+        "cycleRisk": {
+          "rating": "MEDIUM",
+          "reason": "Post +28% spike. Growth likely moderates to 10-12% in 2027-28 but supportive fundamentals.",
+          "source": "Propertyology"
+        },
+        "liquidityRisk": {
+          "rating": "LOW",
+          "reason": "400+ sales/yr, deep market",
+          "source": "REIQ"
+        },
+        "overallRisk": "LOW-MEDIUM",
+        "downgradeVerdict": false,
+        "riskNote": "STRONGEST risk-adjusted pick. Established suburb means supply is constrained. Defence spending is actively delivering, not announcements. Cyclone risk insurable."
+      }
+    },
+    {
+      "name": "Munno Para",
+      "state": "SA",
+      "postcode": "5115",
+      "lga": "City of Playford",
+      "region": "SA \u2014 Adelaide north/south",
+      "medianHouse": 610000,
+      "medianRentWeekly": 550,
+      "quant": {
+        "dom": {
+          "value": 20,
+          "score": 82,
+          "source": "htag.com.au"
+        },
+        "vacancy": {
+          "value": 1.0,
+          "score": 90,
+          "source": "SQM Feb 2026"
+        },
+        "yield": {
+          "value": 4.6,
+          "score": 65,
+          "source": "htag.com.au"
+        },
+        "priceGrowth": {
+          "value": 6.09,
+          "score": 55,
+          "source": "htag.com.au"
+        },
+        "supplyOnMarket": {
+          "value": 0.5,
+          "score": 75,
+          "source": "Cotality"
+        },
+        "vendorDiscount": {
+          "value": -1.0,
+          "score": 68,
+          "source": "Cotality"
+        },
+        "renterPercent": {
+          "value": 32,
+          "score": 75,
+          "source": "ABS Census"
+        },
+        "unitToHouseRatio": {
+          "value": 8,
+          "score": 88,
+          "source": "ABS"
+        },
+        "auctionClearance": {
+          "value": 72,
+          "score": 82,
+          "source": "Domain"
+        }
+      },
+      "compositeScore": 74,
+      "qual": {
+        "infrastructure": [
+          {
+            "name": "Gawler Line Electrification",
+            "type": "transport",
+            "status": "completed",
+            "expectedCompletion": "2024",
+            "delayMonths": null,
+            "investmentAud": 860000000,
+            "impactRating": "high",
+            "source": "dit.sa.gov.au",
+            "notes": "Electric trains serve northern corridor. Commute improvement to CBD."
+          },
+          {
+            "name": "Edinburgh Parks Defence/Industrial Precinct",
+            "type": "commercial",
+            "status": "under-construction",
+            "expectedCompletion": "ongoing",
+            "delayMonths": null,
+            "investmentAud": 2000000000,
+            "impactRating": "high",
+            "source": "SA Gov",
+            "notes": "$2B+ defence industry precinct driving employment in northern Adelaide."
+          },
+          {
+            "name": "Northern Connector Motorway",
+            "type": "road",
+            "status": "completed",
+            "expectedCompletion": "2020",
+            "delayMonths": null,
+            "investmentAud": 985000000,
+            "impactRating": "high",
+            "source": "dit.sa.gov.au",
+            "notes": "15.5km motorway connecting northern suburbs to CBD/port. Already delivered."
+          }
+        ],
+        "crime": {
+          "overallRating": "moderate",
+          "trend": "stable",
+          "notableTypes": [
+            "Playford LGA historically higher than metro avg"
+          ],
+          "comparisonToState": "above-average",
+          "source": "SAPOL 2025"
+        },
+        "publicHousing": {
+          "existingNearby": true,
+          "plannedNearby": false,
+          "concentration": "moderate",
+          "details": "Playford Alive renewal reducing concentration gradually",
+          "source": "Renewal SA"
+        },
+        "schools": {
+          "primary": [
+            {
+              "name": "Munno Para Primary",
+              "rating": "Average",
+              "distance": "1km"
+            }
+          ],
+          "secondary": [
+            {
+              "name": "Mark Oliphant College",
+              "rating": "Average",
+              "distance": "3km"
+            }
+          ],
+          "overallQuality": "average",
+          "source": "MySchool"
+        },
+        "hazards": {
+          "flood": {
+            "risk": "low",
+            "zone": null,
+            "source": "SA Planning"
+          },
+          "bushfire": {
+            "risk": "low",
+            "zone": null,
+            "source": "CFS"
+          },
+          "coastal": {
+            "risk": "n/a",
+            "source": "inland"
+          }
+        },
+        "zoning": {
+          "currentZoning": "General Neighbourhood",
+          "densificationPotential": "medium",
+          "recentRezonings": null,
+          "councilPlan": "playford.sa.gov.au",
+          "source": "City of Playford"
+        },
+        "developmentApps": [],
+        "demographics": {
+          "medianAge": 32,
+          "trend": "young families growing",
+          "householdType": "families",
+          "irsad": 870,
+          "source": "ABS Census 2021"
+        },
+        "rentalDemand": {
+          "tenantTypes": "Defence workers, families, essential workers",
+          "marketDepth": "deep",
+          "source": "REISA"
+        },
+        "connectivity": {
+          "nbn": "FTTP (new estates)",
+          "publicTransport": "Munno Para train (electrified)",
+          "cbdDistance": "35km",
+          "source": "NBN/Adelaide Metro"
+        },
+        "noise": {
+          "flightPath": false,
+          "highway": false,
+          "industrial": false,
+          "notes": "Quiet residential"
+        }
+      },
+      "forward": {
+        "cycleStage": "EARLY-MID",
+        "bear": 10,
+        "base": 25,
+        "bull": 40,
+        "horizon": "5yr to 2031",
+        "drivers": [
+          "$610k entry \u2014 budget headroom",
+          "Edinburgh Parks defence jobs",
+          "Electrified train",
+          "Northern Connector motorway",
+          "Adelaide supply shortage"
+        ],
+        "risks": [
+          "IRSAD 870 lower",
+          "Playford LGA crime moderate",
+          "Growth slower (6%) vs WA/QLD",
+          "SA stamp duty higher than WA/QLD"
+        ],
+        "analystViews": [
+          "KPMG: Adelaide +8.2% 2026",
+          "Aussie: SA +6-9%",
+          "htag: Munno Para 6.09% annual"
+        ],
+        "consensus": "Solid SA diversification play. Not the highest growth but electrified train + defence precinct provide structural demand. Lower IRSAD is a concern. Base case 22-28% over 5yr."
+      },
+      "verdict": "BUY",
+      "topSignals": [
+        "$610k entry \u2014 fits budget easily",
+        "Electrified train",
+        "$2B Edinburgh Parks defence",
+        "Vacancy 1.0% tight",
+        "Northern Connector motorway"
+      ],
+      "watchPoints": [
+        "IRSAD 870",
+        "Playford LGA crime",
+        "Growth 6% below WA/QLD",
+        "Public housing pockets"
+      ],
+      "stampDutyNote": "At $610k: SA stamp ~$23k, total costs ~$85k \u2014 comfortable fit.",
+      "riskFilter": {
+        "supplyRisk": {
+          "rating": "HIGH",
+          "reason": "Playford LGA has extensive greenfield release. Andrews Farm, Munno Para West corridor active.",
+          "source": "Playford Council"
+        },
+        "demandRisk": {
+          "rating": "MEDIUM",
+          "reason": "Edinburgh Parks defence, but lower IRSAD",
+          "source": "ABS"
+        },
+        "infrastructureRisk": {
+          "rating": "LOW",
+          "reason": "Electrified train + Northern Connector delivered",
+          "source": "dit.sa.gov.au"
+        },
+        "cycleRisk": {
+          "rating": "MEDIUM",
+          "reason": "Growing but outer fringe dynamic",
+          "source": ""
+        },
+        "liquidityRisk": {
+          "rating": "LOW",
+          "reason": "Deep market",
+          "source": "REISA"
+        },
+        "overallRisk": "MEDIUM-HIGH",
+        "downgradeVerdict": true,
+        "riskNote": "HIGH supply \u2014 outer fringe with ongoing greenfield release. Growth likely to moderate as supply catches up."
+      }
+    },
+    {
+      "name": "Cranbourne West",
+      "state": "VIC",
+      "postcode": "3977",
+      "lga": "City of Casey",
+      "region": "VIC \u2014 Melbourne outer",
+      "medianHouse": 695000,
+      "medianRentWeekly": 590,
+      "quant": {
+        "dom": {
+          "value": 26,
+          "score": 70,
+          "source": "htag.com.au"
+        },
+        "vacancy": {
+          "value": 1.82,
+          "score": 62,
+          "source": "SQM"
+        },
+        "yield": {
+          "value": 4.2,
+          "score": 55,
+          "source": "htag.com.au"
+        },
+        "priceGrowth": {
+          "value": 4.35,
+          "score": 52,
+          "source": "htag.com.au"
+        },
+        "supplyOnMarket": {
+          "value": 0.8,
+          "score": 65,
+          "source": "Cotality"
+        },
+        "vendorDiscount": {
+          "value": -2.0,
+          "score": 78,
+          "source": "Cotality"
+        },
+        "renterPercent": {
+          "value": 30,
+          "score": 80,
+          "source": "ABS Census"
+        },
+        "unitToHouseRatio": {
+          "value": 10,
+          "score": 85,
+          "source": "ABS"
+        },
+        "auctionClearance": {
+          "value": 62,
+          "score": 68,
+          "source": "Domain"
+        }
+      },
+      "compositeScore": 63,
+      "qual": {
+        "infrastructure": [
+          {
+            "name": "Cranbourne Line Upgrade (Level Crossing Removals)",
+            "type": "transport",
+            "status": "completed",
+            "expectedCompletion": "2024",
+            "delayMonths": null,
+            "investmentAud": 740000000,
+            "impactRating": "high",
+            "source": "levelcrossings.vic.gov.au",
+            "notes": "Level crossings removed, new stations. Already delivered."
+          }
+        ],
+        "crime": {
+          "overallRating": "moderate",
+          "trend": "stable",
+          "notableTypes": [
+            "Casey LGA higher than metro in some categories"
+          ],
+          "comparisonToState": "above-average",
+          "source": "Victoria Police"
+        },
+        "publicHousing": {
+          "existingNearby": false,
+          "plannedNearby": false,
+          "concentration": "low",
+          "details": "Mostly new estates",
+          "source": "Homes Victoria"
+        },
+        "schools": {
+          "primary": [
+            {
+              "name": "Cranbourne West Primary",
+              "rating": "Average",
+              "distance": "1km"
+            }
+          ],
+          "secondary": [
+            {
+              "name": "Cranbourne Secondary",
+              "rating": "Average",
+              "distance": "3km"
+            }
+          ],
+          "overallQuality": "average",
+          "source": "MySchool"
+        },
+        "hazards": {
+          "flood": {
+            "risk": "low",
+            "zone": null,
+            "source": "VicPlan"
+          },
+          "bushfire": {
+            "risk": "low",
+            "zone": null,
+            "source": "CFA"
+          },
+          "coastal": {
+            "risk": "n/a",
+            "source": "inland"
+          }
+        },
+        "zoning": {
+          "currentZoning": "General Residential",
+          "densificationPotential": "low",
+          "recentRezonings": null,
+          "councilPlan": "casey.vic.gov.au",
+          "source": "City of Casey"
+        },
+        "developmentApps": [],
+        "demographics": {
+          "medianAge": 31,
+          "trend": "young families fastest-growing",
+          "householdType": "young families",
+          "irsad": 990,
+          "source": "ABS Census 2021"
+        },
+        "rentalDemand": {
+          "tenantTypes": "Young families, first home buyers renting",
+          "marketDepth": "deep",
+          "source": "REIV"
+        },
+        "connectivity": {
+          "nbn": "FTTP (new estates)",
+          "publicTransport": "Cranbourne train (upgraded)",
+          "cbdDistance": "50km",
+          "source": "NBN/PTV"
+        },
+        "noise": {
+          "flightPath": false,
+          "highway": true,
+          "industrial": false,
+          "notes": "South Gippsland Highway proximity"
+        }
+      },
+      "forward": {
+        "cycleStage": "EARLY-MID",
+        "bear": 5,
+        "base": 18,
+        "bull": 30,
+        "horizon": "5yr to 2031",
+        "drivers": [
+          "Fastest-growing VIC LGA",
+          "Upgraded train line",
+          "Young family demand",
+          "Sub-$700k entry"
+        ],
+        "risks": [
+          "VIC stamp duty + investor surcharge",
+          "Melbourne lagging nationally 4-5% vs 10-28%",
+          "Vacancy 1.82% less tight than WA/QLD",
+          "Growth ceiling lower"
+        ],
+        "analystViews": [
+          "KPMG: Melbourne +6.6% 2026",
+          "Domain: Casey corridor growing"
+        ],
+        "consensus": "Affordable VIC entry but growth ceiling significantly lower than WA/QLD alternatives. Only pursue if geographic diversification into VIC is a priority. Base case 15-20% over 5yr."
+      },
+      "verdict": "WATCH",
+      "topSignals": [
+        "Sub-$700k entry",
+        "Young family demographics",
+        "Upgraded train",
+        "IRSAD 990 decent"
+      ],
+      "watchPoints": [
+        "VIC stamp duty + surcharge ($35-43k)",
+        "Growth 4.35% vs QLD 28%",
+        "Vacancy 1.82%",
+        "Melbourne underperforming nationally"
+      ],
+      "stampDutyNote": "At $695k: VIC stamp ~$37k + surcharge ~$10k = total costs ~$112k \u2014 EXCEEDS $110k cash. Need lower price point or more cash.",
+      "riskFilter": {
+        "supplyRisk": {
+          "rating": "HIGH",
+          "reason": "Casey LGA growth corridor with major greenfield releases in Clyde, Clyde North, Botanic Ridge",
+          "source": "City of Casey"
+        },
+        "demandRisk": {
+          "rating": "MEDIUM",
+          "reason": "Commuter-heavy, VIC weaker",
+          "source": ""
+        },
+        "infrastructureRisk": {
+          "rating": "LOW",
+          "reason": "Cranbourne line upgrade delivered",
+          "source": ""
+        },
+        "cycleRisk": {
+          "rating": "LOW",
+          "reason": "Modest 4.35% growth, no spike risk",
+          "source": ""
+        },
+        "liquidityRisk": {
+          "rating": "LOW",
+          "reason": "Deep market",
+          "source": ""
+        },
+        "overallRisk": "MEDIUM-HIGH",
+        "downgradeVerdict": true,
+        "riskNote": "Growing supply in adjacent Clyde/Clyde North. VIC stamp duty. Better WA/QLD alternatives."
+      }
+    },
+    {
+      "name": "Para Hills",
+      "state": "SA",
+      "postcode": "5096",
+      "lga": "City of Salisbury",
+      "region": "SA \u2014 Adelaide north/south",
+      "medianHouse": 520000,
+      "medianRentWeekly": 500,
+      "quant": {
+        "dom": {
+          "value": 22,
+          "score": 78,
+          "source": "htag.com.au"
+        },
+        "vacancy": {
+          "value": 1.2,
+          "score": 80,
+          "source": "SQM Feb 2026"
+        },
+        "yield": {
+          "value": 5.0,
+          "score": 78,
+          "source": "htag.com.au"
+        },
+        "priceGrowth": {
+          "value": 11.5,
+          "score": 78,
+          "source": "htag.com.au"
+        },
+        "supplyOnMarket": {
+          "value": 0.3,
+          "score": 88,
+          "source": "htag.com.au"
+        },
+        "vendorDiscount": {
+          "value": -1.0,
+          "score": 68,
+          "source": "Cotality"
+        },
+        "renterPercent": {
+          "value": 28,
+          "score": 85,
+          "source": "ABS Census"
+        },
+        "unitToHouseRatio": {
+          "value": 8,
+          "score": 88,
+          "source": "ABS"
+        },
+        "auctionClearance": {
+          "value": 70,
+          "score": 78,
+          "source": "Domain"
+        }
+      },
+      "compositeScore": 80,
+      "qual": {
+        "infrastructure": [
+          {
+            "name": "O-Bahn Busway (existing)",
+            "type": "transport",
+            "status": "completed",
+            "expectedCompletion": "1989",
+            "delayMonths": null,
+            "investmentAud": null,
+            "impactRating": "high",
+            "source": "adelaidemetro.com.au",
+            "notes": "Dedicated busway to CBD \u2014 15 minutes from Para Hills Interchange."
+          },
+          {
+            "name": "Tea Tree Plaza Regional Shopping Centre",
+            "type": "commercial",
+            "status": "completed",
+            "expectedCompletion": "ongoing upgrades",
+            "delayMonths": null,
+            "investmentAud": null,
+            "impactRating": "medium",
+            "source": "westfield.com.au",
+            "notes": "Major shopping + public transport hub adjacent."
+          }
+        ],
+        "crime": {
+          "overallRating": "moderate",
+          "trend": "improving",
+          "notableTypes": [
+            "property crime avg"
+          ],
+          "comparisonToState": "average",
+          "source": "SAPOL 2025"
+        },
+        "publicHousing": {
+          "existingNearby": true,
+          "plannedNearby": false,
+          "concentration": "low",
+          "details": "Some scattered public housing but not dominant",
+          "source": "SA Housing Trust"
+        },
+        "schools": {
+          "primary": [
+            {
+              "name": "Para Hills Primary",
+              "rating": "Average",
+              "distance": "1km"
+            }
+          ],
+          "secondary": [
+            {
+              "name": "Para Hills High",
+              "rating": "Average",
+              "distance": "2km"
+            }
+          ],
+          "overallQuality": "average",
+          "source": "MySchool"
+        },
+        "hazards": {
+          "flood": {
+            "risk": "low",
+            "zone": null,
+            "source": "SA Planning"
+          },
+          "bushfire": {
+            "risk": "low",
+            "zone": null,
+            "source": "CFS"
+          },
+          "coastal": {
+            "risk": "n/a",
+            "source": "inland"
+          }
+        },
+        "zoning": {
+          "currentZoning": "General Neighbourhood",
+          "densificationPotential": "medium",
+          "recentRezonings": null,
+          "councilPlan": "salisbury.sa.gov.au",
+          "source": "City of Salisbury"
+        },
+        "developmentApps": [],
+        "demographics": {
+          "medianAge": 40,
+          "trend": "stable mature",
+          "householdType": "mixed",
+          "irsad": 960,
+          "source": "ABS Census 2021"
+        },
+        "rentalDemand": {
+          "tenantTypes": "Families, professionals, essential workers",
+          "marketDepth": "deep, 200+ sales/yr",
+          "source": "REISA"
+        },
+        "connectivity": {
+          "nbn": "FTTP/FTTC",
+          "publicTransport": "O-Bahn Busway, local buses",
+          "cbdDistance": "16km",
+          "source": "NBN/Adelaide Metro"
+        },
+        "noise": {
+          "flightPath": false,
+          "highway": false,
+          "industrial": false,
+          "notes": "Quiet established residential"
+        }
+      },
+      "forward": {
+        "cycleStage": "MID",
+        "bear": 15,
+        "base": 28,
+        "bull": 42,
+        "horizon": "5yr to 2031",
+        "drivers": [
+          "$520k entry \u2014 major budget headroom",
+          "Established infill only \u2014 LOW supply risk",
+          "O-Bahn 15min to CBD",
+          "5% yield strong for Adelaide",
+          "Tea Tree Plaza adjacent"
+        ],
+        "risks": [
+          "Modest growth vs WA/QLD",
+          "IRSAD 960 lower than Tea Tree Gully",
+          "SA stamp duty"
+        ],
+        "analystViews": [
+          "htag: 11.5% annual growth",
+          "KPMG: Adelaide +8.2% 2026"
+        ],
+        "consensus": "Established Adelaide middle-ring with real budget headroom. LOW supply risk, solid yield, established infrastructure. Base case 25-30% over 5yr."
+      },
+      "verdict": "BUY",
+      "topSignals": [
+        "$520k entry \u2014 massive cash buffer",
+        "5% yield",
+        "Established infill only",
+        "O-Bahn to CBD"
+      ],
+      "watchPoints": [
+        "Growth modest vs WA/QLD",
+        "IRSAD 960"
+      ],
+      "stampDutyNote": "At $520k: SA stamp ~$21k, total costs ~$75k \u2014 huge $35k cash buffer.",
+      "riskFilter": {
+        "supplyRisk": {
+          "rating": "LOW",
+          "reason": "Established middle-ring infill only. No adjacent greenfield.",
+          "source": "City of Salisbury planning"
+        },
+        "demandRisk": {
+          "rating": "LOW",
+          "reason": "Adelaide metro diversified, O-Bahn to CBD",
+          "source": "ABS"
+        },
+        "infrastructureRisk": {
+          "rating": "LOW",
+          "reason": "O-Bahn operational since 1989, Tea Tree Plaza established",
+          "source": ""
+        },
+        "cycleRisk": {
+          "rating": "LOW",
+          "reason": "Sustainable 11.5% growth, not post-spike",
+          "source": ""
+        },
+        "liquidityRisk": {
+          "rating": "LOW",
+          "reason": "Deep Adelaide metro market",
+          "source": ""
+        },
+        "overallRisk": "LOW",
+        "downgradeVerdict": false,
+        "riskNote": "Best SA risk-adjusted pick. Established middle-ring with NO supply risk, real budget headroom at $520k, solid 5% yield."
+      }
+    },
+    {
+      "name": "Salisbury North",
+      "state": "SA",
+      "postcode": "5108",
+      "lga": "City of Salisbury",
+      "region": "SA \u2014 Adelaide north/south",
+      "medianHouse": 615000,
+      "medianRentWeekly": 545,
+      "quant": {
+        "dom": {
+          "value": 25,
+          "score": 72,
+          "source": "htag.com.au"
+        },
+        "vacancy": {
+          "value": 0.9,
+          "score": 92,
+          "source": "SQM Feb 2026"
+        },
+        "yield": {
+          "value": 4.6,
+          "score": 65,
+          "source": "htag.com.au"
+        },
+        "priceGrowth": {
+          "value": 13.2,
+          "score": 82,
+          "source": "htag.com.au"
+        },
+        "supplyOnMarket": {
+          "value": 0.4,
+          "score": 82,
+          "source": "Cotality"
+        },
+        "vendorDiscount": {
+          "value": -0.8,
+          "score": 68,
+          "source": "Cotality"
+        },
+        "renterPercent": {
+          "value": 35,
+          "score": 72,
+          "source": "ABS Census"
+        },
+        "unitToHouseRatio": {
+          "value": 10,
+          "score": 85,
+          "source": "ABS"
+        },
+        "auctionClearance": {
+          "value": 72,
+          "score": 82,
+          "source": "Domain"
+        }
+      },
+      "compositeScore": 78,
+      "qual": {
+        "infrastructure": [
+          {
+            "name": "Gawler Line Electrification",
+            "type": "transport",
+            "status": "completed",
+            "expectedCompletion": "2024",
+            "delayMonths": null,
+            "investmentAud": 860000000,
+            "impactRating": "high",
+            "source": "dit.sa.gov.au",
+            "notes": "Electric trains serve Salisbury station."
+          },
+          {
+            "name": "Edinburgh Parks Defence Precinct",
+            "type": "commercial",
+            "status": "under-construction",
+            "expectedCompletion": "ongoing",
+            "delayMonths": null,
+            "investmentAud": 2000000000,
+            "impactRating": "high",
+            "source": "SA Gov",
+            "notes": "$2B defence precinct employment."
+          }
+        ],
+        "crime": {
+          "overallRating": "moderate",
+          "trend": "stable",
+          "notableTypes": [
+            "property crime above avg"
+          ],
+          "comparisonToState": "above-average",
+          "source": "SAPOL 2025"
+        },
+        "publicHousing": {
+          "existingNearby": true,
+          "plannedNearby": false,
+          "concentration": "moderate",
+          "details": "Some concentration but improving via Playford Alive",
+          "source": "SA Housing"
+        },
+        "schools": {
+          "primary": [
+            {
+              "name": "Salisbury North Primary",
+              "rating": "Below average",
+              "distance": "1km"
+            }
+          ],
+          "secondary": [
+            {
+              "name": "Salisbury High",
+              "rating": "Below average",
+              "distance": "2km"
+            }
+          ],
+          "overallQuality": "below-average",
+          "source": "MySchool"
+        },
+        "hazards": {
+          "flood": {
+            "risk": "low",
+            "zone": null,
+            "source": "SA Planning"
+          },
+          "bushfire": {
+            "risk": "low",
+            "zone": null,
+            "source": "CFS"
+          },
+          "coastal": {
+            "risk": "n/a",
+            "source": "inland"
+          }
+        },
+        "zoning": {
+          "currentZoning": "General Neighbourhood",
+          "densificationPotential": "medium",
+          "recentRezonings": null,
+          "councilPlan": "salisbury.sa.gov.au",
+          "source": "City of Salisbury"
+        },
+        "developmentApps": [],
+        "demographics": {
+          "medianAge": 36,
+          "trend": "young families mixed",
+          "householdType": "mixed",
+          "irsad": 855,
+          "source": "ABS Census 2021"
+        },
+        "rentalDemand": {
+          "tenantTypes": "Defence workers, families, essential workers",
+          "marketDepth": "deep",
+          "source": "REISA"
+        },
+        "connectivity": {
+          "nbn": "FTTN/FTTC",
+          "publicTransport": "Salisbury train (electrified)",
+          "cbdDistance": "20km",
+          "source": "NBN/Adelaide Metro"
+        },
+        "noise": {
+          "flightPath": false,
+          "highway": false,
+          "industrial": true,
+          "notes": "Edinburgh Parks industrial area nearby"
+        }
+      },
+      "forward": {
+        "cycleStage": "MID",
+        "bear": 12,
+        "base": 25,
+        "bull": 38,
+        "horizon": "5yr to 2031",
+        "drivers": [
+          "$615k entry",
+          "Electrified train",
+          "$2B Edinburgh Parks defence",
+          "+13.2% recent growth"
+        ],
+        "risks": [
+          "IRSAD 855 low",
+          "Below avg schools",
+          "Playford crime patterns"
+        ],
+        "analystViews": [
+          "Cotality: Salisbury SA3 +15.7%",
+          "htag: +13.2% annual"
+        ],
+        "consensus": "Solid middle-ring with defence catalyst. Lower IRSAD is main drawback. Base case 22-28% over 5yr."
+      },
+      "verdict": "BUY",
+      "topSignals": [
+        "$615k entry",
+        "Electrified train",
+        "$2B Edinburgh Parks",
+        "Vacancy 0.9%"
+      ],
+      "watchPoints": [
+        "IRSAD 855",
+        "Below-avg schools",
+        "Industrial adjacency"
+      ],
+      "stampDutyNote": "At $615k: SA stamp ~$24k, total costs ~$87k \u2014 fits $110k.",
+      "riskFilter": {
+        "supplyRisk": {
+          "rating": "LOW",
+          "reason": "Established middle-ring. Salisbury SA3 has some outer development but Salisbury North itself is built-out.",
+          "source": "City of Salisbury"
+        },
+        "demandRisk": {
+          "rating": "MEDIUM",
+          "reason": "Lower IRSAD area, but defence precinct provides jobs",
+          "source": "ABS"
+        },
+        "infrastructureRisk": {
+          "rating": "LOW",
+          "reason": "Electrified train + Edinburgh Parks active",
+          "source": "dit.sa.gov.au"
+        },
+        "cycleRisk": {
+          "rating": "MEDIUM",
+          "reason": "13.2% growth possibly moderating",
+          "source": ""
+        },
+        "liquidityRisk": {
+          "rating": "LOW",
+          "reason": "Deep market",
+          "source": "REISA"
+        },
+        "overallRisk": "LOW-MEDIUM",
+        "downgradeVerdict": false,
+        "riskNote": "Established middle-ring with train + defence catalysts. IRSAD 855 is the main caveat vs Para Hills."
+      }
+    },
+    {
+      "name": "Condon",
+      "state": "QLD",
+      "postcode": "4815",
+      "lga": "Townsville City",
+      "region": "QLD \u2014 Townsville",
+      "medianHouse": 599000,
+      "medianRentWeekly": 520,
+      "quant": {
+        "dom": {
+          "value": 13,
+          "score": 92,
+          "source": "Townsville RE"
+        },
+        "vacancy": {
+          "value": 0.5,
+          "score": 98,
+          "source": "SQM Feb 2026"
+        },
+        "yield": {
+          "value": 4.5,
+          "score": 65,
+          "source": "htag.com.au"
+        },
+        "priceGrowth": {
+          "value": 24.5,
+          "score": 96,
+          "source": "Cotality"
+        },
+        "supplyOnMarket": {
+          "value": 0.3,
+          "score": 88,
+          "source": "htag.com.au"
+        },
+        "vendorDiscount": {
+          "value": -0.8,
+          "score": 68,
+          "source": "Cotality"
+        },
+        "renterPercent": {
+          "value": 32,
+          "score": 75,
+          "source": "ABS Census"
+        },
+        "unitToHouseRatio": {
+          "value": 6,
+          "score": 93,
+          "source": "ABS"
+        },
+        "auctionClearance": {
+          "value": null,
+          "score": null,
+          "source": "N/A Townsville"
+        }
+      },
+      "compositeScore": 87,
+      "qual": {
+        "infrastructure": [
+          {
+            "name": "Lavarack Barracks Defence Expansion",
+            "type": "defence",
+            "status": "under-construction",
+            "expectedCompletion": "2028",
+            "delayMonths": null,
+            "investmentAud": 2000000000,
+            "impactRating": "high",
+            "source": "defence.gov.au",
+            "notes": "$2B+ defence expansion \u2014 Condon proximity to base creates rental demand."
+          },
+          {
+            "name": "CopperString 2032",
+            "type": "energy",
+            "status": "under-construction",
+            "expectedCompletion": "2029",
+            "delayMonths": null,
+            "investmentAud": 5000000000,
+            "impactRating": "high",
+            "source": "copperstring.com.au",
+            "notes": "$5B transmission line. Construction jobs near Townsville."
+          }
+        ],
+        "crime": {
+          "overallRating": "moderate",
+          "trend": "stable",
+          "notableTypes": [
+            "property crime moderate"
+          ],
+          "comparisonToState": "average",
+          "source": "QLD Police 2025"
+        },
+        "publicHousing": {
+          "existingNearby": false,
+          "plannedNearby": false,
+          "concentration": "low",
+          "details": "Minimal public housing",
+          "source": "QLD Housing"
+        },
+        "schools": {
+          "primary": [
+            {
+              "name": "Condon State School",
+              "rating": "Good",
+              "distance": "1km"
+            }
+          ],
+          "secondary": [
+            {
+              "name": "Heatley SHS",
+              "rating": "Average",
+              "distance": "4km"
+            }
+          ],
+          "overallQuality": "good",
+          "source": "MySchool"
+        },
+        "hazards": {
+          "flood": {
+            "risk": "low",
+            "zone": null,
+            "source": "TCC flood maps"
+          },
+          "bushfire": {
+            "risk": "low",
+            "zone": null,
+            "source": "QFES"
+          },
+          "coastal": {
+            "risk": "low",
+            "source": "inland"
+          }
+        },
+        "zoning": {
+          "currentZoning": "Low density residential",
+          "densificationPotential": "low",
+          "recentRezonings": null,
+          "councilPlan": "townsville.qld.gov.au",
+          "source": "TCC"
+        },
+        "developmentApps": [],
+        "demographics": {
+          "medianAge": 35,
+          "trend": "young families",
+          "householdType": "families dominant",
+          "irsad": 985,
+          "source": "ABS Census 2021"
+        },
+        "rentalDemand": {
+          "tenantTypes": "Defence personnel, young families, healthcare",
+          "marketDepth": "deep \u2014 200+ sales/yr",
+          "source": "REIQ"
+        },
+        "connectivity": {
+          "nbn": "FTTP/FTTC",
+          "publicTransport": "Bus network",
+          "cbdDistance": "9km",
+          "source": "NBN"
+        },
+        "noise": {
+          "flightPath": false,
+          "highway": false,
+          "industrial": false,
+          "notes": "Quiet residential"
+        }
+      },
+      "forward": {
+        "cycleStage": "MID",
+        "bear": 18,
+        "base": 35,
+        "bull": 52,
+        "horizon": "5yr to 2031",
+        "drivers": [
+          "$599k entry \u2014 huge budget buffer",
+          "+24.5% growth momentum",
+          "Defence $2B active",
+          "CopperString $5B active",
+          "Vacancy 0.5%",
+          "DOM 13 days"
+        ],
+        "risks": [
+          "Cyclone risk Cat 3+ every ~10yr",
+          "QLD 2nd property land tax ~$1,500/yr",
+          "Post-spike moderation"
+        ],
+        "analystViews": [
+          "Propertyology: Townsville top pick",
+          "Cotality: +24.5% annual",
+          "Keir: continued double-digit"
+        ],
+        "consensus": "Established Townsville suburb with defence + energy catalysts actively building. Best risk-adjusted QLD pick alongside Kirwan. Base case 35% over 5yr."
+      },
+      "verdict": "STRONG BUY",
+      "topSignals": [
+        "Entry $599k",
+        "+24.5% growth",
+        "DOM 13d",
+        "Vacancy 0.5%",
+        "Defence active build"
+      ],
+      "watchPoints": [
+        "Cyclone",
+        "Land tax ~$1.5k/yr",
+        "Post-spike risk"
+      ],
+      "stampDutyNote": "At $599k: QLD stamp ~$19k, total costs ~$79k \u2014 $31k cash buffer.",
+      "riskFilter": {
+        "supplyRisk": {
+          "rating": "LOW",
+          "reason": "Established Townsville suburb. New supply concentrated in Mount Low/Elliot Springs, not Condon.",
+          "source": "Townsville Council"
+        },
+        "demandRisk": {
+          "rating": "LOW",
+          "reason": "Diversified: defence (Lavarack 5km), healthcare, port, education",
+          "source": "ABS"
+        },
+        "infrastructureRisk": {
+          "rating": "LOW",
+          "reason": "Defence $2B actively building, CopperString $5B actively building",
+          "source": "defence.gov.au"
+        },
+        "cycleRisk": {
+          "rating": "MEDIUM",
+          "reason": "Post-spike +24.5% may moderate to 10-12% in 2027",
+          "source": ""
+        },
+        "liquidityRisk": {
+          "rating": "LOW",
+          "reason": "200+ sales/yr deep market",
+          "source": "REIQ"
+        },
+        "overallRisk": "LOW-MEDIUM",
+        "downgradeVerdict": false,
+        "riskNote": "Best risk-adjusted QLD pick alongside Kirwan. Defence spending actively delivering, not just announcements. Cyclone risk is real but insurable."
+      }
+    },
+    {
+      "name": "Aitkenvale",
+      "state": "QLD",
+      "postcode": "4814",
+      "lga": "Townsville City",
+      "region": "QLD \u2014 Townsville",
+      "medianHouse": 681000,
+      "medianRentWeekly": 590,
+      "quant": {
+        "dom": {
+          "value": 14,
+          "score": 90,
+          "source": "htag.com.au"
+        },
+        "vacancy": {
+          "value": 0.5,
+          "score": 98,
+          "source": "SQM Feb 2026"
+        },
+        "yield": {
+          "value": 4.5,
+          "score": 65,
+          "source": "htag.com.au"
+        },
+        "priceGrowth": {
+          "value": 18.5,
+          "score": 90,
+          "source": "htag.com.au"
+        },
+        "supplyOnMarket": {
+          "value": 0.21,
+          "score": 92,
+          "source": "htag.com.au"
+        },
+        "vendorDiscount": {
+          "value": -0.5,
+          "score": 62,
+          "source": "Cotality"
+        },
+        "renterPercent": {
+          "value": 38,
+          "score": 62,
+          "source": "ABS Census"
+        },
+        "unitToHouseRatio": {
+          "value": 15,
+          "score": 75,
+          "source": "ABS"
+        },
+        "auctionClearance": {
+          "value": null,
+          "score": null,
+          "source": "N/A Townsville"
+        }
+      },
+      "compositeScore": 83,
+      "qual": {
+        "infrastructure": [
+          {
+            "name": "Lavarack Barracks Defence Expansion",
+            "type": "defence",
+            "status": "under-construction",
+            "expectedCompletion": "2028",
+            "delayMonths": null,
+            "investmentAud": 2000000000,
+            "impactRating": "high",
+            "source": "defence.gov.au",
+            "notes": "Major defence spending adjacent."
+          },
+          {
+            "name": "Stockland Aitkenvale Shopping Centre",
+            "type": "commercial",
+            "status": "completed",
+            "expectedCompletion": "ongoing",
+            "delayMonths": null,
+            "investmentAud": null,
+            "impactRating": "medium",
+            "source": "stockland.com.au",
+            "notes": "Major retail hub for middle Townsville."
+          }
+        ],
+        "crime": {
+          "overallRating": "moderate",
+          "trend": "stable",
+          "notableTypes": [
+            "property crime moderate"
+          ],
+          "comparisonToState": "average",
+          "source": "QLD Police"
+        },
+        "publicHousing": {
+          "existingNearby": true,
+          "plannedNearby": false,
+          "concentration": "low",
+          "details": "Some scattered public housing",
+          "source": "QLD Housing"
+        },
+        "schools": {
+          "primary": [
+            {
+              "name": "Aitkenvale State School",
+              "rating": "Average",
+              "distance": "1km"
+            }
+          ],
+          "secondary": [
+            {
+              "name": "Pimlico SHS",
+              "rating": "Good",
+              "distance": "3km"
+            }
+          ],
+          "overallQuality": "good",
+          "source": "MySchool"
+        },
+        "hazards": {
+          "flood": {
+            "risk": "medium",
+            "zone": "Ross River flood-prone in some areas",
+            "source": "TCC"
+          },
+          "bushfire": {
+            "risk": "low",
+            "zone": null,
+            "source": "QFES"
+          },
+          "coastal": {
+            "risk": "low",
+            "source": "inland"
+          }
+        },
+        "zoning": {
+          "currentZoning": "Low-medium density",
+          "densificationPotential": "medium",
+          "recentRezonings": null,
+          "councilPlan": "townsville.qld.gov.au",
+          "source": "TCC"
+        },
+        "developmentApps": [],
+        "demographics": {
+          "medianAge": 36,
+          "trend": "mixed",
+          "householdType": "mixed families + professionals",
+          "irsad": 970,
+          "source": "ABS Census 2021"
+        },
+        "rentalDemand": {
+          "tenantTypes": "Defence, healthcare (TTH), professionals",
+          "marketDepth": "deep",
+          "source": "REIQ"
+        },
+        "connectivity": {
+          "nbn": "FTTP/FTTC",
+          "publicTransport": "Bus network",
+          "cbdDistance": "6km",
+          "source": "NBN"
+        },
+        "noise": {
+          "flightPath": true,
+          "highway": false,
+          "industrial": false,
+          "notes": "Townsville Airport flight path affects some streets \u2014 check specific address"
+        }
+      },
+      "forward": {
+        "cycleStage": "MID",
+        "bear": 15,
+        "base": 30,
+        "bull": 45,
+        "horizon": "5yr to 2031",
+        "drivers": [
+          "Inner Townsville (6km CBD)",
+          "Defence demand",
+          "Stockland retail hub",
+          "Supply on market 0.21%"
+        ],
+        "risks": [
+          "Some Ross River flood zones \u2014 check specific address",
+          "Flight path exposure",
+          "QLD land tax"
+        ],
+        "analystViews": [
+          "htag: +18.5% annual",
+          "Propertyology: Townsville top pick"
+        ],
+        "consensus": "Inner Townsville with better schools than outer suburbs. Flight path + flood are address-specific risks. Base case 28-32% over 5yr."
+      },
+      "verdict": "BUY",
+      "topSignals": [
+        "Inner Townsville 6km CBD",
+        "Stock 0.21% tightest",
+        "Defence catalyst",
+        "Good schools"
+      ],
+      "watchPoints": [
+        "Ross River flood zones",
+        "Flight path some streets",
+        "At top of QLD budget"
+      ],
+      "stampDutyNote": "At $681k: QLD stamp ~$22k, total costs ~$96k \u2014 fits $110k.",
+      "riskFilter": {
+        "supplyRisk": {
+          "rating": "LOW",
+          "reason": "Inner Townsville established 6km from CBD. Infill only.",
+          "source": "Townsville Council"
+        },
+        "demandRisk": {
+          "rating": "LOW",
+          "reason": "Inner metro diversified employment + healthcare (TTH Hospital)",
+          "source": "ABS"
+        },
+        "infrastructureRisk": {
+          "rating": "LOW",
+          "reason": "Defence + CopperString active",
+          "source": ""
+        },
+        "cycleRisk": {
+          "rating": "MEDIUM",
+          "reason": "Post-spike moderation likely",
+          "source": ""
+        },
+        "liquidityRisk": {
+          "rating": "LOW",
+          "reason": "Deep inner market",
+          "source": "REIQ"
+        },
+        "overallRisk": "LOW-MEDIUM",
+        "downgradeVerdict": false,
+        "riskNote": "Inner Townsville option at top of budget. Ross River flood zones + flight path address-specific \u2014 verify per property."
+      }
+    },
+    {
+      "name": "Noble Park",
+      "state": "VIC",
+      "postcode": "3174",
+      "lga": "City of Greater Dandenong",
+      "region": "VIC \u2014 Melbourne SE middle-ring",
+      "medianHouse": 780000,
+      "medianRentWeekly": 540,
+      "quant": {
+        "dom": {
+          "value": 28,
+          "score": 68,
+          "source": "Domain"
+        },
+        "vacancy": {
+          "value": 1.4,
+          "score": 78,
+          "source": "SQM"
+        },
+        "yield": {
+          "value": 3.6,
+          "score": 40,
+          "source": "Domain"
+        },
+        "priceGrowth": {
+          "value": 7.2,
+          "score": 62,
+          "source": "Domain"
+        },
+        "supplyOnMarket": {
+          "value": 0.7,
+          "score": 65,
+          "source": "Cotality"
+        },
+        "vendorDiscount": {
+          "value": -2.0,
+          "score": 78,
+          "source": "Cotality"
+        },
+        "renterPercent": {
+          "value": 32,
+          "score": 75,
+          "source": "ABS Census"
+        },
+        "unitToHouseRatio": {
+          "value": 30,
+          "score": 60,
+          "source": "ABS"
+        },
+        "auctionClearance": {
+          "value": 62,
+          "score": 68,
+          "source": "Domain"
+        }
+      },
+      "compositeScore": 65,
+      "qual": {
+        "infrastructure": [
+          {
+            "name": "Noble Park station (on Cranbourne/Pakenham line)",
+            "type": "transport",
+            "status": "completed",
+            "expectedCompletion": "1980s",
+            "delayMonths": null,
+            "investmentAud": null,
+            "impactRating": "high",
+            "source": "ptv.vic.gov.au",
+            "notes": "Established rail to CBD ~40min."
+          },
+          {
+            "name": "Dandenong Hospital",
+            "type": "hospital",
+            "status": "completed",
+            "expectedCompletion": "ongoing",
+            "delayMonths": null,
+            "investmentAud": null,
+            "impactRating": "medium",
+            "source": "monashhealth.org",
+            "notes": "Major regional hospital employment."
+          }
+        ],
+        "crime": {
+          "overallRating": "moderate",
+          "trend": "stable",
+          "notableTypes": [
+            "Greater Dandenong LGA higher than metro avg"
+          ],
+          "comparisonToState": "above-average",
+          "source": "Victoria Police"
+        },
+        "publicHousing": {
+          "existingNearby": true,
+          "plannedNearby": false,
+          "concentration": "moderate",
+          "details": "Some older public housing scattered",
+          "source": "Homes Victoria"
+        },
+        "schools": {
+          "primary": [
+            {
+              "name": "Noble Park Primary",
+              "rating": "Average",
+              "distance": "1km"
+            }
+          ],
+          "secondary": [
+            {
+              "name": "Noble Park Secondary",
+              "rating": "Average",
+              "distance": "2km"
+            }
+          ],
+          "overallQuality": "average",
+          "source": "MySchool"
+        },
+        "hazards": {
+          "flood": {
+            "risk": "low",
+            "zone": null,
+            "source": "VicPlan"
+          },
+          "bushfire": {
+            "risk": "low",
+            "zone": null,
+            "source": "CFA"
+          },
+          "coastal": {
+            "risk": "n/a",
+            "source": "inland"
+          }
+        },
+        "zoning": {
+          "currentZoning": "General Residential + NRZ pockets",
+          "densificationPotential": "medium",
+          "recentRezonings": null,
+          "councilPlan": "cgd.vic.gov.au",
+          "source": "City of Greater Dandenong"
+        },
+        "developmentApps": [],
+        "demographics": {
+          "medianAge": 37,
+          "trend": "multicultural stable",
+          "householdType": "diverse",
+          "irsad": 905,
+          "source": "ABS Census 2021"
+        },
+        "rentalDemand": {
+          "tenantTypes": "Workers, migrants, students",
+          "marketDepth": "deep",
+          "source": "REIV"
+        },
+        "connectivity": {
+          "nbn": "FTTN/FTTC",
+          "publicTransport": "Noble Park train station (upgraded)",
+          "cbdDistance": "23km",
+          "source": "NBN/PTV"
+        },
+        "noise": {
+          "flightPath": false,
+          "highway": true,
+          "industrial": true,
+          "notes": "Monash Fwy nearby, some industrial pockets"
+        }
+      },
+      "forward": {
+        "cycleStage": "MID",
+        "bear": 8,
+        "base": 20,
+        "bull": 32,
+        "horizon": "5yr to 2031",
+        "drivers": [
+          "Established middle-ring Melbourne",
+          "Rail to CBD 40min",
+          "Hospital employment",
+          "LOW supply risk \u2014 infill only"
+        ],
+        "risks": [
+          "VIC stamp duty + surcharge (~$50k at $780k)",
+          "Lower IRSAD 905",
+          "Melbourne lagging WA/QLD"
+        ],
+        "analystViews": [
+          "KPMG: Melbourne +6.6% 2026",
+          "Domain: Greater Dandenong moderate growth"
+        ],
+        "consensus": "Real Melbourne middle-ring option. Established, rail access, but VIC stamp duty hurts investor returns. Base case 18-24% over 5yr."
+      },
+      "verdict": "WATCH",
+      "topSignals": [
+        "Established middle-ring",
+        "Rail to CBD",
+        "LOW supply risk",
+        "Sub-$800k"
+      ],
+      "watchPoints": [
+        "VIC stamp duty ~$42k + surcharge ~$10k",
+        "IRSAD 905",
+        "Yield only 3.6%"
+      ],
+      "stampDutyNote": "At $780k: VIC stamp ~$42k + investor surcharge ~$10k = total costs ~$132k \u2014 OVER $110k cash. Need lower price or more cash.",
+      "riskFilter": {
+        "supplyRisk": {
+          "rating": "LOW",
+          "reason": "Established Greater Dandenong middle-ring. Infill only.",
+          "source": "CGD planning"
+        },
+        "demandRisk": {
+          "rating": "MEDIUM",
+          "reason": "Melbourne commuter market weaker than WA/QLD",
+          "source": ""
+        },
+        "infrastructureRisk": {
+          "rating": "LOW",
+          "reason": "Rail operational, hospital established",
+          "source": ""
+        },
+        "cycleRisk": {
+          "rating": "LOW",
+          "reason": "Modest 7.2% growth, no spike",
+          "source": ""
+        },
+        "liquidityRisk": {
+          "rating": "LOW",
+          "reason": "Deep Melbourne market",
+          "source": ""
+        },
+        "overallRisk": "LOW-MEDIUM",
+        "downgradeVerdict": false,
+        "riskNote": "Real VIC middle-ring option with LOW supply risk. BUT VIC stamp duty + investor surcharge makes $780k entry exceed $110k cash."
+      }
+    }
+  ],
+  "summary": "19 suburbs across WA, QLD, SA, VIC. STRONG BUY: Kirwan QLD (88), Condon QLD (87). BUY: Mandurah WA (85), Geraldton WA (84), Albany WA (83), Baldivis WA (82), Armadale WA (81), Wellard WA (81), Para Hills SA (80), Gawler SA (79), Salisbury North SA (78). Portfolio strategy: QLD (Kirwan/Condon/Aitkenvale) for max growth + WA (Perth mid/outer) + SA middle-ring (Para Hills established) for diversification."
+}

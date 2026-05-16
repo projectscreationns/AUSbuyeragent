@@ -1,0 +1,359 @@
+{
+  "asOf": "14/05/2026",
+  "rba": {
+    "cashRate": "4.35%",
+    "lastDecision": { "date": "07/05/2026", "change": "+25bp", "voteSplit": "8-1", "source": "https://www.rba.gov.au/" },
+    "nextMeeting": "17/06/2026",
+    "forecasts": [
+      { "bank": "Westpac", "nextMove": "Two more 0.25% hikes to 4.85% (Jun + Aug)", "source": "https://www.westpac.com.au/" },
+      { "bank": "CBA", "nextMove": "Hold for rest of 2026", "source": "https://www.commbank.com.au/" },
+      { "bank": "RBA Statement", "nextMove": "Will 'do what is necessary' — door open for more hikes", "source": "https://www.rba.gov.au/" }
+    ],
+    "signal": "RED",
+    "note": "3rd hike of 2026 = 4.35% (was 4.10%). Middle East oil crisis fuelling inflation. Westpac sees 4.85% by August."
+  },
+  "employment": {
+    "unemployment": { "value": "4.3%", "month": "Mar 2026", "trend": "stable", "source": "https://www.abs.gov.au/" },
+    "signal": "AMBER",
+    "note": "Stable at 4.3%. April releases 21/05. Labour market resilient despite hikes."
+  },
+  "inflation": {
+    "headline": { "value": "4.6%", "period": "12mo to Mar 2026", "source": "https://www.abs.gov.au/" },
+    "trimmedMean": { "value": "3.3%", "source": "https://www.abs.gov.au/" },
+    "signal": "RED",
+    "note": "Headline jumped from 3.7% to 4.6%. Housing +6.5%, Transport +8.9%, Fuel +24.2%. RBA forecast above target until mid-2028."
+  },
+  "wages": {
+    "wpiAnnual": { "value": "3.4%", "quarter": "Mar Q 2026", "source": "https://www.abs.gov.au/" },
+    "signal": "RED",
+    "note": "Wages 3.4% vs inflation 4.6% = real wages going BACKWARDS."
+  },
+  "migration": {
+    "nom": { "value": "311,000", "period": "yr to Sep 2025", "source": "https://www.abs.gov.au/" },
+    "annualPopGrowth": { "value": "+1.5%", "source": "https://www.abs.gov.au/" },
+    "fastestStates": [
+      { "state": "WA", "growth": "+2.2%" },
+      { "state": "QLD", "growth": "+2.1%" },
+      { "state": "SA", "growth": "+1.8%" }
+    ],
+    "forecast2026": "Treasury: NOM 260k 2025-26, 225k by 2026-27",
+    "signal": "GREEN",
+    "note": "Demand pressure continues. WA/QLD/SA lead growth."
+  },
+  "approvals": {
+    "monthly": { "value": "17,300", "month": "Mar 2026", "source": "https://www.abs.gov.au/" },
+    "housesTrend": "+0.9% houses, -26% units",
+    "vsTarget": "938k forecast vs 1.2M Housing Accord target = 22% shortfall",
+    "signal": "GREEN",
+    "note": "March approvals DOWN 10.5%. 22% deficit over 5 years. Persistent undersupply POSITIVE for prices."
+  },
+  "vacancy": {
+    "national": { "value": "1.2%", "source": "https://sqmresearch.com.au/" },
+    "byCity": [
+      { "city": "Sydney", "value": "1.3%" }, { "city": "Melbourne", "value": "1.5%" },
+      { "city": "Brisbane", "value": "0.8%" }, { "city": "Perth", "value": "0.6%" },
+      { "city": "Adelaide", "value": "0.5%" }, { "city": "Hobart", "value": "0.5%" },
+      { "city": "Darwin", "value": "0.6%" }, { "city": "Canberra", "value": "1.4%" }
+    ],
+    "signal": "GREEN",
+    "note": "Up to 1.2% from 1.0% but still tight. Perth/Adelaide/Brisbane critically low."
+  },
+  "medians": {
+    "cities": [
+      { "city": "Sydney", "median": 1760000 }, { "city": "Melbourne", "median": 925000 },
+      { "city": "Brisbane", "median": 1280000 }, { "city": "Perth", "median": 1130000 },
+      { "city": "Adelaide", "median": 1010000 }, { "city": "Canberra", "median": 1048000 },
+      { "city": "Hobart", "median": 720000 }, { "city": "Darwin", "median": 730000 }
+    ],
+    "annualGrowth": [
+      { "city": "Perth", "growth": "+26.0%" }, { "city": "Brisbane", "growth": "+19.7%" },
+      { "city": "Adelaide", "growth": "+12.2%" }, { "city": "Sydney", "growth": "+4.2%" },
+      { "city": "Melbourne", "growth": "+2.0%" }
+    ],
+    "national": { "value": 1060000, "source": "https://propertyupdate.com.au/" },
+    "signal": "AMBER",
+    "note": "Two-speed: 24pt gap Perth (+26%) vs Melbourne (+2%). Q1: Perth +7.3%."
+  },
+  "clearanceRates": {
+    "cities": [
+      { "city": "Sydney", "rate": "58%", "trend": "weakening" },
+      { "city": "Melbourne", "rate": "60%", "trend": "weakening" },
+      { "city": "Adelaide", "rate": "75%", "trend": "strongest" },
+      { "city": "Brisbane", "rate": "67%", "trend": "steady" },
+      { "city": "Perth", "rate": "N/A", "trend": "private treaty" }
+    ],
+    "signal": "AMBER",
+    "note": "Sydney/Melbourne 58-60% below long-term avg. Adelaide 75% strongest."
+  },
+  "lending": {
+    "ownerOccVariable": { "value": "5.76% avg", "source": "https://www.rba.gov.au/" },
+    "investorVariable": { "value": "5.84-6.85%", "source": "https://www.money.com.au/" },
+    "assessmentRate": { "value": "~8.84-9.85%", "source": "https://www.apra.gov.au/" },
+    "apraChanges": "DTI cap 6x income (20% of new lending max), active since Feb 2026. 3% buffer retained.",
+    "signal": "RED",
+    "note": "Investor rates 5.84-6.85% after May hike. DTI cap binding on 10% of investors."
+  },
+  "lawsAndBills": {
+    "negativeGearing": {
+      "change": "REMOVED for established residential properties acquired after 7:30pm AEST 12 May 2026",
+      "effectiveDate": "1 July 2027",
+      "exemptions": [
+        "Properties owned before 12 May 2026 (grandfathered for life)",
+        "Properties under contract before 12 May 2026",
+        "NEW BUILDS (still fully eligible)",
+        "Build-to-rent developments",
+        "Widely-held trusts and super funds"
+      ],
+      "impact": "Net rental losses on new established purchases QUARANTINED — can only offset rental income or capital gain from same/other rentals. Cannot reduce salary tax. New builds still get full deduction.",
+      "source": "https://budget.gov.au/",
+      "signal": "RED"
+    },
+    "capitalGainsTax": {
+      "change": "50% CGT discount REMOVED, replaced with cost base indexation + 30% minimum tax on net gains",
+      "effectiveDate": "1 July 2027",
+      "exemptions": [
+        "Gains accrued BEFORE 1 July 2027 keep 50% discount (auto via valuation at that date)",
+        "New residential property buyers can CHOOSE old or new regime",
+        "Build-to-rent + government housing programs exempt"
+      ],
+      "impact": "Existing property owners protected via deemed market valuation 1/7/2027. New purchases face min 30% tax on indexed gains from 2027.",
+      "source": "https://williambuck.com/",
+      "signal": "AMBER"
+    },
+    "firstHomeGuarantee": {
+      "change": "UNLIMITED places + NO income cap from 1 October 2025",
+      "effectiveDate": "Active",
+      "details": "5% deposit, no LMI. Price caps: Sydney $1.5M, Brisbane $1M, Melbourne $950k, Perth $850k, Adelaide $850k, Hobart $750k, Darwin $750k, Canberra $1M.",
+      "impact": "MASSIVE owner-occupier demand floor. FHBs now compete on equal footing with investors. Demand absorbed even as investor demand drops.",
+      "source": "https://www.housingaustralia.gov.au/",
+      "signal": "GREEN"
+    },
+    "helpToBuy": {
+      "change": "Shared equity scheme — govt takes 30% (existing) or 40% (new build) equity",
+      "effectiveDate": "Live — 10k places/yr",
+      "details": "Reduces deposit needed, govt shares gains/losses. Drives FHB demand up further.",
+      "impact": "Another owner-occupier demand boost. Concentrated in lower-priced suburbs.",
+      "source": "https://firsthomebuyers.gov.au/",
+      "signal": "GREEN"
+    },
+    "stampDuty": {
+      "WA": "~$36k on $700k investor",
+      "SA": "~$29k on $637k investor",
+      "QLD": "~$25k on $550k investor + 2nd-property land tax ~$500-1500/yr",
+      "VIC": "~$55k on $800k investor + 1.5% surcharge",
+      "note": "Rates unchanged 2026-27 budget but property prices up = higher dollar cost"
+    }
+  },
+  "defenceCatalysts": {
+    "summary": "AUKUS + F-35 + Army Brigades create 20,000+ direct jobs over 30 years. Defence-anchored suburbs see structural owner-occupier demand independent of investor tax rules — making them best plays under new NG/CGT regime.",
+    "aukusSubmarine": {
+      "totalProgram": "$368 billion over 30 years (largest defence project in AU history)",
+      "totalJobs": "20,000+ direct over 30 years",
+      "locations": [
+        {
+          "site": "Osborne, SA (Adelaide north)",
+          "jobs": "5,500 building SSN-AUKUS subs + 4,000 building the infrastructure",
+          "timeline": "Construction commenced 2026. Skills & Training Academy opening 2026. First SSN-AUKUS by end of decade.",
+          "catchmentSuburbs": ["Para Hills", "Salisbury", "Mawson Lakes", "Ingle Farm", "Parafield Gardens", "Gawler"],
+          "signal": "GREEN"
+        },
+        {
+          "site": "HMAS Stirling, WA (Rockingham/Perth South)",
+          "jobs": "$8B infrastructure spend + 3,000 direct jobs. Plus 3,000 at Henderson maintenance.",
+          "timeline": "Submarine Rotational Force-West starts 2027. Virginia Class subs from early 2030s.",
+          "catchmentSuburbs": ["Rockingham", "Baldivis", "Wellard", "Parmelia", "Orelia", "Cooloongup"],
+          "signal": "GREEN"
+        },
+        {
+          "site": "Henderson Defence Precinct, WA",
+          "jobs": "3,000 maintenance jobs",
+          "timeline": "Capability building 2026 onward",
+          "catchmentSuburbs": ["Henderson", "Hammond Park", "Wattleup", "Cockburn", "Baldivis"],
+          "signal": "GREEN"
+        }
+      ]
+    },
+    "fighterJetsAndArmy": [
+      {
+        "site": "RAAF Williamtown, NSW (Newcastle)",
+        "role": "F-35 main operating base + maintenance hub for ALL 72 AU F-35s",
+        "jobs": "4,500+ existing + 400 new F-35 sustainment jobs through 30+ year contract. BAE Systems expanding into 4.4ha at Astra Aerolab.",
+        "catchmentSuburbs": ["Williamtown", "Salt Ash", "Medowie", "Raymond Terrace", "Maitland", "Cessnock", "Newcastle East"],
+        "signal": "GREEN"
+      },
+      {
+        "site": "Lavarack Barracks + RAAF Townsville, QLD",
+        "role": "Army 3rd Brigade + largest RAAF base in north QLD",
+        "jobs": "10,000+ defence personnel and families",
+        "catchmentSuburbs": ["Kirwan", "Condon", "Aitkenvale", "Kelso", "Mount Louisa", "Rasmussen"],
+        "signal": "GREEN"
+      },
+      {
+        "site": "Robertson Barracks, NT (Holtze/Palmerston)",
+        "role": "Army 1st Brigade + 1st Aviation Regiment. Major base improvements through 2026.",
+        "jobs": "~6,000 personnel + civilian + AUKUS sub rotation forces",
+        "catchmentSuburbs": ["Palmerston", "Driver", "Bakewell", "Gunn", "Holtze", "Berrimah"],
+        "signal": "GREEN"
+      },
+      {
+        "site": "HMAS Cairns, QLD",
+        "role": "Naval base (patrol boats, hydrographic)",
+        "jobs": "~1,500 personnel",
+        "catchmentSuburbs": ["Cairns", "Edmonton", "Woree", "Mooroobool"],
+        "signal": "AMBER"
+      },
+      {
+        "site": "RAAF East Sale, VIC (Gippsland)",
+        "role": "Pilot training base",
+        "jobs": "~1,200 personnel",
+        "catchmentSuburbs": ["Sale", "Longford", "Stratford"],
+        "signal": "AMBER"
+      },
+      {
+        "site": "RAAF Edinburgh, SA (north Adelaide)",
+        "role": "P-8 Poseidon, E-7 Wedgetail, AP-3C maritime patrol. Adjacent to AUKUS catchment.",
+        "jobs": "~4,000 personnel",
+        "catchmentSuburbs": ["Edinburgh", "Mawson Lakes", "Salisbury", "Parafield"],
+        "signal": "GREEN"
+      },
+      {
+        "site": "Defence HQ Russell + JOC, ACT",
+        "role": "Defence administration",
+        "jobs": "20,000+ but expensive market",
+        "signal": "AMBER"
+      }
+    ]
+  },
+  "infrastructure": {
+    "summary": "Mega-projects beyond defence shifting where growth happens. Olympics, airports, rail, REZs, hydrogen all anchor multi-decade demand.",
+    "projects": [
+      {
+        "name": "Western Sydney Airport (Nancy-Bird Walton)",
+        "state": "NSW",
+        "openingDate": "October 2026",
+        "investment": "$11B+",
+        "jobs": "28,000 direct + indirect by 2031, 200,000+ in Aerotropolis over 20 years",
+        "impact": "Bradfield City (Australia's 3rd CBD), M12 motorway opened March 2026, rail line opens with airport",
+        "catchmentSuburbs": ["Bringelly (already $2.4M)", "Liverpool", "Leppington", "Edmondson Park", "Austral", "Kemps Creek"],
+        "warning": "Most direct-benefit suburbs already moved. $800k budget excludes Bringelly. Check next-ring.",
+        "signal": "GREEN"
+      },
+      {
+        "name": "Brisbane 2032 Olympics",
+        "state": "QLD",
+        "openingDate": "July 2032",
+        "investment": "$7.1B Cross River Rail (opens 2026) + new stadiums + athletes village",
+        "athletesVillage": "Bowen Hills (moved from Hamilton). 2,000 units, 6 towers, ~10,000 athletes during games, then build-to-rent.",
+        "impact": "Construction ramps from late 2026 to mid-2031",
+        "catchmentSuburbs": ["Bowen Hills", "Logan", "Ipswich", "Redcliffe", "Springfield"],
+        "secondaryBenefit": "Logan + Ipswich get infrastructure spillover and indoor sports centre",
+        "signal": "GREEN"
+      },
+      {
+        "name": "CopperString HVDC Line",
+        "state": "QLD",
+        "openingDate": "First stage 2032",
+        "investment": "$5B QLD government + $13B leveraged + $7B additional private investment already locked in",
+        "impact": "Connects Townsville to Mount Isa NWMP — unlocks $680B critical minerals province. Townsville becomes critical minerals + renewable + manufacturing hub.",
+        "catchmentSuburbs": ["Townsville suburbs (Kirwan, Condon, Aitkenvale, Kelso, Mount Louisa) ALL benefit"],
+        "signal": "GREEN"
+      },
+      {
+        "name": "Hunter-Central Coast REZ",
+        "state": "NSW",
+        "openingDate": "Construction from early 2026, ongoing",
+        "investment": "$3.9B private + $4B total",
+        "jobs": "590/yr construction, 220 ongoing from 2030",
+        "impact": "1.8GW new renewable generation. Combined with F-35 sustainment hub = Newcastle area double catalyst.",
+        "catchmentSuburbs": ["Newcastle", "Maitland", "Cessnock", "Singleton", "Lake Macquarie", "Port Stephens"],
+        "signal": "GREEN"
+      },
+      {
+        "name": "Cross River Rail",
+        "state": "QLD",
+        "openingDate": "2026",
+        "investment": "$7.1B",
+        "impact": "Brisbane CBD connection. Direct benefit for Boggo Road, Woolloongabba, plus outer Logan/Ipswich/Caboolture via faster CBD access.",
+        "signal": "GREEN"
+      },
+      {
+        "name": "METRONET Perth (ongoing expansion)",
+        "state": "WA",
+        "openingDate": "Various 2024-2030",
+        "investment": "$7B+",
+        "impact": "Midland station opened Feb 2026 (suburb +22% growth). Yanchep extension, Thornlie-Cockburn link.",
+        "signal": "GREEN"
+      },
+      {
+        "name": "Middle Arm Sustainable Development Precinct",
+        "state": "NT",
+        "openingDate": "Phased 2026-2030",
+        "investment": "$1.9B ($1.5B Fed equity)",
+        "impact": "Darwin LNG + hydrogen + critical minerals hub. AUKUS submarine rotation through Darwin.",
+        "catchmentSuburbs": ["Palmerston", "Holtze", "Berrimah", "Coonawarra"],
+        "signal": "GREEN"
+      },
+      {
+        "name": "Pilbara Hydrogen Hub + Lumsden Point",
+        "state": "WA",
+        "openingDate": "Phase 1 mid-2026",
+        "investment": "$140M Fed/State agreement + lithium export wharfs",
+        "impact": "Port Hedland export channel for battery metals. 2,000+ new mining jobs.",
+        "catchmentSuburbs": ["Port Hedland", "Karratha (further north, FIFO base)"],
+        "warning": "Remote regional — thin property market, high boom/bust risk",
+        "signal": "AMBER"
+      },
+      {
+        "name": "Suburban Rail Loop",
+        "state": "VIC",
+        "openingDate": "Phased 2035-2057+",
+        "investment": "$35B Stage 1 (Cheltenham to Box Hill)",
+        "impact": "Reshapes Melbourne SE corridor over decades. Too distant for $800k strategy.",
+        "signal": "AMBER"
+      },
+      {
+        "name": "Inland Rail",
+        "state": "NSW/QLD",
+        "openingDate": "Phased 2027-2030",
+        "investment": "$31B",
+        "impact": "Melbourne-Brisbane freight. Boost for Toowoomba, Narromine, Moree.",
+        "signal": "GREEN"
+      },
+      {
+        "name": "North-South Corridor (Torrens-Darlington)",
+        "state": "SA",
+        "openingDate": "2031",
+        "investment": "$15.4B",
+        "impact": "Completes Adelaide motorway. Boost for northern suburbs commuter access.",
+        "catchmentSuburbs": ["Para Hills", "Salisbury", "Gepps Cross", "Pooraka"],
+        "signal": "GREEN"
+      }
+    ]
+  },
+  "risks": [
+    { "risk": "Negative gearing REMOVED for established homes after 12/05/2026", "probability": "CERTAIN", "impact": "Established demand drops 30-40% from investors. New builds + cash-flow-positive established still viable.", "signal": "RED" },
+    { "risk": "CGT 50% discount REMOVED from 1 July 2027", "probability": "CERTAIN", "impact": "Pre-2027 gains protected. New purchases face min 30% tax on indexed gains.", "signal": "AMBER" },
+    { "risk": "Further RBA hikes (Westpac: 4.85% by August)", "probability": "HIGH", "impact": "Each 25bp cuts borrowing capacity ~3%. Investor rates pushing 7%.", "signal": "RED" },
+    { "risk": "Inflation re-accelerating (4.6%)", "probability": "HIGH", "impact": "More hikes likely. No pivot until back to target (mid-2028 RBA forecast).", "signal": "RED" },
+    { "risk": "Housing undersupply (POSITIVE)", "probability": "CERTAIN", "impact": "938k forecast vs 1.2M target = 22% shortfall. Supports prices.", "signal": "GREEN" },
+    { "risk": "AUKUS 30-year defence build (POSITIVE)", "probability": "CERTAIN", "impact": "$368B, 20k+ jobs anchors Adelaide north + Perth south + Henderson WA + Darwin. Owner-occupier demand floor.", "signal": "GREEN" },
+    { "risk": "First Home Guarantee UNLIMITED (POSITIVE)", "probability": "CERTAIN", "impact": "No income cap, no place limit. Massive owner-occupier demand absorbing investor slack.", "signal": "GREEN" },
+    { "risk": "Perth +26% growth = cycle peak risk", "probability": "MEDIUM", "impact": "Sub-$800k window closing. Moderation likely 2027.", "signal": "AMBER" },
+    { "risk": "North QLD insurance premiums +20-30%/yr", "probability": "HIGH", "impact": "Cyclone/flood premiums squeeze cash flow in Townsville/Cairns.", "signal": "AMBER" },
+    { "risk": "Outer Adelaide supply (Two Wells 43k dwellings)", "probability": "CERTAIN", "impact": "Greenfield oversupply dilutes growth in outer ring. Established Adelaide north safer.", "signal": "RED" },
+    { "risk": "VIC tax regime (1.5% surcharge + lowest growth)", "probability": "CERTAIN", "impact": "VIC structurally disadvantaged for investors. Skip.", "signal": "RED" },
+    { "risk": "Investor flight to new builds drives those prices up", "probability": "HIGH", "impact": "New build prices may rise 10-15% on flight demand.", "signal": "AMBER" }
+  ],
+  "summary": "MAJOR REGIME CHANGE 12/05/2026: Federal Budget killed negative gearing on new established-property purchases + removed CGT 50% discount from July 2027. BUT — defence catalysts (AUKUS $368B / 20k jobs) + First Home Guarantee (unlimited places, no income cap) + Olympics + Western Sydney Airport + CopperString + Hunter REZ create a richer picture. The best plays under new rules are DEFENCE-ANCHORED suburbs (Adelaide north AUKUS, Perth south HMAS Stirling, Newcastle F-35, Townsville Lavarack) where owner-occupier demand from defence workers + first-home buyers absorbs any investor slack. Pure speculative growth plays (outer Sydney/Melbourne) are dead. Cash-flow positive Townsville and new builds in growth corridors are the two clear paths.",
+  "warnings": [
+    "🚨 NEGATIVE GEARING removed for established homes acquired after 12 May 2026. Existing portfolio (Murrumba Downs) grandfathered for life.",
+    "🚨 CGT 50% discount removed from 1 July 2027. Pre-2027 gains protected via deemed valuation.",
+    "🚨 RBA 4.35% — Westpac forecasts 4.85% by August. Investor rates 5.84-6.85%. Confirm serviceability before offers.",
+    "✅ DEFENCE OPPORTUNITY: AUKUS $368B/20k jobs makes Adelaide north + Perth south + Newcastle + Darwin structurally strong.",
+    "✅ FIRST HOME GUARANTEE unlimited (no income cap) = massive owner-occupier demand floor.",
+    "✅ Help to Buy shared equity scheme live = 10k more buyers/yr.",
+    "⚠ Perth +26% annual = cycle peak risk. Sub-$800k window closing fast.",
+    "⚠ Western Sydney Airport: Bringelly already $2.4M. Direct-benefit suburbs mostly priced out at $800k.",
+    "💡 STRATEGY: 1) Cash-flow positive established in defence catchments (Townsville/Adelaide north) OR 2) New builds in growth corridors (Wellard WA, Ripley QLD, Munno Para SA)."
+  ]
+}
