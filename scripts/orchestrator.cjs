@@ -45,7 +45,7 @@ const BLACKLIST = [
 
 function runScout(suburbs, extraArgs = '') {
   const suburbList = suburbs.join(',');
-  const cmd = `node "${path.join(__dirname, 'scout_playwright.js')}" --suburbs "${suburbList}" ${extraArgs}`;
+  const cmd = `node "${path.join(__dirname, 'scout_playwright.cjs')}" --suburbs "${suburbList}" ${extraArgs}`;
   console.log(`\n[ORCHESTRATOR] Running scout for: ${suburbs.join(', ')}`);
   console.log(`[ORCHESTRATOR] Command: ${cmd}\n`);
 
@@ -150,7 +150,7 @@ async function main() {
 
     if (pass === 1) {
       // First pass: scan all default suburbs
-      const { DEFAULT_SUBURBS } = require('./scout_playwright.js');
+      const { DEFAULT_SUBURBS } = require('./scout_playwright.cjs');
       const names = DEFAULT_SUBURBS
         .filter(s => s.median <= 800000 + 50000)
         .map(s => s.name);

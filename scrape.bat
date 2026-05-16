@@ -29,7 +29,7 @@ echo Pass 2: Analyze results, expand to adjacent suburbs where strong
 echo This will take 15-25 minutes.
 echo.
 
-node scripts\orchestrator.js --passes 2 --screenshot
+node scripts\orchestrator.cjs --passes 2 --screenshot
 
 echo.
 echo Building and deploying to website...
