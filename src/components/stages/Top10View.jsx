@@ -40,8 +40,8 @@ export function Top10View() {
     <div>
       <div className="stage-shell__header">
         <div>
-          <h2 className="stage-shell__title">Adelaide AUKUS — Top 10 Analysis</h2>
-          <p className="stage-shell__desc">Ranked by growth potential × AUKUS proximity × crime × cash fit</p>
+          <h2 className="stage-shell__title">Top 10 Suburbs — All States</h2>
+          <p className="stage-shell__desc">Ranked by growth potential × risk × cash fit × yield</p>
         </div>
         <button className="btn btn--secondary btn--sm" onClick={load}>Reload</button>
       </div>
@@ -56,12 +56,15 @@ export function Top10View() {
         <div className="card mb-16" style={{ padding: 16 }}>
           <h3 style={{ margin: '0 0 12px', fontSize: 14, color: 'var(--text-bright)' }}>Market Context — May 2026</h3>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: 8, fontSize: 11 }}>
-            <div><span style={{ color: 'var(--text-dim)' }}>Adelaide median:</span> <strong>{mc.adelaideMedian}</strong></div>
-            <div><span style={{ color: 'var(--text-dim)' }}>Growth:</span> <strong style={{ color: '#6fdc6f' }}>{mc.adelaideGrowth}</strong></div>
-            <div><span style={{ color: 'var(--text-dim)' }}>Vacancy:</span> <strong style={{ color: '#dc6f6f' }}>{mc.vacancyRate}</strong></div>
-            <div><span style={{ color: 'var(--text-dim)' }}>AUKUS jobs:</span> <strong>{mc.aukusJobs}</strong></div>
-            <div><span style={{ color: 'var(--text-dim)' }}>Northern corridor:</span> <strong style={{ color: '#6fdc6f' }}>{mc.northernCorridor}</strong></div>
-            <div><span style={{ color: 'var(--text-dim)' }}>Interest rate:</span> <strong>{mc.interestRate}</strong></div>
+            {mc.strategy && <div><span style={{ color: 'var(--text-dim)' }}>Strategy:</span> <strong>{mc.strategy}</strong></div>}
+            {mc.perthMedian && <div><span style={{ color: 'var(--text-dim)' }}>Perth:</span> <strong>{mc.perthMedian}</strong></div>}
+            {mc.townsvilleGrowth && <div><span style={{ color: 'var(--text-dim)' }}>Townsville:</span> <strong style={{ color: '#6fdc6f' }}>{mc.townsvilleGrowth}</strong></div>}
+            {mc.adelaideGrowth && <div><span style={{ color: 'var(--text-dim)' }}>Adelaide:</span> <strong style={{ color: '#6fdc6f' }}>{mc.adelaideGrowth}</strong></div>}
+            {mc.waForecast && <div><span style={{ color: 'var(--text-dim)' }}>WA outlook:</span> <strong style={{ color: '#dcb86f' }}>{mc.waForecast}</strong></div>}
+            {mc.interestRate && <div><span style={{ color: 'var(--text-dim)' }}>Interest rate:</span> <strong>{mc.interestRate}</strong></div>}
+            {mc.adelaideMedian && <div><span style={{ color: 'var(--text-dim)' }}>Adelaide median:</span> <strong>{mc.adelaideMedian}</strong></div>}
+            {mc.vacancyRate && <div><span style={{ color: 'var(--text-dim)' }}>Vacancy:</span> <strong style={{ color: '#dc6f6f' }}>{mc.vacancyRate}</strong></div>}
+            {mc.bankForecasts && <div><span style={{ color: 'var(--text-dim)' }}>Forecasts:</span> <strong>{mc.bankForecasts}</strong></div>}
           </div>
         </div>
 
@@ -69,9 +72,11 @@ export function Top10View() {
         <div className="flex gap-8 mb-16" style={{ flexWrap: 'wrap', fontSize: 11 }}>
           <div className="header__chip">Budget: ${(ip.budget/1000).toFixed(0)}k</div>
           <div className="header__chip">Cash: ${(ip.cashAvailable/1000).toFixed(0)}k</div>
-          <div className="header__chip" style={{ borderColor: 'var(--green)' }}>NG: {ip.ngRelevance}</div>
-          <div className="header__chip" style={{ borderColor: 'var(--green)' }}>Surcharge: {ip.absenteeSurcharge}</div>
-          <div className="header__chip">Tax: {ip.taxStatus}</div>
+          {ip.strategy && <div className="header__chip" style={{ borderColor: 'var(--green)' }}>{ip.strategy}</div>}
+          {ip.stampDutyByState && <div className="header__chip">{ip.stampDutyByState}</div>}
+          {ip.ngRelevance && <div className="header__chip" style={{ borderColor: 'var(--green)' }}>NG: {ip.ngRelevance}</div>}
+          {ip.absenteeSurcharge && <div className="header__chip" style={{ borderColor: 'var(--green)' }}>Surcharge: {ip.absenteeSurcharge}</div>}
+          {ip.taxStatus && <div className="header__chip">Tax: {ip.taxStatus}</div>}
         </div>
 
         {/* Tab selector */}
@@ -96,6 +101,7 @@ export function Top10View() {
                   <div>
                     <span style={{ fontSize: 20, fontWeight: 700, color: 'var(--text-bright)', marginRight: 8 }}>#{s.rank}</span>
                     <span style={{ fontSize: 16, fontWeight: 600, color: 'var(--text-bright)' }}>{s.suburb}</span>
+                    {s.state && <span style={{ fontSize: 10, fontWeight: 700, marginLeft: 8, padding: '2px 6px', borderRadius: 4, background: s.state === 'QLD' ? '#1a3a2a' : s.state === 'WA' ? '#1a2a3a' : s.state === 'SA' ? '#2a1a3a' : s.state === 'VIC' ? '#1a1a3a' : '#3a2a1a', color: s.state === 'QLD' ? '#6fdc6f' : s.state === 'WA' ? '#6fbcdc' : s.state === 'SA' ? '#bc6fdc' : s.state === 'VIC' ? '#6f8adc' : '#dcb86f' }}>{s.state}</span>}
                     <span style={{ fontSize: 11, color: 'var(--text-dim)', marginLeft: 8 }}>{s.postcode}</span>
                   </div>
                   <div style={{ textAlign: 'right' }}>
@@ -111,7 +117,7 @@ export function Top10View() {
                   <div>Vacancy: <strong>{s.vacancyRate}</strong></div>
                   <div>Crime: <strong style={{ color: CRIME_COLOR[s.crimeRating] || '#fff' }}>{s.crimeRating}</strong></div>
                   <div>Supply risk: <strong>{s.supplyRisk}</strong></div>
-                  <div>AUKUS: <strong style={{ color: '#dcb86f' }}>{s.aukusProximity}</strong></div>
+                  <div>Catalyst: <strong style={{ color: '#dcb86f' }}>{s.primaryCatalyst || s.aukusProximity || 'N/A'}</strong></div>
                   <div>Listings: <strong>{s.listings}</strong> ({s.investigate} INV)</div>
                 </div>
 
@@ -176,27 +182,30 @@ export function Top10View() {
             <h3 style={{ margin: '0 0 16px', fontSize: 14, color: 'var(--text-bright)' }}>Cash Position Analysis</h3>
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16, fontSize: 12 }}>
               <div>
-                <h4 style={{ margin: '0 0 8px', color: '#6fbcdc' }}>Upfront Costs</h4>
+                <h4 style={{ margin: '0 0 8px', color: '#6fbcdc' }}>Stamp Duty by State</h4>
                 <div style={{ lineHeight: 2 }}>
-                  <div>Stamp duty (SA): <strong>{ca.stampDutySA}</strong></div>
-                  <div>Deposit (10%): <strong>{ca.deposit10pct}</strong></div>
-                  <div>LMI (90% LVR): <strong>{ca.lmi90lvr}</strong></div>
-                  <div>Legal + B&P: <strong>{ca.legalBP}</strong></div>
+                  {ca.stampDutyWA && <div>WA: <strong style={{ color: '#6fdc6f' }}>{ca.stampDutyWA}</strong></div>}
+                  {ca.stampDutyQLD && <div>QLD: <strong>{ca.stampDutyQLD}</strong></div>}
+                  {ca.stampDutySA && <div>SA: <strong>{ca.stampDutySA}</strong></div>}
+                  {ca.stampDutyNSW && <div>NSW: <strong>{ca.stampDutyNSW}</strong></div>}
+                  {ca.stampDutyVIC && <div>VIC: <strong style={{ color: '#dc6f6f' }}>{ca.stampDutyVIC}</strong></div>}
                 </div>
               </div>
               <div>
-                <h4 style={{ margin: '0 0 8px', color: '#6fbcdc' }}>Total Cash Required</h4>
+                <h4 style={{ margin: '0 0 8px', color: '#6fbcdc' }}>Cash Fit</h4>
                 <div style={{ lineHeight: 2 }}>
-                  <div>At $700k: <strong style={{ color: '#6fdc6f' }}>{ca.totalUpfront700k}</strong></div>
-                  <div>At $800k: <strong style={{ color: '#dcb86f' }}>{ca.totalUpfront800k}</strong></div>
-                  <div style={{ marginTop: 8, color: 'var(--text-bright)' }}>{ca.cashFits}</div>
+                  {ca.bestCashFit && <div>Best: <strong style={{ color: '#6fdc6f' }}>{ca.bestCashFit}</strong></div>}
+                  {ca.worstCashFit && <div>Worst: <strong style={{ color: '#dcb86f' }}>{ca.worstCashFit}</strong></div>}
+                  {ca.cashFitSummary && <div style={{ marginTop: 8, color: 'var(--text-bright)' }}>{ca.cashFitSummary}</div>}
+                  {ca.cashFits && <div style={{ marginTop: 8, color: 'var(--text-bright)' }}>{ca.cashFits}</div>}
                 </div>
               </div>
               <div>
-                <h4 style={{ margin: '0 0 8px', color: '#6fbcdc' }}>Weekly Cashflow ($700k)</h4>
+                <h4 style={{ margin: '0 0 8px', color: '#6fbcdc' }}>Other Costs</h4>
                 <div style={{ lineHeight: 2 }}>
-                  <div>Mortgage: <strong>{ca.weeklyMortgage700k}</strong></div>
-                  <div>Rent (3bed): <strong>{ca.weeklyRent700k}</strong></div>
+                  {ca.deposit10pct && <div>Deposit (10%): <strong>{ca.deposit10pct}</strong></div>}
+                  {ca.lmi90lvr && <div>LMI (90% LVR): <strong>{ca.lmi90lvr}</strong></div>}
+                  {ca.legalBP && <div>Legal + B&P: <strong>{ca.legalBP}</strong></div>}
                 </div>
               </div>
             </div>

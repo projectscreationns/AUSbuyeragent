@@ -1,12 +1,12 @@
 {
-  "asOf": "06/04/2026",
+  "asOf": "19/05/2026",
   "suburbs": [
     {
       "name": "Baldivis",
       "state": "WA",
       "postcode": "6171",
       "lga": "City of Rockingham",
-      "region": "WA \u2014 Perth mid/outer ring",
+      "region": "WA — Perth mid/outer ring",
       "medianHouse": 750000,
       "medianRentWeekly": 650,
       "quant": {
@@ -60,7 +60,7 @@
       "qual": {
         "infrastructure": [
           {
-            "name": "Kwinana Freeway Widening (Russell\u2013Mortimer Rd)",
+            "name": "Kwinana Freeway Widening (Russell–Mortimer Rd)",
             "type": "road",
             "status": "planned",
             "expectedCompletion": "2028-Q2",
@@ -198,7 +198,7 @@
         "Yield 4.62% below 5%",
         "Growth may decelerate"
       ],
-      "stampDutyNote": "At $750k: stamp ~$26k, total ~$95k \u2014 fits $110k comfortably",
+      "stampDutyNote": "At $750k: stamp ~$26k, total ~$95k — fits $110k comfortably",
       "riskFilter": {
         "supplyRisk": {
           "rating": "MEDIUM",
@@ -235,7 +235,7 @@
       "state": "WA",
       "postcode": "6170",
       "lga": "City of Kwinana",
-      "region": "WA \u2014 Perth mid/outer ring",
+      "region": "WA — Perth mid/outer ring",
       "medianHouse": 710000,
       "medianRentWeekly": 670,
       "quant": {
@@ -398,7 +398,7 @@
           "flightPath": false,
           "highway": true,
           "industrial": true,
-          "notes": "Kwinana industrial area 8km north \u2014 occasional industrial noise. Fwy proximity."
+          "notes": "Kwinana industrial area 8km north — occasional industrial noise. Fwy proximity."
         }
       },
       "forward": {
@@ -437,7 +437,7 @@
         "Average schools",
         "IRSAD 960 modest"
       ],
-      "stampDutyNote": "At $710k: stamp ~$23k, total ~$85k \u2014 very comfortable fit",
+      "stampDutyNote": "At $710k: stamp ~$23k, total ~$85k — very comfortable fit",
       "riskFilter": {
         "supplyRisk": {
           "rating": "MEDIUM",
@@ -474,7 +474,7 @@
       "state": "WA",
       "postcode": "6112",
       "lga": "City of Armadale",
-      "region": "WA \u2014 Perth mid/outer ring",
+      "region": "WA — Perth mid/outer ring",
       "medianHouse": 600000,
       "medianRentWeekly": 595,
       "quant": {
@@ -536,7 +536,7 @@
             "investmentAud": 1200000000,
             "impactRating": "high",
             "source": "metronet.wa.gov.au",
-            "notes": "COMPLETED Oct 2025. New elevated Armadale station, 9 level crossings removed, 8km new dual track to Byford. Major transformation \u2014 expect continued price uplift."
+            "notes": "COMPLETED Oct 2025. New elevated Armadale station, 9 level crossings removed, 8km new dual track to Byford. Major transformation — expect continued price uplift."
           }
         ],
         "crime": {
@@ -637,7 +637,7 @@
         "bull": 55,
         "horizon": "5yr to 2031",
         "drivers": [
-          "Metronet COMPLETED \u2014 price catalyst unfolding",
+          "Metronet COMPLETED — price catalyst unfolding",
           "Sub-$600k entry",
           "TOD rezoning potential",
           "LGA growth +23.7% 2025",
@@ -670,7 +670,7 @@
         "Bushfire risk eastern areas",
         "Public housing pockets"
       ],
-      "stampDutyNote": "At $600k: stamp ~$18k, total ~$72k \u2014 huge cash buffer remains",
+      "stampDutyNote": "At $600k: stamp ~$18k, total ~$72k — huge cash buffer remains",
       "riskFilter": {
         "supplyRisk": {
           "rating": "LOW",
@@ -684,7 +684,7 @@
         },
         "infrastructureRisk": {
           "rating": "LOW",
-          "reason": "Metronet Byford COMPLETE Oct 2025 \u2014 catalyst actively unfolding",
+          "reason": "Metronet Byford COMPLETE Oct 2025 — catalyst actively unfolding",
           "source": "metronet.wa.gov.au"
         },
         "cycleRisk": {
@@ -707,7 +707,7 @@
       "state": "WA",
       "postcode": "6210",
       "lga": "City of Mandurah",
-      "region": "WA \u2014 Perth mid/outer ring",
+      "region": "WA — Perth mid/outer ring",
       "medianHouse": 575000,
       "medianRentWeekly": 550,
       "quant": {
@@ -910,10 +910,10 @@
       "watchPoints": [
         "Aging demographic",
         "72km to CBD",
-        "Estuary flood zones \u2014 check specific street",
+        "Estuary flood zones — check specific street",
         "Growth may moderate"
       ],
-      "stampDutyNote": "At $575k: stamp ~$16k, total ~$68k \u2014 excellent buffer",
+      "stampDutyNote": "At $575k: stamp ~$16k, total ~$68k — excellent buffer",
       "riskFilter": {
         "supplyRisk": {
           "rating": "LOW",
@@ -950,7 +950,7 @@
       "state": "SA",
       "postcode": "5118",
       "lga": "Town of Gawler",
-      "region": "SA \u2014 Adelaide north/south",
+      "region": "SA — Adelaide north/south",
       "medianHouse": 637500,
       "medianRentWeekly": 485,
       "quant": {
@@ -1023,7 +1023,7 @@
             "investmentAud": 860000000,
             "impactRating": "high",
             "source": "dit.sa.gov.au",
-            "notes": "Already delivered \u2014 electric trains, faster commute to Adelaide CBD (~50min)."
+            "notes": "Already delivered — electric trains, faster commute to Adelaide CBD (~50min)."
           }
         ],
         "crime": {
@@ -1156,7 +1156,7 @@
         "Oversupply risk 2030+",
         "Bushfire fringe"
       ],
-      "stampDutyNote": "At $637k: stamp ~$24k, total ~$95k \u2014 comfortable fit within $110k cash",
+      "stampDutyNote": "At $637k: stamp ~$24k, total ~$95k — comfortable fit within $110k cash",
       "riskFilter": {
         "supplyRisk": {
           "rating": "HIGH",
@@ -1185,7 +1185,7 @@
         },
         "overallRisk": "HIGH",
         "downgradeVerdict": true,
-        "riskNote": "MAJOR SUPPLY RISK: 43,800 new dwellings being built within 5km as the urban growth boundary has been removed. Growth of 13.9% in past year is unlikely to continue \u2014 post-spike correction highly likely 2027-2030. Only pursue if you have exceptional value-add (e.g. genuinely subdividable block in R20+ zoning)."
+        "riskNote": "MAJOR SUPPLY RISK: 43,800 new dwellings being built within 5km as the urban growth boundary has been removed. Growth of 13.9% in past year is unlikely to continue — post-spike correction highly likely 2027-2030. Only pursue if you have exceptional value-add (e.g. genuinely subdividable block in R20+ zoning)."
       }
     },
     {
@@ -1193,7 +1193,7 @@
       "state": "SA",
       "postcode": "5108",
       "lga": "City of Salisbury",
-      "region": "SA \u2014 Adelaide north/south",
+      "region": "SA — Adelaide north/south",
       "medianHouse": 680000,
       "medianRentWeekly": 550,
       "quant": {
@@ -1367,7 +1367,7 @@
           "Defence precinct jobs"
         ],
         "risks": [
-          "HIGH CRIME \u2014 significant concern",
+          "HIGH CRIME — significant concern",
           "IRSAD 820 low",
           "Below avg schools",
           "Moderate public housing",
@@ -1392,7 +1392,7 @@
         "Below-avg schools",
         "Moderate public housing concentration"
       ],
-      "stampDutyNote": "At $680k: stamp ~$26k, total ~$97k \u2014 fits but risks outweigh savings. Consider Gawler instead.",
+      "stampDutyNote": "At $680k: stamp ~$26k, total ~$97k — fits but risks outweigh savings. Consider Gawler instead.",
       "riskFilter": {
         "supplyRisk": {
           "rating": "MEDIUM",
@@ -1429,7 +1429,7 @@
       "state": "WA",
       "postcode": "6530",
       "lga": "City of Greater Geraldton",
-      "region": "WA \u2014 Geraldton",
+      "region": "WA — Geraldton",
       "medianHouse": 473000,
       "medianRentWeekly": 520,
       "quant": {
@@ -1609,7 +1609,7 @@
           "Port expansion"
         ],
         "risks": [
-          "Regional liquidity \u2014 small buyer pool",
+          "Regional liquidity — small buyer pool",
           "Single-industry sensitivity",
           "424km from Perth",
           "Mining cycle dependent"
@@ -1630,12 +1630,12 @@
         "Vacancy sub-1%"
       ],
       "watchPoints": [
-        "424km from Perth \u2014 regional liquidity",
+        "424km from Perth — regional liquidity",
         "Single industry",
         "Small buyer pool on exit",
         "Coastal erosion west"
       ],
-      "stampDutyNote": "At $473k: stamp ~$14k, total ~$58k \u2014 massive cash buffer. Can afford building inspection risk.",
+      "stampDutyNote": "At $473k: stamp ~$14k, total ~$58k — massive cash buffer. Can afford building inspection risk.",
       "riskFilter": {
         "supplyRisk": {
           "rating": "LOW",
@@ -1649,7 +1649,7 @@
         },
         "infrastructureRisk": {
           "rating": "MEDIUM",
-          "reason": "Oakajee green hydrogen is PROPOSED (not under construction) \u2014 may not deliver",
+          "reason": "Oakajee green hydrogen is PROPOSED (not under construction) — may not deliver",
           "source": "WA Gov"
         },
         "cycleRisk": {
@@ -1664,7 +1664,7 @@
         },
         "overallRisk": "MEDIUM-HIGH",
         "downgradeVerdict": true,
-        "riskNote": "Regional speculation \u2014 Oakajee not confirmed. Post-24% spike. Smaller buyer pool on exit."
+        "riskNote": "Regional speculation — Oakajee not confirmed. Post-24% spike. Smaller buyer pool on exit."
       }
     },
     {
@@ -1672,7 +1672,7 @@
       "state": "WA",
       "postcode": "6330",
       "lga": "City of Albany",
-      "region": "WA \u2014 Albany",
+      "region": "WA — Albany",
       "medianHouse": 550000,
       "medianRentWeekly": 530,
       "quant": {
@@ -1870,7 +1870,7 @@
         "Bushfire fringe",
         "Smaller growth upside vs Geraldton"
       ],
-      "stampDutyNote": "At $550k: stamp ~$20k, total ~$75k \u2014 excellent cash buffer",
+      "stampDutyNote": "At $550k: stamp ~$20k, total ~$75k — excellent cash buffer",
       "riskFilter": {
         "supplyRisk": {
           "rating": "LOW",
@@ -1907,7 +1907,7 @@
       "state": "VIC",
       "postcode": "3337",
       "lga": "City of Melton",
-      "region": "VIC \u2014 Melbourne outer",
+      "region": "VIC — Melbourne outer",
       "medianHouse": 510000,
       "medianRentWeekly": 430,
       "quant": {
@@ -1969,7 +1969,7 @@
             "investmentAud": 3000000000,
             "impactRating": "high",
             "source": "dtp.vic.gov.au",
-            "notes": "Long-awaited upgrade. Currently diesel. Timeline uncertain \u2014 federal funding dependent."
+            "notes": "Long-awaited upgrade. Currently diesel. Timeline uncertain — federal funding dependent."
           },
           {
             "name": "Western Outer Metropolitan Freeway",
@@ -2091,7 +2091,7 @@
           "Domain: +5-7% outer",
           "PropTrack: Melton affordable entry"
         ],
-        "consensus": "Affordable entry but Melbourne underperforming. VIC stamp duty bite. Base case 15-22% 5yr \u2014 well below Perth/Adelaide."
+        "consensus": "Affordable entry but Melbourne underperforming. VIC stamp duty bite. Base case 15-22% 5yr — well below Perth/Adelaide."
       },
       "verdict": "WATCH",
       "topSignals": [
@@ -2107,11 +2107,11 @@
         "Moderate crime",
         "Growth < Perth/Adelaide"
       ],
-      "stampDutyNote": "At $510k: VIC stamp ~$21k, total costs ~$83k \u2014 fits $110k. BUT growth ceiling lower than WA alternatives.",
+      "stampDutyNote": "At $510k: VIC stamp ~$21k, total costs ~$83k — fits $110k. BUT growth ceiling lower than WA alternatives.",
       "riskFilter": {
         "supplyRisk": {
           "rating": "HIGH",
-          "reason": "Melton is Victoria's fastest-growing LGA \u2014 massive greenfield release ongoing across Melton South, Kurunjang, Weir Views",
+          "reason": "Melton is Victoria's fastest-growing LGA — massive greenfield release ongoing across Melton South, Kurunjang, Weir Views",
           "source": "City of Melton"
         },
         "demandRisk": {
@@ -2144,7 +2144,7 @@
       "state": "SA",
       "postcode": "5290",
       "lga": "City of Mount Gambier",
-      "region": "SA \u2014 Mount Gambier",
+      "region": "SA — Mount Gambier",
       "medianHouse": 530000,
       "medianRentWeekly": 420,
       "quant": {
@@ -2305,7 +2305,7 @@
           "Lifestyle"
         ],
         "risks": [
-          "Very regional \u2014 low liquidity",
+          "Very regional — low liquidity",
           "Limited growth catalysts",
           "Yield only 4.12%",
           "436km from Adelaide",
@@ -2329,7 +2329,7 @@
         "Low liquidity",
         "Forestry fringe bushfire"
       ],
-      "stampDutyNote": "At $530k: stamp ~$20k, total ~$80k \u2014 affordable. But growth upside limited vs WA regional.",
+      "stampDutyNote": "At $530k: stamp ~$20k, total ~$80k — affordable. But growth upside limited vs WA regional.",
       "riskFilter": {
         "supplyRisk": {
           "rating": "LOW",
@@ -2366,7 +2366,7 @@
       "state": "VIC",
       "postcode": "3350",
       "lga": "City of Ballarat",
-      "region": "VIC \u2014 Ballarat",
+      "region": "VIC — Ballarat",
       "medianHouse": 550000,
       "medianRentWeekly": 450,
       "quant": {
@@ -2564,7 +2564,7 @@
         "Vacancy 1.8% higher",
         "Regional VIC slowing"
       ],
-      "stampDutyNote": "At $550k: VIC stamp ~$22k, total ~$88k \u2014 fits but growth upside poor. Pass in favour of WA regional.",
+      "stampDutyNote": "At $550k: VIC stamp ~$22k, total ~$88k — fits but growth upside poor. Pass in favour of WA regional.",
       "riskFilter": {
         "supplyRisk": {
           "rating": "LOW",
@@ -2601,7 +2601,7 @@
       "state": "QLD",
       "postcode": "4817",
       "lga": "Townsville City",
-      "region": "QLD \u2014 Townsville",
+      "region": "QLD — Townsville",
       "medianHouse": 550000,
       "medianRentWeekly": 530,
       "quant": {
@@ -2756,7 +2756,7 @@
         },
         "rentalDemand": {
           "tenantTypes": "Defence personnel, FIFO, young families, healthcare workers",
-          "marketDepth": "deep \u2014 400+ sales/yr",
+          "marketDepth": "deep — 400+ sales/yr",
           "source": "REIQ"
         },
         "connectivity": {
@@ -2803,24 +2803,24 @@
       },
       "verdict": "STRONG BUY",
       "topSignals": [
-        "Growth +28.2% \u2014 highest in AU",
-        "DOM 11 days \u2014 instant demand",
+        "Growth +28.2% — highest in AU",
+        "DOM 11 days — instant demand",
         "Vacancy 0.5%",
         "$2B defence spending",
         "$5B CopperString",
-        "Entry $550k \u2014 huge budget headroom"
+        "Entry $550k — huge budget headroom"
       ],
       "watchPoints": [
         "QLD land tax ~$1,500/yr (2nd QLD property)",
         "Cyclone risk",
         "Flight path eastern streets",
-        "Ross River flood zones \u2014 check specific address"
+        "Ross River flood zones — check specific address"
       ],
-      "stampDutyNote": "At $550k: QLD stamp ~$17k, total costs ~$72k \u2014 massive $38k buffer. Land tax ~$0-1,500/yr on 2nd QLD property.",
+      "stampDutyNote": "At $550k: QLD stamp ~$17k, total costs ~$72k — massive $38k buffer. Land tax ~$0-1,500/yr on 2nd QLD property.",
       "riskFilter": {
         "supplyRisk": {
           "rating": "LOW",
-          "reason": "Kirwan is ESTABLISHED. New supply concentrated in Mount Low, Elliot Springs, northern beaches \u2014 NOT Kirwan itself. Kirwan is infill only.",
+          "reason": "Kirwan is ESTABLISHED. New supply concentrated in Mount Low, Elliot Springs, northern beaches — NOT Kirwan itself. Kirwan is infill only.",
           "source": "Townsville Council + GemLife announcement"
         },
         "demandRisk": {
@@ -2853,7 +2853,7 @@
       "state": "SA",
       "postcode": "5115",
       "lga": "City of Playford",
-      "region": "SA \u2014 Adelaide north/south",
+      "region": "SA — Adelaide north/south",
       "medianHouse": 610000,
       "medianRentWeekly": 550,
       "quant": {
@@ -3030,7 +3030,7 @@
         "bull": 40,
         "horizon": "5yr to 2031",
         "drivers": [
-          "$610k entry \u2014 budget headroom",
+          "$610k entry — budget headroom",
           "Edinburgh Parks defence jobs",
           "Electrified train",
           "Northern Connector motorway",
@@ -3051,7 +3051,7 @@
       },
       "verdict": "BUY",
       "topSignals": [
-        "$610k entry \u2014 fits budget easily",
+        "$610k entry — fits budget easily",
         "Electrified train",
         "$2B Edinburgh Parks defence",
         "Vacancy 1.0% tight",
@@ -3063,7 +3063,7 @@
         "Growth 6% below WA/QLD",
         "Public housing pockets"
       ],
-      "stampDutyNote": "At $610k: SA stamp ~$23k, total costs ~$85k \u2014 comfortable fit.",
+      "stampDutyNote": "At $610k: SA stamp ~$23k, total costs ~$85k — comfortable fit.",
       "riskFilter": {
         "supplyRisk": {
           "rating": "HIGH",
@@ -3092,7 +3092,7 @@
         },
         "overallRisk": "MEDIUM-HIGH",
         "downgradeVerdict": true,
-        "riskNote": "HIGH supply \u2014 outer fringe with ongoing greenfield release. Growth likely to moderate as supply catches up."
+        "riskNote": "HIGH supply — outer fringe with ongoing greenfield release. Growth likely to moderate as supply catches up."
       }
     },
     {
@@ -3100,7 +3100,7 @@
       "state": "VIC",
       "postcode": "3977",
       "lga": "City of Casey",
-      "region": "VIC \u2014 Melbourne outer",
+      "region": "VIC — Melbourne outer",
       "medianHouse": 695000,
       "medianRentWeekly": 590,
       "quant": {
@@ -3285,7 +3285,7 @@
         "Vacancy 1.82%",
         "Melbourne underperforming nationally"
       ],
-      "stampDutyNote": "At $695k: VIC stamp ~$37k + surcharge ~$10k = total costs ~$112k \u2014 EXCEEDS $110k cash. Need lower price point or more cash.",
+      "stampDutyNote": "At $695k: VIC stamp ~$37k + surcharge ~$10k = total costs ~$112k — EXCEEDS $110k cash. Need lower price point or more cash.",
       "riskFilter": {
         "supplyRisk": {
           "rating": "HIGH",
@@ -3322,7 +3322,7 @@
       "state": "SA",
       "postcode": "5096",
       "lga": "City of Salisbury",
-      "region": "SA \u2014 Adelaide north/south",
+      "region": "SA — Adelaide north/south",
       "medianHouse": 520000,
       "medianRentWeekly": 500,
       "quant": {
@@ -3384,7 +3384,7 @@
             "investmentAud": null,
             "impactRating": "high",
             "source": "adelaidemetro.com.au",
-            "notes": "Dedicated busway to CBD \u2014 15 minutes from Para Hills Interchange."
+            "notes": "Dedicated busway to CBD — 15 minutes from Para Hills Interchange."
           },
           {
             "name": "Tea Tree Plaza Regional Shopping Centre",
@@ -3488,8 +3488,8 @@
         "bull": 42,
         "horizon": "5yr to 2031",
         "drivers": [
-          "$520k entry \u2014 major budget headroom",
-          "Established infill only \u2014 LOW supply risk",
+          "$520k entry — major budget headroom",
+          "Established infill only — LOW supply risk",
           "O-Bahn 15min to CBD",
           "5% yield strong for Adelaide",
           "Tea Tree Plaza adjacent"
@@ -3507,7 +3507,7 @@
       },
       "verdict": "BUY",
       "topSignals": [
-        "$520k entry \u2014 massive cash buffer",
+        "$520k entry — massive cash buffer",
         "5% yield",
         "Established infill only",
         "O-Bahn to CBD"
@@ -3516,7 +3516,7 @@
         "Growth modest vs WA/QLD",
         "IRSAD 960"
       ],
-      "stampDutyNote": "At $520k: SA stamp ~$21k, total costs ~$75k \u2014 huge $35k cash buffer.",
+      "stampDutyNote": "At $520k: SA stamp ~$21k, total costs ~$75k — huge $35k cash buffer.",
       "riskFilter": {
         "supplyRisk": {
           "rating": "LOW",
@@ -3553,7 +3553,7 @@
       "state": "SA",
       "postcode": "5108",
       "lga": "City of Salisbury",
-      "region": "SA \u2014 Adelaide north/south",
+      "region": "SA — Adelaide north/south",
       "medianHouse": 615000,
       "medianRentWeekly": 545,
       "quant": {
@@ -3747,7 +3747,7 @@
         "Below-avg schools",
         "Industrial adjacency"
       ],
-      "stampDutyNote": "At $615k: SA stamp ~$24k, total costs ~$87k \u2014 fits $110k.",
+      "stampDutyNote": "At $615k: SA stamp ~$24k, total costs ~$87k — fits $110k.",
       "riskFilter": {
         "supplyRisk": {
           "rating": "LOW",
@@ -3784,7 +3784,7 @@
       "state": "QLD",
       "postcode": "4815",
       "lga": "Townsville City",
-      "region": "QLD \u2014 Townsville",
+      "region": "QLD — Townsville",
       "medianHouse": 599000,
       "medianRentWeekly": 520,
       "quant": {
@@ -3846,7 +3846,7 @@
             "investmentAud": 2000000000,
             "impactRating": "high",
             "source": "defence.gov.au",
-            "notes": "$2B+ defence expansion \u2014 Condon proximity to base creates rental demand."
+            "notes": "$2B+ defence expansion — Condon proximity to base creates rental demand."
           },
           {
             "name": "CopperString 2032",
@@ -3927,7 +3927,7 @@
         },
         "rentalDemand": {
           "tenantTypes": "Defence personnel, young families, healthcare",
-          "marketDepth": "deep \u2014 200+ sales/yr",
+          "marketDepth": "deep — 200+ sales/yr",
           "source": "REIQ"
         },
         "connectivity": {
@@ -3950,7 +3950,7 @@
         "bull": 52,
         "horizon": "5yr to 2031",
         "drivers": [
-          "$599k entry \u2014 huge budget buffer",
+          "$599k entry — huge budget buffer",
           "+24.5% growth momentum",
           "Defence $2B active",
           "CopperString $5B active",
@@ -3982,7 +3982,7 @@
         "Land tax ~$1.5k/yr",
         "Post-spike risk"
       ],
-      "stampDutyNote": "At $599k: QLD stamp ~$19k, total costs ~$79k \u2014 $31k cash buffer.",
+      "stampDutyNote": "At $599k: QLD stamp ~$19k, total costs ~$79k — $31k cash buffer.",
       "riskFilter": {
         "supplyRisk": {
           "rating": "LOW",
@@ -4019,7 +4019,7 @@
       "state": "QLD",
       "postcode": "4814",
       "lga": "Townsville City",
-      "region": "QLD \u2014 Townsville",
+      "region": "QLD — Townsville",
       "medianHouse": 681000,
       "medianRentWeekly": 590,
       "quant": {
@@ -4175,7 +4175,7 @@
           "flightPath": true,
           "highway": false,
           "industrial": false,
-          "notes": "Townsville Airport flight path affects some streets \u2014 check specific address"
+          "notes": "Townsville Airport flight path affects some streets — check specific address"
         }
       },
       "forward": {
@@ -4191,7 +4191,7 @@
           "Supply on market 0.21%"
         ],
         "risks": [
-          "Some Ross River flood zones \u2014 check specific address",
+          "Some Ross River flood zones — check specific address",
           "Flight path exposure",
           "QLD land tax"
         ],
@@ -4213,7 +4213,7 @@
         "Flight path some streets",
         "At top of QLD budget"
       ],
-      "stampDutyNote": "At $681k: QLD stamp ~$22k, total costs ~$96k \u2014 fits $110k.",
+      "stampDutyNote": "At $681k: QLD stamp ~$22k, total costs ~$96k — fits $110k.",
       "riskFilter": {
         "supplyRisk": {
           "rating": "LOW",
@@ -4242,7 +4242,7 @@
         },
         "overallRisk": "LOW-MEDIUM",
         "downgradeVerdict": false,
-        "riskNote": "Inner Townsville option at top of budget. Ross River flood zones + flight path address-specific \u2014 verify per property."
+        "riskNote": "Inner Townsville option at top of budget. Ross River flood zones + flight path address-specific — verify per property."
       }
     },
     {
@@ -4250,7 +4250,7 @@
       "state": "VIC",
       "postcode": "3174",
       "lga": "City of Greater Dandenong",
-      "region": "VIC \u2014 Melbourne SE middle-ring",
+      "region": "VIC — Melbourne SE middle-ring",
       "medianHouse": 780000,
       "medianRentWeekly": 540,
       "quant": {
@@ -4419,7 +4419,7 @@
           "Established middle-ring Melbourne",
           "Rail to CBD 40min",
           "Hospital employment",
-          "LOW supply risk \u2014 infill only"
+          "LOW supply risk — infill only"
         ],
         "risks": [
           "VIC stamp duty + surcharge (~$50k at $780k)",
@@ -4444,7 +4444,7 @@
         "IRSAD 905",
         "Yield only 3.6%"
       ],
-      "stampDutyNote": "At $780k: VIC stamp ~$42k + investor surcharge ~$10k = total costs ~$132k \u2014 OVER $110k cash. Need lower price or more cash.",
+      "stampDutyNote": "At $780k: VIC stamp ~$42k + investor surcharge ~$10k = total costs ~$132k — OVER $110k cash. Need lower price or more cash.",
       "riskFilter": {
         "supplyRisk": {
           "rating": "LOW",
@@ -4475,7 +4475,1472 @@
         "downgradeVerdict": false,
         "riskNote": "Real VIC middle-ring option with LOW supply risk. BUT VIC stamp duty + investor surcharge makes $780k entry exceed $110k cash."
       }
+    },
+    {
+      "name": "Camillo",
+      "state": "WA",
+      "postcode": "6111",
+      "lga": "City of Armadale",
+      "region": "WA — Perth mid/outer ring",
+      "medianHouse": 665000,
+      "medianRentWeekly": 590,
+      "quant": {
+        "dom": {
+          "value": 12,
+          "score": 94,
+          "source": "YIP / CoreLogic 2026"
+        },
+        "vacancy": {
+          "value": 2.2,
+          "score": 55,
+          "source": "HTAG Analytics 2026"
+        },
+        "yield": {
+          "value": 5.1,
+          "score": 78,
+          "source": "YIP / Real Estate Investar"
+        },
+        "priceGrowth": {
+          "value": 10.91,
+          "score": 78,
+          "source": "YIP / PropertyValue 2026"
+        },
+        "supplyOnMarket": {
+          "value": 0.22,
+          "score": 95,
+          "source": "HTAG Analytics"
+        },
+        "vendorDiscount": {
+          "value": -3.5,
+          "score": 85,
+          "source": "PropertyValue / OpenAgent"
+        },
+        "renterPercent": {
+          "value": 28,
+          "score": 85,
+          "source": "ABS Census 2021"
+        },
+        "unitToHouseRatio": {
+          "value": 2.4,
+          "score": 96,
+          "source": "YIP 2026"
+        },
+        "auctionClearance": {
+          "value": null,
+          "score": null,
+          "source": "N/A Perth"
+        }
+      },
+      "compositeScore": 79,
+      "qual": {
+        "infrastructure": [
+          {
+            "name": "Metronet Byford Rail Extension + Armadale Line Upgrade",
+            "type": "rail",
+            "status": "completed",
+            "expectedCompletion": "2025-Q4",
+            "delayMonths": 0,
+            "investmentAud": 4300000000,
+            "impactRating": "high",
+            "source": "metronet.wa.gov.au",
+            "notes": "Opened Oct 2025. 7 level crossings removed, new elevated Armadale Station, new Byford Station. Part of $4.3B Metronet program."
+          },
+          {
+            "name": "HMAS Stirling / AUKUS Submarine Base Expansion",
+            "type": "defence",
+            "status": "under-construction",
+            "expectedCompletion": "2035",
+            "delayMonths": null,
+            "investmentAud": 8000000000,
+            "impactRating": "high",
+            "source": "asa.gov.au",
+            "notes": "$8B expansion over next decade. 3,000+ direct jobs at HMAS Stirling, 500+ Submarine Rotational Force jobs from 2027."
+          },
+          {
+            "name": "Armadale City Centre Redevelopment",
+            "type": "mixed",
+            "status": "under-construction",
+            "expectedCompletion": "2030",
+            "delayMonths": null,
+            "investmentAud": 500000000,
+            "impactRating": "medium",
+            "source": "armadale.wa.gov.au",
+            "notes": "New Courthouse ($89M complete), TAFE ($39M complete), DevelopmentWA 9ha residential precinct, 110 new specialty shops planned."
+          },
+          {
+            "name": "Tonkin Highway Extension",
+            "type": "road",
+            "status": "completed",
+            "expectedCompletion": "2024",
+            "delayMonths": 0,
+            "investmentAud": null,
+            "impactRating": "medium",
+            "source": "mainroads.wa.gov.au",
+            "notes": "Connects Armadale area to Perth Airport and eastern industrial areas."
+          }
+        ],
+        "crime": {
+          "overallRating": "high",
+          "trend": "rising",
+          "notableTypes": [
+            "stealing +43%",
+            "assault +7%",
+            "property crime above state average"
+          ],
+          "comparisonToState": "29th percentile safety — 71% of WA suburbs are safer",
+          "source": "aucrimerate.com / WA Police 2024"
+        },
+        "publicHousing": {
+          "existingNearby": true,
+          "plannedNearby": false,
+          "concentration": "moderate",
+          "details": "63 public + 25 community housing properties (~4% of dwellings, above LGA avg of 2.6%)",
+          "source": "WA Parliament tabled paper 2019"
+        },
+        "schools": {
+          "primary": [
+            {
+              "name": "Westfield Park Primary School",
+              "rating": "Below average",
+              "distance": "1km"
+            }
+          ],
+          "secondary": [
+            {
+              "name": "Kelmscott Senior High School",
+              "rating": "Average",
+              "distance": "3km"
+            }
+          ],
+          "overallQuality": "below average",
+          "source": "MySchool / SEIFA"
+        },
+        "hazards": {
+          "flood": {
+            "risk": "low",
+            "zone": null,
+            "source": "WAPC"
+          },
+          "bushfire": {
+            "risk": "moderate",
+            "zone": "Near Darling Scarp — BAL assessment required for properties closest to bushland",
+            "source": "DFES 2025"
+          },
+          "coastal": {
+            "risk": "n/a",
+            "source": "40km inland"
+          }
+        },
+        "zoning": {
+          "currentZoning": "R15/R20",
+          "densificationPotential": "moderate",
+          "recentRezonings": "Amendment 89 proposes R15/60 near Challis/Sherwood stations",
+          "councilPlan": "armadale.wa.gov.au",
+          "source": "City of Armadale"
+        },
+        "developmentApps": [
+          {
+            "description": "DevelopmentWA West of Railway 9ha residential precinct",
+            "scale": "large",
+            "impact": "positive",
+            "source": "developmentwa.com.au"
+          },
+          {
+            "description": "Armadale Strategic Metropolitan Centre Structure Plan (20-year)",
+            "scale": "large",
+            "impact": "positive",
+            "source": "City of Armadale"
+          }
+        ],
+        "demographics": {
+          "medianAge": 37,
+          "trend": "stable",
+          "householdType": "couples with children",
+          "irsad": 859,
+          "source": "ABS Census 2021"
+        },
+        "rentalDemand": {
+          "tenantTypes": "Families, trades workers, healthcare workers",
+          "marketDepth": "medium — 123 sales/yr",
+          "source": "REIWA / YIP"
+        },
+        "connectivity": {
+          "nbn": "FTTN (fibre upgrade underway)",
+          "publicTransport": "Kelmscott Station 2-3km + bus, 44min to Perth CBD",
+          "cbdDistance": "23km",
+          "source": "Transperth / NBN Co"
+        },
+        "noise": {
+          "flightPath": false,
+          "highway": true,
+          "industrial": false,
+          "notes": "Tonkin Highway to west, some road noise on western boundary properties"
+        }
+      },
+      "forward": {
+        "cycleStage": "MID-LATE",
+        "bear": 5,
+        "base": 20,
+        "bull": 35,
+        "horizon": "5yr to 2031",
+        "drivers": [
+          "Completed Metronet infrastructure",
+          "AUKUS defence spending $8B at HMAS Stirling",
+          "Perth structural undersupply",
+          "Strong yield at 5.1%"
+        ],
+        "risks": [
+          "Perth late-cycle — ANZ forecasts +1.5% in 2027 after +12.3% in 2026",
+          "135 active estates in SE Perth greenfield pipeline",
+          "High crime suppresses capital growth",
+          "Low IRSAD (859) limits owner-occupier demand"
+        ],
+        "analystViews": [
+          "ANZ: Perth +12.3% in 2026, +1.5% in 2027",
+          "API Magazine: Perth boom to slow sharply in 2027",
+          "REIWA: strong growth to continue through 2026"
+        ],
+        "consensus": "Yield-focused play with completed infrastructure. Growth decelerating in WA — late cycle entry. Crime discount creates yield premium but caps capital growth."
+      },
+      "verdict": "WATCH",
+      "topSignals": [
+        "5.1% yield — strong for Perth",
+        "12 DOM — selling fast",
+        "Metronet COMPLETED — not speculative",
+        "0.22% supply on market — very constrained",
+        "AUKUS defence spending tailwind"
+      ],
+      "watchPoints": [
+        "Crime HIGH — 29th percentile safety",
+        "IRSAD 859 (bottom quartile)",
+        "Perth late-cycle — 2027 growth forecast to stall",
+        "135 greenfield estates in SE Perth",
+        "Bushfire risk near Darling Scarp"
+      ],
+      "stampDutyNote": "At $665k: WA stamp ~$21k + deposit $66.5k + LMI ~$10k + legal $5k = ~$103k — fits $110k comfortably",
+      "riskFilter": {
+        "supplyRisk": {
+          "rating": "MEDIUM-HIGH",
+          "reason": "135 active estates in SE Perth. Byford (9 estates), Hilbert (11 estates), Mundijong (21 estates). Camillo established but competes with greenfield supply.",
+          "source": "OpenLot Perth SE 2026"
+        },
+        "demandRisk": {
+          "rating": "LOW",
+          "reason": "Diversified — healthcare 19.7%, retail, education, manufacturing, construction. AUKUS adds further tailwind.",
+          "source": "City of Armadale / REMPLAN"
+        },
+        "infrastructureRisk": {
+          "rating": "LOW",
+          "reason": "All major infrastructure COMPLETED: Metronet opened Oct 2025, Courthouse, TAFE, Tonkin Highway. No speculative projects.",
+          "source": "infrastructure.gov.au"
+        },
+        "cycleRisk": {
+          "rating": "MEDIUM-HIGH",
+          "reason": "Perth +24.3% annual growth pushing $1.017M median. ANZ forecasts sharp deceleration to +1.5% in 2027. Late-cycle entry risk.",
+          "source": "ANZ Bluenotes / API Magazine 2026"
+        },
+        "liquidityRisk": {
+          "rating": "MEDIUM",
+          "reason": "123 house sales/yr — adequate but not deep. In downturn, thin markets see wider bid-ask spreads.",
+          "source": "YIP"
+        },
+        "overallRisk": "MEDIUM-HIGH",
+        "downgradeVerdict": false,
+        "riskNote": "Yield play with completed infrastructure — genuine positive. But crime, late-cycle WA, and massive SE Perth greenfield supply are material risks. Growth in the explosive 154% (5yr) phase is behind it."
+      }
+    },
+    {
+      "name": "Kurri Kurri",
+      "state": "NSW",
+      "postcode": "2327",
+      "lga": "Cessnock City Council",
+      "region": "NSW — Newcastle/Hunter",
+      "medianHouse": 635000,
+      "medianRentWeekly": 530,
+      "quant": {
+        "dom": {
+          "value": 22,
+          "score": 78,
+          "source": "HTAG / PropertyValue 2026"
+        },
+        "vacancy": {
+          "value": 0.82,
+          "score": 92,
+          "source": "HTAG / SQM Research 2026"
+        },
+        "yield": {
+          "value": 4.34,
+          "score": 58,
+          "source": "Calculated: $530*52/$635k"
+        },
+        "priceGrowth": {
+          "value": 8.0,
+          "score": 68,
+          "source": "PropertyValue / YIP 2026"
+        },
+        "supplyOnMarket": {
+          "value": 0.22,
+          "score": 95,
+          "source": "HTAG Analytics"
+        },
+        "vendorDiscount": {
+          "value": -4.7,
+          "score": 95,
+          "source": "PropertyValue"
+        },
+        "renterPercent": {
+          "value": 37,
+          "score": 50,
+          "source": "ABS Census 2021"
+        },
+        "unitToHouseRatio": {
+          "value": 22,
+          "score": 65,
+          "source": "HTAG 2026"
+        },
+        "auctionClearance": {
+          "value": null,
+          "score": null,
+          "source": "Insufficient data — regional NSW private treaty market"
+        }
+      },
+      "compositeScore": 72,
+      "qual": {
+        "infrastructure": [
+          {
+            "name": "Hunter Expressway",
+            "type": "road",
+            "status": "completed",
+            "expectedCompletion": "2014",
+            "delayMonths": 0,
+            "investmentAud": 1700000000,
+            "impactRating": "high",
+            "source": "en.wikipedia.org/wiki/Hunter_Expressway",
+            "notes": "$1.7B motorway connecting F3 to New England Hwy. Fast connectivity to Newcastle."
+          },
+          {
+            "name": "Hunter-Central Coast REZ Network Upgrade",
+            "type": "energy",
+            "status": "under-construction",
+            "expectedCompletion": "2028",
+            "delayMonths": 0,
+            "investmentAud": null,
+            "impactRating": "medium",
+            "source": "energyco.nsw.gov.au",
+            "notes": "1GW capacity by 2028. 85km sub-transmission upgrade. 590 construction + 220 ongoing jobs (90% local)."
+          },
+          {
+            "name": "Kurri Kurri / Hunter Power Station (Snowy Hydro gas plant)",
+            "type": "energy",
+            "status": "under-construction",
+            "expectedCompletion": "2026-Q2",
+            "delayMonths": 30,
+            "investmentAud": 2000000000,
+            "impactRating": "low",
+            "source": "snowyhydro.com.au",
+            "notes": "Originally $600M/Dec 2023, now >$2B. Gas peaker only — hydrogen component shelved. Temporary construction jobs. Community complaints about emissions/odour."
+          },
+          {
+            "name": "Regrowth Kurri Kurri (former Hydro Smelter site)",
+            "type": "mixed",
+            "status": "approved",
+            "expectedCompletion": "2040+",
+            "delayMonths": null,
+            "investmentAud": null,
+            "impactRating": "high",
+            "source": "stevensgroup.com.au / Cessnock Council",
+            "notes": "2,000+ residential lots, industrial park, business park on 2,000ha former smelter site. 600 blocks approved. First 120 lots targeted 2025."
+          },
+          {
+            "name": "RAAF Williamtown F-35 Base",
+            "type": "defence",
+            "status": "completed",
+            "expectedCompletion": null,
+            "delayMonths": 0,
+            "investmentAud": null,
+            "impactRating": "medium",
+            "source": "rdasydney.org.au",
+            "notes": "Home to Australia's F-35 fleet. ~30min drive from Kurri Kurri. Defence sector anchor for Hunter region."
+          }
+        ],
+        "crime": {
+          "overallRating": "moderate",
+          "trend": "rising (+2.4% 2023-2024)",
+          "notableTypes": [
+            "theft 149 cases",
+            "assault 92 cases",
+            "motor vehicle theft high for LGA"
+          ],
+          "comparisonToState": "18% above NSW average for personal crime, 12% above for property crime. 54th percentile.",
+          "source": "aucrimerate.com / BOCSAR 2024"
+        },
+        "publicHousing": {
+          "existingNearby": true,
+          "plannedNearby": false,
+          "concentration": "low-moderate",
+          "details": "108 state housing + 21 community housing = 4.4-5.3% of dwellings",
+          "source": "ABS Census 2021 / behindthefence.com.au"
+        },
+        "schools": {
+          "primary": [
+            {
+              "name": "Kurri Kurri Public School",
+              "rating": "Below average (ICSEA 880-891)",
+              "distance": "1km"
+            }
+          ],
+          "secondary": [
+            {
+              "name": "Kurri Kurri High School",
+              "rating": "Below average (ICSEA 894)",
+              "distance": "1km"
+            }
+          ],
+          "overallQuality": "below average — ICSEA 880-894 (9th percentile nationally)",
+          "source": "MySchool / gdp.com.au"
+        },
+        "hazards": {
+          "flood": {
+            "risk": "moderate",
+            "zone": "Kurri Kurri Main Drain — local drainage flood risk. Over-floor flooding at 5% AEP for properties near channels.",
+            "source": "NSW Flood Data Portal / SES"
+          },
+          "bushfire": {
+            "risk": "low-moderate",
+            "zone": "Semi-urban, some surrounding bushfire prone land",
+            "source": "NSW RFS"
+          },
+          "coastal": {
+            "risk": "n/a",
+            "source": "35km inland"
+          }
+        },
+        "zoning": {
+          "currentZoning": "R2 Low Density Residential",
+          "densificationPotential": "moderate — Regrowth site rezoned for mixed use under Cessnock LEP 2011",
+          "recentRezonings": "Former Hydro Smelter site rezoned for 2,000+ lots + industrial/business park",
+          "councilPlan": "Kurri Kurri District Strategy adopted March 2018",
+          "source": "Cessnock Council"
+        },
+        "developmentApps": [
+          {
+            "description": "Regrowth Kurri Kurri — 2,000+ homes + industrial park on former smelter",
+            "scale": "major",
+            "impact": "HIGH supply risk",
+            "source": "stevensgroup.com.au"
+          },
+          {
+            "description": "Kurri Kurri Lateral Gas Pipeline (21km)",
+            "scale": "medium",
+            "impact": "neutral",
+            "source": "NSW Planning Portal"
+          },
+          {
+            "description": "Kurri Kurri Central Sports Precinct masterplan",
+            "scale": "medium",
+            "impact": "positive",
+            "source": "together.cessnock.nsw.gov.au"
+          }
+        ],
+        "demographics": {
+          "medianAge": 38,
+          "trend": "stable — younger cohort (20-29) growing",
+          "householdType": "trades workers, small families",
+          "irsad": 877,
+          "source": "ABS Census 2021"
+        },
+        "rentalDemand": {
+          "tenantTypes": "Trades workers, construction (REZ/power station), aged care/healthcare, some mining-adjacent",
+          "marketDepth": "medium — 136 sales/yr, tight 0.82% vacancy",
+          "source": "YIP / HTAG"
+        },
+        "connectivity": {
+          "nbn": "FTTN (fibre upgrade to FTTP underway)",
+          "publicTransport": "Bus only — Route 160 to Newcastle every 4hrs. No train station.",
+          "cbdDistance": "35km to Newcastle CBD, 150km to Sydney",
+          "source": "rome2rio / NBN Co"
+        },
+        "noise": {
+          "flightPath": false,
+          "highway": false,
+          "industrial": true,
+          "notes": "Hunter Power Station (660MW gas plant) — community complaints of emissions and odour during commissioning. Peaker plant so not constant, but a concern."
+        }
+      },
+      "forward": {
+        "cycleStage": "MID",
+        "bear": 0,
+        "base": 15,
+        "bull": 30,
+        "horizon": "5yr to 2031",
+        "drivers": [
+          "Hunter REZ construction jobs — 590 construction + 220 ongoing",
+          "RAAF Williamtown F-35 defence anchor",
+          "Hunter Expressway — fast Newcastle connectivity",
+          "Tight vacancy 0.82% supporting rents",
+          "Cessnock LGA population growth projected +63% to 2046"
+        ],
+        "risks": [
+          "2,000+ new lots from Regrowth development = massive incoming supply",
+          "Construction employment is temporary — jobs fade when REZ/power station complete",
+          "Hydrogen hub narrative dead — gas peaker only",
+          "Power station pollution complaints",
+          "Low IRSAD 877 — limited owner-occupier demand depth"
+        ],
+        "analystViews": [
+          "Wisebuy Group: Hunter Valley strong demand 2026",
+          "YIP: 11.2% rental growth in 2025 (4th best regional NSW)"
+        ],
+        "consensus": "Current tight supply metrics are genuinely positive. But the 2,000+ lot Regrowth development will begin delivering within the 5yr hold period, potentially flooding the market. Construction-dependent employment adds temporary demand that fades."
+      },
+      "verdict": "CAUTION",
+      "topSignals": [
+        "0.82% vacancy — very tight",
+        "11.2% rental growth in 2025",
+        "Well within budget at $635k",
+        "Hunter Expressway connectivity",
+        "-4.7% vendor discount = negotiation room"
+      ],
+      "watchPoints": [
+        "2,000+ new lots incoming — Regrowth development",
+        "Power station pollution complaints",
+        "IRSAD 877 — socioeconomic disadvantage",
+        "Schools below average (ICSEA 880-894)",
+        "Bus-only public transport",
+        "Renter % high at 37%",
+        "Construction jobs temporary"
+      ],
+      "stampDutyNote": "At $635k: NSW stamp ~$23.5k + deposit $63.5k + LMI ~$9k + legal $5k = ~$101k — fits $110k with buffer",
+      "riskFilter": {
+        "supplyRisk": {
+          "rating": "HIGH",
+          "reason": "2,000+ residential lots from Regrowth Kurri Kurri (former smelter site) = 80%+ increase in dwelling stock over 10-15yr. 600 blocks already approved.",
+          "source": "stevensgroup.com.au / Cessnock Council"
+        },
+        "demandRisk": {
+          "rating": "MEDIUM",
+          "reason": "Post-smelter economy partially diversified (healthcare, trades, construction). But current tailwinds are construction-dependent (REZ, power station) — temporary.",
+          "source": "APH submission / Newcastle Herald"
+        },
+        "infrastructureRisk": {
+          "rating": "MEDIUM-HIGH",
+          "reason": "Power station: $600M→$2B, 30mo delayed, hydrogen shelved. REZ is credible (under construction). Regrowth is 10-15yr timeline.",
+          "source": "WattClarity / RenewEconomy 2026"
+        },
+        "cycleRisk": {
+          "rating": "LOW",
+          "reason": "8% growth is moderate, not overheated. Affordability buffer relative to Newcastle/Sydney.",
+          "source": "HTAG"
+        },
+        "liquidityRisk": {
+          "rating": "MEDIUM",
+          "reason": "136 house sales/yr — adequate but not deep. Exit could be slow in downturn.",
+          "source": "HTAG"
+        },
+        "overallRisk": "MEDIUM-HIGH",
+        "downgradeVerdict": true,
+        "riskNote": "Current tight supply metrics are misleading — the 2,000+ lot Regrowth development will fundamentally change supply dynamics within a 5yr hold. Construction employment is temporary. Power station delivered late, over budget, and shelved the hydrogen promise. Growth potential capped by incoming supply."
+      }
+    },
+    {
+      "name": "Corio",
+      "state": "VIC",
+      "postcode": "3214",
+      "lga": "City of Greater Geelong",
+      "region": "VIC — Geelong",
+      "medianHouse": 545000,
+      "medianRentWeekly": 440,
+      "quant": {
+        "dom": {
+          "value": 16,
+          "score": 90,
+          "source": "PropertyValue / HTAG 2026"
+        },
+        "vacancy": {
+          "value": 1.33,
+          "score": 75,
+          "source": "MELBZ / SQM Research 2026"
+        },
+        "yield": {
+          "value": 4.2,
+          "score": 55,
+          "source": "HTAG / YIP 2026"
+        },
+        "priceGrowth": {
+          "value": 11.5,
+          "score": 78,
+          "source": "PropertyValue / HTAG 2026"
+        },
+        "supplyOnMarket": {
+          "value": 0.3,
+          "score": 88,
+          "source": "Barry Plant / HTAG"
+        },
+        "vendorDiscount": {
+          "value": -3.8,
+          "score": 85,
+          "source": "PropertyValue"
+        },
+        "renterPercent": {
+          "value": 43.5,
+          "score": 55,
+          "source": "ABS Census 2021"
+        },
+        "unitToHouseRatio": {
+          "value": 4.8,
+          "score": 95,
+          "source": "HTAG 2026"
+        },
+        "auctionClearance": {
+          "value": 62,
+          "score": 68,
+          "source": "REIV Geelong 2026"
+        }
+      },
+      "compositeScore": 77,
+      "qual": {
+        "infrastructure": [
+          {
+            "name": "Geelong Fast Rail",
+            "type": "rail",
+            "status": "cancelled",
+            "expectedCompletion": null,
+            "delayMonths": null,
+            "investmentAud": 4000000000,
+            "impactRating": "high",
+            "source": "timesnewsgroup.com.au/geelongtimes",
+            "notes": "CANCELLED Nov 2023 — federal funding axed. Was $4B, key growth catalyst for northern Geelong. No replacement announced."
+          },
+          {
+            "name": "Geelong Line $900M Rail Upgrade",
+            "type": "rail",
+            "status": "completed",
+            "expectedCompletion": "2025",
+            "delayMonths": 0,
+            "investmentAud": 900000000,
+            "impactRating": "medium",
+            "source": "infrastructuremagazine.com.au",
+            "notes": "Completed. Improved services on existing V/Line Geelong corridor. 55min to Melbourne CBD."
+          },
+          {
+            "name": "NDIA National Headquarters",
+            "type": "government",
+            "status": "completed",
+            "expectedCompletion": null,
+            "delayMonths": 0,
+            "investmentAud": null,
+            "impactRating": "medium",
+            "source": "vic.gov.au",
+            "notes": "Operational in Geelong CBD. Adds white-collar employment base."
+          },
+          {
+            "name": "Geelong Renewables Terminal (Oyster Cove)",
+            "type": "energy",
+            "status": "under-construction",
+            "expectedCompletion": "2029",
+            "delayMonths": null,
+            "investmentAud": null,
+            "impactRating": "high",
+            "source": "geelongport.com.au",
+            "notes": "Target late 2028-2029. 4,200 construction + 850 ongoing jobs."
+          },
+          {
+            "name": "Viva Energy Gas Terminal (Corio Bay)",
+            "type": "energy",
+            "status": "approved",
+            "expectedCompletion": "2028",
+            "delayMonths": null,
+            "investmentAud": null,
+            "impactRating": "medium",
+            "source": "vivaenergy.com.au",
+            "notes": "EPBC approved Apr 2026. Construction H2 2026. 150-200 construction, 70 ongoing jobs."
+          },
+          {
+            "name": "Nyaal Banyul Convention Centre",
+            "type": "tourism",
+            "status": "under-construction",
+            "expectedCompletion": "2026",
+            "delayMonths": 0,
+            "investmentAud": null,
+            "impactRating": "low",
+            "source": "vic.gov.au",
+            "notes": "Part of Geelong City Deal. Tourism and economic activation."
+          }
+        ],
+        "crime": {
+          "overallRating": "high",
+          "trend": "rising (+5.6% 2023-2024)",
+          "notableTypes": [
+            "violent crime 121% above VIC avg",
+            "break-ins 73% above avg",
+            "motor vehicle theft 46% above avg"
+          ],
+          "comparisonToState": "Significantly above VIC average across all categories. Among worst in Geelong.",
+          "source": "RedSuburbs / OpenStats Crime Dashboard 2024"
+        },
+        "publicHousing": {
+          "existingNearby": true,
+          "plannedNearby": true,
+          "concentration": "high",
+          "details": "~2,500 Housing Commission homes built 1950s-1970s. Aboriginal Housing VIC ~85 properties (half in Corio/Norlane). Baptcare 52 affordable. New 107 affordable homes + 40yr social housing lease at 116-120 Purnell Rd approved.",
+          "source": "victorianplaces.com.au / Geelong Council"
+        },
+        "schools": {
+          "primary": [
+            {
+              "name": "St Francis Xavier's School",
+              "rating": "Below average (ICSEA 937)",
+              "distance": "2km"
+            }
+          ],
+          "secondary": [
+            {
+              "name": "Northern Bay P-12 College",
+              "rating": "Below average",
+              "distance": "2km"
+            }
+          ],
+          "overallQuality": "below average — SEIFA Decile 1-2 area. Note: Geelong Grammar (elite boarding school) is in Corio but serves different demographic.",
+          "source": "Good Schools Guide / Better Education"
+        },
+        "hazards": {
+          "flood": {
+            "risk": "moderate",
+            "zone": "LSIO2 overlay on Corio Bay coastal properties. Amendment C394 covers 0.8m sea level rise to 2100.",
+            "source": "Geelong Council / VICSES"
+          },
+          "bushfire": {
+            "risk": "low",
+            "zone": null,
+            "source": "CFA — established urban"
+          },
+          "coastal": {
+            "risk": "moderate",
+            "source": "Bay-side properties — storm surge, sea level rise considerations"
+          }
+        },
+        "zoning": {
+          "currentZoning": "General Residential Zone (GRZ)",
+          "densificationPotential": "moderate — ex-Housing Commission lots 600-800sqm+, subdivision/dual-occ potential",
+          "recentRezonings": "Cedar Woods Somerley estate development approved",
+          "councilPlan": "Growth directed to Armstrong Creek/Lara West. Corio is infill/renewal focus.",
+          "source": "Greater Geelong Planning Scheme"
+        },
+        "developmentApps": [
+          {
+            "description": "Cedar Woods Somerley — 400 homes on 18.6ha, Plantation Rd",
+            "scale": "large",
+            "impact": "supply addition",
+            "source": "cedarwoods.com.au"
+          },
+          {
+            "description": "Edenville Estate — 108 properties (48 apts), Sharland Rd",
+            "scale": "medium",
+            "impact": "supply addition",
+            "source": "openlot.com.au"
+          },
+          {
+            "description": "116-120 Purnell Rd — social housing on council land",
+            "scale": "small",
+            "impact": "community",
+            "source": "Geelong Council"
+          }
+        ],
+        "demographics": {
+          "medianAge": 35,
+          "trend": "young diverse population growing",
+          "householdType": "mix of families and single-person households",
+          "irsad": 850,
+          "source": "ABS Census 2021 — SEIFA Decile 1-2 (most disadvantaged in VIC)"
+        },
+        "rentalDemand": {
+          "tenantTypes": "Families, essential workers, blue-collar, young professionals",
+          "marketDepth": "deep — 400+ sales/yr, balanced vacancy 1.33%",
+          "source": "MELBZ / PropertyDirector"
+        },
+        "connectivity": {
+          "nbn": "FTTN (some premises eligible for fibre upgrade)",
+          "publicTransport": "Corio Station — V/Line 55min to Melbourne CBD, hourly service. Bus lines 1, 20, 23.",
+          "cbdDistance": "9km to Geelong CBD, 66km to Melbourne CBD",
+          "source": "Rome2Rio / WhistleOut NBN"
+        },
+        "noise": {
+          "flightPath": true,
+          "highway": true,
+          "industrial": true,
+          "notes": "Avalon Airport ~10km SE. Princes Freeway adjacent. Viva Energy refinery (120,000 barrels/day) dominates coastal skyline — noise and industrial emissions for nearby properties."
+        }
+      },
+      "forward": {
+        "cycleStage": "EARLY-MID",
+        "bear": 5,
+        "base": 22,
+        "bull": 38,
+        "horizon": "5yr to 2031",
+        "drivers": [
+          "Cheapest entry in dataset at $545k — maximum buffer",
+          "Deep market — 400+ sales/yr, LOW liquidity risk",
+          "Geelong economic diversification (NDIA, Renewables Terminal, Viva)",
+          "Population growth — spillover from priced-out Lara/North Geelong",
+          "Large lots (600-800sqm) — subdivision/dual-occ potential"
+        ],
+        "risks": [
+          "Geelong Fast Rail CANCELLED — key catalyst removed",
+          "HIGH crime (121% above VIC avg violent crime)",
+          "HIGH public housing concentration (~2,500 commission homes)",
+          "SEIFA Decile 1-2 — most disadvantaged in VIC",
+          "Industrial noise/emissions from Viva refinery",
+          "VIC investor stamp duty surcharge increases costs"
+        ],
+        "analystViews": [
+          "BuyerAgentFinder: Geelong 'sleeping giant' — will wake when Melbourne recovers",
+          "Geelong Times: 'more measured' growth expected 2026-2027",
+          "Rate Challenge: Corio/Norlane are Geelong's cleanest 'next-door discount' plays"
+        ],
+        "consensus": "Cheap entry with deep liquidity, but Fast Rail cancellation removes the headline catalyst. High crime and public housing concentration are structural — gentrification by necessity is real but slow. Base case 20-25% over 5yr driven by affordability spillover."
+      },
+      "verdict": "WATCH",
+      "topSignals": [
+        "$545k median — cheapest in dataset",
+        "400+ sales/yr — deepest liquidity",
+        "11.5% growth in past 12mo",
+        "16 DOM — selling quickly",
+        "Large lots — subdivision potential"
+      ],
+      "watchPoints": [
+        "Crime HIGH — 121% above VIC average violent crime",
+        "Fast Rail CANCELLED — key catalyst gone",
+        "Public housing HIGH concentration",
+        "IRSAD ~850 — most disadvantaged decile",
+        "VIC investor stamp duty surcharge ~$8k extra",
+        "Renter % 43.5% — high",
+        "Industrial noise from Viva refinery"
+      ],
+      "stampDutyNote": "At $545k: VIC stamp ~$25k + investor surcharge ~$8k + deposit $54.5k + LMI ~$8k + legal $5k = ~$101k — fits $110k with buffer. VIC surcharge adds ~$8k vs WA/QLD.",
+      "riskFilter": {
+        "supplyRisk": {
+          "rating": "MEDIUM",
+          "reason": "Cedar Woods Somerley 400 homes + Edenville 108 properties. Not greenfield scale like Two Wells, but localized supply addition. Growth directed to Armstrong Creek/Lara West, not Corio.",
+          "source": "cedarwoods.com.au / OpenLot Geelong"
+        },
+        "demandRisk": {
+          "rating": "LOW",
+          "reason": "Geelong well-diversified: healthcare (largest), manufacturing, education (Deakin), government (NDIA, WorkSafe), energy (Viva 1,100 workers). No single-employer dependency.",
+          "source": "id Profile Geelong / Geelong Independent"
+        },
+        "infrastructureRisk": {
+          "rating": "HIGH",
+          "reason": "Geelong Fast Rail ($4B) CANCELLED Nov 2023. Was THE key growth catalyst for northern Geelong. $900M line upgrade complete (positive). Renewables Terminal 2028-29 (promising but not yet delivering).",
+          "source": "timesnewsgroup.com.au/geelongtimes"
+        },
+        "cycleRisk": {
+          "rating": "MEDIUM",
+          "reason": "11.5% growth is solid but follows slower 2023-2024. Geelong lags Melbourne by 6-12mo. 'More measured' growth expected.",
+          "source": "Geelong Times / HTAG"
+        },
+        "liquidityRisk": {
+          "rating": "LOW",
+          "reason": "400+ house sales/yr — deepest market of any suburb analysed. 16 DOM. Exit risk minimal.",
+          "source": "PropertyValue / HTAG"
+        },
+        "overallRisk": "HIGH",
+        "downgradeVerdict": true,
+        "riskNote": "Cheapest entry and deepest liquidity in the dataset, but Fast Rail cancellation removes the headline catalyst. HIGH crime, HIGH public housing, industrial proximity, and SEIFA disadvantage are structural headwinds. Gentrification play requires patience and tolerance for area risks."
+      }
+    },
+    {
+      "name": "Cessnock",
+      "state": "NSW",
+      "postcode": "2325",
+      "lga": "Cessnock City Council",
+      "region": "NSW — Newcastle/Hunter",
+      "medianHouse": 669000,
+      "medianRentWeekly": 520,
+      "quant": {
+        "dom": {
+          "value": 26,
+          "score": 80,
+          "source": "HTAG / YIP 2026"
+        },
+        "vacancy": {
+          "value": 2.25,
+          "score": 55,
+          "source": "HTAG / SQM Research 2026"
+        },
+        "yield": {
+          "value": 4.4,
+          "score": 58,
+          "source": "YIP / PropertyValue 2026"
+        },
+        "priceGrowth": {
+          "value": 6.4,
+          "score": 58,
+          "source": "YIP / PropertyValue 2026"
+        },
+        "supplyOnMarket": {
+          "value": 0.29,
+          "score": 88,
+          "source": "YIP 2026"
+        },
+        "vendorDiscount": {
+          "value": -3.2,
+          "score": 78,
+          "source": "PropertyValue"
+        },
+        "renterPercent": {
+          "value": 41,
+          "score": 55,
+          "source": "ABS Census 2021"
+        },
+        "unitToHouseRatio": {
+          "value": 12,
+          "score": 82,
+          "source": "HTAG / YIP 2026"
+        },
+        "auctionClearance": {
+          "value": 30,
+          "score": 40,
+          "source": "HTAG — low volume, mostly private treaty"
+        }
+      },
+      "compositeScore": 67,
+      "qual": {
+        "infrastructure": [
+          {
+            "name": "RAAF Williamtown F-35 Sustainment Hub",
+            "type": "defence",
+            "status": "under-construction",
+            "expectedCompletion": "2026+",
+            "delayMonths": 0,
+            "investmentAud": 110000000,
+            "impactRating": "high",
+            "source": "minister.defence.gov.au",
+            "notes": "BAE Systems hangars under construction. 750+ direct/indirect jobs. 30-year sustainment program. CONFIRMED and funded. ~20km from Cessnock."
+          },
+          {
+            "name": "Hunter-Central Coast REZ",
+            "type": "energy",
+            "status": "under-construction",
+            "expectedCompletion": "2028",
+            "delayMonths": 0,
+            "investmentAud": 3900000000,
+            "impactRating": "high",
+            "source": "energyco.nsw.gov.au",
+            "notes": "$3.9B private investment. Ausgrid deed signed Dec 2025. 590 construction + 220 ongoing jobs. 1GW by 2028. CONFIRMED."
+          },
+          {
+            "name": "Hunter Expressway",
+            "type": "road",
+            "status": "completed",
+            "expectedCompletion": "2014",
+            "delayMonths": 0,
+            "investmentAud": 1700000000,
+            "impactRating": "high",
+            "source": "en.wikipedia.org/wiki/Hunter_Expressway",
+            "notes": "$1.7B motorway completed 2014. 45min to Newcastle. Key connectivity asset."
+          },
+          {
+            "name": "Cessnock Bypass",
+            "type": "road",
+            "status": "proposed",
+            "expectedCompletion": null,
+            "delayMonths": null,
+            "investmentAud": 5000000,
+            "impactRating": "medium",
+            "source": "minister.infrastructure.gov.au",
+            "notes": "$5M federal planning money (Mar 2025). No construction timeline. Don't price this in."
+          },
+          {
+            "name": "Huntlee Masterplanned Community",
+            "type": "residential",
+            "status": "under-construction",
+            "expectedCompletion": "2040+",
+            "delayMonths": null,
+            "investmentAud": null,
+            "impactRating": "high",
+            "source": "huntlee.com.au",
+            "notes": "7,500 lots at North Rothbury. 20,000 future residents. School opening 2028. MAJOR supply pipeline."
+          }
+        ],
+        "crime": {
+          "overallRating": "moderate-high",
+          "trend": "rising (+0.58% while NSW fell -1.12%)",
+          "notableTypes": [
+            "violent crime 100.9% above NSW avg",
+            "break-ins 129.9% above",
+            "motor vehicle theft 121.4% above"
+          ],
+          "comparisonToState": "86% of NSW suburbs have lower break-in rates. Violent crime double NSW average.",
+          "source": "RedSuburbs / BOCSAR 2024"
+        },
+        "publicHousing": {
+          "existingNearby": true,
+          "plannedNearby": false,
+          "concentration": "moderate",
+          "details": "5.3% of households in social housing (2021 Census)",
+          "source": "profile.id / ABS Census 2021"
+        },
+        "schools": {
+          "primary": [
+            {
+              "name": "Cessnock Public School",
+              "rating": "Average",
+              "distance": "1km"
+            },
+            {
+              "name": "St Philip's Christian College",
+              "rating": "Above average",
+              "distance": "3km"
+            }
+          ],
+          "secondary": [
+            {
+              "name": "Mount View High School",
+              "rating": "Highly rated",
+              "distance": "2km"
+            },
+            {
+              "name": "Cessnock High School",
+              "rating": "Average",
+              "distance": "2km"
+            }
+          ],
+          "overallQuality": "mixed — private option (St Philip's) strong, public schools adequate",
+          "source": "MyChoice Schools / MySchool"
+        },
+        "hazards": {
+          "flood": {
+            "risk": "moderate-high",
+            "zone": "Black Creek and Wollombi Brook floodplain overlays. Property-specific check mandatory.",
+            "source": "Cessnock Council / NSW Flood Data Portal"
+          },
+          "bushfire": {
+            "risk": "moderate",
+            "zone": "Bushfire-prone designation for parts of LGA",
+            "source": "Cessnock Council"
+          },
+          "coastal": {
+            "risk": "n/a",
+            "source": "Inland location"
+          }
+        },
+        "zoning": {
+          "currentZoning": "R2 Low Density Residential",
+          "densificationPotential": "moderate — dual occupancy permitted on lots >=600sqm. Council considering multi-dwelling in R2.",
+          "recentRezonings": "Huntlee estate zoned for 7,500 lots",
+          "councilPlan": "NSW housing target: 3,900 new dwellings for Cessnock LGA",
+          "source": "Cessnock LEP 2011 / NSW Planning"
+        },
+        "developmentApps": [
+          {
+            "description": "Huntlee masterplanned community — 7,500 lots, North Rothbury",
+            "scale": "major",
+            "impact": "HIGH supply risk",
+            "source": "huntlee.com.au"
+          },
+          {
+            "description": "Cessnock CBD / Wollombi Road upgrade",
+            "scale": "medium",
+            "impact": "positive",
+            "source": "Cessnock Council"
+          }
+        ],
+        "demographics": {
+          "medianAge": 38,
+          "trend": "young families growing — LGA population up 7.4% (2016-2021)",
+          "householdType": "childless couples, small families",
+          "irsad": 939,
+          "source": "ABS Census 2021"
+        },
+        "rentalDemand": {
+          "tenantTypes": "Families, mining/construction workers, healthcare, defence (Williamtown), tourism/hospitality",
+          "marketDepth": "moderate — vacancy 2.25%, rental growth +6%",
+          "source": "HTAG / DPN"
+        },
+        "connectivity": {
+          "nbn": "FTTN (FTTP upgrade listed under government program)",
+          "publicTransport": "Bus only to Newcastle — every 4hrs, Mon-Sat only. No rail.",
+          "cbdDistance": "52km to Newcastle CBD, 160km to Sydney",
+          "source": "Rome2Rio / WhistleOut NBN"
+        },
+        "noise": {
+          "flightPath": false,
+          "highway": false,
+          "industrial": false,
+          "notes": "Cessnock Aerodrome (small regional). RAAF Williamtown 20km away. Hunter Expressway bypasses town."
+        }
+      },
+      "forward": {
+        "cycleStage": "MID",
+        "bear": 5,
+        "base": 18,
+        "bull": 30,
+        "horizon": "5yr to 2031",
+        "drivers": [
+          "F-35 sustainment hub — 750+ jobs, 30yr program, CONFIRMED",
+          "Hunter REZ $3.9B — under construction, 590+ jobs",
+          "Hunter Expressway connectivity already delivered",
+          "Population growth projected +63-66% to 2041-2046",
+          "Tight existing supply (0.29% SoM)"
+        ],
+        "risks": [
+          "Huntlee 7,500-lot pipeline — massive incoming supply over 10-15yr",
+          "Crime double NSW average — suppresses capital growth",
+          "Bus-only public transport — no rail",
+          "SEIFA 939 — below average socioeconomics",
+          "Boomscore 31/100 'Be Careful' — contrarian data point"
+        ],
+        "analystViews": [
+          "Propertybuyer: Newcastle/Hunter to outperform market 1-3yr",
+          "Boomscore: 31/100 'Be Careful' — supply outweighs demand",
+          "Wisebuy Group: Hunter Valley strong demand 2026"
+        ],
+        "consensus": "Genuine confirmed infrastructure (F-35, REZ) differentiate Cessnock from typical regional towns. But crime, SEIFA, Huntlee supply, and poor transport create headwinds. Growth will be steady not spectacular — 18% base case over 5yr."
+      },
+      "verdict": "WATCH",
+      "topSignals": [
+        "F-35 sustainment hub CONFIRMED — 750+ jobs, 30yr program",
+        "Hunter REZ $3.9B under construction",
+        "0.29% supply on market — very tight",
+        "371 sales/yr — deep liquidity",
+        "Within budget at $669k"
+      ],
+      "watchPoints": [
+        "Crime double NSW average (violent + break-ins)",
+        "Huntlee 7,500-lot estate — supply risk",
+        "Bus-only transport to Newcastle",
+        "IRSAD 939 — below average",
+        "Renter % 41% — high",
+        "Boomscore 31/100 warning",
+        "Flood risk requires property-specific check"
+      ],
+      "stampDutyNote": "At $669k: NSW stamp ~$25k + deposit $66.9k + LMI ~$9k + legal $5k = ~$106k — fits $110k but tight. No NSW land tax issue (land value well under $1.075M threshold).",
+      "riskFilter": {
+        "supplyRisk": {
+          "rating": "MEDIUM-HIGH",
+          "reason": "Huntlee 7,500-lot estate at North Rothbury + NSW housing target 3,900 dwellings for LGA + 750 new dwellings/yr needed for 20yrs.",
+          "source": "huntlee.com.au / NSW Planning"
+        },
+        "demandRisk": {
+          "rating": "LOW",
+          "reason": "Diversified: healthcare 14.3%, mining 10%, retail 9.7%, construction 9.2%, tourism 8.9%. F-35 + REZ add new diversity.",
+          "source": "profile.id / REMPLAN"
+        },
+        "infrastructureRisk": {
+          "rating": "LOW",
+          "reason": "F-35 hub CONFIRMED (under construction, funded). Hunter REZ CONFIRMED (Ausgrid deed signed, construction commenced). Hunter Expressway COMPLETED.",
+          "source": "Defence Ministers / EnergyCo"
+        },
+        "cycleRisk": {
+          "rating": "LOW-MEDIUM",
+          "reason": "6.4% suburb growth is moderate, not overheated. Affordability buffer vs Newcastle/Sydney.",
+          "source": "YIP / PropertyValue"
+        },
+        "liquidityRisk": {
+          "rating": "LOW",
+          "reason": "371 house sales/yr — deep market. DOM 22-31 days. Exit risk minimal.",
+          "source": "YIP / HTAG"
+        },
+        "overallRisk": "MEDIUM",
+        "downgradeVerdict": false,
+        "riskNote": "Confirmed F-35 and REZ infrastructure are genuine positives — not speculative. But Huntlee supply pipeline (7,500 lots), high crime, and below-average SEIFA create headwinds that will limit capital growth to steady rather than spectacular levels."
+      }
+    },
+    {
+      "name": "Norlane",
+      "state": "VIC",
+      "postcode": "3214",
+      "lga": "City of Greater Geelong",
+      "region": "VIC — Geelong",
+      "medianHouse": 487000,
+      "medianRentWeekly": 400,
+      "quant": {
+        "dom": {
+          "value": 30,
+          "score": 65,
+          "source": "YIP / Barry Plant 2026"
+        },
+        "vacancy": {
+          "value": 1.01,
+          "score": 90,
+          "source": "SQM Research 2026"
+        },
+        "yield": {
+          "value": 4.5,
+          "score": 65,
+          "source": "YIP 2026"
+        },
+        "priceGrowth": {
+          "value": 5.0,
+          "score": 55,
+          "source": "YIP / CoreLogic 2026"
+        },
+        "supplyOnMarket": {
+          "value": 0.35,
+          "score": 82,
+          "source": "Boomscore / Allhomes"
+        },
+        "vendorDiscount": {
+          "value": -4.2,
+          "score": 90,
+          "source": "HTAG"
+        },
+        "renterPercent": {
+          "value": 50.7,
+          "score": 40,
+          "source": "ABS Census 2021"
+        },
+        "unitToHouseRatio": {
+          "value": 11,
+          "score": 82,
+          "source": "YIP 2026"
+        },
+        "auctionClearance": {
+          "value": 60,
+          "score": 68,
+          "source": "REIV Geelong region 2026"
+        }
+      },
+      "compositeScore": 66,
+      "qual": {
+        "infrastructure": [
+          {
+            "name": "Geelong Fast Rail",
+            "type": "rail",
+            "status": "cancelled",
+            "expectedCompletion": null,
+            "delayMonths": null,
+            "investmentAud": 4000000000,
+            "impactRating": "high",
+            "source": "timesnewsgroup.com.au/geelongtimes",
+            "notes": "CANCELLED Nov 2023. Was $4B. Key catalyst for northern Geelong — now gone."
+          },
+          {
+            "name": "Northern ARC (Aquatic & Community Hub)",
+            "type": "community",
+            "status": "completed",
+            "expectedCompletion": "2024-Q1",
+            "delayMonths": 0,
+            "investmentAud": 65600000,
+            "impactRating": "medium",
+            "source": "minister.infrastructure.gov.au",
+            "notes": "$65.6M community facility in Norlane — lap pool, gym, community hall, childcare, health suites. Opened Feb 2024."
+          },
+          {
+            "name": "NDIA National Office (Geelong CBD)",
+            "type": "government",
+            "status": "completed",
+            "expectedCompletion": "2026-Q1",
+            "delayMonths": 0,
+            "investmentAud": null,
+            "impactRating": "medium",
+            "source": "ndis.gov.au",
+            "notes": "600 NDIA staff at Geelong HQ. ~$334M annual economic impact. Opened Feb 2026."
+          },
+          {
+            "name": "Geelong Line $900M Rail Upgrade",
+            "type": "rail",
+            "status": "completed",
+            "expectedCompletion": "2024",
+            "delayMonths": 0,
+            "investmentAud": 900000000,
+            "impactRating": "medium",
+            "source": "infrastructuremagazine.com.au",
+            "notes": "8km track duplication, 3 station upgrades, 2 level crossing removals. ~58min to Melbourne."
+          },
+          {
+            "name": "Geelong Renewables Terminal",
+            "type": "energy",
+            "status": "proposed",
+            "expectedCompletion": "2029",
+            "delayMonths": null,
+            "investmentAud": null,
+            "impactRating": "high",
+            "source": "geelongport.com.au",
+            "notes": "4,200 construction + 850 ongoing jobs. Near Norlane/Corio. Proposed — not yet under construction."
+          }
+        ],
+        "crime": {
+          "overallRating": "high",
+          "trend": "elevated — among most crime-affected areas in Victoria",
+          "notableTypes": [
+            "theft 513 cases",
+            "assault 254 cases",
+            "burglary 220 cases",
+            "breaches 273 cases"
+          ],
+          "comparisonToState": "Well above Victorian averages across all categories. Corio-Norlane is among VIC's most disadvantaged and crime-affected areas.",
+          "source": "RedSuburbs / Crime Statistics Agency VIC 2024"
+        },
+        "publicHousing": {
+          "existingNearby": true,
+          "plannedNearby": true,
+          "concentration": "high",
+          "details": "2,464 Housing Commission homes built 1947-1976. 658 state housing + 80 community housing = 738 social housing dwellings (2021 Census). 26 new social housing recently built under Big Housing Build. More planned. 50.7% renter proportion.",
+          "source": "Wikipedia Norlane / Greater Geelong Social Housing Plan / ABS Census 2021"
+        },
+        "schools": {
+          "primary": [
+            {
+              "name": "Northern Bay P-12 College (primary)",
+              "rating": "Below average (ICSEA 875, 2nd lowest percentile)",
+              "distance": "1km"
+            }
+          ],
+          "secondary": [
+            {
+              "name": "Northern Bay P-12 College (secondary)",
+              "rating": "Below average (ICSEA 875)",
+              "distance": "1km"
+            }
+          ],
+          "overallQuality": "very low — ICSEA 875 (78% students from bottom socio-economic quartile). Only 9.6% residents hold bachelor's degree.",
+          "source": "Northern Bay College / Our Place / BestSchools"
+        },
+        "hazards": {
+          "flood": {
+            "risk": "moderate",
+            "zone": "Some areas may have LSIO or SBO overlay. Part of Greater Geelong flood study area.",
+            "source": "Greater Geelong / VicSES"
+          },
+          "bushfire": {
+            "risk": "low",
+            "zone": null,
+            "source": "Established urban — not in Bushfire Management Overlay"
+          },
+          "coastal": {
+            "risk": "low",
+            "source": "~7km from coast, inland suburb"
+          }
+        },
+        "zoning": {
+          "currentZoning": "General Residential Zone (GRZ) — permits up to 11m/3 storeys",
+          "densificationPotential": "moderate — old Housing Commission homes on large blocks being subdivided/rebuilt. GRZ allows unit/townhouse development.",
+          "recentRezonings": "Some Princes Highway parcels from Industrial 2 to Business 4 Zone",
+          "councilPlan": "Housing renewal and infill focus. Growth primarily directed to Armstrong Creek and Lara West.",
+          "source": "Greater Geelong Planning Scheme"
+        },
+        "developmentApps": [
+          {
+            "description": "Knock-down rebuilds of Housing Commission homes — ongoing townhouse infill",
+            "scale": "small (individual lots)",
+            "impact": "gradual renewal",
+            "source": "Planning Alerts Greater Geelong"
+          },
+          {
+            "description": "Lovely Banks PSP — 15,000+ homes planned ADJACENT to Norlane/Corio",
+            "scale": "major",
+            "impact": "LONG-TERM supply risk",
+            "source": "theurbandeveloper.com"
+          }
+        ],
+        "demographics": {
+          "medianAge": 37,
+          "trend": "young diverse population — 20-29 predominant age group",
+          "householdType": "predominantly single-parent families",
+          "irsad": 800,
+          "source": "ABS Census 2021 — SEIFA 2nd percentile nationally (MOST disadvantaged in Victoria)"
+        },
+        "rentalDemand": {
+          "tenantTypes": "NDIS tenants, low-income workers, young families, single parents, Centrelink recipients",
+          "marketDepth": "moderate — vacancy 1.01% but 50.7% renter proportion reflects high social housing demand rather than strong private rental market",
+          "source": "SQM Research / ABS Census"
+        },
+        "connectivity": {
+          "nbn": "FTTN (some areas may have FTTP upgrade)",
+          "publicTransport": "North Shore / North Geelong stations — V/Line 58min to Melbourne CBD. Bus routes 1, 20, 22. ~7min to Geelong.",
+          "cbdDistance": "7km to Geelong CBD, 70km to Melbourne CBD",
+          "source": "Rome2Rio / Wikipedia"
+        },
+        "noise": {
+          "flightPath": true,
+          "highway": true,
+          "industrial": true,
+          "notes": "Avalon Airport ~13km SE. Princes Highway runs through centre of Norlane — significant road noise. Viva Energy refinery nearby at Corio. Ford heritage site on Princes Highway."
+        }
+      },
+      "forward": {
+        "cycleStage": "EARLY",
+        "bear": 0,
+        "base": 15,
+        "bull": 30,
+        "horizon": "5yr to 2031",
+        "drivers": [
+          "Cheapest entry in dataset at $487k — maximum cash buffer",
+          "~$150k discount to comparable neighbouring suburbs",
+          "Northern ARC community hub completed ($65.6M)",
+          "NDIA HQ 600 staff — $334M annual economic impact",
+          "Early-stage gentrification — knock-down rebuilds replacing Housing Commission stock",
+          "Vacancy 1.01% — tight rental market"
+        ],
+        "risks": [
+          "SEIFA 2nd percentile — most disadvantaged suburb in Victoria",
+          "50.7% renter proportion — highest in dataset",
+          "2,464 Housing Commission homes — deep structural disadvantage",
+          "19.5% local unemployment — highest in Victoria",
+          "Geelong Fast Rail CANCELLED",
+          "Lovely Banks 15,000-home development adjacent (long-term supply)",
+          "Crime HIGH",
+          "VIC stamp duty + investor surcharge"
+        ],
+        "analystViews": [
+          "BuyerAgentFinder: Norlane is Geelong's 'sleeping giant' but needs patience",
+          "Rate Challenge: 'cleanest next-door discount play' in Geelong",
+          "OpenAgent: gentrification underway but slow-moving"
+        ],
+        "consensus": "Ultra-cheap entry with genuine early-cycle positioning, but the most disadvantaged suburb in Victoria. Gentrification by necessity is real but will take 10+ years to meaningfully change the profile. 5yr growth will be modest — 15% base case. Patient, risk-tolerant investors only."
+      },
+      "verdict": "CAUTION",
+      "topSignals": [
+        "$487k median — cheapest in entire dataset",
+        "1.01% vacancy — tight",
+        "4.5% yield — decent for VIC",
+        "Northern ARC community hub completed",
+        "Early-stage gentrification underway"
+      ],
+      "watchPoints": [
+        "SEIFA 2nd percentile — MOST disadvantaged in VIC",
+        "50.7% renter proportion — half the suburb rents",
+        "2,464 Housing Commission homes — structural issue",
+        "19.5% unemployment — worst in VIC",
+        "Crime HIGH",
+        "Fast Rail CANCELLED",
+        "Schools ICSEA 875 — bottom 2%",
+        "Lovely Banks 15,000-home supply adjacent",
+        "VIC investor stamp surcharge ~$7k extra"
+      ],
+      "stampDutyNote": "At $487k: VIC stamp ~$22k + investor surcharge ~$7k + deposit $48.7k + LMI ~$7k + legal $5k = ~$90k — fits $110k easily with $20k buffer.",
+      "riskFilter": {
+        "supplyRisk": {
+          "rating": "MEDIUM",
+          "reason": "Norlane itself is established (infill only). But Lovely Banks PSP (15,000+ homes) immediately adjacent is a medium-long term supply threat. Armstrong Creek also delivering thousands of homes 10km south.",
+          "source": "theurbandeveloper.com / OpenLot Geelong"
+        },
+        "demandRisk": {
+          "rating": "LOW-MEDIUM",
+          "reason": "Geelong economy diversified (healthcare, NDIA, Deakin, Viva refinery, port). But Norlane's 19.5% local unemployment is a demand concern.",
+          "source": "Northern Futures / Geelong Indy"
+        },
+        "infrastructureRisk": {
+          "rating": "MEDIUM",
+          "reason": "Fast Rail CANCELLED. But Northern ARC ($65.6M), NDIA HQ, and Geelong Line Upgrade all COMPLETED. Renewables Terminal proposed for 2029.",
+          "source": "timesnewsgroup.com.au / minister.infrastructure.gov.au"
+        },
+        "cycleRisk": {
+          "rating": "LOW",
+          "reason": "5% growth is early-stage, not post-spike. Sales volumes increasing. Not at risk of correction.",
+          "source": "HTAG / BuyerAgentFinder"
+        },
+        "liquidityRisk": {
+          "rating": "LOW-MEDIUM",
+          "reason": "170-294 house sales/yr depending on period. Adequate but not deep metro-level.",
+          "source": "YIP / Barry Plant"
+        },
+        "overallRisk": "MEDIUM",
+        "downgradeVerdict": false,
+        "riskNote": "Victoria's most disadvantaged suburb. Cheapest entry but the structural headwinds (public housing, crime, unemployment, cancelled Fast Rail) are deep-seated. Gentrification is real but will take 10+ years. Patient, risk-tolerant investors with very long horizons only."
+      }
     }
   ],
-  "summary": "19 suburbs across WA, QLD, SA, VIC. STRONG BUY: Kirwan QLD (88), Condon QLD (87). BUY: Mandurah WA (85), Geraldton WA (84), Albany WA (83), Baldivis WA (82), Armadale WA (81), Wellard WA (81), Para Hills SA (80), Gawler SA (79), Salisbury North SA (78). Portfolio strategy: QLD (Kirwan/Condon/Aitkenvale) for max growth + WA (Perth mid/outer) + SA middle-ring (Para Hills established) for diversification."
+  "summary": "24 suburbs across NSW, QLD, SA, VIC, WA. STRONG BUY: Kirwan QLD (88), Condon QLD (87). BUY: Baldivis WA (82), Wellard WA (81), Armadale WA (81), Mandurah WA (85), Gawler SA (79), Geraldton WA (84), Albany WA (83), Munno Para SA (74), Para Hills SA (80), Salisbury North SA (78), Aitkenvale QLD (83). WATCH: Salisbury Downs SA, Melton VIC, Cranbourne West VIC, Noble Park VIC, Camillo WA, Corio VIC, Cessnock NSW. CAUTION: Mount Gambier SA, Ballarat Central VIC, Kurri Kurri NSW, Norlane VIC."
 }
